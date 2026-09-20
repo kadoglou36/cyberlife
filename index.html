@@ -985,8 +985,6 @@
       <button class="btn" type="button" id="btn-report" style="margin-left:0.5rem">📄 Report</button>
       <button id="maintenance-btn"
         style="background:#ef4444;border:1px solid #dc2626;border-radius:8px;padding:.45rem .8rem;cursor:pointer;color:#fff;font-weight:700;margin-left:0.5rem;">🔧 Maintenance</button>
-      <button id="indexeddb-btn"
-        style="background:#fbbf24;border:1px solid #f59e0b;border-radius:8px;padding:.45rem .8rem;cursor:pointer;color:#78350f;font-weight:700;margin-left:0.5rem;">IndexedDB</button>
     </nav>
   </header>
 
@@ -1045,67 +1043,6 @@
       </div>
     </section>
 
-    <!-- IndexedDB View -->
-    <section id="view-indexeddb" class="view" hidden>
-      <div class="calendar" aria-label="IndexedDB">
-        <div class="cal-header">
-          <div class="cal-title" style="color:#fbbf24">🗄️ IndexedDB Management</div>
-          <div style="display:flex;gap:.4rem">
-            <button class="cal-btn cal-btn--blue" type="button" id="indexeddb-refresh">🔄 Refresh</button>
-            <button class="cal-btn cal-btn--red" type="button" id="indexeddb-clear">🗑️ Clear All Data</button>
-            <button class="cal-btn cal-btn--green" type="button" id="indexeddb-export">📤 Export</button>
-            <button class="cal-btn cal-btn--orange" type="button" id="indexeddb-import">📥 Import</button>
-          </div>
-        </div>
-        <div style="padding:1rem">
-          <div style="margin-bottom:1rem">
-            <h3 style="color:#374151;margin-bottom:.5rem">Database Status</h3>
-            <div id="indexeddb-status"
-              style="background:#f9fafb;padding:1rem;border-radius:8px;border:1px solid #e5e7eb">
-              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem">
-                <div><strong>Database:</strong> <span id="db-name">CyberLifeDB</span></div>
-                <div><strong>Version:</strong> <span id="db-version">1</span></div>
-                <div><strong>Store:</strong> <span id="db-store">data</span></div>
-                <div><strong>Status:</strong> <span id="db-status" style="color:#059669">Connected</span></div>
-              </div>
-            </div>
-          </div>
-
-          <div style="margin-bottom:1rem">
-            <h3 style="color:#374151;margin-bottom:.5rem">Current Data</h3>
-            <div id="indexeddb-data"
-              style="background:#f9fafb;padding:1rem;border-radius:8px;border:1px solid #e5e7eb;max-height:400px;overflow:auto">
-              <pre id="data-display"
-                style="margin:0;font-family:monospace;font-size:.9rem;white-space:pre-wrap">Loading...</pre>
-            </div>
-          </div>
-
-          <div style="margin-bottom:1rem">
-            <h3 style="color:#374151;margin-bottom:.5rem">Import/Export</h3>
-            <div style="background:#f9fafb;padding:1rem;border-radius:8px;border:1px solid #e5e7eb">
-              <input type="file" id="import-file" accept=".json" style="margin-bottom:.5rem;display:none" />
-              <div id="import-preview"
-                style="background:#ffffff;border:1px solid #e5e7eb;border-radius:4px;padding:.5rem;margin-bottom:.5rem;display:none;max-height:200px;overflow:auto">
-                <pre id="import-preview-content" style="margin:0;font-family:monospace;font-size:.8rem"></pre>
-              </div>
-              <div style="margin-top:.5rem;display:flex;gap:.5rem">
-                <button class="cal-btn" id="import-confirm" style="display:none">✅ Confirm Import</button>
-                <button class="cal-btn" id="import-cancel" style="display:none">❌ Cancel</button>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h3 style="color:#374151;margin-bottom:.5rem">Operations Log</h3>
-            <div id="indexeddb-log"
-              style="background:#f9fafb;padding:1rem;border-radius:8px;border:1px solid #e5e7eb;max-height:200px;overflow:auto">
-              <div id="log-entries"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Maintenance View -->
     <section id="view-maintenance" class="view" hidden>
       <div class="calendar" aria-label="Maintenance">
@@ -1126,11 +1063,11 @@
               </div>
               <div style="display:flex;justify-content:space-between;padding:0.75rem;background:#f9fafb;border-radius:6px">
                 <span style="color:#6b7280">Database:</span>
-                <span style="font-weight:600;color:#374151">CyberLifeDB</span>
+                <span style="font-weight:600;color:#374151">data.json (GitHub)</span>
               </div>
               <div style="display:flex;justify-content:space-between;padding:0.75rem;background:#f9fafb;border-radius:6px">
                 <span style="color:#6b7280">Storage Type:</span>
-                <span style="font-weight:600;color:#374151">IndexedDB</span>
+                <span style="font-weight:600;color:#374151">GitHub REST API</span>
               </div>
             </div>
           </div>
@@ -2658,20 +2595,7 @@
         window.CyberLifeData.currentView = 'maintenance';
         window.cyberLifeAutoSave?.scheduleAutoSave();
       });
-      // IndexedDB button - show IndexedDB view
-      document.getElementById('indexeddb-btn').addEventListener('click', function () {
-        // Hide all views consistently using .hidden property
-        document.querySelectorAll('section.view').forEach(v => v.hidden = true);
-        document.getElementById('view-indexeddb').hidden = false;
-        // Save the view state
-        if (!window.CyberLifeData) window.CyberLifeData = {};
-        window.CyberLifeData.currentView = 'indexeddb';
-        window.cyberLifeAutoSave?.scheduleAutoSave();
-      });
 
-
-
-      // Database Status Monitor
 
       // Main menu buttons
       document.querySelectorAll('.menu-btn').forEach(btn => {
@@ -2824,399 +2748,32 @@
     }
 
     // ============================================================================
-    // 💾 SIMPLE & CLEAN DATA PERSISTENCE SYSTEM
+    // 💾 DATA PERSISTENCE SYSTEM - all reads/writes go through GitHub data.json
     // ============================================================================
     (function () {
-      // IndexedDB persistence - Main implementation
-      // Note: IndexedDB UI module below reuses this pattern
-      const DB_NAME = 'CyberLifeDB';
-      const DB_VERSION = 1;
-      const STORE_NAME = 'data';
-      let db = null;
-
-      function openDB() {
-        return new Promise((resolve, reject) => {
-          const request = indexedDB.open(DB_NAME, DB_VERSION);
-          request.onupgradeneeded = function (e) {
-            db = e.target.result;
-            if (!db.objectStoreNames.contains(STORE_NAME)) {
-              db.createObjectStore(STORE_NAME);
-            }
-          };
-          request.onsuccess = function (e) {
-            db = e.target.result;
-            resolve(db);
-          };
-          request.onerror = function (e) {
-            reject(e);
-          };
-        });
-      }
-
-      async function saveData() {
-        await openDB();
-        return new Promise((resolve, reject) => {
-          const tx = db.transaction([STORE_NAME], 'readwrite');
-          const store = tx.objectStore(STORE_NAME);
-          window.CyberLifeData.metadata.lastSaved = new Date().toISOString();
-          const req = store.put(window.CyberLifeData, 'main');
-          req.onsuccess = () => {
-            if (window.DEBUG_MODE) console.log('✅ Data saved to IndexedDB');
-            resolve(true);
-          };
-          req.onerror = (e) => {
-            if (window.DEBUG_MODE) console.error('❌ IndexedDB save error:', e);
-            reject(false);
-          };
-        });
-      }
-
-      async function loadData() {
-        await openDB();
-        return new Promise((resolve, reject) => {
-          const tx = db.transaction([STORE_NAME], 'readonly');
-          const store = tx.objectStore(STORE_NAME);
-          const req = store.get('main');
-          req.onsuccess = (e) => {
-            if (req.result) {
-              Object.assign(window.CyberLifeData, req.result);
-              if (window.DEBUG_MODE) console.log('✅ Data loaded from IndexedDB');
-              resolve(true);
-            } else {
-              if (window.DEBUG_MODE) console.log('⚠️ No data found in IndexedDB');
-              resolve(false);
-            }
-          };
-          req.onerror = (e) => {
-            if (window.DEBUG_MODE) console.error('❌ IndexedDB load error:', e);
-            reject(false);
-          };
-        });
-      }
-
+      // Debounce autosave so rapid edits collapse into a single GitHub PUT
+      let saveTimer = null;
       function scheduleAutoSave() {
-        saveData();
-        if (window.DEBUG_MODE) console.log('● SAVING IMMEDIATELY!');
-        // Visual feedback: brief save indicator (optional future enhancement)
-        // document.title = '💾 ' + document.title.replace('💾 ', '');
-        // setTimeout(() => document.title = document.title.replace('💾 ', ''), 1000);
+        window.CyberLifeData.metadata.lastSaved = new Date().toISOString();
+        if (saveTimer) clearTimeout(saveTimer);
+        saveTimer = setTimeout(() => {
+          saveTimer = null;
+          window.saveAppData?.().catch(err => {
+            if (window.DEBUG_MODE) console.error('❌ GitHub save error:', err);
+          });
+        }, 1200);
       }
 
       window.CyberLifeSystem = {
-        save: saveData,
-        load: loadData,
         autoSave: scheduleAutoSave
       };
 
       // Alias for compatibility
       window.CyberLifeService = window.CyberLifeSystem;
-
-      // Initialize on startup
-      setTimeout(async () => {
-        await loadData();
-        if (window.DEBUG_MODE) console.log('🚀 CyberLife Data System Ready');
-
-        // Refresh VOID passengers after loading data
-        if (window.passengersVoid && window.passengersVoid.render) {
-          window.passengersVoid.render();
-        }
-      }, 500);
-
     })();
 
     // ============================================================================
-    // �️ INDEXEDDB MANAGEMENT UI
-    // ============================================================================
-    (function () {
-      const DB_NAME = 'CyberLifeDB';
-      const DB_VERSION = 1;
-      const STORE_NAME = 'data';
-
-      // UI Elements
-      const btnRefresh = document.getElementById('indexeddb-refresh');
-      const btnClear = document.getElementById('indexeddb-clear');
-      const btnExport = document.getElementById('indexeddb-export');
-      const btnImport = document.getElementById('indexeddb-import');
-      const dataDisplay = document.getElementById('data-display');
-      const importFile = document.getElementById('import-file');
-      const importPreview = document.getElementById('import-preview');
-      const importPreviewContent = document.getElementById('import-preview-content');
-      const btnImportConfirm = document.getElementById('import-confirm');
-      const btnImportCancel = document.getElementById('import-cancel');
-      const logEntries = document.getElementById('log-entries');
-
-      let db = null;
-
-      // Logging function
-      function log(message, type = 'info') {
-        const timestamp = new Date().toLocaleTimeString();
-        const color = type === 'error' ? '#dc2626' : type === 'success' ? '#059669' : '#6b7280';
-        const entry = document.createElement('div');
-        entry.style.padding = '0.25rem 0';
-        entry.style.borderBottom = '1px solid #e5e7eb';
-        entry.innerHTML = `<span style="color:${escapeHtml(color)};font-weight:500">[${escapeHtml(timestamp)}]</span> ${escapeHtml(message)}`;
-        logEntries.appendChild(entry);
-        logEntries.scrollTop = logEntries.scrollHeight;
-      }
-
-      // Reuse shared openDB from main persistence system
-      async function openDB() {
-        return new Promise((resolve, reject) => {
-          const request = indexedDB.open(DB_NAME, DB_VERSION);
-          request.onupgradeneeded = function (e) {
-            db = e.target.result;
-            if (!db.objectStoreNames.contains(STORE_NAME)) {
-              db.createObjectStore(STORE_NAME);
-            }
-          };
-          request.onsuccess = function (e) {
-            db = e.target.result;
-            resolve(db);
-          };
-          request.onerror = function (e) {
-            reject(e);
-          };
-        });
-      }
-
-      // Load and display current data
-      async function loadCurrentData() {
-        try {
-          await openDB();
-          const tx = db.transaction([STORE_NAME], 'readonly');
-          const store = tx.objectStore(STORE_NAME);
-          const req = store.get('main');
-
-          req.onsuccess = () => {
-            if (req.result) {
-              const data = req.result;
-              dataDisplay.textContent = JSON.stringify(data, null, 2);
-              log('Data loaded successfully');
-            } else {
-              dataDisplay.textContent = 'No data found in database';
-              log('No data found in database');
-            }
-          };
-
-          req.onerror = () => {
-            dataDisplay.textContent = 'Error loading data';
-            log('Error loading data', 'error');
-          };
-        } catch (error) {
-          dataDisplay.textContent = 'Database connection error';
-          log('Database connection error: ' + error.message, 'error');
-        }
-      }
-
-      // Clear all data
-      async function clearAllData() {
-        if (!confirm('Are you sure you want to delete ALL data from IndexedDB? This cannot be undone!')) {
-          return;
-        }
-
-        try {
-          await openDB();
-          const tx = db.transaction([STORE_NAME], 'readwrite');
-          const store = tx.objectStore(STORE_NAME);
-          const req = store.clear();
-
-          req.onsuccess = () => {
-            // Reset CyberLifeData to defaults
-            window.CyberLifeData = {
-              calendar: {},
-              crewCyber: [],
-              crewHome: [],
-              passengers: [],
-              passengersVoid: [],
-              airosStatus: {},
-              airosUpdates: [],
-              company: [],
-              report: '',
-              cyberLifeReports: [],
-              appLog: [],
-              appLogEnabled: true,
-              intelligenceByYear: {},
-              metadata: {
-                version: '3.0',
-                lastSaved: null,
-                sections: 10
-              }
-            };
-
-            dataDisplay.textContent = 'Database cleared - all data deleted';
-            log('All data cleared successfully', 'success');
-
-            // Refresh all views
-            if (window.CrewLogicRender) window.CrewLogicRender();
-            if (window.passengers && window.passengers.render) window.passengers.render();
-          };
-
-          req.onerror = () => {
-            log('Error clearing data', 'error');
-          };
-        } catch (error) {
-          log('Error clearing data: ' + error.message, 'error');
-        }
-      }
-
-      // Export data
-      async function exportData() {
-        try {
-          await openDB();
-          const tx = db.transaction([STORE_NAME], 'readonly');
-          const store = tx.objectStore(STORE_NAME);
-          const req = store.get('main');
-
-          req.onsuccess = () => {
-            if (req.result) {
-              const dataStr = JSON.stringify(req.result, null, 2);
-              const blob = new Blob([dataStr], { type: 'application/json' });
-              const url = URL.createObjectURL(blob);
-
-              const a = document.createElement('a');
-              a.href = url;
-              a.download = `CyberLifeDB_Backup_${new Date().toISOString().split('T')[0]}.json`;
-              document.body.appendChild(a);
-              a.click();
-              document.body.removeChild(a);
-              URL.revokeObjectURL(url);
-
-              log('Data exported successfully', 'success');
-            } else {
-              log('No data to export', 'error');
-            }
-          };
-
-          req.onerror = () => {
-            log('Error exporting data', 'error');
-          };
-        } catch (error) {
-          log('Error exporting data: ' + error.message, 'error');
-        }
-      }
-
-      // Import data
-      function showImportUI() {
-        importFile.style.display = 'block';
-        importFile.value = '';
-        importPreview.style.display = 'none';
-        importPreviewContent.textContent = '';
-        btnImportConfirm.style.display = 'none';
-        btnImportCancel.style.display = 'inline-block';
-        importFile.click(); // Auto-open file dialog
-      }
-
-      function hideImportUI() {
-        importFile.style.display = 'none';
-        importPreview.style.display = 'none';
-        importPreviewContent.textContent = '';
-        btnImportConfirm.style.display = 'none';
-        btnImportCancel.style.display = 'none';
-        importFile.value = '';
-      }
-
-      // Handle file selection
-      importFile.addEventListener('change', function (e) {
-        const file = e.target.files[0];
-        if (!file) {
-          hideImportUI();
-          return;
-        }
-
-        if (!file.name.toLowerCase().endsWith('.json')) {
-          log('Please select a .json file', 'error');
-          hideImportUI();
-          return;
-        }
-
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          try {
-            const data = JSON.parse(e.target.result);
-            importPreviewContent.textContent = JSON.stringify(data, null, 2);
-            importPreview.style.display = 'block';
-            btnImportConfirm.style.display = 'inline-block';
-            btnImportConfirm.dataset.importData = e.target.result;
-            log('File loaded successfully. Review data and confirm import.');
-          } catch (error) {
-            log('Invalid JSON file: ' + error.message, 'error');
-            if (window.DEBUG_MODE) console.error('JSON parse error:', error);
-            hideImportUI();
-          }
-        };
-        reader.onerror = function () {
-          log('Error reading file', 'error');
-          hideImportUI();
-        };
-        reader.readAsText(file);
-      });
-
-      async function importData() {
-        try {
-          btnImportConfirm.disabled = true;
-          btnImportConfirm.textContent = 'Importing...';
-          
-          const data = JSON.parse(btnImportConfirm.dataset.importData);
-          
-          // Validate data structure
-          if (!data || typeof data !== 'object') {
-            throw new Error('Invalid data structure');
-          }
-
-          await openDB();
-          const tx = db.transaction([STORE_NAME], 'readwrite');
-          const store = tx.objectStore(STORE_NAME);
-          const req = store.put(data, 'main');
-
-          req.onsuccess = () => {
-            // Update CyberLifeData
-            Object.assign(window.CyberLifeData, data);
-
-            // Refresh display
-            loadCurrentData();
-
-            // Refresh all views
-            if (window.CrewLogicRender) window.CrewLogicRender();
-            if (window.passengers && window.passengers.render) window.passengers.render();
-
-            log('Data imported successfully from file', 'success');
-            btnImportConfirm.disabled = false;
-            btnImportConfirm.textContent = '✅ Confirm Import';
-            hideImportUI();
-          };
-
-          req.onerror = () => {
-            log('Error importing data from file', 'error');
-            if (window.DEBUG_MODE) console.error('IndexedDB import error');
-            btnImportConfirm.disabled = false;
-            btnImportConfirm.textContent = '✅ Confirm Import';
-          };
-        } catch (error) {
-          log('Error importing data from file: ' + error.message, 'error');
-          if (window.DEBUG_MODE) console.error('Import error:', error);
-          btnImportConfirm.disabled = false;
-          btnImportConfirm.textContent = '✅ Confirm Import';
-        }
-      }
-
-      // Event listeners
-      btnRefresh?.addEventListener('click', loadCurrentData);
-      btnClear?.addEventListener('click', clearAllData);
-      btnExport?.addEventListener('click', exportData);
-      btnImport?.addEventListener('click', showImportUI);
-      btnImportConfirm?.addEventListener('click', importData);
-      btnImportCancel?.addEventListener('click', hideImportUI);
-
-      // Initialize when IndexedDB view is shown
-      document.getElementById('indexeddb-btn')?.addEventListener('click', () => {
-        setTimeout(loadCurrentData, 100); // Small delay to ensure view is visible
-      });
-
-      log('IndexedDB Management UI initialized');
-    })();
-
-    // ============================================================================
-    // �🔗 COMPATIBILITY LAYER - Maps old appData to new CyberLifeData
+    // 🔗 COMPATIBILITY LAYER - Maps old appData to new CyberLifeData
     // ============================================================================
     (function () {
       // Create compatibility layer
@@ -3274,7 +2831,131 @@
       };
     })();
 
+    // ============================================================================
+    // 🐙 GITHUB REST API SYNC - reads/writes data.json in kadoglou36/cyberlife
+    // ============================================================================
+    (function () {
+      const GITHUB_OWNER = 'kadoglou36';
+      const GITHUB_REPO = 'cyberlife';
+      const GITHUB_FILE_PATH = 'data.json';
+      const TOKEN_STORAGE_KEY = 'cyberlife_token';
 
+      // sha of the last-loaded data.json, required by GitHub to update the file
+      let currentFileSHA = null;
+
+      function contentsApiUrl() {
+        return `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}`;
+      }
+
+      // Base64 helpers that correctly round-trip UTF-8 (unlike plain atob/btoa)
+      function utf8ToBase64(str) {
+        return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (_, hex) => String.fromCharCode(parseInt(hex, 16))));
+      }
+      function base64ToUtf8(str) {
+        return decodeURIComponent(atob(str).split('').map(c => '%' + c.charCodeAt(0).toString(16).padStart(2, '0')).join(''));
+      }
+
+      function getGitHubToken() {
+        let token = localStorage.getItem(TOKEN_STORAGE_KEY);
+        if (!token) {
+          token = prompt('Enter your GitHub Personal Access Token (repo scope) to sync CyberLife data:');
+          if (token) {
+            token = token.trim();
+            localStorage.setItem(TOKEN_STORAGE_KEY, token);
+          }
+        }
+        return token || null;
+      }
+
+      // Fetches and decodes data.json from GitHub, populating window.appData
+      async function loadAppData() {
+        const token = getGitHubToken();
+        if (!token) throw new Error('No GitHub token available');
+
+        const res = await fetch(contentsApiUrl(), {
+          headers: {
+            'Authorization': `token ${token}`,
+            'Accept': 'application/vnd.github+json'
+          }
+        });
+
+        if (res.status === 401) {
+          localStorage.removeItem(TOKEN_STORAGE_KEY);
+          throw new Error('GitHub authentication failed. Please re-enter your token.');
+        }
+        if (!res.ok) {
+          throw new Error(`Failed to load ${GITHUB_FILE_PATH}: ${res.status} ${res.statusText}`);
+        }
+
+        const file = await res.json();
+        currentFileSHA = file.sha;
+        window.currentFileSHA = currentFileSHA;
+
+        const decoded = base64ToUtf8((file.content || '').replace(/\n/g, ''));
+        const data = decoded ? JSON.parse(decoded) : {};
+        window.appData = data;
+        if (window.DEBUG_MODE) console.log('✅ appData loaded from GitHub', data);
+        return data;
+      }
+
+      // Encodes window.appData and writes it back to data.json on GitHub
+      async function saveAppData() {
+        const token = getGitHubToken();
+        if (!token) throw new Error('No GitHub token available');
+
+        const content = utf8ToBase64(JSON.stringify(window.appData || {}, null, 2));
+        const body = {
+          message: `Update ${GITHUB_FILE_PATH} - ${new Date().toISOString()}`,
+          content
+        };
+        if (currentFileSHA) body.sha = currentFileSHA;
+
+        const res = await fetch(contentsApiUrl(), {
+          method: 'PUT',
+          headers: {
+            'Authorization': `token ${token}`,
+            'Accept': 'application/vnd.github+json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(body)
+        });
+
+        if (res.status === 401) {
+          localStorage.removeItem(TOKEN_STORAGE_KEY);
+          throw new Error('GitHub authentication failed. Please re-enter your token.');
+        }
+        if (!res.ok) {
+          const errText = await res.text();
+          throw new Error(`Failed to save ${GITHUB_FILE_PATH}: ${res.status} ${errText}`);
+        }
+
+        const result = await res.json();
+        currentFileSHA = result.content?.sha || currentFileSHA;
+        window.currentFileSHA = currentFileSHA;
+        if (window.DEBUG_MODE) console.log('✅ appData saved to GitHub');
+        return result;
+      }
+
+      // Ensures a token exists, then loads the latest data.json
+      async function checkAuth() {
+        const token = getGitHubToken();
+        if (!token) return;
+        try {
+          await loadAppData();
+          window.restoreLastView?.();
+          window.passengersVoid?.render?.();
+        } catch (err) {
+          console.error('CyberLife GitHub sync error:', err);
+          alert(err.message);
+        }
+      }
+
+      window.loadAppData = loadAppData;
+      window.saveAppData = saveAppData;
+      window.checkAuth = checkAuth;
+
+      document.addEventListener('DOMContentLoaded', checkAuth);
+    })();
 
     (function () {
       const btn = document.getElementById('about-copyright');
@@ -3346,8 +3027,6 @@
         viewCyberLifeReports && (viewCyberLifeReports.hidden = true);
         viewCrew && (viewCrew.hidden = true);
         viewWorkTime && (viewWorkTime.hidden = true);
-        const viewIndexedDB = document.getElementById('view-indexeddb');
-        viewIndexedDB && (viewIndexedDB.hidden = true);
         const viewMaintenance = document.getElementById('view-maintenance');
         viewMaintenance && (viewMaintenance.hidden = true);
         const viewReport = document.getElementById('view-report');
@@ -3599,10 +3278,6 @@
             document.querySelectorAll('section.view').forEach(v => v.hidden = true);
             document.getElementById('view-maintenance').hidden = false;
             break;
-          case 'indexeddb':
-            document.querySelectorAll('section.view').forEach(v => v.hidden = true);
-            document.getElementById('view-indexeddb').hidden = false;
-            break;
           case 'report':
             document.querySelectorAll('.view').forEach(v => v.hidden = true);
             document.getElementById('view-report').hidden = false;
@@ -3610,11 +3285,7 @@
             break;
         }
       }
-
-      // Call restoreLastView after data is loaded
-      setTimeout(() => {
-        restoreLastView();
-      }, 600); // Slightly after data loads (500ms + 100ms buffer)
+      window.restoreLastView = restoreLastView;
 
 
       // Scroll over the calendar (main area) to change months (debounced for performance)

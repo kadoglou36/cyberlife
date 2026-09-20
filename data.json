@@ -1,1 +1,21 @@
-{}
+{
+  "tasks": {},
+  "passengers": [],
+  "passengersVoid": [],
+  "crewCyber": [],
+  "crewHome": [],
+  "company": [],
+  "airos": {},
+  "airosUpdates": [],
+  "intelligenceByYear": {},
+  "cyberLifeReports": [],
+  "appLog": [],
+  "appLogEnabled": true,
+  "workCalendar": {
+    "entries": [],
+    "settings": {
+      "defaultRate": 4,
+      "periodStartDay": 1
+    }
+  }
+}

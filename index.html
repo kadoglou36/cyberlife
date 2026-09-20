@@ -873,10 +873,64 @@
       justify-content: center;
       z-index: 1000
     }
+
+    #login-container[hidden] {
+      display: none !important
+    }
+
+    #cyberlife-auth-denied {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(135deg, #1f2937 0%, #0f172a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000
+    }
+
+    #cyberlife-auth-denied[hidden] {
+      display: none !important
+    }
+
+    /* Keep the entire app hidden behind the auth overlay until a valid token is confirmed */
+    body.cyberlife-locked>:not(#login-container):not(#cyberlife-auth-denied) {
+      display: none !important
+    }
   </style>
 </head>
 
-<body>
+<body class="cyberlife-locked">
+  <!-- GitHub Personal Access Token gate - blocks the entire app until authenticated -->
+  <div id="login-container">
+    <div class="overlay-card" style="max-width:420px;text-align:center">
+      <h3 style="font-size:1.3rem">🔒 CyberLife Access</h3>
+      <p class="overlay-msg">Enter a GitHub Personal Access Token (repo scope) to unlock AI Suite 3. It is stored
+        only in this browser and used solely to read/write <code>data.json</code>.</p>
+      <form id="cyberlife-auth-form" style="display:grid;gap:.6rem;margin-top:.8rem;text-align:left">
+        <label for="cyberlife-auth-token-input"
+          style="font-weight:600;font-size:.85rem;color:#374151">Personal Access Token</label>
+        <input type="password" id="cyberlife-auth-token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
+          autocomplete="off" style="border:1px solid #d1d5db;border-radius:8px;padding:.55rem .7rem;font-size:.95rem" />
+        <div id="cyberlife-auth-error" class="overlay-error" hidden></div>
+        <div class="overlay-actions">
+          <button type="button" class="btn" id="cyberlife-auth-cancel">Cancel</button>
+          <button type="submit" class="cal-btn cal-btn--blue" id="cyberlife-auth-connect">Connect</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Shown after cancel or when the user gives up on entering a valid token -->
+  <div id="cyberlife-auth-denied" hidden>
+    <div class="overlay-card" style="max-width:420px;text-align:center">
+      <h3 style="color:#ef4444;font-size:1.3rem">⛔ Access Denied</h3>
+      <p class="overlay-msg">A valid GitHub Personal Access Token is required to use AI Suite 3.</p>
+      <div class="overlay-actions" style="justify-content:center">
+        <button type="button" class="cal-btn cal-btn--blue" id="cyberlife-auth-retry">Try Again</button>
+      </div>
+    </div>
+  </div>
+
   <header class="topbar">
     <nav class="nav" aria-label="Main navigation">
       <button class="brand" id="brand-home" type="button">🏠 Main</button>
@@ -2855,21 +2909,19 @@
         return decodeURIComponent(atob(str).split('').map(c => '%' + c.charCodeAt(0).toString(16).padStart(2, '0')).join(''));
       }
 
-      function getGitHubToken() {
-        let token = localStorage.getItem(TOKEN_STORAGE_KEY);
-        if (!token) {
-          token = prompt('Enter your GitHub Personal Access Token (repo scope) to sync CyberLife data:');
-          if (token) {
-            token = token.trim();
-            localStorage.setItem(TOKEN_STORAGE_KEY, token);
-          }
-        }
-        return token || null;
+      function getStoredToken() {
+        return localStorage.getItem(TOKEN_STORAGE_KEY);
+      }
+      function setStoredToken(token) {
+        localStorage.setItem(TOKEN_STORAGE_KEY, token);
+      }
+      function clearStoredToken() {
+        localStorage.removeItem(TOKEN_STORAGE_KEY);
       }
 
       // Fetches and decodes data.json from GitHub, populating window.appData
       async function loadAppData() {
-        const token = getGitHubToken();
+        const token = getStoredToken();
         if (!token) throw new Error('No GitHub token available');
 
         const res = await fetch(contentsApiUrl(), {
@@ -2880,8 +2932,8 @@
         });
 
         if (res.status === 401) {
-          localStorage.removeItem(TOKEN_STORAGE_KEY);
-          throw new Error('GitHub authentication failed. Please re-enter your token.');
+          clearStoredToken();
+          throw new Error('Invalid GitHub token. Please check it and try again.');
         }
         if (!res.ok) {
           throw new Error(`Failed to load ${GITHUB_FILE_PATH}: ${res.status} ${res.statusText}`);
@@ -2900,7 +2952,7 @@
 
       // Encodes window.appData and writes it back to data.json on GitHub
       async function saveAppData() {
-        const token = getGitHubToken();
+        const token = getStoredToken();
         if (!token) throw new Error('No GitHub token available');
 
         const content = utf8ToBase64(JSON.stringify(window.appData || {}, null, 2));
@@ -2921,8 +2973,10 @@
         });
 
         if (res.status === 401) {
-          localStorage.removeItem(TOKEN_STORAGE_KEY);
-          throw new Error('GitHub authentication failed. Please re-enter your token.');
+          clearStoredToken();
+          lockApp();
+          showAuthForm('Your GitHub token is no longer valid. Please sign in again.');
+          throw new Error('Invalid GitHub token. Please check it and try again.');
         }
         if (!res.ok) {
           const errText = await res.text();
@@ -2936,17 +2990,93 @@
         return result;
       }
 
-      // Ensures a token exists, then loads the latest data.json
-      async function checkAuth() {
-        const token = getGitHubToken();
-        if (!token) return;
+      // ---- Auth overlay wiring ----
+      const authOverlay = document.getElementById('login-container');
+      const deniedOverlay = document.getElementById('cyberlife-auth-denied');
+      const authForm = document.getElementById('cyberlife-auth-form');
+      const tokenInput = document.getElementById('cyberlife-auth-token-input');
+      const errorEl = document.getElementById('cyberlife-auth-error');
+      const cancelBtn = document.getElementById('cyberlife-auth-cancel');
+      const retryBtn = document.getElementById('cyberlife-auth-retry');
+      const connectBtn = document.getElementById('cyberlife-auth-connect');
+
+      function lockApp() {
+        document.body.classList.add('cyberlife-locked');
+      }
+      function unlockApp() {
+        document.body.classList.remove('cyberlife-locked');
+      }
+      function showAuthForm(message) {
+        if (deniedOverlay) deniedOverlay.hidden = true;
+        if (authOverlay) authOverlay.hidden = false;
+        if (errorEl) {
+          errorEl.textContent = message || '';
+          errorEl.hidden = !message;
+        }
+        tokenInput?.focus();
+      }
+      function showAccessDenied() {
+        if (authOverlay) authOverlay.hidden = true;
+        if (deniedOverlay) deniedOverlay.hidden = false;
+      }
+      function hideAuthScreens() {
+        if (authOverlay) authOverlay.hidden = true;
+        if (deniedOverlay) deniedOverlay.hidden = true;
+      }
+
+      async function attemptLogin(token) {
+        setStoredToken(token);
+        if (connectBtn) { connectBtn.disabled = true; connectBtn.textContent = 'Connecting…'; }
         try {
           await loadAppData();
+          hideAuthScreens();
+          unlockApp();
           window.restoreLastView?.();
           window.passengersVoid?.render?.();
         } catch (err) {
           console.error('CyberLife GitHub sync error:', err);
-          alert(err.message);
+          showAuthForm(err.message || 'Failed to connect. Please check your token and try again.');
+        } finally {
+          if (connectBtn) { connectBtn.disabled = false; connectBtn.textContent = 'Connect'; }
+        }
+      }
+
+      authForm?.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const token = (tokenInput?.value || '').trim();
+        if (!token) {
+          showAuthForm('Please enter a Personal Access Token.');
+          return;
+        }
+        attemptLogin(token);
+      });
+
+      cancelBtn?.addEventListener('click', function () {
+        showAccessDenied();
+      });
+
+      retryBtn?.addEventListener('click', function () {
+        if (tokenInput) tokenInput.value = '';
+        showAuthForm();
+      });
+
+      // Ensures a token exists, then loads the latest data.json
+      async function checkAuth() {
+        lockApp();
+        const token = getStoredToken();
+        if (!token) {
+          showAuthForm();
+          return;
+        }
+        try {
+          await loadAppData();
+          hideAuthScreens();
+          unlockApp();
+          window.restoreLastView?.();
+          window.passengersVoid?.render?.();
+        } catch (err) {
+          console.error('CyberLife GitHub sync error:', err);
+          showAuthForm(err.message);
         }
       }
 

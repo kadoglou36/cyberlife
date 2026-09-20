@@ -2880,7 +2880,7 @@
         get: function () {
           return {
             // Map new structure to old names
-            tasks: window.CyberLifeData.calendar,
+            calendar: window.CyberLifeData.calendar,
             passengers: window.CyberLifeData.passengers,
             passengersVoid: window.CyberLifeData.passengersVoid,
             crewCyber: window.CyberLifeData.crewCyber,
@@ -2899,7 +2899,9 @@
         set: function (value) {
           // When old code sets appData, update new structure
           if (value && typeof value === 'object') {
-            if (value.tasks) window.CyberLifeData.calendar = value.tasks;
+            // 'tasks' is the legacy data.json key, kept as a fallback for older saved files
+            if (value.calendar) window.CyberLifeData.calendar = value.calendar;
+            else if (value.tasks) window.CyberLifeData.calendar = value.tasks;
             if (value.passengers) window.CyberLifeData.passengers = value.passengers;
             if (value.passengersVoid) window.CyberLifeData.passengersVoid = value.passengersVoid;
             if (value.crewCyber) window.CyberLifeData.crewCyber = value.crewCyber;
@@ -3292,7 +3294,7 @@
       function loadTasks(d) {
         try {
           const key = toKey(d);
-          const store = (window.appData && window.appData.tasks) ? window.appData.tasks : {};
+          const store = (window.appData && window.appData.calendar) ? window.appData.calendar : {};
           const arr = Array.isArray(store[key]) ? store[key] : [];
           // migrate legacy formats to {id,title,desc,color}
           let changed = false;
@@ -3312,10 +3314,10 @@
           });
           if (changed) {
             // write back to in-memory store and persist
-            if (!window.appData) window.appData = { passengers: [], airosStatus: {}, tasks: {}, airosUpdates: [] };
-            if (!window.appData.tasks) window.appData.tasks = {};
-            window.appData.tasks[key] = migrated;
-            window.cyberLifeAutoSave?.scheduleAutoSave();
+            if (!window.appData) window.appData = { passengers: [], airosStatus: {}, calendar: {}, airosUpdates: [] };
+            if (!window.appData.calendar) window.appData.calendar = {};
+            window.appData.calendar[key] = migrated;
+            window.saveAppData?.();
           }
           return migrated;
         } catch {
@@ -3324,10 +3326,10 @@
       }
       function saveTasks(d, tasks) {
         const key = toKey(d);
-        if (!window.appData) window.appData = { passengers: [], airosStatus: {}, tasks: {}, airosUpdates: [] };
-        if (!window.appData.tasks) window.appData.tasks = {};
-        window.appData.tasks[key] = tasks;
-        window.cyberLifeAutoSave?.scheduleAutoSave();
+        if (!window.appData) window.appData = { passengers: [], airosStatus: {}, calendar: {}, airosUpdates: [] };
+        if (!window.appData.calendar) window.appData.calendar = {};
+        window.appData.calendar[key] = tasks;
+        window.saveAppData?.();
       }
 
       function render() {

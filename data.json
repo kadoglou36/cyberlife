@@ -300,79 +300,79 @@
   "company": [],
   "airosStatus": {
     "AirOs": {
-      "status": "ONLINE",
+      "status": "OFFLINE",
       "note": ""
     },
     "Scanner": {
-      "status": "ONLINE",
+      "status": "OFFLINE",
       "note": ""
     },
     "Community": {
-      "status": "ONLINE",
+      "status": "OFFLINE",
       "note": ""
     },
     "Diagnostic": {
-      "status": "ONLINE",
+      "status": "OFFLINE",
       "note": ""
     },
     "Control Check": {
-      "status": "ONLINE",
+      "status": "OFFLINE",
       "note": ""
     },
     "Control Sleep": {
-      "status": "ONLINE",
+      "status": "OFFLINE",
       "note": ""
     },
     "Driving Control": {
-      "status": "ONLINE",
+      "status": "OFFLINE",
       "note": ""
     },
     "Power Control": {
-      "status": "ONLINE",
+      "status": "OFFLINE",
       "note": ""
     },
     "CT Scan": {
-      "status": "ONLINE",
+      "status": "OFFLINE",
       "note": ""
     },
     "Central Scan": {
-      "status": "ONLINE",
+      "status": "OFFLINE",
       "note": ""
     },
     "Processing": {
-      "status": "ONLINE",
+      "status": "OFFLINE",
       "note": ""
     },
     "Optical Graphics": {
-      "status": "ONLINE",
+      "status": "OFFLINE",
       "note": ""
     },
     "Technical": {
-      "status": "ONLINE",
+      "status": "OFFLINE",
       "note": ""
     },
     "Support": {
-      "status": "ONLINE",
+      "status": "OFFLINE",
       "note": ""
     },
     "Copilot + Recall": {
-      "status": "ONLINE",
+      "status": "OFFLINE",
       "note": ""
     },
     "Snap X Elite Assist": {
-      "status": "ONLINE",
+      "status": "OFFLINE",
       "note": ""
     },
     "Sudo": {
-      "status": "ONLINE",
+      "status": "OFFLINE",
       "note": ""
     },
     "Auto-Fix Engine": {
-      "status": "ONLINE",
+      "status": "OFFLINE",
       "note": ""
     },
     "Maintenance Module": {
-      "status": "ONLINE",
+      "status": "OFFLINE",
       "note": ""
     }
   },
@@ -2520,6 +2520,12 @@
       "area": "AirOs15 Status",
       "action": "Apply",
       "details": "19 tech ? ONLINE"
+    },
+    {
+      "when": "2026-09-20T16:34:25.138Z",
+      "area": "AirOs15 Status",
+      "action": "Apply",
+      "details": "19 tech ? OFFLINE"
     }
   ],
   "appLogEnabled": true,

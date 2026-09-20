@@ -2886,7 +2886,7 @@
             crewCyber: window.CyberLifeData.crewCyber,
             crewHome: window.CyberLifeData.crewHome,
             company: window.CyberLifeData.company,
-            airos: window.CyberLifeData.airosStatus,
+            airosStatus: window.CyberLifeData.airosStatus,
             airosUpdates: window.CyberLifeData.airosUpdates,
             airosUpdatesByTab: window.CyberLifeData.airosUpdatesByTab,
             intelligenceByYear: window.CyberLifeData.intelligenceByYear,
@@ -2905,7 +2905,7 @@
             if (value.crewCyber) window.CyberLifeData.crewCyber = value.crewCyber;
             if (value.crewHome) window.CyberLifeData.crewHome = value.crewHome;
             if (value.company) window.CyberLifeData.company = value.company;
-            if (value.airos) window.CyberLifeData.airosStatus = value.airos;
+            if (value.airosStatus) window.CyberLifeData.airosStatus = value.airosStatus;
             if (value.airosUpdates) window.CyberLifeData.airosUpdates = value.airosUpdates;
             if (value.airosUpdatesByTab) window.CyberLifeData.airosUpdatesByTab = value.airosUpdatesByTab;
             if (value.intelligenceByYear) window.CyberLifeData.intelligenceByYear = value.intelligenceByYear;
@@ -3312,7 +3312,7 @@
           });
           if (changed) {
             // write back to in-memory store and persist
-            if (!window.appData) window.appData = { passengers: [], airos: {}, tasks: {}, airosUpdates: [] };
+            if (!window.appData) window.appData = { passengers: [], airosStatus: {}, tasks: {}, airosUpdates: [] };
             if (!window.appData.tasks) window.appData.tasks = {};
             window.appData.tasks[key] = migrated;
             window.cyberLifeAutoSave?.scheduleAutoSave();
@@ -3324,7 +3324,7 @@
       }
       function saveTasks(d, tasks) {
         const key = toKey(d);
-        if (!window.appData) window.appData = { passengers: [], airos: {}, tasks: {}, airosUpdates: [] };
+        if (!window.appData) window.appData = { passengers: [], airosStatus: {}, tasks: {}, airosUpdates: [] };
         if (!window.appData.tasks) window.appData.tasks = {};
         window.appData.tasks[key] = tasks;
         window.cyberLifeAutoSave?.scheduleAutoSave();
@@ -4624,19 +4624,21 @@
       ];
       const STATUSES = ['ONLINE', 'OFFLINE', 'OVERLOAD', 'FAIL', 'AV/IN DECK', 'MAINTENANCE'];
       function load() {
-        const obj = window.appData?.airos;
-        return (obj && typeof obj === 'object') ? obj : {};
+        if (!window.appData) window.appData = { passengers: [], airosStatus: {}, tasks: {}, airosUpdates: [] };
+        if (!appData.airosStatus || typeof appData.airosStatus !== 'object') appData.airosStatus = {};
+        return appData.airosStatus;
       }
-      function save(obj) {
-        if (!window.appData) window.appData = { passengers: [], airos: {}, tasks: {}, airosUpdates: [] };
-        window.appData.airos = (obj && typeof obj === 'object') ? obj : {};
-        window.cyberLifeAutoSave?.scheduleAutoSave();
+      // Union of the known technologies with any extra keys already present in the data
+      function techList(state) {
+        const keys = TECHNOLOGIES.slice();
+        Object.keys(state).forEach(k => { if (!keys.includes(k)) keys.push(k); });
+        return keys;
       }
 
       function render() {
         const state = load();
         while (tbody.firstChild) tbody.removeChild(tbody.firstChild);
-        TECHNOLOGIES.forEach(tech => {
+        techList(state).forEach(tech => {
           const tr = document.createElement('tr');
           tr.style.cursor = 'pointer';
           function tdEl() { const td = document.createElement('td'); td.style.padding = '.5rem'; td.style.borderBottom = '1px solid #e5e7eb'; return td; }
@@ -4716,7 +4718,7 @@
           const prev = state[tech] || {};
           const val = select.value;
           state[tech] = { status: val, note: prev.note || '' };
-          save(state);
+          window.saveAppData?.();
           renderStatusPill(cell, val);
         };
         select.addEventListener('change', commit);
@@ -4747,7 +4749,7 @@
           const prev = state[tech] || {};
           const val = input.value.trim();
           state[tech] = { status: prev.status || '', note: val };
-          save(state);
+          window.saveAppData?.();
           cell.textContent = val;
         };
         const cancel = () => {
@@ -4835,7 +4837,7 @@
           const prev = state[tech] || {};
           state[tech] = { status, note: note !== '' ? note : (prev.note || '') };
         });
-        save(state);
+        window.saveAppData?.();
         window.appLogger?.log('AirOs15 Status', 'Apply', `${targets.length} tech ? ${status}`);
         closeModal();
         render();

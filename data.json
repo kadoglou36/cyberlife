@@ -1,5 +1,18 @@
 {
-  "tasks": {},
+  "tasks": {
+    "2026-09-20": [
+      {
+        "id": "1789921551444124",
+        "title": "test",
+        "desc": "test",
+        "color": "#60a5fa",
+        "startDate": "2026-09-20",
+        "endDate": "2026-09-20",
+        "startTime": "",
+        "endTime": ""
+      }
+    ]
+  },
   "passengers": [],
   "passengersVoid": [
     {
@@ -2423,6 +2436,12 @@
       "area": "CyberLife Reports",
       "action": "Category",
       "details": "--Unknown Block-Rule-Crew-Examine: Normal"
+    },
+    {
+      "when": "2026-09-20T16:25:51.445Z",
+      "area": "Calendar",
+      "action": "Add task",
+      "details": "test"
     }
   ],
   "appLogEnabled": true,

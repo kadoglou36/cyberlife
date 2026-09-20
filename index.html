@@ -3000,36 +3000,55 @@
         return data;
       }
 
+      // Fetches the sha GitHub currently has on record for data.json (required by the Contents API for updates)
+      async function fetchLatestSHA(token) {
+        const shaRes = await fetch(`${contentsApiUrl()}?t=${Date.now()}`, {
+          headers: {
+            'Authorization': `token ${token}`,
+            'Accept': 'application/vnd.github+json'
+          }
+        });
+        if (shaRes.status === 401) {
+          clearStoredToken();
+          lockApp();
+          showAuthForm('Your GitHub token is no longer valid. Please sign in again.');
+          throw new Error('Invalid GitHub token. Please check it and try again.');
+        }
+        if (!shaRes.ok) {
+          throw new Error(`Failed to fetch latest ${GITHUB_FILE_PATH} sha: ${shaRes.status} ${shaRes.statusText}`);
+        }
+        const shaFile = await shaRes.json();
+        currentFileSHA = shaFile.sha;
+        window.currentFileSHA = currentFileSHA;
+        return currentFileSHA;
+      }
+
+      // Chain of pending saves so overlapping saveAppData() calls run one at a time,
+      // each with a freshly-fetched sha, instead of racing on the same stale sha (which causes 409s)
+      let saveChain = Promise.resolve();
+
       // Encodes window.appData and writes it back to data.json on GitHub
-      async function saveAppData() {
+      function saveAppData() {
+        const run = saveChain.then(() => performSave());
+        // keep the chain alive even if this save fails, so later saves still run
+        saveChain = run.catch(() => {});
+        return run;
+      }
+
+      async function performSave(attempt = 0) {
         const token = getStoredToken();
         if (!token) throw new Error('No GitHub token available');
 
         try {
-          // Fetch the latest sha first, in case the file changed since it was last loaded
-          const shaRes = await fetch(`${contentsApiUrl()}?t=${Date.now()}`, {
-            headers: {
-              'Authorization': `token ${token}`,
-              'Accept': 'application/vnd.github+json'
-            }
-          });
-          if (shaRes.ok) {
-            const shaFile = await shaRes.json();
-            currentFileSHA = shaFile.sha;
-            window.currentFileSHA = currentFileSHA;
-          } else if (shaRes.status === 401) {
-            clearStoredToken();
-            lockApp();
-            showAuthForm('Your GitHub token is no longer valid. Please sign in again.');
-            throw new Error('Invalid GitHub token. Please check it and try again.');
-          }
+          // Always fetch the latest sha right before PUT, in case the file changed since it was last loaded
+          const sha = await fetchLatestSHA(token);
 
           const content = utf8ToBase64(JSON.stringify(window.appData || {}, null, 2));
           const body = {
             message: `Update ${GITHUB_FILE_PATH} - ${new Date().toISOString()}`,
-            content
+            content,
+            sha
           };
-          if (currentFileSHA) body.sha = currentFileSHA;
 
           const res = await fetch(contentsApiUrl(), {
             method: 'PUT',
@@ -3046,6 +3065,11 @@
             lockApp();
             showAuthForm('Your GitHub token is no longer valid. Please sign in again.');
             throw new Error('Invalid GitHub token. Please check it and try again.');
+          }
+          if (res.status === 409 && attempt < 2) {
+            // sha changed between our fetch and the PUT (another save landed first) - refetch and retry
+            if (window.DEBUG_MODE) console.warn(`⚠️ ${GITHUB_FILE_PATH} sha conflict (409), retrying with fresh sha... (attempt ${attempt + 1})`);
+            return performSave(attempt + 1);
           }
           if (!res.ok) {
             const errText = await res.text();

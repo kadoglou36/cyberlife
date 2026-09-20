@@ -4622,11 +4622,11 @@
       if (!tbody) return;
 
       const TECHNOLOGIES = [
-        'AirOs', 'Scanner', 'Community', 'Diagnostic', 'Control Check', 'Control Sleep', 'Driving Control', 'Power Control', 'CT Scan', 'Central Scan', 'Processing', 'Optical Graphics', 'Technical', 'Support', 'Copilot + Recall', 'Snap X Elite Assist', 'Sudo'
+        'AirOs', 'Scanner', 'Community', 'Diagnostic', 'Control Check', 'Control Sleep', 'Driving Control', 'Power Control', 'CT Scan', 'Central Scan', 'Processing', 'Optical Graphics', 'Technical', 'Support', 'Copilot + Recall', 'Snap X Elite Assist', 'Sudo', 'Auto-Fix Engine', 'Maintenance Module'
       ];
       const STATUSES = ['ONLINE', 'OFFLINE', 'OVERLOAD', 'FAIL', 'AV/IN DECK', 'MAINTENANCE'];
       function load() {
-        if (!window.appData) window.appData = { passengers: [], airosStatus: {}, tasks: {}, airosUpdates: [] };
+        if (!window.appData) window.appData = { passengers: [], airosStatus: {}, calendar: {}, airosUpdates: [] };
         if (!appData.airosStatus || typeof appData.airosStatus !== 'object') appData.airosStatus = {};
         return appData.airosStatus;
       }

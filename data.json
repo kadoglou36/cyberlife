@@ -1,5 +1,7 @@
 {
-  "tasks": {},
+  "tasks": {
+    "2026-09-20": []
+  },
   "passengers": [],
   "passengersVoid": [
     {
@@ -296,7 +298,7 @@
     }
   ],
   "company": [],
-  "airos": {},
+  "airosStatus": {},
   "airosUpdates": [],
   "airosUpdatesByTab": {
     "stable": [
@@ -2423,6 +2425,18 @@
       "area": "CyberLife Reports",
       "action": "Category",
       "details": "--Unknown Block-Rule-Crew-Examine: Normal"
+    },
+    {
+      "when": "2026-09-20T16:25:51.445Z",
+      "area": "Calendar",
+      "action": "Add task",
+      "details": "test"
+    },
+    {
+      "when": "2026-09-20T16:25:59.518Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "test"
     }
   ],
   "appLogEnabled": true,

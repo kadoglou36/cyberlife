@@ -1038,7 +1038,7 @@
       "description": "cd:for-in-cast\ncd:load-current-state\nX\\\\G:\\CyberLife\\Server-4\\10.68.42.100\\Tash Command\\AI Suite 3\\https:\\\\www.health.com\\\ncd:exit",
       "category": "Resolved",
       "createdAt": "2026-06-02T01:20:48.969Z",
-      "updatedAt": "2026-06-09T03:45:38.492Z"
+      "updatedAt": "2026-09-20T21:09:19.884Z"
     },
     {
       "id": "1780363315422",
@@ -2771,6 +2771,18 @@
       "area": "CyberLife Reports",
       "action": "Category",
       "details": "--Unknown Block-Rule-Crew-Examine: Normal"
+    },
+    {
+      "when": "2026-09-20T21:09:18.490Z",
+      "area": "CyberLife Reports",
+      "action": "Category",
+      "details": "--Patient--: Normal"
+    },
+    {
+      "when": "2026-09-20T21:09:19.884Z",
+      "area": "CyberLife Reports",
+      "action": "Category",
+      "details": "--Patient--: Resolved"
     }
   ],
   "appLogEnabled": true,

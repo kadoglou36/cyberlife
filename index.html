@@ -2975,6 +2975,7 @@
 
         // Cache-bust so the browser/CDN never serves a stale copy of data.json
         const res = await fetch(`${contentsApiUrl()}?t=${Date.now()}`, {
+          cache: 'no-store',
           headers: {
             'Authorization': `token ${token}`,
             'Accept': 'application/vnd.github+json'
@@ -3003,6 +3004,7 @@
       // Fetches the sha GitHub currently has on record for data.json (required by the Contents API for updates)
       async function fetchLatestSHA(token) {
         const shaRes = await fetch(`${contentsApiUrl()}?t=${Date.now()}`, {
+          cache: 'no-store',
           headers: {
             'Authorization': `token ${token}`,
             'Accept': 'application/vnd.github+json'
@@ -3066,9 +3068,10 @@
             showAuthForm('Your GitHub token is no longer valid. Please sign in again.');
             throw new Error('Invalid GitHub token. Please check it and try again.');
           }
-          if (res.status === 409 && attempt < 2) {
-            // sha changed between our fetch and the PUT (another save landed first) - refetch and retry
+          if (res.status === 409 && attempt < 3) {
+            // sha changed between our fetch and the PUT (another save landed first) - back off briefly, refetch and retry
             if (window.DEBUG_MODE) console.warn(`⚠️ ${GITHUB_FILE_PATH} sha conflict (409), retrying with fresh sha... (attempt ${attempt + 1})`);
+            await new Promise(r => setTimeout(r, 250 * (attempt + 1)));
             return performSave(attempt + 1);
           }
           if (!res.ok) {

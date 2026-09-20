@@ -298,7 +298,84 @@
     }
   ],
   "company": [],
-  "airosStatus": {},
+  "airosStatus": {
+    "AirOs": {
+      "status": "OFFLINE",
+      "note": ""
+    },
+    "Scanner": {
+      "status": "OFFLINE",
+      "note": ""
+    },
+    "Community": {
+      "status": "OFFLINE",
+      "note": ""
+    },
+    "Diagnostic": {
+      "status": "OFFLINE",
+      "note": ""
+    },
+    "Control Check": {
+      "status": "OFFLINE",
+      "note": ""
+    },
+    "Control Sleep": {
+      "status": "OFFLINE",
+      "note": ""
+    },
+    "Driving Control": {
+      "status": "OFFLINE",
+      "note": ""
+    },
+    "Power Control": {
+      "status": "OFFLINE",
+      "note": ""
+    },
+    "CT Scan": {
+      "status": "OFFLINE",
+      "note": ""
+    },
+    "Central Scan": {
+      "status": "OFFLINE",
+      "note": ""
+    },
+    "Processing": {
+      "status": "OFFLINE",
+      "note": ""
+    },
+    "Optical Graphics": {
+      "status": "OFFLINE",
+      "note": ""
+    },
+    "Technical": {
+      "status": "OFFLINE",
+      "note": ""
+    },
+    "Support": {
+      "status": "OFFLINE",
+      "note": ""
+    },
+    "Copilot + Recall": {
+      "status": "OFFLINE",
+      "note": ""
+    },
+    "Snap X Elite Assist": {
+      "status": "OFFLINE",
+      "note": ""
+    },
+    "Sudo": {
+      "status": "OFFLINE",
+      "note": ""
+    },
+    "Auto-Fix Engine": {
+      "status": "OFFLINE",
+      "note": ""
+    },
+    "Maintenance Module": {
+      "status": "OFFLINE",
+      "note": ""
+    }
+  },
   "airosUpdates": [],
   "airosUpdatesByTab": {
     "stable": [
@@ -2437,6 +2514,18 @@
       "area": "Calendar",
       "action": "Delete task",
       "details": "test"
+    },
+    {
+      "when": "2026-09-20T16:33:32.137Z",
+      "area": "AirOs15 Status",
+      "action": "Apply",
+      "details": "19 tech ? ONLINE"
+    },
+    {
+      "when": "2026-09-20T16:34:25.138Z",
+      "area": "AirOs15 Status",
+      "action": "Apply",
+      "details": "19 tech ? OFFLINE"
     }
   ],
   "appLogEnabled": true,

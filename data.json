@@ -300,80 +300,80 @@
   "company": [],
   "airosStatus": {
     "AirOs": {
-      "status": "OFFLINE",
-      "note": ""
+      "status": "ONLINE",
+      "note": "A1"
     },
     "Scanner": {
-      "status": "OFFLINE",
-      "note": ""
+      "status": "ONLINE",
+      "note": "A1"
     },
     "Community": {
-      "status": "OFFLINE",
-      "note": ""
+      "status": "ONLINE",
+      "note": "A1"
     },
     "Diagnostic": {
-      "status": "OFFLINE",
-      "note": ""
+      "status": "ONLINE",
+      "note": "A1"
     },
     "Control Check": {
-      "status": "OFFLINE",
-      "note": ""
+      "status": "ONLINE",
+      "note": "A1"
     },
     "Control Sleep": {
-      "status": "OFFLINE",
-      "note": ""
+      "status": "ONLINE",
+      "note": "A1"
     },
     "Driving Control": {
-      "status": "OFFLINE",
-      "note": ""
+      "status": "ONLINE",
+      "note": "A1"
     },
     "Power Control": {
-      "status": "OFFLINE",
-      "note": ""
+      "status": "ONLINE",
+      "note": "A1"
     },
     "CT Scan": {
-      "status": "OFFLINE",
-      "note": ""
+      "status": "ONLINE",
+      "note": "A1"
     },
     "Central Scan": {
-      "status": "OFFLINE",
-      "note": ""
+      "status": "ONLINE",
+      "note": "A1"
     },
     "Processing": {
-      "status": "OFFLINE",
-      "note": ""
+      "status": "ONLINE",
+      "note": "A1"
     },
     "Optical Graphics": {
-      "status": "OFFLINE",
-      "note": ""
+      "status": "ONLINE",
+      "note": "A1"
     },
     "Technical": {
-      "status": "OFFLINE",
-      "note": ""
+      "status": "ONLINE",
+      "note": "A1"
     },
     "Support": {
-      "status": "OFFLINE",
-      "note": ""
+      "status": "ONLINE",
+      "note": "A1"
     },
     "Copilot + Recall": {
-      "status": "OFFLINE",
-      "note": ""
+      "status": "ONLINE",
+      "note": "A1"
     },
     "Snap X Elite Assist": {
-      "status": "OFFLINE",
-      "note": ""
+      "status": "ONLINE",
+      "note": "A1"
     },
     "Sudo": {
-      "status": "OFFLINE",
-      "note": ""
+      "status": "ONLINE",
+      "note": "A1"
     },
     "Auto-Fix Engine": {
-      "status": "OFFLINE",
-      "note": ""
+      "status": "ONLINE",
+      "note": "A1"
     },
     "Maintenance Module": {
-      "status": "OFFLINE",
-      "note": ""
+      "status": "ONLINE",
+      "note": "A1"
     }
   },
   "airosUpdates": [],
@@ -2526,6 +2526,12 @@
       "area": "AirOs15 Status",
       "action": "Apply",
       "details": "19 tech ? OFFLINE"
+    },
+    {
+      "when": "2026-09-20T16:36:18.743Z",
+      "area": "AirOs15 Status",
+      "action": "Apply",
+      "details": "19 tech ? ONLINE"
     }
   ],
   "appLogEnabled": true,

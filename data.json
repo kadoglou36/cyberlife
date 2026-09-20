@@ -4156,6 +4156,11 @@
             "text": "11:00-15:00",
             "hours": 4,
             "valid": true
+          },
+          {
+            "text": "20:00-00:00",
+            "hours": 4,
+            "valid": true
           }
         ],
         "rate": 4,

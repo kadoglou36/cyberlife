@@ -4148,6 +4148,18 @@
         ],
         "rate": 4,
         "note": ""
+      },
+      {
+        "date": "2026-09-20",
+        "slots": [
+          {
+            "text": "11:00-15:00",
+            "hours": 4,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       }
     ],
     "settings": {

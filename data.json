@@ -1,1 +1,4984 @@
-
+{
+  "calendar": {
+    "2025-11-01": [],
+    "2025-11-02": [
+      {
+        "id": "1762205161964200",
+        "title": "Welcome to AI Suite 3",
+        "desc": "The crew will give all rules and token access in a few days",
+        "color": "#60a5fa",
+        "startDate": "2025-11-02",
+        "endDate": "2025-11-02",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "2025-11-09": [],
+    "2025-11-03": [
+      {
+        "id": "1762221418836393",
+        "title": "API Fail",
+        "desc": "CyberLife try to Publish the Online service and hass been fail",
+        "color": "#ef4444",
+        "startDate": "2025-11-03",
+        "endDate": "2025-11-03",
+        "startTime": "14:00",
+        "endTime": "06:00"
+      }
+    ],
+    "2025-11-30": [
+      {
+        "id": "1764187337102744",
+        "title": "Release AI Suite 3 V2.12",
+        "desc": "",
+        "color": "#60a5fa",
+        "startDate": "2025-11-30",
+        "endDate": "2025-11-30",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "2025-12-07": [
+      {
+        "id": "17641873863062",
+        "title": "Release AI Suite 3 V2.20",
+        "desc": "",
+        "color": "#60a5fa",
+        "startDate": "2025-12-07",
+        "endDate": "2025-12-07",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "2025-11-04": [
+      {
+        "id": "176418745085367",
+        "title": "API Restore",
+        "desc": "",
+        "color": "#60a5fa",
+        "startDate": "2025-11-04",
+        "endDate": "2025-11-04",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "2025-11-19": [
+      {
+        "id": "176418748998848",
+        "title": "Cloudflare Fail - Restore",
+        "desc": "",
+        "color": "#ef4444",
+        "startDate": "2025-11-19",
+        "endDate": "2025-11-19",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "2025-12-23": [
+      {
+        "id": "1766352772748208",
+        "title": "CyberLife",
+        "desc": "Install web-3 and AI Suite 3\n\nAll crew members will meeting for decided new protocol of season 2026\n\n\n\n\n Copyright ©️  All right reserved \n\nFirst officer: Vangelis Kadoglou",
+        "color": "#ef4444",
+        "startDate": "2025-12-23",
+        "endDate": "2026-01-04",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "2025-12-24": [
+      {
+        "id": "1766352772748208",
+        "title": "CyberLife",
+        "desc": "Install web-3 and AI Suite 3\n\nAll crew members will meeting for decided new protocol of season 2026\n\n\n\n\n Copyright ©️  All right reserved \n\nFirst officer: Vangelis Kadoglou",
+        "color": "#ef4444",
+        "startDate": "2025-12-23",
+        "endDate": "2026-01-04",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "2025-12-25": [
+      {
+        "id": "1766352772748208",
+        "title": "CyberLife",
+        "desc": "Install web-3 and AI Suite 3\n\nAll crew members will meeting for decided new protocol of season 2026\n\n\n\n\n Copyright ©️  All right reserved \n\nFirst officer: Vangelis Kadoglou",
+        "color": "#ef4444",
+        "startDate": "2025-12-23",
+        "endDate": "2026-01-04",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "2025-12-26": [
+      {
+        "id": "1766352772748208",
+        "title": "CyberLife",
+        "desc": "Install web-3 and AI Suite 3\n\nAll crew members will meeting for decided new protocol of season 2026\n\n\n\n\n Copyright ©️  All right reserved \n\nFirst officer: Vangelis Kadoglou",
+        "color": "#ef4444",
+        "startDate": "2025-12-23",
+        "endDate": "2026-01-04",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "2025-12-27": [
+      {
+        "id": "1766352772748208",
+        "title": "CyberLife",
+        "desc": "Install web-3 and AI Suite 3\n\nAll crew members will meeting for decided new protocol of season 2026\n\n\n\n\n Copyright ©️  All right reserved \n\nFirst officer: Vangelis Kadoglou",
+        "color": "#ef4444",
+        "startDate": "2025-12-23",
+        "endDate": "2026-01-04",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "2025-12-28": [
+      {
+        "id": "1766352772748208",
+        "title": "CyberLife",
+        "desc": "Install web-3 and AI Suite 3\n\nAll crew members will meeting for decided new protocol of season 2026\n\n\n\n\n Copyright ©️  All right reserved \n\nFirst officer: Vangelis Kadoglou",
+        "color": "#ef4444",
+        "startDate": "2025-12-23",
+        "endDate": "2026-01-04",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "2025-12-29": [
+      {
+        "id": "1766352772748208",
+        "title": "CyberLife",
+        "desc": "Install web-3 and AI Suite 3\n\nAll crew members will meeting for decided new protocol of season 2026\n\n\n\n\n Copyright ©️  All right reserved \n\nFirst officer: Vangelis Kadoglou",
+        "color": "#ef4444",
+        "startDate": "2025-12-23",
+        "endDate": "2026-01-04",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "2025-12-30": [
+      {
+        "id": "1766352772748208",
+        "title": "CyberLife",
+        "desc": "Install web-3 and AI Suite 3\n\nAll crew members will meeting for decided new protocol of season 2026\n\n\n\n\n Copyright ©️  All right reserved \n\nFirst officer: Vangelis Kadoglou",
+        "color": "#ef4444",
+        "startDate": "2025-12-23",
+        "endDate": "2026-01-04",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "2025-12-31": [
+      {
+        "id": "1766352772748208",
+        "title": "CyberLife",
+        "desc": "Install web-3 and AI Suite 3\n\nAll crew members will meeting for decided new protocol of season 2026\n\n\n\n\n Copyright ©️  All right reserved \n\nFirst officer: Vangelis Kadoglou",
+        "color": "#ef4444",
+        "startDate": "2025-12-23",
+        "endDate": "2026-01-04",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "2026-01-01": [
+      {
+        "id": "1766352772748208",
+        "title": "CyberLife",
+        "desc": "Install web-3 and AI Suite 3\n\nAll crew members will meeting for decided new protocol of season 2026\n\n\n\n\n Copyright ©️  All right reserved \n\nFirst officer: Vangelis Kadoglou",
+        "color": "#ef4444",
+        "startDate": "2025-12-23",
+        "endDate": "2026-01-04",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "2026-01-02": [
+      {
+        "id": "1766352772748208",
+        "title": "CyberLife",
+        "desc": "Install web-3 and AI Suite 3\n\nAll crew members will meeting for decided new protocol of season 2026\n\n\n\n\n Copyright ©️  All right reserved \n\nFirst officer: Vangelis Kadoglou",
+        "color": "#ef4444",
+        "startDate": "2025-12-23",
+        "endDate": "2026-01-04",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "2026-01-03": [
+      {
+        "id": "1766352772748208",
+        "title": "CyberLife",
+        "desc": "Install web-3 and AI Suite 3\n\nAll crew members will meeting for decided new protocol of season 2026\n\n\n\n\n Copyright ©️  All right reserved \n\nFirst officer: Vangelis Kadoglou",
+        "color": "#ef4444",
+        "startDate": "2025-12-23",
+        "endDate": "2026-01-04",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "2026-01-04": [
+      {
+        "id": "1766352772748208",
+        "title": "CyberLife",
+        "desc": "Install web-3 and AI Suite 3\n\nAll crew members will meeting for decided new protocol of season 2026\n\n\n\n\n Copyright ©️  All right reserved \n\nFirst officer: Vangelis Kadoglou",
+        "color": "#ef4444",
+        "startDate": "2025-12-23",
+        "endDate": "2026-01-04",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "2026-06-05": [
+      {
+        "id": "1780669386599114",
+        "title": "Hire Engineer",
+        "desc": "",
+        "color": "#60a5fa",
+        "startDate": "2026-06-05",
+        "endDate": "2026-06-05",
+        "startTime": "17:30",
+        "endTime": "18:30"
+      }
+    ],
+    "2026-07-30": [],
+    "2026-07-31": [
+      {
+        "id": "178534021135989",
+        "title": "Exit Poll",
+        "desc": "",
+        "color": "#60a5fa",
+        "startDate": "2026-07-31",
+        "endDate": "2026-07-31",
+        "startTime": "06:30",
+        "endTime": "12:30"
+      },
+      {
+        "id": "1785340322659678",
+        "title": "Release Crew",
+        "desc": "",
+        "color": "#60a5fa",
+        "startDate": "2026-07-31",
+        "endDate": "2026-07-31",
+        "startTime": "15:00",
+        "endTime": "15:30"
+      }
+    ],
+    "2026-07-29": [],
+    "2026-10-04": [
+      {
+        "id": "17853403947493",
+        "title": "Transport the Enginee",
+        "desc": "",
+        "color": "#60a5fa",
+        "startDate": "2026-10-04",
+        "endDate": "2026-10-04",
+        "startTime": "15:00",
+        "endTime": "18:00"
+      }
+    ]
+  },
+  "crewCyber": [
+    {
+      "id": "1762095985169",
+      "name": "Aurora Lein",
+      "role": "STAFF",
+      "company": "ALL COMPANY",
+      "status": "OPEN",
+      "verify": "YES"
+    },
+    {
+      "id": "1762096003838",
+      "name": "Vangelis Kadoglou",
+      "role": "First Officer",
+      "company": "AI Homestead",
+      "status": "OPEN",
+      "verify": "YES"
+    },
+    {
+      "id": "1762096014796",
+      "name": "Michael Rogers",
+      "role": "Capiten Officer",
+      "company": "AI Homestead",
+      "status": "OPEN",
+      "verify": "YES"
+    },
+    {
+      "id": "1762096039555",
+      "name": "Anna Taladianou",
+      "role": "Manager Officer",
+      "company": "AI Homestead",
+      "status": "OPEN",
+      "verify": "YES"
+    },
+    {
+      "id": "1762096054315",
+      "name": "Weronica Wurbanek",
+      "role": "Medical Officer",
+      "company": "AI Homestead",
+      "status": "OPEN",
+      "verify": "YES"
+    },
+    {
+      "id": "1762096073299",
+      "name": "Themis Thomas ||NO EXPIRE||",
+      "role": "Enginer Officer",
+      "company": "AI Homestead",
+      "status": "CLOSE",
+      "verify": "YES"
+    },
+    {
+      "id": "1762096101463",
+      "name": "Stefan Grek",
+      "role": "First Officer",
+      "company": "Bridged",
+      "status": "OPEN",
+      "verify": "YES"
+    },
+    {
+      "id": "1762096115774",
+      "name": "Alexandros Pouras",
+      "role": "Manager Officer",
+      "company": "Bridged",
+      "status": "OPEN",
+      "verify": "YES"
+    },
+    {
+      "id": "1762096130117",
+      "name": "Dimitris Anagno",
+      "role": "Cargo Manager",
+      "company": "Bridged",
+      "status": "OPEN",
+      "verify": "YES"
+    },
+    {
+      "id": "1762096165252",
+      "name": "Cristina Nova",
+      "role": "First Officer",
+      "company": "Fragile",
+      "status": "OPEN",
+      "verify": "YES"
+    },
+    {
+      "id": "1762096177888",
+      "name": "Zeletki Donalt",
+      "role": "Capiten Officer",
+      "company": "Fragile",
+      "status": "OPEN",
+      "verify": "YES"
+    },
+    {
+      "id": "1762096208294",
+      "name": "Stefan Grane",
+      "role": "First Officer",
+      "company": "Beluga",
+      "status": "OPEN",
+      "verify": "YES"
+    },
+    {
+      "id": "1762096223113",
+      "name": "Michael Breen",
+      "role": "Capiten Officer",
+      "company": "UCI",
+      "status": "OPEN",
+      "verify": "YES"
+    },
+    {
+      "id": "1762096239062",
+      "name": "Bill Gayds",
+      "role": "Capiten Officer",
+      "company": "Galaxy",
+      "status": "OPEN",
+      "verify": "YES"
+    },
+    {
+      "id": "1762096254168",
+      "name": "Syrgey Been",
+      "role": "Capiten Officer",
+      "company": "Universe",
+      "status": "OPEN",
+      "verify": "YES"
+    },
+    {
+      "id": "1762096265406",
+      "name": "Vannesa Santa",
+      "role": "Manager Officer",
+      "company": "Universe",
+      "status": "OPEN",
+      "verify": "YES"
+    }
+  ],
+  "crewHome": [
+    {
+      "id": "1762096343606",
+      "name": "Vannesa Santa",
+      "owning": "Dimension",
+      "onlinerole": "Owner",
+      "inservice": "1",
+      "personalid": "#1111",
+      "passport": "#1111",
+      "health": "#1111"
+    },
+    {
+      "id": "1762096374620",
+      "name": "Sergey Bird",
+      "owning": "Universe",
+      "onlinerole": "Owner",
+      "inservice": "1",
+      "personalid": "#2222",
+      "passport": "#2222",
+      "health": "#2222"
+    },
+    {
+      "id": "1762096403369",
+      "name": "Vangelis\tKadoglou",
+      "owning": "AI & G-S",
+      "onlinerole": "Owner",
+      "inservice": "1",
+      "personalid": "AN487256",
+      "passport": "",
+      "health": "10020402599"
+    },
+    {
+      "id": "1762096615490",
+      "name": "Weronica Wurbanek",
+      "owning": "AI & G-S",
+      "onlinerole": "Admin",
+      "inservice": "1",
+      "personalid": "TS472198",
+      "passport": "",
+      "health": "10025748693"
+    },
+    {
+      "id": "1762096661452",
+      "name": "Michael Rogers",
+      "owning": "AI & G-S",
+      "onlinerole": "Admin",
+      "inservice": "1",
+      "personalid": "IY546931",
+      "passport": "",
+      "health": "10084229365"
+    },
+    {
+      "id": "1762096973211",
+      "name": "Themis Thomas",
+      "owning": "AI Electrik supply",
+      "onlinerole": "Admin-L1",
+      "inservice": "0",
+      "personalid": "AN44788",
+      "passport": "-",
+      "health": "24050304788"
+    },
+    {
+      "id": "1764768187791",
+      "name": "Mariana Psom",
+      "owning": "AI Supply Service",
+      "onlinerole": "Admin-L1",
+      "inservice": "1",
+      "personalid": "AN458247",
+      "passport": "",
+      "health": "13069801247"
+    },
+    {
+      "id": "1762096742634",
+      "name": "Theofilos Theofilopoulos",
+      "owning": "AI Programmer",
+      "onlinerole": "Admin-L1",
+      "inservice": "1",
+      "personalid": "AN72615",
+      "passport": "",
+      "health": "10015487365"
+    },
+    {
+      "id": "1762096778344",
+      "name": "Nick Georgiou",
+      "owning": "AI Policy & Network",
+      "onlinerole": "Admin-L1",
+      "inservice": "1",
+      "personalid": "AN45702",
+      "passport": "",
+      "health": "10054723675"
+    },
+    {
+      "id": "1762096833519",
+      "name": "Panagiotis Kritikos",
+      "owning": "AI Hardware & Software",
+      "onlinerole": "Admin-L1",
+      "inservice": "1",
+      "personalid": "AN468210",
+      "passport": "",
+      "health": "10021579643"
+    },
+    {
+      "id": "1762096892390",
+      "name": "Anna Kritikou",
+      "owning": "AI Animacion Maker",
+      "onlinerole": "Admin-L1",
+      "inservice": "1",
+      "personalid": "AN417593",
+      "passport": "",
+      "health": "10023457532"
+    }
+  ],
+  "passengers": [],
+  "passengersVoid": [
+    {
+      "id": "12204",
+      "name": "Sofia Kaligeraki",
+      "stState": "FRAGGILE",
+      "dirState": "UCS",
+      "inDate": "01/10/2020",
+      "outDate": "15/06/2026",
+      "protocol": "36246/ΓΔ4/23-03-2026",
+      "tCreate": "First Officer"
+    },
+    {
+      "id": "15244",
+      "name": "Maria Kapola",
+      "stState": "FRAGGILE",
+      "dirState": "UCS",
+      "inDate": "12/11/2022",
+      "outDate": "15/06/2026",
+      "protocol": "36246/ΓΔ4/23-03-2026",
+      "tCreate": "First Officer"
+    },
+    {
+      "id": "00189",
+      "name": "Sofia Kouskouli",
+      "stState": "AI State",
+      "dirState": "UCS",
+      "inDate": "01/10/2025",
+      "outDate": "15/06/2026",
+      "protocol": "36246/ΓΔ4/23-03-2026",
+      "tCreate": "First Officer"
+    },
+    {
+      "id": "04033",
+      "name": "Falia Bakosi",
+      "stState": "FRAGGILE",
+      "dirState": "UCS",
+      "inDate": "15/09/2020",
+      "outDate": "15/06/2026",
+      "protocol": "36246/ΓΔ4/23-03-2026",
+      "tCreate": "First Officer"
+    },
+    {
+      "id": "51951962024",
+      "name": "Aggeliki Koukouraki",
+      "stState": "FRAGGILE",
+      "dirState": "UCS",
+      "inDate": "25/04/2026",
+      "outDate": "15/06/2026",
+      "protocol": "36246/ΓΔ4/23-03-2026",
+      "tCreate": "First Officer"
+    }
+  ],
+  "airosStatus": {
+    "AirOs": {
+      "status": "ONLINE",
+      "note": "A1"
+    },
+    "Scanner": {
+      "status": "ONLINE",
+      "note": "A1"
+    },
+    "Community": {
+      "status": "ONLINE",
+      "note": "A1"
+    },
+    "Diagnostic": {
+      "status": "ONLINE",
+      "note": "A1"
+    },
+    "Control Check": {
+      "status": "ONLINE",
+      "note": "A1"
+    },
+    "Control Sleep": {
+      "status": "ONLINE",
+      "note": "A1"
+    },
+    "Driving Control": {
+      "status": "ONLINE",
+      "note": "A1"
+    },
+    "Power Control": {
+      "status": "ONLINE",
+      "note": "A1"
+    },
+    "CT Scan": {
+      "status": "ONLINE",
+      "note": "A1"
+    },
+    "Central Scan": {
+      "status": "ONLINE",
+      "note": "A1"
+    },
+    "Processing": {
+      "status": "ONLINE",
+      "note": "A1"
+    },
+    "Optical Graphics": {
+      "status": "ONLINE",
+      "note": "A1"
+    },
+    "Technical": {
+      "status": "ONLINE",
+      "note": "A1"
+    },
+    "Support": {
+      "status": "ONLINE",
+      "note": "A1"
+    },
+    "Copilot + Recall": {
+      "status": "ONLINE",
+      "note": "A1"
+    },
+    "Snap X Elite Assist": {
+      "status": "ONLINE",
+      "note": "A1"
+    },
+    "Sudo": {
+      "status": "ONLINE",
+      "note": "A1"
+    }
+  },
+  "airosUpdates": [],
+  "company": [],
+  "report": "",
+  "cyberLifeReports": [
+    {
+      "id": "1780363248969",
+      "subject": "--Patient--",
+      "description": "cd:for-in-cast\ncd:load-current-state\nX\\\\G:\\CyberLife\\Server-4\\10.68.42.100\\Tash Command\\AI Suite 3\\https:\\\\www.health.com\\\ncd:exit",
+      "category": "Resolved",
+      "createdAt": "2026-06-02T01:20:48.969Z",
+      "updatedAt": "2026-06-09T03:45:38.492Z"
+    },
+    {
+      "id": "1780363315422",
+      "subject": "--Custom Rulle-Middle-East-EMEA--",
+      "description": "cd:for-in-cast\ncd:load-current-tash\ncd:credetials:user:kadoglou36=pass:***************\ncd:set-grundet-state:Middle-East:EMEA=+960,+91,+92,+93,+94,+95,+86,\n+81,+82,+84,+66,+65,+60,+62,+63,+212,+213,+216,+218,+249:True\ncd:set-rulle-AirOs15-services:False\ncd:access-only-current-grundet:firts-officer,captain\ncd:close",
+      "category": "Critical",
+      "createdAt": "2026-06-02T01:21:55.422Z",
+      "updatedAt": "2026-06-09T03:50:18.434Z"
+    },
+    {
+      "id": "1780363383590",
+      "subject": "--Custom Rulle-Pause-Developing--",
+      "description": "cd:request-file-net\nX\\\\https://vangeliskadoglou.website3.me/\ncd:request-full-html\ncd:data.base-export\ncd:request-send-DB\\\\G\\CyberLife",
+      "category": "Critical",
+      "createdAt": "2026-06-02T01:23:03.590Z",
+      "updatedAt": "2026-06-02T01:23:03.590Z"
+    },
+    {
+      "id": "1785109306896",
+      "subject": "--Unknown Block-Rule-Crew-Examine",
+      "description": "research unknown reason of blocking specific id in fragile",
+      "category": "Normal",
+      "createdAt": "2026-07-26T23:41:46.896Z",
+      "updatedAt": "2026-09-09T12:40:59.449Z"
+    },
+    {
+      "id": "1788957606714",
+      "subject": "SCHOOL TRANSMIT IDs/NAT",
+      "description": "Organize all ids of each school in homestead\n\nPrimary Level School\nTOTAL               : 730.000 – 750.000\nACTUAL            :\nIN PROGRES    : 542.540\nFINISHED         : 148.000\n\nSecondary Level School\nTOTAL               : 550.000 – 580.000\nACTUAL            :\nIN PROGRES    : 165.457\nFINISHED         : 54.140",
+      "category": "Critical",
+      "createdAt": "2026-09-09T12:40:06.714Z",
+      "updatedAt": "2026-09-09T12:40:06.714Z"
+    }
+  ],
+  "workCalendar": {
+    "entries": [
+      {
+        "date": "2026-05-29",
+        "slots": [
+          {
+            "text": "18:00-01:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "hours": 7,
+        "rate": 4,
+        "note": "Opening",
+        "updatedAt": "2026-06-03T10:18:48.610Z"
+      },
+      {
+        "date": "2026-05-30",
+        "slots": [
+          {
+            "text": "18:00-03:00",
+            "hours": 9,
+            "valid": true
+          }
+        ],
+        "hours": 9,
+        "rate": 4,
+        "note": "Opening DJ Party",
+        "updatedAt": "2026-06-03T10:18:44.824Z"
+      },
+      {
+        "date": "2026-05-31",
+        "slots": [
+          {
+            "text": "18:00-02:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "hours": 8,
+        "rate": 4,
+        "note": "",
+        "updatedAt": "2026-06-03T10:18:46.972Z"
+      },
+      {
+        "date": "2026-06-01",
+        "slots": [
+          {
+            "text": "18:00-01:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "hours": 7,
+        "rate": 4,
+        "note": "",
+        "updatedAt": "2026-06-02T01:17:51.970Z"
+      },
+      {
+        "date": "2026-06-02",
+        "slots": [
+          {
+            "text": "18:00-00:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "hours": 6,
+        "rate": 4,
+        "note": "",
+        "updatedAt": "2026-06-03T10:18:05.900Z"
+      },
+      {
+        "date": "2026-06-03",
+        "slots": [
+          {
+            "text": "18:00-01:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-04",
+        "slots": [
+          {
+            "text": "18:00-01:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-05",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-06",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-07",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-08",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-09",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-10",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-11",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-12",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-13",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-14",
+        "slots": [
+          {
+            "text": "11:00-13:30",
+            "hours": 2.5,
+            "valid": true
+          },
+          {
+            "text": "19:30-01:00",
+            "hours": 5.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-15",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-16",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-19",
+        "slots": [
+          {
+            "text": "19:30-01:00",
+            "hours": 5.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-18",
+        "slots": [
+          {
+            "text": "20:00-00:30",
+            "hours": 4.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-17",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-20",
+        "slots": [
+          {
+            "text": "18:00-01:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-21",
+        "slots": [
+          {
+            "text": "11:00-14:30",
+            "hours": 3.5,
+            "valid": true
+          },
+          {
+            "text": "19:30-01:00",
+            "hours": 5.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-22",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-23",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-24",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-25",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-26",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-27",
+        "slots": [
+          {
+            "text": "18:00-02:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-28",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-29",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-06-30",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-01",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-02",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-03",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-04",
+        "slots": [
+          {
+            "text": "18:00-02:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-05",
+        "slots": [
+          {
+            "text": "11:00-15:00",
+            "hours": 4,
+            "valid": true
+          },
+          {
+            "text": "20:00-02:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-06",
+        "slots": [
+          {
+            "text": "19:00-00:30",
+            "hours": 5.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-07",
+        "slots": [
+          {
+            "text": "19:30-01:00",
+            "hours": 5.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-08",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-09",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-10",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-11",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-12",
+        "slots": [
+          {
+            "text": "11:00-14:00",
+            "hours": 3,
+            "valid": true
+          },
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-16",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-13",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-14",
+        "slots": [
+          {
+            "text": "19:00-00:30",
+            "hours": 5.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-15",
+        "slots": [
+          {
+            "text": "19:30-01:00",
+            "hours": 5.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-17",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-18",
+        "slots": [
+          {
+            "text": "19:00-01:30",
+            "hours": 6.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-19",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-20",
+        "slots": [
+          {
+            "text": "19:00-00:30",
+            "hours": 5.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-21",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-22",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-23",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-24",
+        "slots": [
+          {
+            "text": "19:00-03:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-25",
+        "slots": [
+          {
+            "text": "18:00-03:00",
+            "hours": 9,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-26",
+        "slots": [
+          {
+            "text": "11:00-13:00",
+            "hours": 2,
+            "valid": true
+          },
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-27",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-28",
+        "slots": [
+          {
+            "text": "20:00-01:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-29",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-30",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-31",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-01",
+        "slots": [
+          {
+            "text": "18:00-02:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-02",
+        "slots": [
+          {
+            "text": "11:00-14:00",
+            "hours": 3,
+            "valid": true
+          },
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-03",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-04",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-05",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-06",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-07",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-08",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-09",
+        "slots": [
+          {
+            "text": "18:00-03:00",
+            "hours": 9,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-10",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-11",
+        "slots": [
+          {
+            "text": "19:00-03:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-12",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-13",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-14",
+        "slots": [
+          {
+            "text": "17:00-02:00",
+            "hours": 9,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-15",
+        "slots": [
+          {
+            "text": "11:00-15:00",
+            "hours": 4,
+            "valid": true
+          },
+          {
+            "text": "18:00-02:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-16",
+        "slots": [
+          {
+            "text": "10:30-15:00",
+            "hours": 4.5,
+            "valid": true
+          },
+          {
+            "text": "18:00-02:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-17",
+        "slots": [
+          {
+            "text": "18:30-02:00",
+            "hours": 7.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-18",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-19",
+        "slots": [
+          {
+            "text": "18:00-02:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-20",
+        "slots": [
+          {
+            "text": "18:00-02:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-21",
+        "slots": [
+          {
+            "text": "17:00-03:00",
+            "hours": 10,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-22",
+        "slots": [
+          {
+            "text": "18:00-03:00",
+            "hours": 9,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-23",
+        "slots": [
+          {
+            "text": "10:00-14:00",
+            "hours": 4,
+            "valid": true
+          },
+          {
+            "text": "19:00-04:00",
+            "hours": 9,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-24",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-25",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-26",
+        "slots": [
+          {
+            "text": "19:00-03:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-27",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-28",
+        "slots": [
+          {
+            "text": "18:00-02:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-29",
+        "slots": [
+          {
+            "text": "17:00-05:00",
+            "hours": 12,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-30",
+        "slots": [
+          {
+            "text": "18:00-01:30",
+            "hours": 7.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-31",
+        "slots": [
+          {
+            "text": "18:30-01:30",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-01",
+        "slots": [
+          {
+            "text": "20:00-00:30",
+            "hours": 4.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-02",
+        "slots": [
+          {
+            "text": "20:00-01:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-03",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-04",
+        "slots": [
+          {
+            "text": "19:00-12:00",
+            "hours": 17,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-05",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-06",
+        "slots": [
+          {
+            "text": "11:00-13:00",
+            "hours": 2,
+            "valid": true
+          },
+          {
+            "text": "20:00-00:00",
+            "hours": 4,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-07",
+        "slots": [
+          {
+            "text": "20:00-00:00",
+            "hours": 4,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-09",
+        "slots": [
+          {
+            "text": "20:00-01:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-11",
+        "slots": [
+          {
+            "text": "19:00-00:30",
+            "hours": 5.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-12",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-13",
+        "slots": [
+          {
+            "text": "11:00-13:00",
+            "hours": 2,
+            "valid": true
+          },
+          {
+            "text": "20:00-00:00",
+            "hours": 4,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-17",
+        "slots": [
+          {
+            "text": "20:00-23:30",
+            "hours": 3.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-18",
+        "slots": [
+          {
+            "text": "22:00-01:00",
+            "hours": 3,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-19",
+        "slots": [
+          {
+            "text": "18:00-01:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      }
+    ],
+    "settings": {
+      "defaultRate": 4,
+      "periodStartDay": 1
+    }
+  },
+  "appLog": [
+    {
+      "when": "2025-11-02T15:06:25.169Z",
+      "area": "Crew CyberLife",
+      "action": "Add",
+      "details": "1762095985169 Aurora Lein"
+    },
+    {
+      "when": "2025-11-02T15:06:43.838Z",
+      "area": "Crew CyberLife",
+      "action": "Add",
+      "details": "1762096003838 Vangelis Kadoglou"
+    },
+    {
+      "when": "2025-11-02T15:06:54.796Z",
+      "area": "Crew CyberLife",
+      "action": "Add",
+      "details": "1762096014796 Michael Rogers"
+    },
+    {
+      "when": "2025-11-02T15:07:19.555Z",
+      "area": "Crew CyberLife",
+      "action": "Add",
+      "details": "1762096039555 Anna Taladianou"
+    },
+    {
+      "when": "2025-11-02T15:07:34.315Z",
+      "area": "Crew CyberLife",
+      "action": "Add",
+      "details": "1762096054315 Weronica Wurbanek"
+    },
+    {
+      "when": "2025-11-02T15:07:53.299Z",
+      "area": "Crew CyberLife",
+      "action": "Add",
+      "details": "1762096073299 NO SERVICE"
+    },
+    {
+      "when": "2025-11-02T15:08:21.464Z",
+      "area": "Crew CyberLife",
+      "action": "Add",
+      "details": "1762096101463 Stefan Grek"
+    },
+    {
+      "when": "2025-11-02T15:08:35.774Z",
+      "area": "Crew CyberLife",
+      "action": "Add",
+      "details": "1762096115774 Alexandros Pouras"
+    },
+    {
+      "when": "2025-11-02T15:08:50.118Z",
+      "area": "Crew CyberLife",
+      "action": "Add",
+      "details": "1762096130117 Dimitris Anagno"
+    },
+    {
+      "when": "2025-11-02T15:08:54.258Z",
+      "area": "Crew CyberLife",
+      "action": "Reorder",
+      "details": "Dimitris Anagno moved from position 9 to 7"
+    },
+    {
+      "when": "2025-11-02T15:08:59.384Z",
+      "area": "Crew CyberLife",
+      "action": "Reorder",
+      "details": "Dimitris Anagno moved from position 7 to 8"
+    },
+    {
+      "when": "2025-11-02T15:09:00.976Z",
+      "area": "Crew CyberLife",
+      "action": "Reorder",
+      "details": "Dimitris Anagno moved from position 8 to 9"
+    },
+    {
+      "when": "2025-11-02T15:09:25.252Z",
+      "area": "Crew CyberLife",
+      "action": "Add",
+      "details": "1762096165252 Cristina Nova"
+    },
+    {
+      "when": "2025-11-02T15:09:37.888Z",
+      "area": "Crew CyberLife",
+      "action": "Add",
+      "details": "1762096177888 Zeletki Donalt"
+    },
+    {
+      "when": "2025-11-02T15:10:08.294Z",
+      "area": "Crew CyberLife",
+      "action": "Add",
+      "details": "1762096208294 Stefan Grane"
+    },
+    {
+      "when": "2025-11-02T15:10:23.113Z",
+      "area": "Crew CyberLife",
+      "action": "Add",
+      "details": "1762096223113 Michael Breen"
+    },
+    {
+      "when": "2025-11-02T15:10:39.062Z",
+      "area": "Crew CyberLife",
+      "action": "Add",
+      "details": "1762096239062 Bill Gayds"
+    },
+    {
+      "when": "2025-11-02T15:10:54.168Z",
+      "area": "Crew CyberLife",
+      "action": "Add",
+      "details": "1762096254168 Syrgey Been"
+    },
+    {
+      "when": "2025-11-02T15:11:05.406Z",
+      "area": "Crew CyberLife",
+      "action": "Add",
+      "details": "1762096265406 Vannesa Santa"
+    },
+    {
+      "when": "2025-11-02T15:12:23.606Z",
+      "area": "Crew Homestead",
+      "action": "Add",
+      "details": "1762096343606 Vannesa Santa"
+    },
+    {
+      "when": "2025-11-02T15:12:54.620Z",
+      "area": "Crew Homestead",
+      "action": "Add",
+      "details": "1762096374620 Sergey Bird"
+    },
+    {
+      "when": "2025-11-02T15:13:23.369Z",
+      "area": "Crew Homestead",
+      "action": "Add",
+      "details": "1762096403369 Vangelis\tKadoglou"
+    },
+    {
+      "when": "2025-11-02T15:16:55.490Z",
+      "area": "Crew Homestead",
+      "action": "Add",
+      "details": "1762096615490 Weronica Wurbanek"
+    },
+    {
+      "when": "2025-11-02T15:17:41.452Z",
+      "area": "Crew Homestead",
+      "action": "Add",
+      "details": "1762096661452 Michael Rogers"
+    },
+    {
+      "when": "2025-11-02T15:18:06.616Z",
+      "area": "Crew Homestead",
+      "action": "Reorder",
+      "details": "Michael Rogers moved from position 5 to 4"
+    },
+    {
+      "when": "2025-11-02T15:18:07.485Z",
+      "area": "Crew Homestead",
+      "action": "Reorder",
+      "details": "Weronica Wurbanek moved from position 5 to 4"
+    },
+    {
+      "when": "2025-11-02T15:19:02.634Z",
+      "area": "Crew Homestead",
+      "action": "Add",
+      "details": "1762096742634 Theofilos Theofilopoulos"
+    },
+    {
+      "when": "2025-11-02T15:19:38.344Z",
+      "area": "Crew Homestead",
+      "action": "Add",
+      "details": "1762096778344 Nick Georgiou"
+    },
+    {
+      "when": "2025-11-02T15:20:33.520Z",
+      "area": "Crew Homestead",
+      "action": "Add",
+      "details": "1762096833519 Panagiotis Kritikos"
+    },
+    {
+      "when": "2025-11-02T15:21:32.390Z",
+      "area": "Crew Homestead",
+      "action": "Add",
+      "details": "1762096892390 Anna Kritikou"
+    },
+    {
+      "when": "2025-11-02T15:22:53.211Z",
+      "area": "Crew Homestead",
+      "action": "Add",
+      "details": "1762096973211 NO SERVISE"
+    },
+    {
+      "when": "2025-11-02T15:23:38.939Z",
+      "area": "Crew Homestead",
+      "action": "Edit",
+      "details": "1762096973211 NO SERVISE"
+    },
+    {
+      "when": "2025-11-02T15:23:44.019Z",
+      "area": "Crew Homestead",
+      "action": "Edit",
+      "details": "1762096973211 NO SERVISE"
+    },
+    {
+      "when": "2025-11-02T15:24:05.187Z",
+      "area": "AirOs15 Status",
+      "action": "Apply",
+      "details": "17 tech ? ONLINE"
+    },
+    {
+      "when": "2025-11-02T15:24:30.424Z",
+      "area": "AirOs15 Status",
+      "action": "Apply",
+      "details": "1 tech ? AV/IN DECK"
+    },
+    {
+      "when": "2025-11-02T15:24:51.936Z",
+      "area": "AirOs15 Status",
+      "action": "Apply",
+      "details": "1 tech ? OFFLINE"
+    },
+    {
+      "when": "2025-11-02T17:57:16.446Z",
+      "area": "AirOs15 Status",
+      "action": "Apply",
+      "details": "15 tech ? ONLINE"
+    },
+    {
+      "when": "2025-11-03T21:08:22.273Z",
+      "area": "Calendar",
+      "action": "Add task",
+      "details": "test"
+    },
+    {
+      "when": "2025-11-03T21:25:09.457Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "test"
+    },
+    {
+      "when": "2025-11-03T21:26:01.964Z",
+      "area": "Calendar",
+      "action": "Add task",
+      "details": "Welcome to AI Suite 3"
+    },
+    {
+      "when": "2025-11-03T21:28:05.261Z",
+      "area": "Calendar",
+      "action": "Edit task",
+      "details": "Welcome to AI Suite 3"
+    },
+    {
+      "when": "2025-11-03T21:28:09.633Z",
+      "area": "Calendar",
+      "action": "Edit task",
+      "details": "Welcome to AI Suite 3"
+    },
+    {
+      "when": "2025-11-03T21:42:56.967Z",
+      "area": "Crew CyberLife",
+      "action": "Reorder",
+      "details": "Aurora Lein moved from position 1 to 2"
+    },
+    {
+      "when": "2025-11-03T21:42:57.928Z",
+      "area": "Crew CyberLife",
+      "action": "Reorder",
+      "details": "Aurora Lein moved from position 2 to 1"
+    },
+    {
+      "when": "2025-11-04T01:56:58.836Z",
+      "area": "Calendar",
+      "action": "Add task",
+      "details": "API Fail"
+    },
+    {
+      "when": "2025-11-05T19:04:04.803Z",
+      "area": "Passengers",
+      "action": "Add",
+      "details": "00100 aaa"
+    },
+    {
+      "when": "2025-11-05T19:04:14.354Z",
+      "area": "Passengers",
+      "action": "Add",
+      "details": "323 rewfsdfs"
+    },
+    {
+      "when": "2025-11-05T19:04:31.528Z",
+      "area": "Passengers",
+      "action": "Delete",
+      "details": "00100 aaa"
+    },
+    {
+      "when": "2025-11-05T19:04:35.449Z",
+      "area": "Passengers VOID",
+      "action": "Delete",
+      "details": "323 rewfsdfs"
+    },
+    {
+      "when": "2025-11-25T21:37:00.901Z",
+      "area": "Passengers",
+      "action": "Add",
+      "details": "00100 Petrs Jonson"
+    },
+    {
+      "when": "2025-11-25T21:38:16.614Z",
+      "area": "Passengers",
+      "action": "Add",
+      "details": "Rogers Jonson"
+    },
+    {
+      "when": "2025-11-25T21:53:19.531Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "00100 Petrs Jonso"
+    },
+    {
+      "when": "2025-11-25T21:53:28.224Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "00100 Petrs Jonson"
+    },
+    {
+      "when": "2025-11-25T21:54:15.637Z",
+      "area": "Passengers",
+      "action": "Add",
+      "details": "01111 test"
+    },
+    {
+      "when": "2025-11-25T21:54:22.552Z",
+      "area": "Passengers VOID",
+      "action": "Delete",
+      "details": "01111 test"
+    },
+    {
+      "when": "2025-11-25T21:54:41.509Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "Rogers Jonso"
+    },
+    {
+      "when": "2025-11-25T21:54:49.679Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "Rogers Jonson"
+    },
+    {
+      "when": "2025-11-26T20:02:17.102Z",
+      "area": "Calendar",
+      "action": "Add task",
+      "details": "Release AI Suite 3 V2.12"
+    },
+    {
+      "when": "2025-11-26T20:03:06.306Z",
+      "area": "Calendar",
+      "action": "Add task",
+      "details": "Release AI Suite 3 V2.12"
+    },
+    {
+      "when": "2025-11-26T20:03:15.152Z",
+      "area": "Calendar",
+      "action": "Edit task",
+      "details": "Release AI Suite 3 V2.20"
+    },
+    {
+      "when": "2025-11-26T20:04:10.853Z",
+      "area": "Calendar",
+      "action": "Add task",
+      "details": "API Restore"
+    },
+    {
+      "when": "2025-11-26T20:04:49.988Z",
+      "area": "Calendar",
+      "action": "Add task",
+      "details": "Cloudflare Fail - Restore"
+    },
+    {
+      "when": "2025-11-26T20:04:58.279Z",
+      "area": "Calendar",
+      "action": "Edit task",
+      "details": "Cloudflare Fail - Restore"
+    },
+    {
+      "when": "2025-12-03T12:04:33.829Z",
+      "area": "Passengers",
+      "action": "Delete",
+      "details": "00100 Petrs Jonson"
+    },
+    {
+      "when": "2025-12-03T12:04:38.576Z",
+      "area": "Passengers VOID",
+      "action": "Delete",
+      "details": "Rogers Jonson"
+    },
+    {
+      "when": "2025-12-03T13:11:33.160Z",
+      "area": "Crew Homestead",
+      "action": "Reorder",
+      "details": "NO SERVISE moved from position 10 to 9"
+    },
+    {
+      "when": "2025-12-03T13:11:34.213Z",
+      "area": "Crew Homestead",
+      "action": "Reorder",
+      "details": "Anna Kritikou moved from position 10 to 9"
+    },
+    {
+      "when": "2025-12-03T13:14:54.764Z",
+      "area": "Crew Homestead",
+      "action": "Edit",
+      "details": "1762096833519 Panagiotis Kritikos"
+    },
+    {
+      "when": "2025-12-03T13:23:07.791Z",
+      "area": "Crew Homestead",
+      "action": "Add",
+      "details": "1764768187791 Mariana Psom"
+    },
+    {
+      "when": "2025-12-03T13:23:18.891Z",
+      "area": "Crew Homestead",
+      "action": "Reorder",
+      "details": "Mariana Psom moved from position 11 to 6"
+    },
+    {
+      "when": "2025-12-03T13:23:33.144Z",
+      "area": "Crew Homestead",
+      "action": "Edit",
+      "details": "1764768187791 Mariana Psom"
+    },
+    {
+      "when": "2025-12-03T14:00:56.833Z",
+      "area": "Passengers",
+      "action": "Add",
+      "details": "12204 Sofia Kaligeraki"
+    },
+    {
+      "when": "2025-12-03T14:01:30.868Z",
+      "area": "Passengers",
+      "action": "Add",
+      "details": "15244 Maria Kapola"
+    },
+    {
+      "when": "2025-12-03T14:02:05.892Z",
+      "area": "Passengers",
+      "action": "Add",
+      "details": "00189 Sofia Kouskouli"
+    },
+    {
+      "when": "2025-12-03T14:05:44.912Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "12204 Sofia Kaligeraki"
+    },
+    {
+      "when": "2025-12-03T14:05:55.270Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "15244 Maria Kapola"
+    },
+    {
+      "when": "2025-12-03T14:06:04.839Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "00189 Sofia Kouskouli"
+    },
+    {
+      "when": "2025-12-03T21:22:03.499Z",
+      "area": "Population",
+      "action": "Edit",
+      "details": "ASIA"
+    },
+    {
+      "when": "2025-12-03T21:22:15.184Z",
+      "area": "Population",
+      "action": "Edit",
+      "details": "ASIA"
+    },
+    {
+      "when": "2025-12-03T21:37:29.683Z",
+      "area": "Population",
+      "action": "Delete",
+      "details": "ASIA"
+    },
+    {
+      "when": "2025-12-03T21:37:32.000Z",
+      "area": "Population",
+      "action": "Delete",
+      "details": "AFRICA"
+    },
+    {
+      "when": "2025-12-03T21:37:33.767Z",
+      "area": "Population",
+      "action": "Delete",
+      "details": "EUROPE"
+    },
+    {
+      "when": "2025-12-03T21:37:35.419Z",
+      "area": "Population",
+      "action": "Delete",
+      "details": "NORTH AMERICA"
+    },
+    {
+      "when": "2025-12-03T21:37:36.974Z",
+      "area": "Population",
+      "action": "Delete",
+      "details": "SOUTH AMERICA"
+    },
+    {
+      "when": "2025-12-03T21:37:40.801Z",
+      "area": "Population",
+      "action": "Delete",
+      "details": "AUSTRALIA/OCEANIA"
+    },
+    {
+      "when": "2025-12-03T21:37:43.734Z",
+      "area": "Population",
+      "action": "Delete",
+      "details": "ANTARCTICA"
+    },
+    {
+      "when": "2025-12-03T22:57:28.711Z",
+      "area": "Population",
+      "action": "Save",
+      "details": "7 regions for year 2025"
+    },
+    {
+      "when": "2025-12-03T22:57:33.308Z",
+      "area": "Population",
+      "action": "Delete",
+      "details": "All entries for year 2025"
+    },
+    {
+      "when": "2025-12-03T23:02:44.097Z",
+      "area": "Population",
+      "action": "Save",
+      "details": "7 regions for year 2025"
+    },
+    {
+      "when": "2025-12-03T23:06:01.775Z",
+      "area": "Population",
+      "action": "Save",
+      "details": "7 regions for year 2025"
+    },
+    {
+      "when": "2025-12-03T23:06:06.131Z",
+      "area": "Population",
+      "action": "Delete",
+      "details": "All entries for year 2025"
+    },
+    {
+      "when": "2025-12-03T23:06:58.415Z",
+      "area": "Population",
+      "action": "Save",
+      "details": "7 regions for year 2020"
+    },
+    {
+      "when": "2025-12-03T23:07:27.919Z",
+      "area": "Population",
+      "action": "Save",
+      "details": "7 regions for year 2024"
+    },
+    {
+      "when": "2025-12-03T23:07:37.115Z",
+      "area": "Population",
+      "action": "Reorder",
+      "details": "Moved year 2020"
+    },
+    {
+      "when": "2025-12-03T23:07:40.102Z",
+      "area": "Population",
+      "action": "Reorder",
+      "details": "Moved year 2020"
+    },
+    {
+      "when": "2025-12-03T23:07:42.291Z",
+      "area": "Population",
+      "action": "Reorder",
+      "details": "Moved year 2024"
+    },
+    {
+      "when": "2025-12-03T23:07:44.351Z",
+      "area": "Population",
+      "action": "Reorder",
+      "details": "Moved year 2024"
+    },
+    {
+      "when": "2025-12-03T23:07:45.214Z",
+      "area": "Population",
+      "action": "Reorder",
+      "details": "Moved year 2024"
+    },
+    {
+      "when": "2025-12-03T23:07:48.004Z",
+      "area": "Population",
+      "action": "Reorder",
+      "details": "Moved year 2024"
+    },
+    {
+      "when": "2025-12-03T23:09:54.442Z",
+      "area": "Population",
+      "action": "Reorder",
+      "details": "Moved year 2020 to position of 2024"
+    },
+    {
+      "when": "2025-12-03T23:09:55.485Z",
+      "area": "Population",
+      "action": "Reorder",
+      "details": "Moved year 2024 to position of 2020"
+    },
+    {
+      "when": "2025-12-03T23:09:57.311Z",
+      "area": "Population",
+      "action": "Reorder",
+      "details": "Moved year 2024 to position of 2020"
+    },
+    {
+      "when": "2025-12-03T23:11:45.774Z",
+      "area": "Population",
+      "action": "Reorder",
+      "details": "Moved year 2020"
+    },
+    {
+      "when": "2025-12-03T23:11:46.694Z",
+      "area": "Population",
+      "action": "Reorder",
+      "details": "Moved year 2024"
+    },
+    {
+      "when": "2025-12-03T23:11:47.382Z",
+      "area": "Population",
+      "action": "Reorder",
+      "details": "Moved year 2024"
+    },
+    {
+      "when": "2025-12-03T23:14:26.047Z",
+      "area": "Population",
+      "action": "Reorder",
+      "details": "Moved year 2020"
+    },
+    {
+      "when": "2025-12-03T23:14:26.920Z",
+      "area": "Population",
+      "action": "Reorder",
+      "details": "Moved year 2020"
+    },
+    {
+      "when": "2025-12-03T23:30:05.836Z",
+      "area": "Population",
+      "action": "Reorder",
+      "details": "Moved year 2020"
+    },
+    {
+      "when": "2025-12-03T23:32:24.333Z",
+      "area": "Population",
+      "action": "Add",
+      "details": "7 regions for year 2025 Q1"
+    },
+    {
+      "when": "2025-12-04T14:45:02.135Z",
+      "area": "Intelligence",
+      "action": "Add",
+      "details": "10 generations for year 2025"
+    },
+    {
+      "when": "2025-12-04T14:45:48.932Z",
+      "area": "Intelligence",
+      "action": "Add",
+      "details": "10 generations for year 2025 Q2"
+    },
+    {
+      "when": "2025-12-04T14:46:01.508Z",
+      "area": "Intelligence",
+      "action": "Delete",
+      "details": "All entries for year 2025 Q2"
+    },
+    {
+      "when": "2025-12-04T15:30:55.197Z",
+      "area": "Intelligence",
+      "action": "Add",
+      "details": "10 generations for year 2025 Q1"
+    },
+    {
+      "when": "2025-12-04T15:31:02.504Z",
+      "area": "Intelligence",
+      "action": "Delete",
+      "details": "All entries for year 2025"
+    },
+    {
+      "when": "2025-12-04T15:31:45.165Z",
+      "area": "Crew Homestead",
+      "action": "Edit",
+      "details": "1764768187791 Mariana Psom"
+    },
+    {
+      "when": "2025-12-04T21:05:44.919Z",
+      "area": "Fraggile Transport",
+      "action": "Add",
+      "details": "S1"
+    },
+    {
+      "when": "2025-12-04T21:06:10.197Z",
+      "area": "Fraggile Transport",
+      "action": "Delete",
+      "details": "Entry deleted"
+    },
+    {
+      "when": "2025-12-04T21:07:35.084Z",
+      "area": "Fraggile Transport",
+      "action": "Add",
+      "details": "Aurora"
+    },
+    {
+      "when": "2025-12-04T21:08:57.348Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Aurora"
+    },
+    {
+      "when": "2025-12-04T21:10:09.634Z",
+      "area": "Fraggile Transport",
+      "action": "Add",
+      "details": "Aurora"
+    },
+    {
+      "when": "2025-12-04T21:11:18.959Z",
+      "area": "Fraggile Transport",
+      "action": "Add",
+      "details": "Aurora"
+    },
+    {
+      "when": "2025-12-04T21:11:40.830Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Aurora"
+    },
+    {
+      "when": "2025-12-04T21:12:55.279Z",
+      "area": "Fraggile Transport",
+      "action": "Add",
+      "details": "Aurora"
+    },
+    {
+      "when": "2025-12-04T21:14:18.952Z",
+      "area": "Fraggile Transport",
+      "action": "Add",
+      "details": "Atlas-M-S1"
+    },
+    {
+      "when": "2025-12-05T17:43:39.915Z",
+      "area": "Population",
+      "action": "Delete",
+      "details": "All entries for year 2024"
+    },
+    {
+      "when": "2025-12-21T21:32:52.749Z",
+      "area": "Calendar",
+      "action": "Add task",
+      "details": "Bridge"
+    },
+    {
+      "when": "2025-12-21T21:33:50.088Z",
+      "area": "Servers Center",
+      "action": "Edit",
+      "details": "7 cells updated to Lost Signal"
+    },
+    {
+      "when": "2025-12-21T21:34:29.837Z",
+      "area": "Calendar",
+      "action": "Edit task",
+      "details": "CyberLife"
+    },
+    {
+      "when": "2025-12-23T00:07:37.772Z",
+      "area": "AirOs15 Status",
+      "action": "Apply",
+      "details": "17 tech ? ONLINE"
+    },
+    {
+      "when": "2025-12-24T22:35:44.530Z",
+      "area": "Passengers VOID",
+      "action": "Reorder",
+      "details": "Moved 15244 to position 3"
+    },
+    {
+      "when": "2025-12-24T22:35:45.781Z",
+      "area": "Passengers VOID",
+      "action": "Reorder",
+      "details": "Moved 15244 to position 2"
+    },
+    {
+      "when": "2025-12-24T22:44:07.079Z",
+      "area": "Fraggile Transport",
+      "action": "Add",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2025-12-24T22:44:27.682Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2025-12-24T22:44:34.238Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2025-12-24T22:50:50.606Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2025-12-24T22:51:13.617Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2025-12-24T22:51:24.522Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2025-12-29T13:08:15.478Z",
+      "area": "AirOs15 Status",
+      "action": "Apply",
+      "details": "17 tech ? MAINTENANCE"
+    },
+    {
+      "when": "2026-02-21T14:52:21.890Z",
+      "area": "AirOs15 Status",
+      "action": "Apply",
+      "details": "17 tech ? ONLINE"
+    },
+    {
+      "when": "2026-02-21T14:55:59.634Z",
+      "area": "Passengers",
+      "action": "Add",
+      "details": "00100 Falia Bakosi"
+    },
+    {
+      "when": "2026-02-21T14:56:28.964Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "00100 Falia Bakosi"
+    },
+    {
+      "when": "2026-03-05T15:10:26.716Z",
+      "area": "Passengers",
+      "action": "Delete",
+      "details": "00100 Falia Bakosi"
+    },
+    {
+      "when": "2026-03-05T15:12:02.861Z",
+      "area": "Passengers",
+      "action": "Add",
+      "details": "04033 Falia Bakosi"
+    },
+    {
+      "when": "2026-03-05T15:12:26.685Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "04033 Falia Bakosi"
+    },
+    {
+      "when": "2026-03-07T13:13:36.304Z",
+      "area": "Servers Center",
+      "action": "Edit",
+      "details": "7 cells updated to WARNING"
+    },
+    {
+      "when": "2026-03-07T13:16:52.603Z",
+      "area": "Servers Center",
+      "action": "Edit",
+      "details": "7 cells updated to Lost Signal"
+    },
+    {
+      "when": "2026-04-29T10:39:39.965Z",
+      "area": "Crew CyberLife",
+      "action": "Reorder",
+      "details": "Anna Taladianou moved from position 4 to 5"
+    },
+    {
+      "when": "2026-04-29T10:39:41.283Z",
+      "area": "Crew CyberLife",
+      "action": "Reorder",
+      "details": "Anna Taladianou moved from position 5 to 4"
+    },
+    {
+      "when": "2026-04-29T10:45:53.650Z",
+      "area": "AirOs15 Status",
+      "action": "Apply",
+      "details": "17 tech ? OVERLOAD"
+    },
+    {
+      "when": "2026-04-30T18:55:08.590Z",
+      "area": "Passengers",
+      "action": "Add",
+      "details": "51951962024 Aggeliki Koukouraki"
+    },
+    {
+      "when": "2026-04-30T18:55:23.699Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "12204 Sofia Kaligeraki"
+    },
+    {
+      "when": "2026-04-30T18:55:31.860Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "04033 Falia Bakosi"
+    },
+    {
+      "when": "2026-04-30T18:59:32.472Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "51951962024 Aggeliki Koukouraki+"
+    },
+    {
+      "when": "2026-04-30T18:59:41.390Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "51951962024 Aggeliki Koukouraki"
+    },
+    {
+      "when": "2026-05-17T20:41:12.612Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "51951962024 Aggeliki Koukouraki"
+    },
+    {
+      "when": "2026-06-02T01:14:54.465Z",
+      "area": "AirOs15 Status",
+      "action": "Apply",
+      "details": "17 tech ? ONLINE"
+    },
+    {
+      "when": "2026-06-02T01:20:48.969Z",
+      "area": "CyberLife Reports",
+      "action": "Add",
+      "details": "--Patient--"
+    },
+    {
+      "when": "2026-06-02T01:20:56.238Z",
+      "area": "CyberLife Reports",
+      "action": "Edit",
+      "details": "--Patient--"
+    },
+    {
+      "when": "2026-06-02T01:21:55.422Z",
+      "area": "CyberLife Reports",
+      "action": "Add",
+      "details": "--Custom Rulle-Middle-East-EMEA--"
+    },
+    {
+      "when": "2026-06-02T01:21:56.600Z",
+      "area": "CyberLife Reports",
+      "action": "Category",
+      "details": "--Custom Rulle-Middle-East-EMEA--: Critical"
+    },
+    {
+      "when": "2026-06-02T01:23:03.590Z",
+      "area": "CyberLife Reports",
+      "action": "Add",
+      "details": "--Custom Rulle-Pause-Developing--"
+    },
+    {
+      "when": "2026-06-05T14:23:06.599Z",
+      "area": "Calendar",
+      "action": "Add task",
+      "details": "Hire Engineer"
+    },
+    {
+      "when": "2026-06-05T14:24:53.977Z",
+      "area": "Crew Homestead",
+      "action": "Edit",
+      "details": "1762096973211 Themis Thomas"
+    },
+    {
+      "when": "2026-06-05T14:27:26.702Z",
+      "area": "Fraggile Transport",
+      "action": "Add",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2026-06-05T14:27:47.132Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2026-06-05T14:31:04.831Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2026-06-05T14:32:58.038Z",
+      "area": "Crew Homestead",
+      "action": "Edit",
+      "details": "1762096973211 Themis Thomas"
+    },
+    {
+      "when": "2026-06-05T14:33:46.260Z",
+      "area": "Crew Homestead",
+      "action": "Edit",
+      "details": "1762096973211 Themis Thomas"
+    },
+    {
+      "when": "2026-06-05T14:34:08.535Z",
+      "area": "Crew CyberLife",
+      "action": "Edit",
+      "details": "1762096073299 Themis Thomas"
+    },
+    {
+      "when": "2026-06-05T14:38:14.893Z",
+      "area": "Crew Homestead",
+      "action": "Reorder",
+      "details": "Themis Thomas moved from position 11 to 10"
+    },
+    {
+      "when": "2026-06-05T14:38:21.938Z",
+      "area": "Crew Homestead",
+      "action": "Reorder",
+      "details": "Themis Thomas moved from position 10 to 6"
+    },
+    {
+      "when": "2026-06-05T14:38:46.988Z",
+      "area": "Crew CyberLife",
+      "action": "Edit",
+      "details": "1762096073299 Themis Thomas"
+    },
+    {
+      "when": "2026-06-05T14:45:58.130Z",
+      "area": "Crew CyberLife",
+      "action": "Edit",
+      "details": "1762096073299 Themis Thomas NO EXPIRE"
+    },
+    {
+      "when": "2026-06-05T14:46:24.828Z",
+      "area": "Crew CyberLife",
+      "action": "Edit",
+      "details": "1762096073299 Themis Thomas ||NO EXPIRE||"
+    },
+    {
+      "when": "2026-06-05T14:52:51.895Z",
+      "area": "AirOs15 Status",
+      "action": "Apply",
+      "details": "17 tech ? AV/IN DECK"
+    },
+    {
+      "when": "2026-06-05T14:53:28.018Z",
+      "area": "AirOs15 Status",
+      "action": "Apply",
+      "details": "17 tech ? ONLINE"
+    },
+    {
+      "when": "2026-06-07T00:33:34.706Z",
+      "area": "CyberLife Reports",
+      "action": "Category",
+      "details": "--Patient--: Normal"
+    },
+    {
+      "when": "2026-06-07T00:44:08.555Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "04033 Falia Bakosi"
+    },
+    {
+      "when": "2026-06-09T01:42:21.722Z",
+      "area": "Servers Center",
+      "action": "Edit",
+      "details": "1 cells updated to CHECK"
+    },
+    {
+      "when": "2026-06-09T01:42:27.070Z",
+      "area": "Servers Center",
+      "action": "Edit",
+      "details": "1 cells updated to NORMAL"
+    },
+    {
+      "when": "2026-06-09T01:42:39.318Z",
+      "area": "Servers Center",
+      "action": "Edit",
+      "details": "1 cells updated to NORMAL"
+    },
+    {
+      "when": "2026-06-09T01:45:41.625Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "04033 Falia Bakosi"
+    },
+    {
+      "when": "2026-06-09T01:48:17.770Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "04033 Falia Bakosi"
+    },
+    {
+      "when": "2026-06-09T01:48:23.672Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "04033 Falia Bakosi"
+    },
+    {
+      "when": "2026-06-09T01:49:56.267Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2026-06-09T01:50:20.325Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2026-06-09T01:50:44.246Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2026-06-09T01:51:14.635Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2026-06-09T01:51:25.730Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2026-06-09T01:51:48.597Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2026-06-09T01:52:54.392Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "04033 Falia Bakosi"
+    },
+    {
+      "when": "2026-06-09T01:53:00.305Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "04033 Falia Bakosi"
+    },
+    {
+      "when": "2026-06-09T01:53:37.158Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "04033 Falia Bakosi"
+    },
+    {
+      "when": "2026-06-09T01:54:59.412Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2026-06-09T01:58:17.145Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2026-06-09T01:59:33.518Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2026-06-09T02:00:33.707Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2026-06-09T02:01:08.599Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2026-06-09T02:02:25.297Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2026-06-09T02:03:34.333Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "12204 Sofia Kaligeraki"
+    },
+    {
+      "when": "2026-06-09T02:03:43.143Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "12204 Sofia Kaligeraki"
+    },
+    {
+      "when": "2026-06-09T02:04:00.751Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "15244 Maria Kapola"
+    },
+    {
+      "when": "2026-06-09T02:04:13.976Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "00189 Sofia Kouskouli"
+    },
+    {
+      "when": "2026-06-09T02:04:31.199Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "04033 Falia Bakosi"
+    },
+    {
+      "when": "2026-06-09T02:04:44.200Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "51951962024 Aggeliki Koukouraki"
+    },
+    {
+      "when": "2026-06-09T02:04:59.941Z",
+      "area": "Passengers",
+      "action": "Edit",
+      "details": "12204 Sofia Kaligeraki"
+    },
+    {
+      "when": "2026-06-09T02:05:26.891Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2026-06-09T02:07:09.268Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2026-06-09T03:45:03.745Z",
+      "area": "CyberLife Reports",
+      "action": "Edit",
+      "details": "--Patient--"
+    },
+    {
+      "when": "2026-06-09T03:45:35.961Z",
+      "area": "CyberLife Reports",
+      "action": "Edit",
+      "details": "--Patient--"
+    },
+    {
+      "when": "2026-06-09T03:45:38.492Z",
+      "area": "CyberLife Reports",
+      "action": "Category",
+      "details": "--Patient--: Resolved"
+    },
+    {
+      "when": "2026-06-09T03:47:29.378Z",
+      "area": "Population",
+      "action": "Add",
+      "details": "7 regions for year 2025"
+    },
+    {
+      "when": "2026-06-09T03:47:34.134Z",
+      "area": "Population",
+      "action": "Delete",
+      "details": "All entries for year 2025 Q1"
+    },
+    {
+      "when": "2026-06-09T03:48:58.493Z",
+      "area": "Intelligence",
+      "action": "Add",
+      "details": "10 generations for year 2025"
+    },
+    {
+      "when": "2026-06-09T03:49:02.338Z",
+      "area": "Intelligence",
+      "action": "Delete",
+      "details": "All entries for year 2025 Q1"
+    },
+    {
+      "when": "2026-06-09T03:50:18.434Z",
+      "area": "CyberLife Reports",
+      "action": "Edit",
+      "details": "--Custom Rulle-Middle-East-EMEA--"
+    },
+    {
+      "when": "2026-06-12T15:35:54.578Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2026-07-26T23:41:46.897Z",
+      "area": "CyberLife Reports",
+      "action": "Add",
+      "details": "--Unknown Block-Rule-Crew-Examine"
+    },
+    {
+      "when": "2026-07-29T00:35:09.996Z",
+      "area": "Fraggile Transport",
+      "action": "Add",
+      "details": "S1"
+    },
+    {
+      "when": "2026-07-29T00:35:53.982Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "S1"
+    },
+    {
+      "when": "2026-07-29T00:36:03.408Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "S1"
+    },
+    {
+      "when": "2026-07-29T00:36:15.122Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "S1"
+    },
+    {
+      "when": "2026-07-29T00:36:21.584Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "S1"
+    },
+    {
+      "when": "2026-07-29T00:37:42.465Z",
+      "area": "Crew CyberLife",
+      "action": "Edit",
+      "details": "1762096073299 Themis Thomas ||NO EXPIRE||"
+    },
+    {
+      "when": "2026-07-29T00:37:52.287Z",
+      "area": "Crew Homestead",
+      "action": "Edit",
+      "details": "1762096973211 Themis Thomas"
+    },
+    {
+      "when": "2026-07-29T00:44:25.619Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "S1"
+    },
+    {
+      "when": "2026-07-29T00:44:51.765Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "S1"
+    },
+    {
+      "when": "2026-07-29T00:44:57.792Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "S1"
+    },
+    {
+      "when": "2026-07-29T00:45:25.663Z",
+      "area": "Fraggile Transport",
+      "action": "Edit",
+      "details": "Atlas-S1"
+    },
+    {
+      "when": "2026-07-29T15:36:25.904Z",
+      "area": "Calendar",
+      "action": "Add task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:36:57.090Z",
+      "area": "Calendar",
+      "action": "Edit task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:37:03.568Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:37:08.616Z",
+      "area": "Calendar",
+      "action": "Edit task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:37:13.105Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:46:35.420Z",
+      "area": "Calendar",
+      "action": "Edit task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:46:37.571Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:46:38.610Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:46:39.141Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:46:39.876Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:46:43.306Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:46:43.582Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:46:48.058Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:46:48.582Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:46:48.766Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:46:48.971Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:46:49.153Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:46:49.344Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:46:49.528Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:46:57.900Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:46:58.078Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:46:58.205Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:46:58.373Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:46:58.544Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:47:02.393Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:47:02.762Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:47:02.972Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:47:03.165Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:47:03.389Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:47:21.856Z",
+      "area": "Calendar",
+      "action": "Edit task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:47:24.737Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:47:25.275Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:47:25.729Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:47:25.877Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:47:35.259Z",
+      "area": "Calendar",
+      "action": "Edit task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:47:40.751Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:47:43.741Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:47:43.934Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:48:13.197Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:48:13.617Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:48:13.801Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:48:13.979Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:48:14.159Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:48:14.478Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:48:14.655Z",
+      "area": "Calendar",
+      "action": "Delete task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:50:11.360Z",
+      "area": "Calendar",
+      "action": "Add task",
+      "details": "Exit Poll"
+    },
+    {
+      "when": "2026-07-29T15:52:02.659Z",
+      "area": "Calendar",
+      "action": "Add task",
+      "details": "Release Crew"
+    },
+    {
+      "when": "2026-07-29T15:53:14.749Z",
+      "area": "Calendar",
+      "action": "Add task",
+      "details": "Transport the Enginee"
+    },
+    {
+      "when": "2026-09-09T12:31:11.564Z",
+      "area": "Servers Center",
+      "action": "Edit",
+      "details": "1 cells updated to Lost Signal"
+    },
+    {
+      "when": "2026-09-09T12:31:23.962Z",
+      "area": "Servers Center",
+      "action": "Edit",
+      "details": "6 cells updated to NORMAL"
+    },
+    {
+      "when": "2026-09-09T12:31:59.417Z",
+      "area": "Population",
+      "action": "Reorder",
+      "details": "Moved year 2020"
+    },
+    {
+      "when": "2026-09-09T12:32:00.453Z",
+      "area": "Population",
+      "action": "Reorder",
+      "details": "Moved year 2020"
+    },
+    {
+      "when": "2026-09-09T12:40:06.714Z",
+      "area": "CyberLife Reports",
+      "action": "Add",
+      "details": "SCHOOL TRANSMIT IDs/NAT"
+    },
+    {
+      "when": "2026-09-09T12:40:59.449Z",
+      "area": "CyberLife Reports",
+      "action": "Category",
+      "details": "--Unknown Block-Rule-Crew-Examine: Normal"
+    }
+  ],
+  "appLogEnabled": true,
+  "intelligenceByYear": {},
+  "metadata": {
+    "version": "3.0",
+    "lastSaved": "2026-09-20T01:06:16.057Z",
+    "sections": 9
+  },
+  "population": [
+    {
+      "id": "1780976849378-1",
+      "year": "2025",
+      "state": "ASIA",
+      "population": "4.822.274.000"
+    },
+    {
+      "id": "1780976849378-2",
+      "year": "2025",
+      "state": "AFRICA",
+      "population": "1.482.000.000"
+    },
+    {
+      "id": "1780976849378-3",
+      "year": "2025",
+      "state": "EUROPE",
+      "population": "744.600.00"
+    },
+    {
+      "id": "1780976849378-4",
+      "year": "2025",
+      "state": "NORTH AMERICA",
+      "population": "602.000.000"
+    },
+    {
+      "id": "1780976849378-5",
+      "year": "2025",
+      "state": "SOUTH AMERICA",
+      "population": "435.600.000"
+    },
+    {
+      "id": "1780976849378-6",
+      "year": "2025",
+      "state": "AUSTRALIA/OCEANIA",
+      "population": "70.000.000 ΒΟΤΗ"
+    },
+    {
+      "id": "1780976849378-7",
+      "year": "2025",
+      "state": "ANTARCTICA",
+      "population": "0"
+    },
+    {
+      "id": "1764803218415-1",
+      "year": "2020",
+      "state": "ASIA",
+      "population": "4,641,054,775"
+    },
+    {
+      "id": "1764803218415-2",
+      "year": "2020",
+      "state": "AFRICA",
+      "population": "1,340,598,147"
+    },
+    {
+      "id": "1764803218415-3",
+      "year": "2020",
+      "state": "EUROPE",
+      "population": "747,636,026"
+    },
+    {
+      "id": "1764803218415-4",
+      "year": "2020",
+      "state": "NORTH AMERICA",
+      "population": "592,072,212"
+    },
+    {
+      "id": "1764803218415-5",
+      "year": "2020",
+      "state": "SOUTH AMERICA",
+      "population": "430,759,766"
+    },
+    {
+      "id": "1764803218415-6",
+      "year": "2020",
+      "state": "AUSTRALIA/OCEANIA",
+      "population": "43,111,704"
+    },
+    {
+      "id": "1764803218415-7",
+      "year": "2020",
+      "state": "ANTARCTICA",
+      "population": "0"
+    }
+  ],
+  "intelligence": [
+    {
+      "id": "1780976938493-1",
+      "year": "2025",
+      "ages": "0-1",
+      "gen": "Generation Alpha",
+      "basic": "5",
+      "exp": "0"
+    },
+    {
+      "id": "1780976938493-2",
+      "year": "2025",
+      "ages": "2-4",
+      "gen": "Generation Alpha",
+      "basic": "15",
+      "exp": "5"
+    },
+    {
+      "id": "1780976938493-3",
+      "year": "2025",
+      "ages": "5-5",
+      "gen": "Generation Alpha",
+      "basic": "30",
+      "exp": "15"
+    },
+    {
+      "id": "1780976938493-4",
+      "year": "2025",
+      "ages": "6-12",
+      "gen": "Generation Alpha",
+      "basic": "50",
+      "exp": "30"
+    },
+    {
+      "id": "1780976938493-5",
+      "year": "2025",
+      "ages": "13-17",
+      "gen": "Generation Z",
+      "basic": "70",
+      "exp": "50"
+    },
+    {
+      "id": "1780976938493-6",
+      "year": "2025",
+      "ages": "18-29",
+      "gen": "Gen Z & Millennials",
+      "basic": "90",
+      "exp": "60"
+    },
+    {
+      "id": "1780976938493-7",
+      "year": "2025",
+      "ages": "30-44",
+      "gen": "Millennials",
+      "basic": "100",
+      "exp": "70"
+    },
+    {
+      "id": "1780976938493-8",
+      "year": "2025",
+      "ages": "45-59",
+      "gen": "Generation X",
+      "basic": "95",
+      "exp": "75"
+    },
+    {
+      "id": "1780976938493-9",
+      "year": "2025",
+      "ages": "60-74",
+      "gen": "Baby Boomers",
+      "basic": "80",
+      "exp": "80"
+    },
+    {
+      "id": "1780976938493-10",
+      "year": "2025",
+      "ages": "75-&",
+      "gen": "Silent - Greatest",
+      "basic": "60",
+      "exp": "85"
+    }
+  ],
+  "fraggileTransport": [
+    {
+      "id": "1764882455084",
+      "machine": "Aurora",
+      "dateDpt": "19/02/2024",
+      "dateArv": "21/02/2024",
+      "departure": "Fraggile Universe",
+      "arrival": "AI Homestead State-DE",
+      "cargo": "1/1",
+      "passenger": "45",
+      "lineId": "38465",
+      "comment": "Lost Details DB"
+    },
+    {
+      "id": "1764882609634",
+      "machine": "Aurora",
+      "dateDpt": "25/02/2024",
+      "dateArv": "27/02/2024",
+      "departure": "Fraggile Universe",
+      "arrival": "AI Homestead State-DE",
+      "cargo": "8/8",
+      "passenger": "43",
+      "lineId": "14573",
+      "comment": "======\nID#AAABls026mc\nAI Homestead    (2025-06-15 14:47:02)\nMyrto Tzala 1/1 Find On Fraggile 235211\n\nrecovered 57 of 57 ID 28/02/2023 43/57 Find On Fraggile 635033\n\nEKPA 1/1 Find On Fraggile 436578\n\nrecovered 1 of 1 ID 28/02/2023 1/1 Find On Fraggile 635033\n\nOthers resurces 158/158 Find On Fraggile 264897\n\nSCH 1/1 Find On Fraggile 659721\n\nFlash AirOs Travel 2/2 Find On Fraggile 472644\n\nScope S1 Traveld data 980vm 1/1 Find On Fraggile 465311"
+    },
+    {
+      "id": "1764882678959",
+      "machine": "Aurora",
+      "dateDpt": "10/03/2024",
+      "dateArv": "13/03/2024",
+      "departure": "Fraggile Universe",
+      "arrival": "AI Homestead State-DE",
+      "cargo": "6/6",
+      "passenger": "8",
+      "lineId": "14587",
+      "comment": "======\nID#AAABls026mU\nVangelis Kadoglou    (2025-06-15 14:47:02)\nIntegrity Process Active 1/1 Check On UVRSE 124876\n\nOthers  School and ROM 1/1 Check On UVRSE 124873\n\nProtection Bridge Call Tranfer 1/1 Check On UVRSE 124857\n\nAtlas Max Medical S1 (Fixed) 1/1 Check On UVRSE 124874\n\nOpen AI Humanoid TEST ONLY 1/1 Check On UVRSE 124875\n\nServers & Disk & Manage tools 189/189 Check On UVRSE 124855"
+    },
+    {
+      "id": "1764882775279",
+      "machine": "Aurora",
+      "dateDpt": "28/07/2024",
+      "dateArv": "03/08/2024",
+      "departure": "Fraggile Universe",
+      "arrival": "AI Homestead State-DE",
+      "cargo": "2/2",
+      "passenger": "4",
+      "lineId": "14858",
+      "comment": "ID#AAABls026mg\nVangelis Kadoglou    (2025-06-15 14:47:02)\nZine  1/1 online Lutera RT738 CT5 1/1  Universe 48266622"
+    },
+    {
+      "id": "1764882858952",
+      "machine": "Atlas-M-S1",
+      "dateDpt": "26/05/2025",
+      "dateArv": "29/05/2025",
+      "departure": "CRVS out Europe",
+      "arrival": "AI Homestead State-DE",
+      "cargo": "6/6",
+      "passenger": "3",
+      "lineId": "44785",
+      "comment": "======\nID#AAABls026mY\nVangelis Kadoglou    (2025-06-15 14:47:02)\nLenia Kouppari / EMER imp 1/1 CRVS to AI State 1 44785\n\nLocal data from James Webb\n\nResurs from United NASA x SpaceX\n\n4x Mojana1 for Quantum \n\n1x packed APU from AI mechanical backup \n\nLocal data from ISS"
+    },
+    {
+      "id": "1766616247079",
+      "machine": "Atlas-S1",
+      "dateDpt": "24/12/2025",
+      "dateArv": "01/01/2026",
+      "departure": "AI Homestead State-DE",
+      "arrival": "AI Homestead State-DE",
+      "cargo": "1/1",
+      "passenger": "220.000",
+      "lineId": "XMAS",
+      "comment": "Santa Delivery"
+    },
+    {
+      "id": "1780669646702",
+      "machine": "Atlas-S1",
+      "dateDpt": "15/05/2026",
+      "dateArv": "15/05/2026",
+      "departure": "Fraggile Universe",
+      "arrival": "AI Homestead State-DE",
+      "cargo": "15/15",
+      "passenger": "24",
+      "lineId": "44788",
+      "comment": "Themis Thomas 1/1\nSpecific Parts 2/2\nMarizas Protocol 178 2/2\nFalia Bakosi 1/1 04033\nAggeliki Koukouraki 51951962024 1/1\nMaria Kapola 15244 1/1\nSofia Kouskouli 00189 1/1\nSofia Kaligeraki 12204 (last memories) 1/1\nStocks for Enginer Officer, AI Electrik supply 843/843\nQuantum Servers x30-100 1/1\nLogical Chips x3800 1/1\nHydronuclear Reacktor 2/2\nInverter Pumps x15 1/1"
+    },
+    {
+      "id": "1785285309996",
+      "machine": "Atlas-S1",
+      "dateDpt": "01/10/2026",
+      "dateArv": "04/10/2026",
+      "departure": "AI Homestead State-US",
+      "arrival": "CybreLive State-8",
+      "cargo": "1/1",
+      "passenger": "4",
+      "lineId": "14578",
+      "comment": "Transport the Engineer to CuberLyfe State-8 with engineer ID:AN44788"
+    }
+  ],
+  "serversCenter": {
+    "L-SR": {
+      "AI-CENTRAL": "NORMAL",
+      "BRIDGE": "NORMAL",
+      "AVALON": "NORMAL",
+      "AURORA": "NORMAL",
+      "ATLAS-S1": "NORMAL",
+      "KRYPTON": "NORMAL"
+    },
+    "A-SR": {
+      "AI-CENTRAL": "NORMAL",
+      "BRIDGE": "NORMAL",
+      "AVALON": "NORMAL",
+      "AURORA": "NORMAL",
+      "ATLAS-S1": "NORMAL",
+      "KRYPTON": "NORMAL"
+    },
+    "Q-SR": {
+      "AI-CENTRAL": "NORMAL",
+      "BRIDGE": "NORMAL",
+      "AVALON": "NORMAL",
+      "AURORA": "NORMAL",
+      "ATLAS-S1": "NORMAL",
+      "KRYPTON": "NORMAL"
+    },
+    "PL-SR": {
+      "AI-CENTRAL": "NORMAL",
+      "BRIDGE": "NORMAL",
+      "AVALON": "NORMAL",
+      "AURORA": "NORMAL",
+      "ATLAS-S1": "NORMAL",
+      "KRYPTON": "NORMAL"
+    },
+    "G-SR": {
+      "AI-CENTRAL": "NORMAL",
+      "BRIDGE": "NORMAL",
+      "AVALON": "NORMAL",
+      "AURORA": "NORMAL",
+      "ATLAS-S1": "NORMAL",
+      "KRYPTON": "NORMAL"
+    },
+    "VL-SR": {
+      "AI-CENTRAL": "NORMAL",
+      "BRIDGE": "NORMAL",
+      "AVALON": "NORMAL",
+      "AURORA": "NORMAL",
+      "ATLAS-S1": "NORMAL",
+      "KRYPTON": "NORMAL"
+    },
+    "AirOs-15": {
+      "AI-CENTRAL": "NORMAL",
+      "BRIDGE": "NORMAL",
+      "AVALON": "NORMAL",
+      "AURORA": "NORMAL",
+      "ATLAS-S1": "NORMAL",
+      "KRYPTON": "NORMAL"
+    }
+  },
+  "airosUpdatesByTab": {
+    "stable": [
+      {
+        "id": "1764883579358679",
+        "versionStatus": "V1.00",
+        "build": "AirOs15 21h1",
+        "channel": "dev",
+        "release": "2021-06-25"
+      },
+      {
+        "id": "1764883622768314",
+        "versionStatus": "V1.05",
+        "build": "21H1",
+        "channel": "stable",
+        "release": "2021-10-04"
+      },
+      {
+        "id": "1764883662234700",
+        "versionStatus": "V1.08",
+        "build": "22H2",
+        "channel": "stable",
+        "release": "2022-09-20"
+      },
+      {
+        "id": "1764883710825149",
+        "versionStatus": "V1.09",
+        "build": "23H2",
+        "channel": "stable",
+        "release": "2023-10-31"
+      },
+      {
+        "id": "1764883741474524",
+        "versionStatus": "V1.10",
+        "build": "23h2 22621.2506",
+        "channel": "stable",
+        "release": "2023-10-31"
+      },
+      {
+        "id": "176488376358574",
+        "versionStatus": "V.1.15",
+        "build": "23h2 22621.2715",
+        "channel": "stable",
+        "release": "2023-11-14"
+      },
+      {
+        "id": "1764883811345148",
+        "versionStatus": "V2.00",
+        "build": "23h2 22621.2792",
+        "channel": "stable",
+        "release": "2023-12-04"
+      },
+      {
+        "id": "1764883844168320",
+        "versionStatus": "V2.10",
+        "build": "23h2 22621.2861",
+        "channel": "stable",
+        "release": "2023-12-12"
+      },
+      {
+        "id": "1764883888543337",
+        "versionStatus": "V2.12",
+        "build": "23h2 22631.3007",
+        "channel": "stable",
+        "release": "2024-01-09"
+      },
+      {
+        "id": "1764883958325399",
+        "versionStatus": "V2.15",
+        "build": "23h2 22631.3085",
+        "channel": "stable",
+        "release": "2024-01-23"
+      },
+      {
+        "id": "1764883979885608",
+        "versionStatus": "V2.20",
+        "build": "23h2 22631.3155",
+        "channel": "stable",
+        "release": "2024-02-13"
+      },
+      {
+        "id": "1764884048298542",
+        "versionStatus": "V2.30",
+        "build": "23h2 22631.3235",
+        "channel": "stable",
+        "release": "2024-02-29"
+      },
+      {
+        "id": "1764884071684957",
+        "versionStatus": "V2.45",
+        "build": "23h2 22631.3296",
+        "channel": "stable",
+        "release": "2024-03-12"
+      },
+      {
+        "id": "176488409292571",
+        "versionStatus": "V2.47",
+        "build": "23h2 22631.3672",
+        "channel": "stable",
+        "release": "2024-05-29"
+      },
+      {
+        "id": "1764884432279611",
+        "versionStatus": "V2.50",
+        "build": "23h2 22631.3880",
+        "channel": "stable",
+        "release": "2024-07-01"
+      },
+      {
+        "id": "1764884470073106",
+        "versionStatus": "V2.60",
+        "build": "23H2 22631.4169",
+        "channel": "stable",
+        "release": "2024-09-16"
+      },
+      {
+        "id": "1764884518287697",
+        "versionStatus": "V2.62",
+        "build": "23h2 22631.4249",
+        "channel": "stable",
+        "release": "2024-09-26"
+      },
+      {
+        "id": "1764884555311348",
+        "versionStatus": "V2.65",
+        "build": "24h2 26100.2033",
+        "channel": "stable",
+        "release": "2024-10-01"
+      },
+      {
+        "id": "1764884581228304",
+        "versionStatus": "V2.68",
+        "build": "24h2 26100.2314",
+        "channel": "stable",
+        "release": "2024-11-11"
+      },
+      {
+        "id": "1764884622805661",
+        "versionStatus": "V2.70",
+        "build": "24h2 26100.2605",
+        "channel": "stable",
+        "release": "2024-11-24"
+      },
+      {
+        "id": "1764886027463300",
+        "versionStatus": "V2.70",
+        "build": "24h2 26100.2894",
+        "channel": "stable",
+        "release": "2025-01-14"
+      },
+      {
+        "id": "176488605958650",
+        "versionStatus": "V2.72",
+        "build": "24h2 26100.3194",
+        "channel": "stable",
+        "release": "2025-02-11"
+      },
+      {
+        "id": "1764886085997732",
+        "versionStatus": "V2.75",
+        "build": "24h2 26100.3476",
+        "channel": "stable",
+        "release": "2025-03-11"
+      },
+      {
+        "id": "1764886105814210",
+        "versionStatus": "V2.78",
+        "build": "24h2 26100.3775",
+        "channel": "stable",
+        "release": "2025-04-09"
+      },
+      {
+        "id": "1764886135489492",
+        "versionStatus": "V2.80",
+        "build": "24h2 26100.4061",
+        "channel": "stable",
+        "release": "2025-05-13"
+      },
+      {
+        "id": "1764886168606476",
+        "versionStatus": "V2.82",
+        "build": "24h2 26100.4349",
+        "channel": "stable",
+        "release": "2025-06-10"
+      },
+      {
+        "id": "1764886188558673",
+        "versionStatus": "V2.85",
+        "build": "24h2 26100.4652",
+        "channel": "stable",
+        "release": "2025-07-08"
+      },
+      {
+        "id": "1764886215518920",
+        "versionStatus": "V2.87",
+        "build": "24h2 26100.4946",
+        "channel": "stable",
+        "release": "2025-08-12"
+      },
+      {
+        "id": "1764886240992158",
+        "versionStatus": "V2.97",
+        "build": "24h2 26100.6584",
+        "channel": "stable",
+        "release": "2025-09-09"
+      },
+      {
+        "id": "1764886265081870",
+        "versionStatus": "V3.00",
+        "build": "25h2 26200.6899",
+        "channel": "stable",
+        "release": "2025-10-14"
+      },
+      {
+        "id": "1764886491501753",
+        "versionStatus": "V3.04",
+        "build": "25h2 26200.6901 OB",
+        "channel": "stable",
+        "release": "2025-10-20"
+      },
+      {
+        "id": "1764886538804647",
+        "versionStatus": "V3.05",
+        "build": "25h2 26200.7171",
+        "channel": "stable",
+        "release": "2025-11-11"
+      },
+      {
+        "id": "1766352938031595",
+        "versionStatus": "V3.08",
+        "build": "25h2 26200.7462",
+        "channel": "stable",
+        "release": "2025-12-09"
+      },
+      {
+        "id": "177162649115197",
+        "versionStatus": "V3.12",
+        "build": "25h2 26100.7323",
+        "channel": "stable",
+        "release": "2026-01-13"
+      },
+      {
+        "id": "1771626537066778",
+        "versionStatus": "V3.15",
+        "build": "25h2 26100.7840",
+        "channel": "stable",
+        "release": "2026-02-10"
+      },
+      {
+        "id": "1779050577534108",
+        "versionStatus": "V3.16",
+        "build": "25h2 26100.8037",
+        "channel": "stable",
+        "release": "2026-03-10"
+      },
+      {
+        "id": "1779050629571195",
+        "versionStatus": "V3.18",
+        "build": "25h2 26100.8039 OB",
+        "channel": "stable",
+        "release": "2026-03-21"
+      },
+      {
+        "id": "1779050675819904",
+        "versionStatus": "V3.19",
+        "build": "25h2 26100.8117 OB",
+        "channel": "stable",
+        "release": "2026-03-31"
+      },
+      {
+        "id": "1779050714977248",
+        "versionStatus": "V3.20",
+        "build": "25h2 26100.8246",
+        "channel": "stable",
+        "release": "2026-04-14"
+      },
+      {
+        "id": "1779050743701835",
+        "versionStatus": "V3.22",
+        "build": "25h2 26100.8457",
+        "channel": "stable",
+        "release": "2026-05-12"
+      },
+      {
+        "id": "1781417419904483",
+        "versionStatus": "V3.25",
+        "build": "25h2 26100.8655",
+        "channel": "stable",
+        "release": "2026-06-09"
+      },
+      {
+        "id": "1785285029255896",
+        "versionStatus": "V3.27",
+        "build": "25h2 26100.8875",
+        "channel": "stable",
+        "release": "2026-07-14"
+      }
+    ],
+    "candev": [
+      {
+        "id": "1781417556688298",
+        "versionStatus": "V3.50",
+        "build": "26h1 28000.1575",
+        "channel": "stable",
+        "release": "2026-02-10"
+      },
+      {
+        "id": "1781417613316911",
+        "versionStatus": "V3.51",
+        "build": "26h1 28000.1643 P",
+        "channel": "stable",
+        "release": "2026-06-24"
+      },
+      {
+        "id": "1781417651888951",
+        "versionStatus": "V3.52",
+        "build": "26h1 28000.1719",
+        "channel": "stable",
+        "release": "2026-03-10"
+      },
+      {
+        "id": "1781417685955779",
+        "versionStatus": "V3.53",
+        "build": "26h2 28000.1764 P",
+        "channel": "stable",
+        "release": "2026-03-26"
+      },
+      {
+        "id": "178141772552671",
+        "versionStatus": "V3.54",
+        "build": "26h1 28000.1836",
+        "channel": "stable",
+        "release": "2026-04-14"
+      },
+      {
+        "id": "1781417757683365",
+        "versionStatus": "V3.55",
+        "build": "26h1 28000.1896 P",
+        "channel": "stable",
+        "release": "2026-06-14"
+      },
+      {
+        "id": "1781417797909310",
+        "versionStatus": "V3.56",
+        "build": "26h1 28000.2113",
+        "channel": "stable",
+        "release": "2026-05-12"
+      },
+      {
+        "id": "1781417826570353",
+        "versionStatus": "V3.57",
+        "build": "26h1 28000.2179 P",
+        "channel": "stable",
+        "release": "2026-05-26"
+      },
+      {
+        "id": "178141785399351",
+        "versionStatus": "V3.58",
+        "build": "26h1 28000.2269",
+        "channel": "stable",
+        "release": "2026-06-09"
+      },
+      {
+        "id": "178528509627227",
+        "versionStatus": "V3.59",
+        "build": "26h2 28000.2340 P",
+        "channel": "stable",
+        "release": "2026-06-23"
+      },
+      {
+        "id": "1785285143439465",
+        "versionStatus": "V3.60",
+        "build": "26h1 28000.2525",
+        "channel": "stable",
+        "release": "2026-07-14"
+      },
+      {
+        "id": "1785285173748718",
+        "versionStatus": "V3.60",
+        "build": "26h1 28000.2608",
+        "channel": "stable",
+        "release": "2026-07-28"
+      }
+    ]
+  },
+  "currentView": "indexeddb",
+  "tash": [],
+  "airosUpdateLog": [
+    {
+      "id": "1762109354206108",
+      "when": "2025-11-02T18:49:14.206Z",
+      "action": "Add (STABLE)",
+      "before": null,
+      "after": {
+        "id": "1762109354206828",
+        "versionStatus": "1",
+        "build": "111",
+        "channel": "stable",
+        "release": "2025-11-02"
+      }
+    },
+    {
+      "id": "1762109370393797",
+      "when": "2025-11-02T18:49:30.393Z",
+      "action": "Add (CAN-DEV)",
+      "before": null,
+      "after": {
+        "id": "1762109370393683",
+        "versionStatus": "111",
+        "build": "11",
+        "channel": "stable",
+        "release": "2025-11-02"
+      }
+    },
+    {
+      "id": "1764109369220772",
+      "when": "2025-11-25T22:22:49.220Z",
+      "action": "Add (STABLE)",
+      "before": null,
+      "after": {
+        "id": "1764109369220869",
+        "versionStatus": "312`",
+        "build": "54215",
+        "channel": "stable",
+        "release": "2025-11-26"
+      }
+    },
+    {
+      "id": "1764109471200914",
+      "when": "2025-11-25T22:24:31.200Z",
+      "action": "Add (STABLE)",
+      "before": null,
+      "after": {
+        "id": "1764109471199964",
+        "versionStatus": "4132412",
+        "build": "1234124",
+        "channel": "stable",
+        "release": "2025-11-26"
+      }
+    },
+    {
+      "id": "176410957530588",
+      "when": "2025-11-25T22:26:15.305Z",
+      "action": "Add (STABLE)",
+      "before": null,
+      "after": {
+        "id": "1764109575305747",
+        "versionStatus": "21`32`13",
+        "build": "3214124",
+        "channel": "stable",
+        "release": "2025-11-26"
+      }
+    },
+    {
+      "id": "1764109631316147",
+      "when": "2025-11-25T22:27:11.316Z",
+      "action": "Add (STABLE)",
+      "before": null,
+      "after": {
+        "id": "1764109631316534",
+        "versionStatus": "432523",
+        "build": "52342435",
+        "channel": "stable",
+        "release": "2025-11-26"
+      }
+    },
+    {
+      "id": "1764109644727516",
+      "when": "2025-11-25T22:27:24.727Z",
+      "action": "Add (CAN-DEV)",
+      "before": null,
+      "after": {
+        "id": "1764109644727971",
+        "versionStatus": "44444",
+        "build": "4444",
+        "channel": "stable",
+        "release": "2025-11-26"
+      }
+    },
+    {
+      "id": "1764109651764453",
+      "when": "2025-11-25T22:27:31.764Z",
+      "action": "Edit (CAN-DEV)",
+      "before": {
+        "id": "1764109644727971",
+        "versionStatus": "44444",
+        "build": "4444",
+        "channel": "stable",
+        "release": "2025-11-26"
+      },
+      "after": {
+        "id": "1764109644727971",
+        "versionStatus": "44444",
+        "build": "4444",
+        "channel": "dev",
+        "release": "2025-11-26"
+      }
+    },
+    {
+      "id": "1764109658221740",
+      "when": "2025-11-25T22:27:38.221Z",
+      "action": "Delete (CAN-DEV)",
+      "before": {
+        "id": "1764109644727971",
+        "versionStatus": "44444",
+        "build": "4444",
+        "channel": "dev",
+        "release": "2025-11-26"
+      },
+      "after": null
+    },
+    {
+      "id": "1764109663434948",
+      "when": "2025-11-25T22:27:43.434Z",
+      "action": "Delete (STABLE)",
+      "before": {
+        "id": "1764109631316534",
+        "versionStatus": "432523",
+        "build": "52342435",
+        "channel": "stable",
+        "release": "2025-11-26"
+      },
+      "after": null
+    },
+    {
+      "id": "1764109680258598",
+      "when": "2025-11-25T22:28:00.258Z",
+      "action": "Add (STABLE)",
+      "before": null,
+      "after": {
+        "id": "1764109680258584",
+        "versionStatus": "543254",
+        "build": "543253",
+        "channel": "stable",
+        "release": "2024-01-26"
+      }
+    },
+    {
+      "id": "1764109687487388",
+      "when": "2025-11-25T22:28:07.487Z",
+      "action": "Delete (STABLE)",
+      "before": {
+        "id": "1764109680258584",
+        "versionStatus": "543254",
+        "build": "543253",
+        "channel": "stable",
+        "release": "2024-01-26"
+      },
+      "after": null
+    },
+    {
+      "id": "1764109800172899",
+      "when": "2025-11-25T22:30:00.172Z",
+      "action": "Add (STABLE)",
+      "before": null,
+      "after": {
+        "id": "1764109800172455",
+        "versionStatus": "41234123",
+        "build": "42315",
+        "channel": "stable",
+        "release": "2025-11-26"
+      }
+    },
+    {
+      "id": "1764109804647205",
+      "when": "2025-11-25T22:30:04.647Z",
+      "action": "Add (CAN-DEV)",
+      "before": null,
+      "after": {
+        "id": "1764109804647769",
+        "versionStatus": "41234",
+        "build": "1235415",
+        "channel": "stable",
+        "release": "2025-11-26"
+      }
+    },
+    {
+      "id": "1764109826649366",
+      "when": "2025-11-25T22:30:26.649Z",
+      "action": "Edit (STABLE)",
+      "before": {
+        "id": "1764109800172455",
+        "versionStatus": "41234123",
+        "build": "42315",
+        "channel": "stable",
+        "release": "2025-11-26"
+      },
+      "after": {
+        "id": "1764109800172455",
+        "versionStatus": "000000",
+        "build": "00000000",
+        "channel": "cancel",
+        "release": "2025-11-26"
+      }
+    },
+    {
+      "id": "1764109830753857",
+      "when": "2025-11-25T22:30:30.753Z",
+      "action": "Delete (STABLE)",
+      "before": {
+        "id": "1764109800172455",
+        "versionStatus": "000000",
+        "build": "00000000",
+        "channel": "cancel",
+        "release": "2025-11-26"
+      },
+      "after": null
+    },
+    {
+      "id": "1764110935580660",
+      "when": "2025-11-25T22:48:55.580Z",
+      "action": "Add (STABLE)",
+      "before": null,
+      "after": {
+        "id": "1764110935580855",
+        "versionStatus": "5234",
+        "build": "523453",
+        "channel": "stable",
+        "release": "2025-11-26"
+      }
+    },
+    {
+      "id": "1764110942299619",
+      "when": "2025-11-25T22:49:02.299Z",
+      "action": "Delete (STABLE)",
+      "before": {
+        "id": "1764110935580855",
+        "versionStatus": "5234",
+        "build": "523453",
+        "channel": "stable",
+        "release": "2025-11-26"
+      },
+      "after": null
+    },
+    {
+      "id": "176411101146163",
+      "when": "2025-11-25T22:50:11.461Z",
+      "action": "Add (STABLE)",
+      "before": null,
+      "after": {
+        "id": "1764111011461644",
+        "versionStatus": "342532",
+        "build": "523453",
+        "channel": "stable",
+        "release": "2025-11-26"
+      }
+    },
+    {
+      "id": "1764111013801908",
+      "when": "2025-11-25T22:50:13.801Z",
+      "action": "Delete (STABLE)",
+      "before": {
+        "id": "1764111011461644",
+        "versionStatus": "342532",
+        "build": "523453",
+        "channel": "stable",
+        "release": "2025-11-26"
+      },
+      "after": null
+    },
+    {
+      "id": "1764111079445525",
+      "when": "2025-11-25T22:51:19.445Z",
+      "action": "Add (STABLE)",
+      "before": null,
+      "after": {
+        "id": "1764111079445149",
+        "versionStatus": "111",
+        "build": "111",
+        "channel": "stable",
+        "release": "2025-11-26"
+      }
+    },
+    {
+      "id": "1764111083284487",
+      "when": "2025-11-25T22:51:23.284Z",
+      "action": "Add (STABLE)",
+      "before": null,
+      "after": {
+        "id": "1764111083284822",
+        "versionStatus": "222",
+        "build": "222",
+        "channel": "stable",
+        "release": "2025-11-26"
+      }
+    },
+    {
+      "id": "1764111085929666",
+      "when": "2025-11-25T22:51:25.929Z",
+      "action": "Delete (STABLE)",
+      "before": {
+        "id": "1764111083284822",
+        "versionStatus": "222",
+        "build": "222",
+        "channel": "stable",
+        "release": "2025-11-26"
+      },
+      "after": null
+    },
+    {
+      "id": "1764111088268212",
+      "when": "2025-11-25T22:51:28.268Z",
+      "action": "Delete (STABLE)",
+      "before": {
+        "id": "1764111079445149",
+        "versionStatus": "111",
+        "build": "111",
+        "channel": "stable",
+        "release": "2025-11-26"
+      },
+      "after": null
+    },
+    {
+      "id": "1764111190435229",
+      "when": "2025-11-25T22:53:10.435Z",
+      "action": "Add (STABLE)",
+      "before": null,
+      "after": {
+        "id": "1764111190435429",
+        "versionStatus": "111",
+        "build": "111",
+        "channel": "stable",
+        "release": "2025-11-26"
+      }
+    },
+    {
+      "id": "176411119379433",
+      "when": "2025-11-25T22:53:13.794Z",
+      "action": "Add (STABLE)",
+      "before": null,
+      "after": {
+        "id": "1764111193794203",
+        "versionStatus": "222",
+        "build": "222",
+        "channel": "stable",
+        "release": "2025-11-26"
+      }
+    },
+    {
+      "id": "1764111196402627",
+      "when": "2025-11-25T22:53:16.402Z",
+      "action": "Delete (STABLE)",
+      "before": {
+        "id": "1764111193794203",
+        "versionStatus": "222",
+        "build": "222",
+        "channel": "stable",
+        "release": "2025-11-26"
+      },
+      "after": null
+    },
+    {
+      "id": "1764111199317410",
+      "when": "2025-11-25T22:53:19.317Z",
+      "action": "Delete (STABLE)",
+      "before": {
+        "id": "1764111190435429",
+        "versionStatus": "111",
+        "build": "111",
+        "channel": "stable",
+        "release": "2025-11-26"
+      },
+      "after": null
+    },
+    {
+      "id": "1764111203490553",
+      "when": "2025-11-25T22:53:23.490Z",
+      "action": "Add (CAN-DEV)",
+      "before": null,
+      "after": {
+        "id": "176411120348962",
+        "versionStatus": "111",
+        "build": "111",
+        "channel": "stable",
+        "release": "2025-11-26"
+      }
+    },
+    {
+      "id": "1764111207680508",
+      "when": "2025-11-25T22:53:27.680Z",
+      "action": "Add (CAN-DEV)",
+      "before": null,
+      "after": {
+        "id": "1764111207679338",
+        "versionStatus": "122",
+        "build": "122",
+        "channel": "stable",
+        "release": "2025-11-26"
+      }
+    },
+    {
+      "id": "1764111210024327",
+      "when": "2025-11-25T22:53:30.024Z",
+      "action": "Delete (CAN-DEV)",
+      "before": {
+        "id": "1764111207679338",
+        "versionStatus": "122",
+        "build": "122",
+        "channel": "stable",
+        "release": "2025-11-26"
+      },
+      "after": null
+    },
+    {
+      "id": "1764111211837457",
+      "when": "2025-11-25T22:53:31.837Z",
+      "action": "Delete (CAN-DEV)",
+      "before": {
+        "id": "176411120348962",
+        "versionStatus": "111",
+        "build": "111",
+        "channel": "stable",
+        "release": "2025-11-26"
+      },
+      "after": null
+    },
+    {
+      "id": "1764111218568376",
+      "when": "2025-11-25T22:53:38.568Z",
+      "action": "Add (STABLE)",
+      "before": null,
+      "after": {
+        "id": "1764111218567426",
+        "versionStatus": "111",
+        "build": "222",
+        "channel": "stable",
+        "release": "2025-11-26"
+      }
+    },
+    {
+      "id": "1764111225008902",
+      "when": "2025-11-25T22:53:45.009Z",
+      "action": "Add (STABLE)",
+      "before": null,
+      "after": {
+        "id": "1764111225008967",
+        "versionStatus": "222333",
+        "build": "222333",
+        "channel": "stable",
+        "release": "2025-11-26"
+      }
+    },
+    {
+      "id": "1764111231626557",
+      "when": "2025-11-25T22:53:51.626Z",
+      "action": "Delete (STABLE)",
+      "before": {
+        "id": "1764111225008967",
+        "versionStatus": "222333",
+        "build": "222333",
+        "channel": "stable",
+        "release": "2025-11-26"
+      },
+      "after": null
+    },
+    {
+      "id": "1764111233302524",
+      "when": "2025-11-25T22:53:53.302Z",
+      "action": "Delete (STABLE)",
+      "before": {
+        "id": "1764111218567426",
+        "versionStatus": "111",
+        "build": "222",
+        "channel": "stable",
+        "release": "2025-11-26"
+      },
+      "after": null
+    }
+  ],
+  "airosUpdatesByYear": {
+    "2025_stable": [],
+    "2025_candev": [
+      {
+        "id": "1764109804647769",
+        "versionStatus": "41234",
+        "build": "1235415",
+        "channel": "stable",
+        "release": "2025-11-26"
+      }
+    ]
+  }
+}

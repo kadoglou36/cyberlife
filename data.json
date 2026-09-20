@@ -298,7 +298,76 @@
     }
   ],
   "company": [],
-  "airosStatus": {},
+  "airosStatus": {
+    "AirOs": {
+      "status": "ONLINE",
+      "note": ""
+    },
+    "Scanner": {
+      "status": "ONLINE",
+      "note": ""
+    },
+    "Community": {
+      "status": "ONLINE",
+      "note": ""
+    },
+    "Diagnostic": {
+      "status": "ONLINE",
+      "note": ""
+    },
+    "Control Check": {
+      "status": "ONLINE",
+      "note": ""
+    },
+    "Control Sleep": {
+      "status": "ONLINE",
+      "note": ""
+    },
+    "Driving Control": {
+      "status": "ONLINE",
+      "note": ""
+    },
+    "Power Control": {
+      "status": "ONLINE",
+      "note": ""
+    },
+    "CT Scan": {
+      "status": "ONLINE",
+      "note": ""
+    },
+    "Central Scan": {
+      "status": "ONLINE",
+      "note": ""
+    },
+    "Processing": {
+      "status": "ONLINE",
+      "note": ""
+    },
+    "Optical Graphics": {
+      "status": "ONLINE",
+      "note": ""
+    },
+    "Technical": {
+      "status": "ONLINE",
+      "note": ""
+    },
+    "Support": {
+      "status": "ONLINE",
+      "note": ""
+    },
+    "Copilot + Recall": {
+      "status": "ONLINE",
+      "note": ""
+    },
+    "Snap X Elite Assist": {
+      "status": "ONLINE",
+      "note": ""
+    },
+    "Sudo": {
+      "status": "ONLINE",
+      "note": ""
+    }
+  },
   "airosUpdates": [],
   "airosUpdatesByTab": {
     "stable": [
@@ -2437,6 +2506,12 @@
       "area": "Calendar",
       "action": "Delete task",
       "details": "test"
+    },
+    {
+      "when": "2026-09-20T16:27:39.687Z",
+      "area": "AirOs15 Status",
+      "action": "Apply",
+      "details": "17 tech ? ONLINE"
     }
   ],
   "appLogEnabled": true,

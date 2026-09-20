@@ -863,74 +863,118 @@
       vertical-align: middle;
     }
 
-    /* Login Page Styles */
-    #login-container {
+    /* Dashboard is strictly hidden until a token is verified against the GitHub API */
+    #app-container {
+      display: none !important
+    }
+
+    #app-container.unlocked {
+      display: block !important
+    }
+
+    /* Full-screen dark auth gate - always on top while the app is locked */
+    #auth-modal {
       position: fixed;
       inset: 0;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      z-index: 99999;
+      background: rgba(10, 12, 20, .94);
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 1000
+      padding: 1rem
     }
 
-    #login-container[hidden] {
+    #auth-modal[hidden] {
       display: none !important
     }
 
-    #cyberlife-auth-denied {
-      position: fixed;
-      inset: 0;
-      background: linear-gradient(135deg, #1f2937 0%, #0f172a 100%);
+    .auth-modal-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, .45);
+      max-width: 420px;
+      width: 100%;
+      padding: 1.5rem;
+      text-align: center
+    }
+
+    .auth-modal-card h2 {
+      margin: 0 0 .5rem;
+      font-size: 1.3rem
+    }
+
+    .auth-modal-card p {
+      color: #6b7280;
+      margin: 0 0 .8rem
+    }
+
+    .auth-modal-form {
+      display: grid;
+      gap: .6rem;
+      text-align: left
+    }
+
+    .auth-modal-form label {
+      font-weight: 600;
+      font-size: .85rem;
+      color: #374151
+    }
+
+    .auth-modal-form input[type="password"] {
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      padding: .55rem .7rem;
+      font-size: .95rem
+    }
+
+    .auth-modal-error {
+      color: #b91c1c;
+      font-size: .88rem
+    }
+
+    .auth-modal-actions {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000
+      gap: .6rem;
+      justify-content: flex-end;
+      margin-top: .8rem
     }
 
-    #cyberlife-auth-denied[hidden] {
-      display: none !important
-    }
-
-    /* Keep the entire app hidden behind the auth overlay until a valid token is confirmed */
-    body.cyberlife-locked>:not(#login-container):not(#cyberlife-auth-denied) {
-      display: none !important
+    .auth-modal-actions.center {
+      justify-content: center
     }
   </style>
 </head>
 
-<body class="cyberlife-locked">
-  <!-- GitHub Personal Access Token gate - blocks the entire app until authenticated -->
-  <div id="login-container">
-    <div class="overlay-card" style="max-width:420px;text-align:center">
-      <h3 style="font-size:1.3rem">🔒 CyberLife Access</h3>
-      <p class="overlay-msg">Enter a GitHub Personal Access Token (repo scope) to unlock AI Suite 3. It is stored
-        only in this browser and used solely to read/write <code>data.json</code>.</p>
-      <form id="cyberlife-auth-form" style="display:grid;gap:.6rem;margin-top:.8rem;text-align:left">
-        <label for="cyberlife-auth-token-input"
-          style="font-weight:600;font-size:.85rem;color:#374151">Personal Access Token</label>
-        <input type="password" id="cyberlife-auth-token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
-          autocomplete="off" style="border:1px solid #d1d5db;border-radius:8px;padding:.55rem .7rem;font-size:.95rem" />
-        <div id="cyberlife-auth-error" class="overlay-error" hidden></div>
-        <div class="overlay-actions">
-          <button type="button" class="btn" id="cyberlife-auth-cancel">Cancel</button>
-          <button type="submit" class="cal-btn cal-btn--blue" id="cyberlife-auth-connect">Connect</button>
+<body>
+  <!-- Full-screen auth gate: blocks the dashboard until cyberlife_token is verified via the GitHub API -->
+  <div id="auth-modal">
+    <div class="auth-modal-card">
+      <div id="auth-modal-section-form">
+        <h2>🔒 CyberLife Access</h2>
+        <p>Enter a GitHub Personal Access Token (repo scope) to unlock AI Suite 3. It is stored only in this
+          browser and used solely to read/write <code>data.json</code>.</p>
+        <form id="cyberlife-auth-form" class="auth-modal-form">
+          <label for="cyberlife-auth-token-input">Personal Access Token</label>
+          <input type="password" id="cyberlife-auth-token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
+            autocomplete="off" />
+          <div id="cyberlife-auth-error" class="auth-modal-error" hidden></div>
+          <div class="auth-modal-actions">
+            <button type="button" class="btn" id="cyberlife-auth-cancel">Cancel</button>
+            <button type="submit" class="cal-btn cal-btn--blue" id="cyberlife-auth-connect">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div id="auth-modal-section-denied" hidden>
+        <h2 style="color:#ef4444">⛔ Access Denied</h2>
+        <p>Authentication required — a valid GitHub Personal Access Token is required to use AI Suite 3.</p>
+        <div class="auth-modal-actions center">
+          <button type="button" class="cal-btn cal-btn--blue" id="cyberlife-auth-retry">Try Again</button>
         </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- Shown after cancel or when the user gives up on entering a valid token -->
-  <div id="cyberlife-auth-denied" hidden>
-    <div class="overlay-card" style="max-width:420px;text-align:center">
-      <h3 style="color:#ef4444;font-size:1.3rem">⛔ Access Denied</h3>
-      <p class="overlay-msg">A valid GitHub Personal Access Token is required to use AI Suite 3.</p>
-      <div class="overlay-actions" style="justify-content:center">
-        <button type="button" class="cal-btn cal-btn--blue" id="cyberlife-auth-retry">Try Again</button>
       </div>
     </div>
   </div>
 
+  <div id="app-container">
   <header class="topbar">
     <nav class="nav" aria-label="Main navigation">
       <button class="brand" id="brand-home" type="button">🏠 Main</button>
@@ -2587,6 +2631,7 @@
       </div>
     </div>
   </div>
+  </div><!-- /#app-container -->
 
   <script>
     // Debug mode disabled
@@ -2990,9 +3035,11 @@
         return result;
       }
 
-      // ---- Auth overlay wiring ----
-      const authOverlay = document.getElementById('login-container');
-      const deniedOverlay = document.getElementById('cyberlife-auth-denied');
+      // ---- Auth modal wiring ----
+      const appContainer = document.getElementById('app-container');
+      const authModal = document.getElementById('auth-modal');
+      const formSection = document.getElementById('auth-modal-section-form');
+      const deniedSection = document.getElementById('auth-modal-section-denied');
       const authForm = document.getElementById('cyberlife-auth-form');
       const tokenInput = document.getElementById('cyberlife-auth-token-input');
       const errorEl = document.getElementById('cyberlife-auth-error');
@@ -3000,15 +3047,20 @@
       const retryBtn = document.getElementById('cyberlife-auth-retry');
       const connectBtn = document.getElementById('cyberlife-auth-connect');
 
+      // Strictly hide the dashboard and show the auth gate
       function lockApp() {
-        document.body.classList.add('cyberlife-locked');
+        appContainer?.classList.remove('unlocked');
+        if (authModal) authModal.hidden = false;
       }
+      // Only called after the token is verified against the GitHub API
       function unlockApp() {
-        document.body.classList.remove('cyberlife-locked');
+        appContainer?.classList.add('unlocked');
+        if (authModal) authModal.hidden = true;
       }
       function showAuthForm(message) {
-        if (deniedOverlay) deniedOverlay.hidden = true;
-        if (authOverlay) authOverlay.hidden = false;
+        if (deniedSection) deniedSection.hidden = true;
+        if (formSection) formSection.hidden = false;
+        if (authModal) authModal.hidden = false;
         if (errorEl) {
           errorEl.textContent = message || '';
           errorEl.hidden = !message;
@@ -3016,12 +3068,9 @@
         tokenInput?.focus();
       }
       function showAccessDenied() {
-        if (authOverlay) authOverlay.hidden = true;
-        if (deniedOverlay) deniedOverlay.hidden = false;
-      }
-      function hideAuthScreens() {
-        if (authOverlay) authOverlay.hidden = true;
-        if (deniedOverlay) deniedOverlay.hidden = true;
+        if (formSection) formSection.hidden = true;
+        if (deniedSection) deniedSection.hidden = false;
+        if (authModal) authModal.hidden = false;
       }
 
       async function attemptLogin(token) {
@@ -3029,7 +3078,6 @@
         if (connectBtn) { connectBtn.disabled = true; connectBtn.textContent = 'Connecting…'; }
         try {
           await loadAppData();
-          hideAuthScreens();
           unlockApp();
           window.restoreLastView?.();
           window.passengersVoid?.render?.();
@@ -3037,7 +3085,7 @@
           console.error('CyberLife GitHub sync error:', err);
           showAuthForm(err.message || 'Failed to connect. Please check your token and try again.');
         } finally {
-          if (connectBtn) { connectBtn.disabled = false; connectBtn.textContent = 'Connect'; }
+          if (connectBtn) { connectBtn.disabled = false; connectBtn.textContent = 'Submit'; }
         }
       }
 
@@ -3060,7 +3108,7 @@
         showAuthForm();
       });
 
-      // Ensures a token exists, then loads the latest data.json
+      // Ensures a token exists, then validates it by loading the latest data.json
       async function checkAuth() {
         lockApp();
         const token = getStoredToken();
@@ -3070,7 +3118,6 @@
         }
         try {
           await loadAppData();
-          hideAuthScreens();
           unlockApp();
           window.restoreLastView?.();
           window.passengersVoid?.render?.();

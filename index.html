@@ -2969,7 +2969,8 @@
         const token = getStoredToken();
         if (!token) throw new Error('No GitHub token available');
 
-        const res = await fetch(contentsApiUrl(), {
+        // Cache-bust so the browser/CDN never serves a stale copy of data.json
+        const res = await fetch(`${contentsApiUrl()}?t=${Date.now()}`, {
           headers: {
             'Authorization': `token ${token}`,
             'Accept': 'application/vnd.github+json'
@@ -3000,39 +3001,63 @@
         const token = getStoredToken();
         if (!token) throw new Error('No GitHub token available');
 
-        const content = utf8ToBase64(JSON.stringify(window.appData || {}, null, 2));
-        const body = {
-          message: `Update ${GITHUB_FILE_PATH} - ${new Date().toISOString()}`,
-          content
-        };
-        if (currentFileSHA) body.sha = currentFileSHA;
+        try {
+          // Fetch the latest sha first, in case the file changed since it was last loaded
+          const shaRes = await fetch(`${contentsApiUrl()}?t=${Date.now()}`, {
+            headers: {
+              'Authorization': `token ${token}`,
+              'Accept': 'application/vnd.github+json'
+            }
+          });
+          if (shaRes.ok) {
+            const shaFile = await shaRes.json();
+            currentFileSHA = shaFile.sha;
+            window.currentFileSHA = currentFileSHA;
+          } else if (shaRes.status === 401) {
+            clearStoredToken();
+            lockApp();
+            showAuthForm('Your GitHub token is no longer valid. Please sign in again.');
+            throw new Error('Invalid GitHub token. Please check it and try again.');
+          }
 
-        const res = await fetch(contentsApiUrl(), {
-          method: 'PUT',
-          headers: {
-            'Authorization': `token ${token}`,
-            'Accept': 'application/vnd.github+json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(body)
-        });
+          const content = utf8ToBase64(JSON.stringify(window.appData || {}, null, 2));
+          const body = {
+            message: `Update ${GITHUB_FILE_PATH} - ${new Date().toISOString()}`,
+            content
+          };
+          if (currentFileSHA) body.sha = currentFileSHA;
 
-        if (res.status === 401) {
-          clearStoredToken();
-          lockApp();
-          showAuthForm('Your GitHub token is no longer valid. Please sign in again.');
-          throw new Error('Invalid GitHub token. Please check it and try again.');
+          const res = await fetch(contentsApiUrl(), {
+            method: 'PUT',
+            headers: {
+              'Authorization': `token ${token}`,
+              'Accept': 'application/vnd.github+json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+          });
+
+          if (res.status === 401) {
+            clearStoredToken();
+            lockApp();
+            showAuthForm('Your GitHub token is no longer valid. Please sign in again.');
+            throw new Error('Invalid GitHub token. Please check it and try again.');
+          }
+          if (!res.ok) {
+            const errText = await res.text();
+            throw new Error(`Failed to save ${GITHUB_FILE_PATH}: ${res.status} ${errText}`);
+          }
+
+          const result = await res.json();
+          currentFileSHA = result.content?.sha || currentFileSHA;
+          window.currentFileSHA = currentFileSHA;
+          if (window.DEBUG_MODE) console.log('✅ appData saved to GitHub');
+          return result;
+        } catch (err) {
+          console.error('❌ CyberLife save error:', err);
+          alert(`Failed to save data to GitHub:\n${err.message}`);
+          throw err;
         }
-        if (!res.ok) {
-          const errText = await res.text();
-          throw new Error(`Failed to save ${GITHUB_FILE_PATH}: ${res.status} ${errText}`);
-        }
-
-        const result = await res.json();
-        currentFileSHA = result.content?.sha || currentFileSHA;
-        window.currentFileSHA = currentFileSHA;
-        if (window.DEBUG_MODE) console.log('✅ appData saved to GitHub');
-        return result;
       }
 
       // ---- Auth modal wiring ----

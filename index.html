@@ -2888,6 +2888,7 @@
             company: window.CyberLifeData.company,
             airos: window.CyberLifeData.airosStatus,
             airosUpdates: window.CyberLifeData.airosUpdates,
+            airosUpdatesByTab: window.CyberLifeData.airosUpdatesByTab,
             intelligenceByYear: window.CyberLifeData.intelligenceByYear,
             cyberLifeReports: window.CyberLifeData.cyberLifeReports,
             appLog: window.CyberLifeData.appLog,
@@ -2906,6 +2907,7 @@
             if (value.company) window.CyberLifeData.company = value.company;
             if (value.airos) window.CyberLifeData.airosStatus = value.airos;
             if (value.airosUpdates) window.CyberLifeData.airosUpdates = value.airosUpdates;
+            if (value.airosUpdatesByTab) window.CyberLifeData.airosUpdatesByTab = value.airosUpdatesByTab;
             if (value.intelligenceByYear) window.CyberLifeData.intelligenceByYear = value.intelligenceByYear;
             if (value.cyberLifeReports) window.CyberLifeData.cyberLifeReports = value.cyberLifeReports;
             if (value.appLog) window.CyberLifeData.appLog = value.appLog;
@@ -4937,19 +4939,24 @@
         let editId = null;
 
         function loadData() {
-          if (!window.CyberLifeData) window.CyberLifeData = {};
-          if (!window.CyberLifeData.airosUpdatesByTab) window.CyberLifeData.airosUpdatesByTab = {};
+          if (!window.appData) window.appData = {};
           const key = currentTab; // 'stable' or 'candev'
-          if (!window.CyberLifeData.airosUpdatesByTab[key]) window.CyberLifeData.airosUpdatesByTab[key] = [];
-          return Array.isArray(window.CyberLifeData.airosUpdatesByTab[key]) ? window.CyberLifeData.airosUpdatesByTab[key] : [];
+          // New per-tab structure takes priority when present
+          if (appData.airosUpdatesByTab) {
+            if (!Array.isArray(appData.airosUpdatesByTab[key])) appData.airosUpdatesByTab[key] = [];
+            return appData.airosUpdatesByTab[key];
+          }
+          // Legacy fallback: single flat list shared by both tabs
+          if (!Array.isArray(appData.airosUpdates)) appData.airosUpdates = [];
+          return appData.airosUpdates;
         }
 
         function saveData(arr) {
-          if (!window.CyberLifeData) window.CyberLifeData = {};
-          if (!window.CyberLifeData.airosUpdatesByTab) window.CyberLifeData.airosUpdatesByTab = {};
+          if (!window.appData) window.appData = {};
           const key = currentTab; // 'stable' or 'candev'
-          window.CyberLifeData.airosUpdatesByTab[key] = arr;
-          window.cyberLifeAutoSave?.scheduleAutoSave();
+          if (!appData.airosUpdatesByTab) appData.airosUpdatesByTab = {};
+          appData.airosUpdatesByTab[key] = arr;
+          window.saveAppData?.();
         }
 
         function todayInput() {

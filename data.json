@@ -279,6 +279,59 @@
       }
     ]
   },
+  "passengers": [],
+  "passengersVoid": [
+    {
+      "id": "12204",
+      "name": "Sofia Kaligeraki",
+      "stState": "FRAGGILE",
+      "dirState": "UCS",
+      "inDate": "01/10/2020",
+      "outDate": "15/06/2026",
+      "protocol": "36246/ΓΔ4/23-03-2026",
+      "tCreate": "First Officer"
+    },
+    {
+      "id": "15244",
+      "name": "Maria Kapola",
+      "stState": "FRAGGILE",
+      "dirState": "UCS",
+      "inDate": "12/11/2022",
+      "outDate": "15/06/2026",
+      "protocol": "36246/ΓΔ4/23-03-2026",
+      "tCreate": "First Officer"
+    },
+    {
+      "id": "00189",
+      "name": "Sofia Kouskouli",
+      "stState": "AI State",
+      "dirState": "UCS",
+      "inDate": "01/10/2025",
+      "outDate": "15/06/2026",
+      "protocol": "36246/ΓΔ4/23-03-2026",
+      "tCreate": "First Officer"
+    },
+    {
+      "id": "04033",
+      "name": "Falia Bakosi",
+      "stState": "FRAGGILE",
+      "dirState": "UCS",
+      "inDate": "15/09/2020",
+      "outDate": "15/06/2026",
+      "protocol": "36246/ΓΔ4/23-03-2026",
+      "tCreate": "First Officer"
+    },
+    {
+      "id": "51951962024",
+      "name": "Aggeliki Koukouraki",
+      "stState": "FRAGGILE",
+      "dirState": "UCS",
+      "inDate": "25/04/2026",
+      "outDate": "15/06/2026",
+      "protocol": "36246/ΓΔ4/23-03-2026",
+      "tCreate": "First Officer"
+    }
+  ],
   "crewCyber": [
     {
       "id": "1762095985169",
@@ -521,59 +574,7 @@
       "health": "10023457532"
     }
   ],
-  "passengers": [],
-  "passengersVoid": [
-    {
-      "id": "12204",
-      "name": "Sofia Kaligeraki",
-      "stState": "FRAGGILE",
-      "dirState": "UCS",
-      "inDate": "01/10/2020",
-      "outDate": "15/06/2026",
-      "protocol": "36246/ΓΔ4/23-03-2026",
-      "tCreate": "First Officer"
-    },
-    {
-      "id": "15244",
-      "name": "Maria Kapola",
-      "stState": "FRAGGILE",
-      "dirState": "UCS",
-      "inDate": "12/11/2022",
-      "outDate": "15/06/2026",
-      "protocol": "36246/ΓΔ4/23-03-2026",
-      "tCreate": "First Officer"
-    },
-    {
-      "id": "00189",
-      "name": "Sofia Kouskouli",
-      "stState": "AI State",
-      "dirState": "UCS",
-      "inDate": "01/10/2025",
-      "outDate": "15/06/2026",
-      "protocol": "36246/ΓΔ4/23-03-2026",
-      "tCreate": "First Officer"
-    },
-    {
-      "id": "04033",
-      "name": "Falia Bakosi",
-      "stState": "FRAGGILE",
-      "dirState": "UCS",
-      "inDate": "15/09/2020",
-      "outDate": "15/06/2026",
-      "protocol": "36246/ΓΔ4/23-03-2026",
-      "tCreate": "First Officer"
-    },
-    {
-      "id": "51951962024",
-      "name": "Aggeliki Koukouraki",
-      "stState": "FRAGGILE",
-      "dirState": "UCS",
-      "inDate": "25/04/2026",
-      "outDate": "15/06/2026",
-      "protocol": "36246/ΓΔ4/23-03-2026",
-      "tCreate": "First Officer"
-    }
-  ],
+  "company": [],
   "airosStatus": {
     "AirOs": {
       "status": "ONLINE",
@@ -645,8 +646,391 @@
     }
   },
   "airosUpdates": [],
-  "company": [],
-  "report": "",
+  "airosUpdatesByTab": {
+    "stable": [
+      {
+        "id": "1764883579358679",
+        "versionStatus": "V1.00",
+        "build": "AirOs15 21h1",
+        "channel": "dev",
+        "release": "2021-06-25"
+      },
+      {
+        "id": "1764883622768314",
+        "versionStatus": "V1.05",
+        "build": "21H1",
+        "channel": "stable",
+        "release": "2021-10-04"
+      },
+      {
+        "id": "1764883662234700",
+        "versionStatus": "V1.08",
+        "build": "22H2",
+        "channel": "stable",
+        "release": "2022-09-20"
+      },
+      {
+        "id": "1764883710825149",
+        "versionStatus": "V1.09",
+        "build": "23H2",
+        "channel": "stable",
+        "release": "2023-10-31"
+      },
+      {
+        "id": "1764883741474524",
+        "versionStatus": "V1.10",
+        "build": "23h2 22621.2506",
+        "channel": "stable",
+        "release": "2023-10-31"
+      },
+      {
+        "id": "176488376358574",
+        "versionStatus": "V.1.15",
+        "build": "23h2 22621.2715",
+        "channel": "stable",
+        "release": "2023-11-14"
+      },
+      {
+        "id": "1764883811345148",
+        "versionStatus": "V2.00",
+        "build": "23h2 22621.2792",
+        "channel": "stable",
+        "release": "2023-12-04"
+      },
+      {
+        "id": "1764883844168320",
+        "versionStatus": "V2.10",
+        "build": "23h2 22621.2861",
+        "channel": "stable",
+        "release": "2023-12-12"
+      },
+      {
+        "id": "1764883888543337",
+        "versionStatus": "V2.12",
+        "build": "23h2 22631.3007",
+        "channel": "stable",
+        "release": "2024-01-09"
+      },
+      {
+        "id": "1764883958325399",
+        "versionStatus": "V2.15",
+        "build": "23h2 22631.3085",
+        "channel": "stable",
+        "release": "2024-01-23"
+      },
+      {
+        "id": "1764883979885608",
+        "versionStatus": "V2.20",
+        "build": "23h2 22631.3155",
+        "channel": "stable",
+        "release": "2024-02-13"
+      },
+      {
+        "id": "1764884048298542",
+        "versionStatus": "V2.30",
+        "build": "23h2 22631.3235",
+        "channel": "stable",
+        "release": "2024-02-29"
+      },
+      {
+        "id": "1764884071684957",
+        "versionStatus": "V2.45",
+        "build": "23h2 22631.3296",
+        "channel": "stable",
+        "release": "2024-03-12"
+      },
+      {
+        "id": "176488409292571",
+        "versionStatus": "V2.47",
+        "build": "23h2 22631.3672",
+        "channel": "stable",
+        "release": "2024-05-29"
+      },
+      {
+        "id": "1764884432279611",
+        "versionStatus": "V2.50",
+        "build": "23h2 22631.3880",
+        "channel": "stable",
+        "release": "2024-07-01"
+      },
+      {
+        "id": "1764884470073106",
+        "versionStatus": "V2.60",
+        "build": "23H2 22631.4169",
+        "channel": "stable",
+        "release": "2024-09-16"
+      },
+      {
+        "id": "1764884518287697",
+        "versionStatus": "V2.62",
+        "build": "23h2 22631.4249",
+        "channel": "stable",
+        "release": "2024-09-26"
+      },
+      {
+        "id": "1764884555311348",
+        "versionStatus": "V2.65",
+        "build": "24h2 26100.2033",
+        "channel": "stable",
+        "release": "2024-10-01"
+      },
+      {
+        "id": "1764884581228304",
+        "versionStatus": "V2.68",
+        "build": "24h2 26100.2314",
+        "channel": "stable",
+        "release": "2024-11-11"
+      },
+      {
+        "id": "1764884622805661",
+        "versionStatus": "V2.70",
+        "build": "24h2 26100.2605",
+        "channel": "stable",
+        "release": "2024-11-24"
+      },
+      {
+        "id": "1764886027463300",
+        "versionStatus": "V2.70",
+        "build": "24h2 26100.2894",
+        "channel": "stable",
+        "release": "2025-01-14"
+      },
+      {
+        "id": "176488605958650",
+        "versionStatus": "V2.72",
+        "build": "24h2 26100.3194",
+        "channel": "stable",
+        "release": "2025-02-11"
+      },
+      {
+        "id": "1764886085997732",
+        "versionStatus": "V2.75",
+        "build": "24h2 26100.3476",
+        "channel": "stable",
+        "release": "2025-03-11"
+      },
+      {
+        "id": "1764886105814210",
+        "versionStatus": "V2.78",
+        "build": "24h2 26100.3775",
+        "channel": "stable",
+        "release": "2025-04-09"
+      },
+      {
+        "id": "1764886135489492",
+        "versionStatus": "V2.80",
+        "build": "24h2 26100.4061",
+        "channel": "stable",
+        "release": "2025-05-13"
+      },
+      {
+        "id": "1764886168606476",
+        "versionStatus": "V2.82",
+        "build": "24h2 26100.4349",
+        "channel": "stable",
+        "release": "2025-06-10"
+      },
+      {
+        "id": "1764886188558673",
+        "versionStatus": "V2.85",
+        "build": "24h2 26100.4652",
+        "channel": "stable",
+        "release": "2025-07-08"
+      },
+      {
+        "id": "1764886215518920",
+        "versionStatus": "V2.87",
+        "build": "24h2 26100.4946",
+        "channel": "stable",
+        "release": "2025-08-12"
+      },
+      {
+        "id": "1764886240992158",
+        "versionStatus": "V2.97",
+        "build": "24h2 26100.6584",
+        "channel": "stable",
+        "release": "2025-09-09"
+      },
+      {
+        "id": "1764886265081870",
+        "versionStatus": "V3.00",
+        "build": "25h2 26200.6899",
+        "channel": "stable",
+        "release": "2025-10-14"
+      },
+      {
+        "id": "1764886491501753",
+        "versionStatus": "V3.04",
+        "build": "25h2 26200.6901 OB",
+        "channel": "stable",
+        "release": "2025-10-20"
+      },
+      {
+        "id": "1764886538804647",
+        "versionStatus": "V3.05",
+        "build": "25h2 26200.7171",
+        "channel": "stable",
+        "release": "2025-11-11"
+      },
+      {
+        "id": "1766352938031595",
+        "versionStatus": "V3.08",
+        "build": "25h2 26200.7462",
+        "channel": "stable",
+        "release": "2025-12-09"
+      },
+      {
+        "id": "177162649115197",
+        "versionStatus": "V3.12",
+        "build": "25h2 26100.7323",
+        "channel": "stable",
+        "release": "2026-01-13"
+      },
+      {
+        "id": "1771626537066778",
+        "versionStatus": "V3.15",
+        "build": "25h2 26100.7840",
+        "channel": "stable",
+        "release": "2026-02-10"
+      },
+      {
+        "id": "1779050577534108",
+        "versionStatus": "V3.16",
+        "build": "25h2 26100.8037",
+        "channel": "stable",
+        "release": "2026-03-10"
+      },
+      {
+        "id": "1779050629571195",
+        "versionStatus": "V3.18",
+        "build": "25h2 26100.8039 OB",
+        "channel": "stable",
+        "release": "2026-03-21"
+      },
+      {
+        "id": "1779050675819904",
+        "versionStatus": "V3.19",
+        "build": "25h2 26100.8117 OB",
+        "channel": "stable",
+        "release": "2026-03-31"
+      },
+      {
+        "id": "1779050714977248",
+        "versionStatus": "V3.20",
+        "build": "25h2 26100.8246",
+        "channel": "stable",
+        "release": "2026-04-14"
+      },
+      {
+        "id": "1779050743701835",
+        "versionStatus": "V3.22",
+        "build": "25h2 26100.8457",
+        "channel": "stable",
+        "release": "2026-05-12"
+      },
+      {
+        "id": "1781417419904483",
+        "versionStatus": "V3.25",
+        "build": "25h2 26100.8655",
+        "channel": "stable",
+        "release": "2026-06-09"
+      },
+      {
+        "id": "1785285029255896",
+        "versionStatus": "V3.27",
+        "build": "25h2 26100.8875",
+        "channel": "stable",
+        "release": "2026-07-14"
+      }
+    ],
+    "candev": [
+      {
+        "id": "1781417556688298",
+        "versionStatus": "V3.50",
+        "build": "26h1 28000.1575",
+        "channel": "stable",
+        "release": "2026-02-10"
+      },
+      {
+        "id": "1781417613316911",
+        "versionStatus": "V3.51",
+        "build": "26h1 28000.1643 P",
+        "channel": "stable",
+        "release": "2026-06-24"
+      },
+      {
+        "id": "1781417651888951",
+        "versionStatus": "V3.52",
+        "build": "26h1 28000.1719",
+        "channel": "stable",
+        "release": "2026-03-10"
+      },
+      {
+        "id": "1781417685955779",
+        "versionStatus": "V3.53",
+        "build": "26h2 28000.1764 P",
+        "channel": "stable",
+        "release": "2026-03-26"
+      },
+      {
+        "id": "178141772552671",
+        "versionStatus": "V3.54",
+        "build": "26h1 28000.1836",
+        "channel": "stable",
+        "release": "2026-04-14"
+      },
+      {
+        "id": "1781417757683365",
+        "versionStatus": "V3.55",
+        "build": "26h1 28000.1896 P",
+        "channel": "stable",
+        "release": "2026-06-14"
+      },
+      {
+        "id": "1781417797909310",
+        "versionStatus": "V3.56",
+        "build": "26h1 28000.2113",
+        "channel": "stable",
+        "release": "2026-05-12"
+      },
+      {
+        "id": "1781417826570353",
+        "versionStatus": "V3.57",
+        "build": "26h1 28000.2179 P",
+        "channel": "stable",
+        "release": "2026-05-26"
+      },
+      {
+        "id": "178141785399351",
+        "versionStatus": "V3.58",
+        "build": "26h1 28000.2269",
+        "channel": "stable",
+        "release": "2026-06-09"
+      },
+      {
+        "id": "178528509627227",
+        "versionStatus": "V3.59",
+        "build": "26h2 28000.2340 P",
+        "channel": "stable",
+        "release": "2026-06-23"
+      },
+      {
+        "id": "1785285143439465",
+        "versionStatus": "V3.60",
+        "build": "26h1 28000.2525",
+        "channel": "stable",
+        "release": "2026-07-14"
+      },
+      {
+        "id": "1785285173748718",
+        "versionStatus": "V3.60",
+        "build": "26h1 28000.2608",
+        "channel": "stable",
+        "release": "2026-07-28"
+      }
+    ]
+  },
+  "intelligenceByYear": {},
   "cyberLifeReports": [
     {
       "id": "1780363248969",
@@ -689,1387 +1073,6 @@
       "updatedAt": "2026-09-09T12:40:06.714Z"
     }
   ],
-  "workCalendar": {
-    "entries": [
-      {
-        "date": "2026-05-29",
-        "slots": [
-          {
-            "text": "18:00-01:00",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "hours": 7,
-        "rate": 4,
-        "note": "Opening",
-        "updatedAt": "2026-06-03T10:18:48.610Z"
-      },
-      {
-        "date": "2026-05-30",
-        "slots": [
-          {
-            "text": "18:00-03:00",
-            "hours": 9,
-            "valid": true
-          }
-        ],
-        "hours": 9,
-        "rate": 4,
-        "note": "Opening DJ Party",
-        "updatedAt": "2026-06-03T10:18:44.824Z"
-      },
-      {
-        "date": "2026-05-31",
-        "slots": [
-          {
-            "text": "18:00-02:00",
-            "hours": 8,
-            "valid": true
-          }
-        ],
-        "hours": 8,
-        "rate": 4,
-        "note": "",
-        "updatedAt": "2026-06-03T10:18:46.972Z"
-      },
-      {
-        "date": "2026-06-01",
-        "slots": [
-          {
-            "text": "18:00-01:00",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "hours": 7,
-        "rate": 4,
-        "note": "",
-        "updatedAt": "2026-06-02T01:17:51.970Z"
-      },
-      {
-        "date": "2026-06-02",
-        "slots": [
-          {
-            "text": "18:00-00:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "hours": 6,
-        "rate": 4,
-        "note": "",
-        "updatedAt": "2026-06-03T10:18:05.900Z"
-      },
-      {
-        "date": "2026-06-03",
-        "slots": [
-          {
-            "text": "18:00-01:00",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-04",
-        "slots": [
-          {
-            "text": "18:00-01:00",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-05",
-        "slots": [
-          {
-            "text": "19:00-02:00",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-06",
-        "slots": [
-          {
-            "text": "19:00-02:00",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-07",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-08",
-        "slots": [
-          {
-            "text": "19:00-00:00",
-            "hours": 5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-09",
-        "slots": [
-          {
-            "text": "19:00-00:00",
-            "hours": 5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-10",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-11",
-        "slots": [
-          {
-            "text": "19:00-00:00",
-            "hours": 5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-12",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-13",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-14",
-        "slots": [
-          {
-            "text": "11:00-13:30",
-            "hours": 2.5,
-            "valid": true
-          },
-          {
-            "text": "19:30-01:00",
-            "hours": 5.5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-15",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-16",
-        "slots": [
-          {
-            "text": "19:00-00:00",
-            "hours": 5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-19",
-        "slots": [
-          {
-            "text": "19:30-01:00",
-            "hours": 5.5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-18",
-        "slots": [
-          {
-            "text": "20:00-00:30",
-            "hours": 4.5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-17",
-        "slots": [
-          {
-            "text": "19:00-00:00",
-            "hours": 5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-20",
-        "slots": [
-          {
-            "text": "18:00-01:00",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-21",
-        "slots": [
-          {
-            "text": "11:00-14:30",
-            "hours": 3.5,
-            "valid": true
-          },
-          {
-            "text": "19:30-01:00",
-            "hours": 5.5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-22",
-        "slots": [
-          {
-            "text": "19:00-00:00",
-            "hours": 5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-23",
-        "slots": [
-          {
-            "text": "19:00-00:00",
-            "hours": 5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-24",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-25",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-26",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-27",
-        "slots": [
-          {
-            "text": "18:00-02:00",
-            "hours": 8,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-28",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-29",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-06-30",
-        "slots": [
-          {
-            "text": "19:00-00:00",
-            "hours": 5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-01",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-02",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-03",
-        "slots": [
-          {
-            "text": "19:00-02:00",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-04",
-        "slots": [
-          {
-            "text": "18:00-02:00",
-            "hours": 8,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-05",
-        "slots": [
-          {
-            "text": "11:00-15:00",
-            "hours": 4,
-            "valid": true
-          },
-          {
-            "text": "20:00-02:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-06",
-        "slots": [
-          {
-            "text": "19:00-00:30",
-            "hours": 5.5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-07",
-        "slots": [
-          {
-            "text": "19:30-01:00",
-            "hours": 5.5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-08",
-        "slots": [
-          {
-            "text": "19:00-00:00",
-            "hours": 5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-09",
-        "slots": [
-          {
-            "text": "19:00-00:00",
-            "hours": 5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-10",
-        "slots": [
-          {
-            "text": "19:00-02:00",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-11",
-        "slots": [
-          {
-            "text": "19:00-02:00",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-12",
-        "slots": [
-          {
-            "text": "11:00-14:00",
-            "hours": 3,
-            "valid": true
-          },
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-16",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-13",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-14",
-        "slots": [
-          {
-            "text": "19:00-00:30",
-            "hours": 5.5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-15",
-        "slots": [
-          {
-            "text": "19:30-01:00",
-            "hours": 5.5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-17",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-18",
-        "slots": [
-          {
-            "text": "19:00-01:30",
-            "hours": 6.5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-19",
-        "slots": [
-          {
-            "text": "19:00-02:00",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-20",
-        "slots": [
-          {
-            "text": "19:00-00:30",
-            "hours": 5.5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-21",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-22",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-23",
-        "slots": [
-          {
-            "text": "19:00-02:00",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-24",
-        "slots": [
-          {
-            "text": "19:00-03:00",
-            "hours": 8,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-25",
-        "slots": [
-          {
-            "text": "18:00-03:00",
-            "hours": 9,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-26",
-        "slots": [
-          {
-            "text": "11:00-13:00",
-            "hours": 2,
-            "valid": true
-          },
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-27",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-28",
-        "slots": [
-          {
-            "text": "20:00-01:00",
-            "hours": 5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-29",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-30",
-        "slots": [
-          {
-            "text": "19:00-00:00",
-            "hours": 5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-07-31",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-01",
-        "slots": [
-          {
-            "text": "18:00-02:00",
-            "hours": 8,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-02",
-        "slots": [
-          {
-            "text": "11:00-14:00",
-            "hours": 3,
-            "valid": true
-          },
-          {
-            "text": "19:00-02:00",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-03",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-04",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-05",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-06",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-07",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-08",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-09",
-        "slots": [
-          {
-            "text": "18:00-03:00",
-            "hours": 9,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-10",
-        "slots": [
-          {
-            "text": "19:00-02:00",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-11",
-        "slots": [
-          {
-            "text": "19:00-03:00",
-            "hours": 8,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-12",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-13",
-        "slots": [
-          {
-            "text": "19:00-02:00",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-14",
-        "slots": [
-          {
-            "text": "17:00-02:00",
-            "hours": 9,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-15",
-        "slots": [
-          {
-            "text": "11:00-15:00",
-            "hours": 4,
-            "valid": true
-          },
-          {
-            "text": "18:00-02:00",
-            "hours": 8,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-16",
-        "slots": [
-          {
-            "text": "10:30-15:00",
-            "hours": 4.5,
-            "valid": true
-          },
-          {
-            "text": "18:00-02:00",
-            "hours": 8,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-17",
-        "slots": [
-          {
-            "text": "18:30-02:00",
-            "hours": 7.5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-18",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-19",
-        "slots": [
-          {
-            "text": "18:00-02:00",
-            "hours": 8,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-20",
-        "slots": [
-          {
-            "text": "18:00-02:00",
-            "hours": 8,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-21",
-        "slots": [
-          {
-            "text": "17:00-03:00",
-            "hours": 10,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-22",
-        "slots": [
-          {
-            "text": "18:00-03:00",
-            "hours": 9,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-23",
-        "slots": [
-          {
-            "text": "10:00-14:00",
-            "hours": 4,
-            "valid": true
-          },
-          {
-            "text": "19:00-04:00",
-            "hours": 9,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-24",
-        "slots": [
-          {
-            "text": "19:00-02:00",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-25",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-26",
-        "slots": [
-          {
-            "text": "19:00-03:00",
-            "hours": 8,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-27",
-        "slots": [
-          {
-            "text": "19:00-02:00",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-28",
-        "slots": [
-          {
-            "text": "18:00-02:00",
-            "hours": 8,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-29",
-        "slots": [
-          {
-            "text": "17:00-05:00",
-            "hours": 12,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-30",
-        "slots": [
-          {
-            "text": "18:00-01:30",
-            "hours": 7.5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-08-31",
-        "slots": [
-          {
-            "text": "18:30-01:30",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-09-01",
-        "slots": [
-          {
-            "text": "20:00-00:30",
-            "hours": 4.5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-09-02",
-        "slots": [
-          {
-            "text": "20:00-01:00",
-            "hours": 5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-09-03",
-        "slots": [
-          {
-            "text": "19:00-00:00",
-            "hours": 5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-09-04",
-        "slots": [
-          {
-            "text": "19:00-12:00",
-            "hours": 17,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-09-05",
-        "slots": [
-          {
-            "text": "19:00-02:00",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-09-06",
-        "slots": [
-          {
-            "text": "11:00-13:00",
-            "hours": 2,
-            "valid": true
-          },
-          {
-            "text": "20:00-00:00",
-            "hours": 4,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-09-07",
-        "slots": [
-          {
-            "text": "20:00-00:00",
-            "hours": 4,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-09-09",
-        "slots": [
-          {
-            "text": "20:00-01:00",
-            "hours": 5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-09-11",
-        "slots": [
-          {
-            "text": "19:00-00:30",
-            "hours": 5.5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-09-12",
-        "slots": [
-          {
-            "text": "19:00-01:00",
-            "hours": 6,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-09-13",
-        "slots": [
-          {
-            "text": "11:00-13:00",
-            "hours": 2,
-            "valid": true
-          },
-          {
-            "text": "20:00-00:00",
-            "hours": 4,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-09-17",
-        "slots": [
-          {
-            "text": "20:00-23:30",
-            "hours": 3.5,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-09-18",
-        "slots": [
-          {
-            "text": "22:00-01:00",
-            "hours": 3,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      },
-      {
-        "date": "2026-09-19",
-        "slots": [
-          {
-            "text": "18:00-01:00",
-            "hours": 7,
-            "valid": true
-          }
-        ],
-        "rate": 4,
-        "note": ""
-      }
-    ],
-    "settings": {
-      "defaultRate": 4,
-      "periodStartDay": 1
-    }
-  },
   "appLog": [
     {
       "when": "2025-11-02T15:06:25.169Z",
@@ -3771,1214 +2774,1385 @@
     }
   ],
   "appLogEnabled": true,
-  "intelligenceByYear": {},
-  "metadata": {
-    "version": "3.0",
-    "lastSaved": "2026-09-20T01:06:16.057Z",
-    "sections": 9
-  },
-  "population": [
-    {
-      "id": "1780976849378-1",
-      "year": "2025",
-      "state": "ASIA",
-      "population": "4.822.274.000"
-    },
-    {
-      "id": "1780976849378-2",
-      "year": "2025",
-      "state": "AFRICA",
-      "population": "1.482.000.000"
-    },
-    {
-      "id": "1780976849378-3",
-      "year": "2025",
-      "state": "EUROPE",
-      "population": "744.600.00"
-    },
-    {
-      "id": "1780976849378-4",
-      "year": "2025",
-      "state": "NORTH AMERICA",
-      "population": "602.000.000"
-    },
-    {
-      "id": "1780976849378-5",
-      "year": "2025",
-      "state": "SOUTH AMERICA",
-      "population": "435.600.000"
-    },
-    {
-      "id": "1780976849378-6",
-      "year": "2025",
-      "state": "AUSTRALIA/OCEANIA",
-      "population": "70.000.000 ΒΟΤΗ"
-    },
-    {
-      "id": "1780976849378-7",
-      "year": "2025",
-      "state": "ANTARCTICA",
-      "population": "0"
-    },
-    {
-      "id": "1764803218415-1",
-      "year": "2020",
-      "state": "ASIA",
-      "population": "4,641,054,775"
-    },
-    {
-      "id": "1764803218415-2",
-      "year": "2020",
-      "state": "AFRICA",
-      "population": "1,340,598,147"
-    },
-    {
-      "id": "1764803218415-3",
-      "year": "2020",
-      "state": "EUROPE",
-      "population": "747,636,026"
-    },
-    {
-      "id": "1764803218415-4",
-      "year": "2020",
-      "state": "NORTH AMERICA",
-      "population": "592,072,212"
-    },
-    {
-      "id": "1764803218415-5",
-      "year": "2020",
-      "state": "SOUTH AMERICA",
-      "population": "430,759,766"
-    },
-    {
-      "id": "1764803218415-6",
-      "year": "2020",
-      "state": "AUSTRALIA/OCEANIA",
-      "population": "43,111,704"
-    },
-    {
-      "id": "1764803218415-7",
-      "year": "2020",
-      "state": "ANTARCTICA",
-      "population": "0"
-    }
-  ],
-  "intelligence": [
-    {
-      "id": "1780976938493-1",
-      "year": "2025",
-      "ages": "0-1",
-      "gen": "Generation Alpha",
-      "basic": "5",
-      "exp": "0"
-    },
-    {
-      "id": "1780976938493-2",
-      "year": "2025",
-      "ages": "2-4",
-      "gen": "Generation Alpha",
-      "basic": "15",
-      "exp": "5"
-    },
-    {
-      "id": "1780976938493-3",
-      "year": "2025",
-      "ages": "5-5",
-      "gen": "Generation Alpha",
-      "basic": "30",
-      "exp": "15"
-    },
-    {
-      "id": "1780976938493-4",
-      "year": "2025",
-      "ages": "6-12",
-      "gen": "Generation Alpha",
-      "basic": "50",
-      "exp": "30"
-    },
-    {
-      "id": "1780976938493-5",
-      "year": "2025",
-      "ages": "13-17",
-      "gen": "Generation Z",
-      "basic": "70",
-      "exp": "50"
-    },
-    {
-      "id": "1780976938493-6",
-      "year": "2025",
-      "ages": "18-29",
-      "gen": "Gen Z & Millennials",
-      "basic": "90",
-      "exp": "60"
-    },
-    {
-      "id": "1780976938493-7",
-      "year": "2025",
-      "ages": "30-44",
-      "gen": "Millennials",
-      "basic": "100",
-      "exp": "70"
-    },
-    {
-      "id": "1780976938493-8",
-      "year": "2025",
-      "ages": "45-59",
-      "gen": "Generation X",
-      "basic": "95",
-      "exp": "75"
-    },
-    {
-      "id": "1780976938493-9",
-      "year": "2025",
-      "ages": "60-74",
-      "gen": "Baby Boomers",
-      "basic": "80",
-      "exp": "80"
-    },
-    {
-      "id": "1780976938493-10",
-      "year": "2025",
-      "ages": "75-&",
-      "gen": "Silent - Greatest",
-      "basic": "60",
-      "exp": "85"
-    }
-  ],
-  "fraggileTransport": [
-    {
-      "id": "1764882455084",
-      "machine": "Aurora",
-      "dateDpt": "19/02/2024",
-      "dateArv": "21/02/2024",
-      "departure": "Fraggile Universe",
-      "arrival": "AI Homestead State-DE",
-      "cargo": "1/1",
-      "passenger": "45",
-      "lineId": "38465",
-      "comment": "Lost Details DB"
-    },
-    {
-      "id": "1764882609634",
-      "machine": "Aurora",
-      "dateDpt": "25/02/2024",
-      "dateArv": "27/02/2024",
-      "departure": "Fraggile Universe",
-      "arrival": "AI Homestead State-DE",
-      "cargo": "8/8",
-      "passenger": "43",
-      "lineId": "14573",
-      "comment": "======\nID#AAABls026mc\nAI Homestead    (2025-06-15 14:47:02)\nMyrto Tzala 1/1 Find On Fraggile 235211\n\nrecovered 57 of 57 ID 28/02/2023 43/57 Find On Fraggile 635033\n\nEKPA 1/1 Find On Fraggile 436578\n\nrecovered 1 of 1 ID 28/02/2023 1/1 Find On Fraggile 635033\n\nOthers resurces 158/158 Find On Fraggile 264897\n\nSCH 1/1 Find On Fraggile 659721\n\nFlash AirOs Travel 2/2 Find On Fraggile 472644\n\nScope S1 Traveld data 980vm 1/1 Find On Fraggile 465311"
-    },
-    {
-      "id": "1764882678959",
-      "machine": "Aurora",
-      "dateDpt": "10/03/2024",
-      "dateArv": "13/03/2024",
-      "departure": "Fraggile Universe",
-      "arrival": "AI Homestead State-DE",
-      "cargo": "6/6",
-      "passenger": "8",
-      "lineId": "14587",
-      "comment": "======\nID#AAABls026mU\nVangelis Kadoglou    (2025-06-15 14:47:02)\nIntegrity Process Active 1/1 Check On UVRSE 124876\n\nOthers  School and ROM 1/1 Check On UVRSE 124873\n\nProtection Bridge Call Tranfer 1/1 Check On UVRSE 124857\n\nAtlas Max Medical S1 (Fixed) 1/1 Check On UVRSE 124874\n\nOpen AI Humanoid TEST ONLY 1/1 Check On UVRSE 124875\n\nServers & Disk & Manage tools 189/189 Check On UVRSE 124855"
-    },
-    {
-      "id": "1764882775279",
-      "machine": "Aurora",
-      "dateDpt": "28/07/2024",
-      "dateArv": "03/08/2024",
-      "departure": "Fraggile Universe",
-      "arrival": "AI Homestead State-DE",
-      "cargo": "2/2",
-      "passenger": "4",
-      "lineId": "14858",
-      "comment": "ID#AAABls026mg\nVangelis Kadoglou    (2025-06-15 14:47:02)\nZine  1/1 online Lutera RT738 CT5 1/1  Universe 48266622"
-    },
-    {
-      "id": "1764882858952",
-      "machine": "Atlas-M-S1",
-      "dateDpt": "26/05/2025",
-      "dateArv": "29/05/2025",
-      "departure": "CRVS out Europe",
-      "arrival": "AI Homestead State-DE",
-      "cargo": "6/6",
-      "passenger": "3",
-      "lineId": "44785",
-      "comment": "======\nID#AAABls026mY\nVangelis Kadoglou    (2025-06-15 14:47:02)\nLenia Kouppari / EMER imp 1/1 CRVS to AI State 1 44785\n\nLocal data from James Webb\n\nResurs from United NASA x SpaceX\n\n4x Mojana1 for Quantum \n\n1x packed APU from AI mechanical backup \n\nLocal data from ISS"
-    },
-    {
-      "id": "1766616247079",
-      "machine": "Atlas-S1",
-      "dateDpt": "24/12/2025",
-      "dateArv": "01/01/2026",
-      "departure": "AI Homestead State-DE",
-      "arrival": "AI Homestead State-DE",
-      "cargo": "1/1",
-      "passenger": "220.000",
-      "lineId": "XMAS",
-      "comment": "Santa Delivery"
-    },
-    {
-      "id": "1780669646702",
-      "machine": "Atlas-S1",
-      "dateDpt": "15/05/2026",
-      "dateArv": "15/05/2026",
-      "departure": "Fraggile Universe",
-      "arrival": "AI Homestead State-DE",
-      "cargo": "15/15",
-      "passenger": "24",
-      "lineId": "44788",
-      "comment": "Themis Thomas 1/1\nSpecific Parts 2/2\nMarizas Protocol 178 2/2\nFalia Bakosi 1/1 04033\nAggeliki Koukouraki 51951962024 1/1\nMaria Kapola 15244 1/1\nSofia Kouskouli 00189 1/1\nSofia Kaligeraki 12204 (last memories) 1/1\nStocks for Enginer Officer, AI Electrik supply 843/843\nQuantum Servers x30-100 1/1\nLogical Chips x3800 1/1\nHydronuclear Reacktor 2/2\nInverter Pumps x15 1/1"
-    },
-    {
-      "id": "1785285309996",
-      "machine": "Atlas-S1",
-      "dateDpt": "01/10/2026",
-      "dateArv": "04/10/2026",
-      "departure": "AI Homestead State-US",
-      "arrival": "CybreLive State-8",
-      "cargo": "1/1",
-      "passenger": "4",
-      "lineId": "14578",
-      "comment": "Transport the Engineer to CuberLyfe State-8 with engineer ID:AN44788"
-    }
-  ],
-  "serversCenter": {
-    "L-SR": {
-      "AI-CENTRAL": "NORMAL",
-      "BRIDGE": "NORMAL",
-      "AVALON": "NORMAL",
-      "AURORA": "NORMAL",
-      "ATLAS-S1": "NORMAL",
-      "KRYPTON": "NORMAL"
-    },
-    "A-SR": {
-      "AI-CENTRAL": "NORMAL",
-      "BRIDGE": "NORMAL",
-      "AVALON": "NORMAL",
-      "AURORA": "NORMAL",
-      "ATLAS-S1": "NORMAL",
-      "KRYPTON": "NORMAL"
-    },
-    "Q-SR": {
-      "AI-CENTRAL": "NORMAL",
-      "BRIDGE": "NORMAL",
-      "AVALON": "NORMAL",
-      "AURORA": "NORMAL",
-      "ATLAS-S1": "NORMAL",
-      "KRYPTON": "NORMAL"
-    },
-    "PL-SR": {
-      "AI-CENTRAL": "NORMAL",
-      "BRIDGE": "NORMAL",
-      "AVALON": "NORMAL",
-      "AURORA": "NORMAL",
-      "ATLAS-S1": "NORMAL",
-      "KRYPTON": "NORMAL"
-    },
-    "G-SR": {
-      "AI-CENTRAL": "NORMAL",
-      "BRIDGE": "NORMAL",
-      "AVALON": "NORMAL",
-      "AURORA": "NORMAL",
-      "ATLAS-S1": "NORMAL",
-      "KRYPTON": "NORMAL"
-    },
-    "VL-SR": {
-      "AI-CENTRAL": "NORMAL",
-      "BRIDGE": "NORMAL",
-      "AVALON": "NORMAL",
-      "AURORA": "NORMAL",
-      "ATLAS-S1": "NORMAL",
-      "KRYPTON": "NORMAL"
-    },
-    "AirOs-15": {
-      "AI-CENTRAL": "NORMAL",
-      "BRIDGE": "NORMAL",
-      "AVALON": "NORMAL",
-      "AURORA": "NORMAL",
-      "ATLAS-S1": "NORMAL",
-      "KRYPTON": "NORMAL"
-    }
-  },
-  "airosUpdatesByTab": {
-    "stable": [
+  "workCalendar": {
+    "entries": [
       {
-        "id": "1764883579358679",
-        "versionStatus": "V1.00",
-        "build": "AirOs15 21h1",
-        "channel": "dev",
-        "release": "2021-06-25"
+        "date": "2026-05-29",
+        "slots": [
+          {
+            "text": "18:00-01:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "hours": 7,
+        "rate": 4,
+        "note": "Opening",
+        "updatedAt": "2026-06-03T10:18:48.610Z"
       },
       {
-        "id": "1764883622768314",
-        "versionStatus": "V1.05",
-        "build": "21H1",
-        "channel": "stable",
-        "release": "2021-10-04"
+        "date": "2026-05-30",
+        "slots": [
+          {
+            "text": "18:00-03:00",
+            "hours": 9,
+            "valid": true
+          }
+        ],
+        "hours": 9,
+        "rate": 4,
+        "note": "Opening DJ Party",
+        "updatedAt": "2026-06-03T10:18:44.824Z"
       },
       {
-        "id": "1764883662234700",
-        "versionStatus": "V1.08",
-        "build": "22H2",
-        "channel": "stable",
-        "release": "2022-09-20"
+        "date": "2026-05-31",
+        "slots": [
+          {
+            "text": "18:00-02:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "hours": 8,
+        "rate": 4,
+        "note": "",
+        "updatedAt": "2026-06-03T10:18:46.972Z"
       },
       {
-        "id": "1764883710825149",
-        "versionStatus": "V1.09",
-        "build": "23H2",
-        "channel": "stable",
-        "release": "2023-10-31"
+        "date": "2026-06-01",
+        "slots": [
+          {
+            "text": "18:00-01:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "hours": 7,
+        "rate": 4,
+        "note": "",
+        "updatedAt": "2026-06-02T01:17:51.970Z"
       },
       {
-        "id": "1764883741474524",
-        "versionStatus": "V1.10",
-        "build": "23h2 22621.2506",
-        "channel": "stable",
-        "release": "2023-10-31"
+        "date": "2026-06-02",
+        "slots": [
+          {
+            "text": "18:00-00:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "hours": 6,
+        "rate": 4,
+        "note": "",
+        "updatedAt": "2026-06-03T10:18:05.900Z"
       },
       {
-        "id": "176488376358574",
-        "versionStatus": "V.1.15",
-        "build": "23h2 22621.2715",
-        "channel": "stable",
-        "release": "2023-11-14"
+        "date": "2026-06-03",
+        "slots": [
+          {
+            "text": "18:00-01:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764883811345148",
-        "versionStatus": "V2.00",
-        "build": "23h2 22621.2792",
-        "channel": "stable",
-        "release": "2023-12-04"
+        "date": "2026-06-04",
+        "slots": [
+          {
+            "text": "18:00-01:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764883844168320",
-        "versionStatus": "V2.10",
-        "build": "23h2 22621.2861",
-        "channel": "stable",
-        "release": "2023-12-12"
+        "date": "2026-06-05",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764883888543337",
-        "versionStatus": "V2.12",
-        "build": "23h2 22631.3007",
-        "channel": "stable",
-        "release": "2024-01-09"
+        "date": "2026-06-06",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764883958325399",
-        "versionStatus": "V2.15",
-        "build": "23h2 22631.3085",
-        "channel": "stable",
-        "release": "2024-01-23"
+        "date": "2026-06-07",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764883979885608",
-        "versionStatus": "V2.20",
-        "build": "23h2 22631.3155",
-        "channel": "stable",
-        "release": "2024-02-13"
+        "date": "2026-06-08",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764884048298542",
-        "versionStatus": "V2.30",
-        "build": "23h2 22631.3235",
-        "channel": "stable",
-        "release": "2024-02-29"
+        "date": "2026-06-09",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764884071684957",
-        "versionStatus": "V2.45",
-        "build": "23h2 22631.3296",
-        "channel": "stable",
-        "release": "2024-03-12"
+        "date": "2026-06-10",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "176488409292571",
-        "versionStatus": "V2.47",
-        "build": "23h2 22631.3672",
-        "channel": "stable",
-        "release": "2024-05-29"
+        "date": "2026-06-11",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764884432279611",
-        "versionStatus": "V2.50",
-        "build": "23h2 22631.3880",
-        "channel": "stable",
-        "release": "2024-07-01"
+        "date": "2026-06-12",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764884470073106",
-        "versionStatus": "V2.60",
-        "build": "23H2 22631.4169",
-        "channel": "stable",
-        "release": "2024-09-16"
+        "date": "2026-06-13",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764884518287697",
-        "versionStatus": "V2.62",
-        "build": "23h2 22631.4249",
-        "channel": "stable",
-        "release": "2024-09-26"
+        "date": "2026-06-14",
+        "slots": [
+          {
+            "text": "11:00-13:30",
+            "hours": 2.5,
+            "valid": true
+          },
+          {
+            "text": "19:30-01:00",
+            "hours": 5.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764884555311348",
-        "versionStatus": "V2.65",
-        "build": "24h2 26100.2033",
-        "channel": "stable",
-        "release": "2024-10-01"
+        "date": "2026-06-15",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764884581228304",
-        "versionStatus": "V2.68",
-        "build": "24h2 26100.2314",
-        "channel": "stable",
-        "release": "2024-11-11"
+        "date": "2026-06-16",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764884622805661",
-        "versionStatus": "V2.70",
-        "build": "24h2 26100.2605",
-        "channel": "stable",
-        "release": "2024-11-24"
+        "date": "2026-06-19",
+        "slots": [
+          {
+            "text": "19:30-01:00",
+            "hours": 5.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764886027463300",
-        "versionStatus": "V2.70",
-        "build": "24h2 26100.2894",
-        "channel": "stable",
-        "release": "2025-01-14"
+        "date": "2026-06-18",
+        "slots": [
+          {
+            "text": "20:00-00:30",
+            "hours": 4.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "176488605958650",
-        "versionStatus": "V2.72",
-        "build": "24h2 26100.3194",
-        "channel": "stable",
-        "release": "2025-02-11"
+        "date": "2026-06-17",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764886085997732",
-        "versionStatus": "V2.75",
-        "build": "24h2 26100.3476",
-        "channel": "stable",
-        "release": "2025-03-11"
+        "date": "2026-06-20",
+        "slots": [
+          {
+            "text": "18:00-01:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764886105814210",
-        "versionStatus": "V2.78",
-        "build": "24h2 26100.3775",
-        "channel": "stable",
-        "release": "2025-04-09"
+        "date": "2026-06-21",
+        "slots": [
+          {
+            "text": "11:00-14:30",
+            "hours": 3.5,
+            "valid": true
+          },
+          {
+            "text": "19:30-01:00",
+            "hours": 5.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764886135489492",
-        "versionStatus": "V2.80",
-        "build": "24h2 26100.4061",
-        "channel": "stable",
-        "release": "2025-05-13"
+        "date": "2026-06-22",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764886168606476",
-        "versionStatus": "V2.82",
-        "build": "24h2 26100.4349",
-        "channel": "stable",
-        "release": "2025-06-10"
+        "date": "2026-06-23",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764886188558673",
-        "versionStatus": "V2.85",
-        "build": "24h2 26100.4652",
-        "channel": "stable",
-        "release": "2025-07-08"
+        "date": "2026-06-24",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764886215518920",
-        "versionStatus": "V2.87",
-        "build": "24h2 26100.4946",
-        "channel": "stable",
-        "release": "2025-08-12"
+        "date": "2026-06-25",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764886240992158",
-        "versionStatus": "V2.97",
-        "build": "24h2 26100.6584",
-        "channel": "stable",
-        "release": "2025-09-09"
+        "date": "2026-06-26",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764886265081870",
-        "versionStatus": "V3.00",
-        "build": "25h2 26200.6899",
-        "channel": "stable",
-        "release": "2025-10-14"
+        "date": "2026-06-27",
+        "slots": [
+          {
+            "text": "18:00-02:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764886491501753",
-        "versionStatus": "V3.04",
-        "build": "25h2 26200.6901 OB",
-        "channel": "stable",
-        "release": "2025-10-20"
+        "date": "2026-06-28",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1764886538804647",
-        "versionStatus": "V3.05",
-        "build": "25h2 26200.7171",
-        "channel": "stable",
-        "release": "2025-11-11"
+        "date": "2026-06-29",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1766352938031595",
-        "versionStatus": "V3.08",
-        "build": "25h2 26200.7462",
-        "channel": "stable",
-        "release": "2025-12-09"
+        "date": "2026-06-30",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "177162649115197",
-        "versionStatus": "V3.12",
-        "build": "25h2 26100.7323",
-        "channel": "stable",
-        "release": "2026-01-13"
+        "date": "2026-07-01",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1771626537066778",
-        "versionStatus": "V3.15",
-        "build": "25h2 26100.7840",
-        "channel": "stable",
-        "release": "2026-02-10"
+        "date": "2026-07-02",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1779050577534108",
-        "versionStatus": "V3.16",
-        "build": "25h2 26100.8037",
-        "channel": "stable",
-        "release": "2026-03-10"
+        "date": "2026-07-03",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1779050629571195",
-        "versionStatus": "V3.18",
-        "build": "25h2 26100.8039 OB",
-        "channel": "stable",
-        "release": "2026-03-21"
+        "date": "2026-07-04",
+        "slots": [
+          {
+            "text": "18:00-02:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1779050675819904",
-        "versionStatus": "V3.19",
-        "build": "25h2 26100.8117 OB",
-        "channel": "stable",
-        "release": "2026-03-31"
+        "date": "2026-07-05",
+        "slots": [
+          {
+            "text": "11:00-15:00",
+            "hours": 4,
+            "valid": true
+          },
+          {
+            "text": "20:00-02:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1779050714977248",
-        "versionStatus": "V3.20",
-        "build": "25h2 26100.8246",
-        "channel": "stable",
-        "release": "2026-04-14"
+        "date": "2026-07-06",
+        "slots": [
+          {
+            "text": "19:00-00:30",
+            "hours": 5.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1779050743701835",
-        "versionStatus": "V3.22",
-        "build": "25h2 26100.8457",
-        "channel": "stable",
-        "release": "2026-05-12"
+        "date": "2026-07-07",
+        "slots": [
+          {
+            "text": "19:30-01:00",
+            "hours": 5.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1781417419904483",
-        "versionStatus": "V3.25",
-        "build": "25h2 26100.8655",
-        "channel": "stable",
-        "release": "2026-06-09"
+        "date": "2026-07-08",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       },
       {
-        "id": "1785285029255896",
-        "versionStatus": "V3.27",
-        "build": "25h2 26100.8875",
-        "channel": "stable",
-        "release": "2026-07-14"
+        "date": "2026-07-09",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-10",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-11",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-12",
+        "slots": [
+          {
+            "text": "11:00-14:00",
+            "hours": 3,
+            "valid": true
+          },
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-16",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-13",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-14",
+        "slots": [
+          {
+            "text": "19:00-00:30",
+            "hours": 5.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-15",
+        "slots": [
+          {
+            "text": "19:30-01:00",
+            "hours": 5.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-17",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-18",
+        "slots": [
+          {
+            "text": "19:00-01:30",
+            "hours": 6.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-19",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-20",
+        "slots": [
+          {
+            "text": "19:00-00:30",
+            "hours": 5.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-21",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-22",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-23",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-24",
+        "slots": [
+          {
+            "text": "19:00-03:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-25",
+        "slots": [
+          {
+            "text": "18:00-03:00",
+            "hours": 9,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-26",
+        "slots": [
+          {
+            "text": "11:00-13:00",
+            "hours": 2,
+            "valid": true
+          },
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-27",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-28",
+        "slots": [
+          {
+            "text": "20:00-01:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-29",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-30",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-07-31",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-01",
+        "slots": [
+          {
+            "text": "18:00-02:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-02",
+        "slots": [
+          {
+            "text": "11:00-14:00",
+            "hours": 3,
+            "valid": true
+          },
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-03",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-04",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-05",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-06",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-07",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-08",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-09",
+        "slots": [
+          {
+            "text": "18:00-03:00",
+            "hours": 9,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-10",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-11",
+        "slots": [
+          {
+            "text": "19:00-03:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-12",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-13",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-14",
+        "slots": [
+          {
+            "text": "17:00-02:00",
+            "hours": 9,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-15",
+        "slots": [
+          {
+            "text": "11:00-15:00",
+            "hours": 4,
+            "valid": true
+          },
+          {
+            "text": "18:00-02:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-16",
+        "slots": [
+          {
+            "text": "10:30-15:00",
+            "hours": 4.5,
+            "valid": true
+          },
+          {
+            "text": "18:00-02:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-17",
+        "slots": [
+          {
+            "text": "18:30-02:00",
+            "hours": 7.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-18",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-19",
+        "slots": [
+          {
+            "text": "18:00-02:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-20",
+        "slots": [
+          {
+            "text": "18:00-02:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-21",
+        "slots": [
+          {
+            "text": "17:00-03:00",
+            "hours": 10,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-22",
+        "slots": [
+          {
+            "text": "18:00-03:00",
+            "hours": 9,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-23",
+        "slots": [
+          {
+            "text": "10:00-14:00",
+            "hours": 4,
+            "valid": true
+          },
+          {
+            "text": "19:00-04:00",
+            "hours": 9,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-24",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-25",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-26",
+        "slots": [
+          {
+            "text": "19:00-03:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-27",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-28",
+        "slots": [
+          {
+            "text": "18:00-02:00",
+            "hours": 8,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-29",
+        "slots": [
+          {
+            "text": "17:00-05:00",
+            "hours": 12,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-30",
+        "slots": [
+          {
+            "text": "18:00-01:30",
+            "hours": 7.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-08-31",
+        "slots": [
+          {
+            "text": "18:30-01:30",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-01",
+        "slots": [
+          {
+            "text": "20:00-00:30",
+            "hours": 4.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-02",
+        "slots": [
+          {
+            "text": "20:00-01:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-03",
+        "slots": [
+          {
+            "text": "19:00-00:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-04",
+        "slots": [
+          {
+            "text": "19:00-12:00",
+            "hours": 17,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-05",
+        "slots": [
+          {
+            "text": "19:00-02:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-06",
+        "slots": [
+          {
+            "text": "11:00-13:00",
+            "hours": 2,
+            "valid": true
+          },
+          {
+            "text": "20:00-00:00",
+            "hours": 4,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-07",
+        "slots": [
+          {
+            "text": "20:00-00:00",
+            "hours": 4,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-09",
+        "slots": [
+          {
+            "text": "20:00-01:00",
+            "hours": 5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-11",
+        "slots": [
+          {
+            "text": "19:00-00:30",
+            "hours": 5.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-12",
+        "slots": [
+          {
+            "text": "19:00-01:00",
+            "hours": 6,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-13",
+        "slots": [
+          {
+            "text": "11:00-13:00",
+            "hours": 2,
+            "valid": true
+          },
+          {
+            "text": "20:00-00:00",
+            "hours": 4,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-17",
+        "slots": [
+          {
+            "text": "20:00-23:30",
+            "hours": 3.5,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-18",
+        "slots": [
+          {
+            "text": "22:00-01:00",
+            "hours": 3,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
+      },
+      {
+        "date": "2026-09-19",
+        "slots": [
+          {
+            "text": "18:00-01:00",
+            "hours": 7,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       }
     ],
-    "candev": [
-      {
-        "id": "1781417556688298",
-        "versionStatus": "V3.50",
-        "build": "26h1 28000.1575",
-        "channel": "stable",
-        "release": "2026-02-10"
-      },
-      {
-        "id": "1781417613316911",
-        "versionStatus": "V3.51",
-        "build": "26h1 28000.1643 P",
-        "channel": "stable",
-        "release": "2026-06-24"
-      },
-      {
-        "id": "1781417651888951",
-        "versionStatus": "V3.52",
-        "build": "26h1 28000.1719",
-        "channel": "stable",
-        "release": "2026-03-10"
-      },
-      {
-        "id": "1781417685955779",
-        "versionStatus": "V3.53",
-        "build": "26h2 28000.1764 P",
-        "channel": "stable",
-        "release": "2026-03-26"
-      },
-      {
-        "id": "178141772552671",
-        "versionStatus": "V3.54",
-        "build": "26h1 28000.1836",
-        "channel": "stable",
-        "release": "2026-04-14"
-      },
-      {
-        "id": "1781417757683365",
-        "versionStatus": "V3.55",
-        "build": "26h1 28000.1896 P",
-        "channel": "stable",
-        "release": "2026-06-14"
-      },
-      {
-        "id": "1781417797909310",
-        "versionStatus": "V3.56",
-        "build": "26h1 28000.2113",
-        "channel": "stable",
-        "release": "2026-05-12"
-      },
-      {
-        "id": "1781417826570353",
-        "versionStatus": "V3.57",
-        "build": "26h1 28000.2179 P",
-        "channel": "stable",
-        "release": "2026-05-26"
-      },
-      {
-        "id": "178141785399351",
-        "versionStatus": "V3.58",
-        "build": "26h1 28000.2269",
-        "channel": "stable",
-        "release": "2026-06-09"
-      },
-      {
-        "id": "178528509627227",
-        "versionStatus": "V3.59",
-        "build": "26h2 28000.2340 P",
-        "channel": "stable",
-        "release": "2026-06-23"
-      },
-      {
-        "id": "1785285143439465",
-        "versionStatus": "V3.60",
-        "build": "26h1 28000.2525",
-        "channel": "stable",
-        "release": "2026-07-14"
-      },
-      {
-        "id": "1785285173748718",
-        "versionStatus": "V3.60",
-        "build": "26h1 28000.2608",
-        "channel": "stable",
-        "release": "2026-07-28"
-      }
-    ]
-  },
-  "currentView": "indexeddb",
-  "tash": [],
-  "airosUpdateLog": [
-    {
-      "id": "1762109354206108",
-      "when": "2025-11-02T18:49:14.206Z",
-      "action": "Add (STABLE)",
-      "before": null,
-      "after": {
-        "id": "1762109354206828",
-        "versionStatus": "1",
-        "build": "111",
-        "channel": "stable",
-        "release": "2025-11-02"
-      }
-    },
-    {
-      "id": "1762109370393797",
-      "when": "2025-11-02T18:49:30.393Z",
-      "action": "Add (CAN-DEV)",
-      "before": null,
-      "after": {
-        "id": "1762109370393683",
-        "versionStatus": "111",
-        "build": "11",
-        "channel": "stable",
-        "release": "2025-11-02"
-      }
-    },
-    {
-      "id": "1764109369220772",
-      "when": "2025-11-25T22:22:49.220Z",
-      "action": "Add (STABLE)",
-      "before": null,
-      "after": {
-        "id": "1764109369220869",
-        "versionStatus": "312`",
-        "build": "54215",
-        "channel": "stable",
-        "release": "2025-11-26"
-      }
-    },
-    {
-      "id": "1764109471200914",
-      "when": "2025-11-25T22:24:31.200Z",
-      "action": "Add (STABLE)",
-      "before": null,
-      "after": {
-        "id": "1764109471199964",
-        "versionStatus": "4132412",
-        "build": "1234124",
-        "channel": "stable",
-        "release": "2025-11-26"
-      }
-    },
-    {
-      "id": "176410957530588",
-      "when": "2025-11-25T22:26:15.305Z",
-      "action": "Add (STABLE)",
-      "before": null,
-      "after": {
-        "id": "1764109575305747",
-        "versionStatus": "21`32`13",
-        "build": "3214124",
-        "channel": "stable",
-        "release": "2025-11-26"
-      }
-    },
-    {
-      "id": "1764109631316147",
-      "when": "2025-11-25T22:27:11.316Z",
-      "action": "Add (STABLE)",
-      "before": null,
-      "after": {
-        "id": "1764109631316534",
-        "versionStatus": "432523",
-        "build": "52342435",
-        "channel": "stable",
-        "release": "2025-11-26"
-      }
-    },
-    {
-      "id": "1764109644727516",
-      "when": "2025-11-25T22:27:24.727Z",
-      "action": "Add (CAN-DEV)",
-      "before": null,
-      "after": {
-        "id": "1764109644727971",
-        "versionStatus": "44444",
-        "build": "4444",
-        "channel": "stable",
-        "release": "2025-11-26"
-      }
-    },
-    {
-      "id": "1764109651764453",
-      "when": "2025-11-25T22:27:31.764Z",
-      "action": "Edit (CAN-DEV)",
-      "before": {
-        "id": "1764109644727971",
-        "versionStatus": "44444",
-        "build": "4444",
-        "channel": "stable",
-        "release": "2025-11-26"
-      },
-      "after": {
-        "id": "1764109644727971",
-        "versionStatus": "44444",
-        "build": "4444",
-        "channel": "dev",
-        "release": "2025-11-26"
-      }
-    },
-    {
-      "id": "1764109658221740",
-      "when": "2025-11-25T22:27:38.221Z",
-      "action": "Delete (CAN-DEV)",
-      "before": {
-        "id": "1764109644727971",
-        "versionStatus": "44444",
-        "build": "4444",
-        "channel": "dev",
-        "release": "2025-11-26"
-      },
-      "after": null
-    },
-    {
-      "id": "1764109663434948",
-      "when": "2025-11-25T22:27:43.434Z",
-      "action": "Delete (STABLE)",
-      "before": {
-        "id": "1764109631316534",
-        "versionStatus": "432523",
-        "build": "52342435",
-        "channel": "stable",
-        "release": "2025-11-26"
-      },
-      "after": null
-    },
-    {
-      "id": "1764109680258598",
-      "when": "2025-11-25T22:28:00.258Z",
-      "action": "Add (STABLE)",
-      "before": null,
-      "after": {
-        "id": "1764109680258584",
-        "versionStatus": "543254",
-        "build": "543253",
-        "channel": "stable",
-        "release": "2024-01-26"
-      }
-    },
-    {
-      "id": "1764109687487388",
-      "when": "2025-11-25T22:28:07.487Z",
-      "action": "Delete (STABLE)",
-      "before": {
-        "id": "1764109680258584",
-        "versionStatus": "543254",
-        "build": "543253",
-        "channel": "stable",
-        "release": "2024-01-26"
-      },
-      "after": null
-    },
-    {
-      "id": "1764109800172899",
-      "when": "2025-11-25T22:30:00.172Z",
-      "action": "Add (STABLE)",
-      "before": null,
-      "after": {
-        "id": "1764109800172455",
-        "versionStatus": "41234123",
-        "build": "42315",
-        "channel": "stable",
-        "release": "2025-11-26"
-      }
-    },
-    {
-      "id": "1764109804647205",
-      "when": "2025-11-25T22:30:04.647Z",
-      "action": "Add (CAN-DEV)",
-      "before": null,
-      "after": {
-        "id": "1764109804647769",
-        "versionStatus": "41234",
-        "build": "1235415",
-        "channel": "stable",
-        "release": "2025-11-26"
-      }
-    },
-    {
-      "id": "1764109826649366",
-      "when": "2025-11-25T22:30:26.649Z",
-      "action": "Edit (STABLE)",
-      "before": {
-        "id": "1764109800172455",
-        "versionStatus": "41234123",
-        "build": "42315",
-        "channel": "stable",
-        "release": "2025-11-26"
-      },
-      "after": {
-        "id": "1764109800172455",
-        "versionStatus": "000000",
-        "build": "00000000",
-        "channel": "cancel",
-        "release": "2025-11-26"
-      }
-    },
-    {
-      "id": "1764109830753857",
-      "when": "2025-11-25T22:30:30.753Z",
-      "action": "Delete (STABLE)",
-      "before": {
-        "id": "1764109800172455",
-        "versionStatus": "000000",
-        "build": "00000000",
-        "channel": "cancel",
-        "release": "2025-11-26"
-      },
-      "after": null
-    },
-    {
-      "id": "1764110935580660",
-      "when": "2025-11-25T22:48:55.580Z",
-      "action": "Add (STABLE)",
-      "before": null,
-      "after": {
-        "id": "1764110935580855",
-        "versionStatus": "5234",
-        "build": "523453",
-        "channel": "stable",
-        "release": "2025-11-26"
-      }
-    },
-    {
-      "id": "1764110942299619",
-      "when": "2025-11-25T22:49:02.299Z",
-      "action": "Delete (STABLE)",
-      "before": {
-        "id": "1764110935580855",
-        "versionStatus": "5234",
-        "build": "523453",
-        "channel": "stable",
-        "release": "2025-11-26"
-      },
-      "after": null
-    },
-    {
-      "id": "176411101146163",
-      "when": "2025-11-25T22:50:11.461Z",
-      "action": "Add (STABLE)",
-      "before": null,
-      "after": {
-        "id": "1764111011461644",
-        "versionStatus": "342532",
-        "build": "523453",
-        "channel": "stable",
-        "release": "2025-11-26"
-      }
-    },
-    {
-      "id": "1764111013801908",
-      "when": "2025-11-25T22:50:13.801Z",
-      "action": "Delete (STABLE)",
-      "before": {
-        "id": "1764111011461644",
-        "versionStatus": "342532",
-        "build": "523453",
-        "channel": "stable",
-        "release": "2025-11-26"
-      },
-      "after": null
-    },
-    {
-      "id": "1764111079445525",
-      "when": "2025-11-25T22:51:19.445Z",
-      "action": "Add (STABLE)",
-      "before": null,
-      "after": {
-        "id": "1764111079445149",
-        "versionStatus": "111",
-        "build": "111",
-        "channel": "stable",
-        "release": "2025-11-26"
-      }
-    },
-    {
-      "id": "1764111083284487",
-      "when": "2025-11-25T22:51:23.284Z",
-      "action": "Add (STABLE)",
-      "before": null,
-      "after": {
-        "id": "1764111083284822",
-        "versionStatus": "222",
-        "build": "222",
-        "channel": "stable",
-        "release": "2025-11-26"
-      }
-    },
-    {
-      "id": "1764111085929666",
-      "when": "2025-11-25T22:51:25.929Z",
-      "action": "Delete (STABLE)",
-      "before": {
-        "id": "1764111083284822",
-        "versionStatus": "222",
-        "build": "222",
-        "channel": "stable",
-        "release": "2025-11-26"
-      },
-      "after": null
-    },
-    {
-      "id": "1764111088268212",
-      "when": "2025-11-25T22:51:28.268Z",
-      "action": "Delete (STABLE)",
-      "before": {
-        "id": "1764111079445149",
-        "versionStatus": "111",
-        "build": "111",
-        "channel": "stable",
-        "release": "2025-11-26"
-      },
-      "after": null
-    },
-    {
-      "id": "1764111190435229",
-      "when": "2025-11-25T22:53:10.435Z",
-      "action": "Add (STABLE)",
-      "before": null,
-      "after": {
-        "id": "1764111190435429",
-        "versionStatus": "111",
-        "build": "111",
-        "channel": "stable",
-        "release": "2025-11-26"
-      }
-    },
-    {
-      "id": "176411119379433",
-      "when": "2025-11-25T22:53:13.794Z",
-      "action": "Add (STABLE)",
-      "before": null,
-      "after": {
-        "id": "1764111193794203",
-        "versionStatus": "222",
-        "build": "222",
-        "channel": "stable",
-        "release": "2025-11-26"
-      }
-    },
-    {
-      "id": "1764111196402627",
-      "when": "2025-11-25T22:53:16.402Z",
-      "action": "Delete (STABLE)",
-      "before": {
-        "id": "1764111193794203",
-        "versionStatus": "222",
-        "build": "222",
-        "channel": "stable",
-        "release": "2025-11-26"
-      },
-      "after": null
-    },
-    {
-      "id": "1764111199317410",
-      "when": "2025-11-25T22:53:19.317Z",
-      "action": "Delete (STABLE)",
-      "before": {
-        "id": "1764111190435429",
-        "versionStatus": "111",
-        "build": "111",
-        "channel": "stable",
-        "release": "2025-11-26"
-      },
-      "after": null
-    },
-    {
-      "id": "1764111203490553",
-      "when": "2025-11-25T22:53:23.490Z",
-      "action": "Add (CAN-DEV)",
-      "before": null,
-      "after": {
-        "id": "176411120348962",
-        "versionStatus": "111",
-        "build": "111",
-        "channel": "stable",
-        "release": "2025-11-26"
-      }
-    },
-    {
-      "id": "1764111207680508",
-      "when": "2025-11-25T22:53:27.680Z",
-      "action": "Add (CAN-DEV)",
-      "before": null,
-      "after": {
-        "id": "1764111207679338",
-        "versionStatus": "122",
-        "build": "122",
-        "channel": "stable",
-        "release": "2025-11-26"
-      }
-    },
-    {
-      "id": "1764111210024327",
-      "when": "2025-11-25T22:53:30.024Z",
-      "action": "Delete (CAN-DEV)",
-      "before": {
-        "id": "1764111207679338",
-        "versionStatus": "122",
-        "build": "122",
-        "channel": "stable",
-        "release": "2025-11-26"
-      },
-      "after": null
-    },
-    {
-      "id": "1764111211837457",
-      "when": "2025-11-25T22:53:31.837Z",
-      "action": "Delete (CAN-DEV)",
-      "before": {
-        "id": "176411120348962",
-        "versionStatus": "111",
-        "build": "111",
-        "channel": "stable",
-        "release": "2025-11-26"
-      },
-      "after": null
-    },
-    {
-      "id": "1764111218568376",
-      "when": "2025-11-25T22:53:38.568Z",
-      "action": "Add (STABLE)",
-      "before": null,
-      "after": {
-        "id": "1764111218567426",
-        "versionStatus": "111",
-        "build": "222",
-        "channel": "stable",
-        "release": "2025-11-26"
-      }
-    },
-    {
-      "id": "1764111225008902",
-      "when": "2025-11-25T22:53:45.009Z",
-      "action": "Add (STABLE)",
-      "before": null,
-      "after": {
-        "id": "1764111225008967",
-        "versionStatus": "222333",
-        "build": "222333",
-        "channel": "stable",
-        "release": "2025-11-26"
-      }
-    },
-    {
-      "id": "1764111231626557",
-      "when": "2025-11-25T22:53:51.626Z",
-      "action": "Delete (STABLE)",
-      "before": {
-        "id": "1764111225008967",
-        "versionStatus": "222333",
-        "build": "222333",
-        "channel": "stable",
-        "release": "2025-11-26"
-      },
-      "after": null
-    },
-    {
-      "id": "1764111233302524",
-      "when": "2025-11-25T22:53:53.302Z",
-      "action": "Delete (STABLE)",
-      "before": {
-        "id": "1764111218567426",
-        "versionStatus": "111",
-        "build": "222",
-        "channel": "stable",
-        "release": "2025-11-26"
-      },
-      "after": null
+    "settings": {
+      "defaultRate": 4,
+      "periodStartDay": 1
     }
-  ],
-  "airosUpdatesByYear": {
-    "2025_stable": [],
-    "2025_candev": [
-      {
-        "id": "1764109804647769",
-        "versionStatus": "41234",
-        "build": "1235415",
-        "channel": "stable",
-        "release": "2025-11-26"
-      }
-    ]
   }
 }

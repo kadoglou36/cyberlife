@@ -4209,6 +4209,11 @@
             "text": "10:00-14:00",
             "hours": 4,
             "valid": true
+          },
+          {
+            "text": "20:00-00:30",
+            "hours": 4.5,
+            "valid": true
           }
         ],
         "rate": 4,

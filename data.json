@@ -4218,6 +4218,18 @@
         ],
         "rate": 4,
         "note": ""
+      },
+      {
+        "date": "2026-10-02",
+        "slots": [
+          {
+            "text": "21:00-00:00",
+            "hours": 3,
+            "valid": true
+          }
+        ],
+        "rate": 4,
+        "note": ""
       }
     ],
     "settings": {

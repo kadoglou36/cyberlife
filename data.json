@@ -1071,6 +1071,14 @@
       "category": "Critical",
       "createdAt": "2026-09-09T12:40:06.714Z",
       "updatedAt": "2026-09-09T12:40:06.714Z"
+    },
+    {
+      "id": "1791219126633",
+      "subject": "RAISE 2026-27 Q4-Q1",
+      "description": "C:/tash/cyberlife/engineering.bat\n#1 Preparation 18/09/2026\n#2 Starting Main Reactor 23/09/2026\n#3 Starting Main Engines 28/09/2026\n#4 Rolling Out Of State 8 With Thrust Level 40% Main Burn 29/09/2026\n#5 Change Thrust Level to 60% Main Burn 02/10/2026\n#6 Abort Attempt Thrust Level 80% Main Burn to Afterburner Level 60% 04/10/2026\n#7 Tash Verified Complete to Push the Afterburner Level 60% 05/10/2026",
+      "category": "Critical",
+      "createdAt": "2026-10-05T16:52:06.633Z",
+      "updatedAt": "2026-10-05T16:52:06.633Z"
     }
   ],
   "appLog": [
@@ -2783,6 +2791,12 @@
       "area": "CyberLife Reports",
       "action": "Category",
       "details": "--Patient--: Resolved"
+    },
+    {
+      "when": "2026-10-05T16:52:06.633Z",
+      "area": "CyberLife Reports",
+      "action": "Add",
+      "details": "RAISE 2026-27 Q4-Q1"
     }
   ],
   "appLogEnabled": true,

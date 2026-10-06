@@ -1062,6 +1062,13 @@
         "build": "26h1 28000.2608",
         "channel": "stable",
         "release": "2026-07-28"
+      },
+      {
+        "id": "1791330360161970",
+        "versionStatus": "V3",
+        "build": "28000.2608 P",
+        "channel": "stable",
+        "release": "2026-07-28"
       }
     ]
   },

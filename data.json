@@ -1083,6 +1083,13 @@
         "build": "28000.2804 P",
         "channel": "stable",
         "release": "2026-10-07"
+      },
+      {
+        "id": "1791330605854317",
+        "versionStatus": "V3.50.58",
+        "build": "28000.2954",
+        "channel": "stable",
+        "release": "2026-09-08"
       }
     ]
   },

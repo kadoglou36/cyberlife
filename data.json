@@ -969,6 +969,13 @@
         "build": "26100.9457 OB",
         "channel": "stable",
         "release": "2026-09-14"
+      },
+      {
+        "id": "1791330233329409",
+        "versionStatus": "V3.50",
+        "build": "26100.9550",
+        "channel": "stable",
+        "release": "2026-09-22"
       }
     ],
     "candev": [

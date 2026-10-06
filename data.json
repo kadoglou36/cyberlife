@@ -981,7 +981,7 @@
     "candev": [
       {
         "id": "1781417556688298",
-        "versionStatus": "V3.50",
+        "versionStatus": "V3.50.1",
         "build": "26h1 28000.1575",
         "channel": "stable",
         "release": "2026-02-10"

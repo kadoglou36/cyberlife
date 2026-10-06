@@ -941,6 +941,13 @@
         "build": "25h2 26100.8875",
         "channel": "stable",
         "release": "2026-07-14"
+      },
+      {
+        "id": "1791329902040295",
+        "versionStatus": "V3.48",
+        "build": "26100.8894 OB",
+        "channel": "stable",
+        "release": "2026-10-07"
       }
     ],
     "candev": [

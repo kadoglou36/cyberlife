@@ -2044,11 +2044,6 @@
         <button class="cal-btn cal-btn--blue" type="button" id="email-pass-edit">Edit</button>
         <button class="cal-btn cal-btn--red" type="button" id="email-pass-delete">Delete</button>
       </div>
-      <div id="email-pass-save-error" role="status" aria-live="polite"
-        style="margin:0 1rem 1rem;color:#b91c1c;font-size:.9rem" hidden></div>
-      <p style="margin:0;padding:0 1rem 1rem;color:#92400e">
-        ⚠️ Passwords are stored as plain text in the GitHub database and its commit history.
-      </p>
       <div style="padding:0 1rem 1rem">
         <div style="overflow:auto;border:1px solid #e5e7eb;border-radius:12px">
           <table style="width:100%;border-collapse:collapse;min-width:720px;table-layout:fixed">
@@ -2178,7 +2173,7 @@
               style="width:100%;border:1px solid #e5e7eb;border-radius:8px;padding:.45rem .6rem;resize:vertical;font-family:inherit"></textarea>
           </label>
           <div style="display:flex;gap:.5rem;justify-content:flex-end">
-            <button class="cal-btn cal-btn--green" type="submit" id="email-pass-save">Save</button>
+            <button class="cal-btn cal-btn--green" type="submit">Save</button>
             <button class="cal-btn" type="button" id="email-pass-cancel">Cancel</button>
           </div>
         </form>
@@ -3195,11 +3190,9 @@
       const title = document.getElementById('email-pass-title');
       const closeButton = document.getElementById('email-pass-close');
       const cancelButton = document.getElementById('email-pass-cancel');
-      const saveButton = document.getElementById('email-pass-save');
-      const saveError = document.getElementById('email-pass-save-error');
       if (!menuButton || !tbody || !addButton || !editButton || !deleteButton ||
           !modal || !form || !emailInput || !passwordInput || !togglePasswordButton || !commentInput ||
-          !title || !closeButton || !cancelButton || !saveButton || !saveError) return;
+          !title || !closeButton || !cancelButton) return;
 
       let selectedId = null;
       let editingId = null;
@@ -3258,35 +3251,10 @@
         editingId = null;
       }
 
-      async function saveEntries(entries) {
-        const previousEntries = getEntries();
+      function saveEntries(entries) {
         window.CyberLifeData.emailPass = entries;
-        saveButton.disabled = true;
-        saveButton.textContent = 'Saving…';
-        saveError.style.color = '#6b7280';
-        saveError.textContent = 'Saving to GitHub…';
-        saveError.hidden = false;
-        try {
-          await window.saveAppData();
-          render();
-          saveError.style.color = '#065f46';
-          saveError.textContent = 'Saved to GitHub.';
-          saveError.hidden = false;
-          return true;
-        } catch (error) {
-          window.CyberLifeData.emailPass = previousEntries;
-          render();
-          saveError.style.color = '#b91c1c';
-          const detail = error instanceof Error ? error.message : String(error);
-          saveError.textContent = /403|404|Resource not accessible/i.test(detail)
-            ? `GitHub rejected the database update. Check that your token has Contents: Read and write permission for kadoglou36/secure-databases. (${detail})`
-            : `Could not save to the GitHub database. Your changes were not saved. (${detail})`;
-          saveError.hidden = false;
-          return false;
-        } finally {
-          saveButton.disabled = false;
-          saveButton.textContent = 'Save';
-        }
+        window.cyberLifeAutoSave?.scheduleAutoSave();
+        render();
       }
 
       menuButton.addEventListener('click', render);
@@ -3358,12 +3326,10 @@
         } else {
           entries.push(entry);
         }
-        saveEntries(entries).then(saved => {
-          if (!saved) return;
-          selectedId = entry.id;
-          render();
-          closeModal();
-        });
+        saveEntries(entries);
+        selectedId = entry.id;
+        render();
+        closeModal();
       });
 
       closeButton.addEventListener('click', closeModal);

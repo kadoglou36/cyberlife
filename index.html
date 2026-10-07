@@ -980,57 +980,7 @@
     <nav class="nav" aria-label="Main navigation">
       <button class="brand" id="brand-home" type="button">🏠 Main</button>
 
-      <!-- Mobile/Desktop Toggle -->
-      <button class="btn" type="button" id="toggle-mobile">📱 Mobile</button>
-      <button class="btn" type="button" id="toggle-desktop" style="display:none">💻 Desktop</button>
-
-      <!-- Mobile View: Single CyberLife Dropdown -->
-      <div class="menu" id="nav-mobile" style="display:none">
-        <button class="menu-btn" type="button">🤖 CyberLife</button>
-        <div class="menu-list">
-          <button type="button" id="menu-calendar-mobile">📅 Calendar</button>
-          <button type="button" id="menu-crew-mobile">👥 Crew</button>
-          <div class="submenu">
-            <button type="button">👤 Passengers</button>
-            <div class="submenu-list">
-              <button type="button" id="menu-passengers-mobile">👥 All Passengers</button>
-              <button type="button" id="menu-passengers-void-mobile">🕳️ Passengers VOID</button>
-              <button type="button">🔍 Researching ID</button>
-            </div>
-          </div>
-          <div class="submenu">
-            <button type="button">🚀 AirOs15</button>
-            <div class="submenu-list">
-              <button type="button" id="menu-airos-status-mobile">📊 AirOs15 Status</button>
-              <button type="button" id="menu-airos-update-mobile">🔄 AirOs15 Update</button>
-            </div>
-          </div>
-          <div class="submenu">
-            <button type="button">🏢 Company</button>
-            <div class="submenu-list">
-              <button type="button" id="menu-company-mobile">🏭 Company State</button>
-              <button type="button">🔓 State Access</button>
-              <button type="button" id="menu-servers-mobile">🗄️ Servers Center</button>
-              <button type="button" id="menu-fraggile-mobile">📦 Fraggile Transport</button>
-              <button type="button" id="menu-population-mobile">🌍 Population</button>
-              <button type="button" id="menu-intelligence-count-mobile">🧠 Intelligence Count</button>
-            </div>
-          </div>
-          <div class="submenu">
-            <button type="button">🔒 Privacy</button>
-            <div class="submenu-list">
-              <button type="button" id="menu-work-time-mobile">⏰ Work Time</button>
-              <button type="button">📧 Email-Pass</button>
-              <button type="button" id="menu-cyberlife-reports-mobile">📄 CyberLife Reports</button>
-              <button type="button" id="menu-app-log-mobile">📋 AI Suite 3 Log</button>
-            </div>
-          </div>
-          <button type="button" id="about-copyright-mobile">ⓘ Copyright</button>
-        </div>
-      </div>
-
-      <!-- Desktop View: Expanded Menu Items -->
-      <div id="nav-desktop" style="display:flex;gap:.5rem">
+      <div style="display:flex;gap:.5rem">
         <button class="btn" type="button" id="menu-calendar">📅 Calendar</button>
         <button class="btn" type="button" id="menu-crew">👥 Crew</button>
         
@@ -1040,7 +990,6 @@
           <div class="menu-list">
             <button type="button" id="menu-passengers">👥 All Passengers</button>
             <button type="button" id="menu-passengers-void">🕳️ Passengers VOID</button>
-            <button type="button">🔍 Researching ID</button>
           </div>
         </div>
 
@@ -1071,7 +1020,7 @@
           <button class="menu-btn" type="button">🔒 Privacy</button>
           <div class="menu-list">
             <button type="button" id="menu-work-time">⏰ Work Time</button>
-            <button type="button">📧 Email-Pass</button>
+            <button type="button" id="menu-email-pass">📧 Email-Pass</button>
             <button type="button" id="menu-cyberlife-reports">📄 CyberLife Reports</button>
             <button type="button" id="menu-app-log">📋 AI Suite 3 Log</button>
           </div>
@@ -1158,7 +1107,7 @@
             <div style="display:grid;gap:0.75rem">
               <div style="display:flex;justify-content:space-between;padding:0.75rem;background:#f9fafb;border-radius:6px">
                 <span style="color:#6b7280">Application Version:</span>
-                <span style="font-weight:600;color:#374151">V 1.2</span>
+                <span style="font-weight:600;color:#374151">V 3.50</span>
               </div>
               <div style="display:flex;justify-content:space-between;padding:0.75rem;background:#f9fafb;border-radius:6px">
                 <span style="color:#6b7280">Database:</span>
@@ -2086,6 +2035,35 @@
     </div>
   </section>
 
+  <!-- Email and password records -->
+  <section id="view-email-pass" class="view" hidden>
+    <div class="calendar" style="padding:0" aria-label="Email and Passwords">
+      <div class="cal-header">
+        <div class="cal-title" style="margin-right:0">📧 Email-Pass</div>
+        <button class="cal-btn cal-btn--green" type="button" id="email-pass-add">Add</button>
+        <button class="cal-btn cal-btn--blue" type="button" id="email-pass-edit">Edit</button>
+        <button class="cal-btn cal-btn--red" type="button" id="email-pass-delete">Delete</button>
+      </div>
+      <p style="margin:0;padding:0 1rem 1rem;color:#92400e">
+        ⚠️ Passwords are stored as plain text in the GitHub database and its commit history.
+      </p>
+      <div style="padding:0 1rem 1rem">
+        <div style="overflow:auto;border:1px solid #e5e7eb;border-radius:12px">
+          <table style="width:100%;border-collapse:collapse;min-width:720px;table-layout:fixed">
+            <thead style="background:#f9fafb">
+              <tr>
+                <th style="text-align:left;padding:.6rem;border-bottom:1px solid #e5e7eb;width:30%">Email</th>
+                <th style="text-align:left;padding:.6rem;border-bottom:1px solid #e5e7eb;width:25%">Password</th>
+                <th style="text-align:left;padding:.6rem;border-bottom:1px solid #e5e7eb">Comment</th>
+              </tr>
+            </thead>
+            <tbody id="email-pass-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CyberLife Reports View -->
   <section id="view-cyberlife-reports" class="view" hidden>
     <div class="calendar" style="padding:0" aria-label="CyberLife Reports">
@@ -2163,6 +2141,43 @@
           <div style="display:flex;gap:.5rem;justify-content:flex-end">
             <button class="cal-btn cal-btn--green" type="submit">Save</button>
             <button class="cal-btn" type="button" id="cyberlife-report-cancel">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Email and password entry modal -->
+  <div class="modal-backdrop" id="email-pass-modal">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="email-pass-title">
+      <header>
+        <h3 id="email-pass-title">Email-Pass Entry</h3>
+        <button class="close" type="button" aria-label="Close" id="email-pass-close">✕</button>
+      </header>
+      <div class="content">
+        <form id="email-pass-form" style="display:grid;grid-template-columns:1fr;gap:.75rem">
+          <label>
+            <div style="font-weight:600;margin-bottom:.25rem">Email</div>
+            <input id="email-pass-email" type="email" required autocomplete="username"
+              style="width:100%;border:1px solid #e5e7eb;border-radius:8px;padding:.45rem .6rem" />
+          </label>
+          <label>
+            <div style="font-weight:600;margin-bottom:.25rem">Password</div>
+            <div style="display:flex;gap:.4rem">
+              <input id="email-pass-password" type="password" required autocomplete="new-password"
+                style="flex:1;min-width:0;border:1px solid #e5e7eb;border-radius:8px;padding:.45rem .6rem" />
+              <button class="cal-btn" type="button" id="email-pass-toggle-password"
+                aria-label="Show password" aria-pressed="false" title="Show password">👁️</button>
+            </div>
+          </label>
+          <label>
+            <div style="font-weight:600;margin-bottom:.25rem">Comment (optional)</div>
+            <textarea id="email-pass-comment" rows="3"
+              style="width:100%;border:1px solid #e5e7eb;border-radius:8px;padding:.45rem .6rem;resize:vertical;font-family:inherit"></textarea>
+          </label>
+          <div style="display:flex;gap:.5rem;justify-content:flex-end">
+            <button class="cal-btn cal-btn--green" type="submit">Save</button>
+            <button class="cal-btn" type="button" id="email-pass-cancel">Cancel</button>
           </div>
         </form>
       </div>
@@ -2556,10 +2571,10 @@
         <button class="close" type="button" aria-label="Close" id="about-close">✕</button>
       </header>
       <div class="content">
-        AI Suite 3 - Version V 1.2
+        AI Suite 3 - Version V 3.50
         Team: AI Homestead Company
         First Officer: Vangelis Kadoglou ID: 152400
-        2001-2025 CyberLife. All rights reserved.
+        2001-2026 CyberLife. All rights reserved.
       </div>
     </div>
   </div>
@@ -2642,39 +2657,6 @@
 
     // Menu click behavior (instead of hover)
     document.addEventListener('DOMContentLoaded', function () {
-      // Mobile/Desktop Toggle Logic
-      const toggleMobileBtn = document.getElementById('toggle-mobile');
-      const toggleDesktopBtn = document.getElementById('toggle-desktop');
-      const navMobile = document.getElementById('nav-mobile');
-      const navDesktop = document.getElementById('nav-desktop');
-
-      // Switch to Mobile view
-      toggleMobileBtn.addEventListener('click', function () {
-        navDesktop.style.display = 'none';
-        navMobile.style.display = 'flex';
-        toggleDesktopBtn.style.display = 'inline-flex';
-        toggleMobileBtn.style.display = 'none';
-      });
-
-      // Switch to Desktop view
-      toggleDesktopBtn.addEventListener('click', function () {
-        navMobile.style.display = 'none';
-        navDesktop.style.display = 'flex';
-        toggleMobileBtn.style.display = 'inline-flex';
-        toggleDesktopBtn.style.display = 'none';
-      });
-
-      // Synchronize mobile menu clicks with desktop actions
-      document.querySelectorAll('#nav-mobile [id$="-mobile"]').forEach(mobileBtn => {
-        mobileBtn.addEventListener('click', function () {
-          const desktopId = this.id.replace('-mobile', '');
-          const desktopBtn = document.getElementById(desktopId);
-          if (desktopBtn) {
-            desktopBtn.click();
-          }
-        });
-      });
-
       // Main button - show homepage only
       document.getElementById('brand-home').addEventListener('click', function () {
         // Hide all views consistently using .hidden property
@@ -2763,6 +2745,7 @@
         // 👤 Passengers
         passengers: [],
         passengersVoid: [],
+        emailPass: [],
 
         // 🚀 AirOs15
         airosStatus: {},
@@ -2884,6 +2867,7 @@
             calendar: window.CyberLifeData.calendar,
             passengers: window.CyberLifeData.passengers,
             passengersVoid: window.CyberLifeData.passengersVoid,
+            emailPass: window.CyberLifeData.emailPass,
             crewCyber: window.CyberLifeData.crewCyber,
             crewHome: window.CyberLifeData.crewHome,
             company: window.CyberLifeData.company,
@@ -2906,6 +2890,7 @@
             else if (value.tasks) window.CyberLifeData.calendar = value.tasks;
             if (value.passengers) window.CyberLifeData.passengers = value.passengers;
             if (value.passengersVoid) window.CyberLifeData.passengersVoid = value.passengersVoid;
+            if (Array.isArray(value.emailPass)) window.CyberLifeData.emailPass = value.emailPass;
             if (value.crewCyber) window.CyberLifeData.crewCyber = value.crewCyber;
             if (value.crewHome) window.CyberLifeData.crewHome = value.crewHome;
             if (value.company) window.CyberLifeData.company = value.company;
@@ -3194,6 +3179,175 @@
     })();
 
     (function () {
+      const menuButton = document.getElementById('menu-email-pass');
+      const tbody = document.getElementById('email-pass-tbody');
+      const addButton = document.getElementById('email-pass-add');
+      const editButton = document.getElementById('email-pass-edit');
+      const deleteButton = document.getElementById('email-pass-delete');
+      const modal = document.getElementById('email-pass-modal');
+      const form = document.getElementById('email-pass-form');
+      const emailInput = document.getElementById('email-pass-email');
+      const passwordInput = document.getElementById('email-pass-password');
+      const togglePasswordButton = document.getElementById('email-pass-toggle-password');
+      const commentInput = document.getElementById('email-pass-comment');
+      const title = document.getElementById('email-pass-title');
+      const closeButton = document.getElementById('email-pass-close');
+      const cancelButton = document.getElementById('email-pass-cancel');
+      if (!menuButton || !tbody || !addButton || !editButton || !deleteButton ||
+          !modal || !form || !emailInput || !passwordInput || !togglePasswordButton || !commentInput ||
+          !title || !closeButton || !cancelButton) return;
+
+      let selectedId = null;
+      let editingId = null;
+
+      function getEntries() {
+        if (!Array.isArray(window.CyberLifeData.emailPass)) {
+          window.CyberLifeData.emailPass = [];
+        }
+        return window.CyberLifeData.emailPass;
+      }
+
+      function render() {
+        const entries = getEntries();
+        if (!entries.length) {
+          tbody.innerHTML = '<tr><td colspan="3" style="padding:1rem;text-align:center;color:#6b7280">No email entries</td></tr>';
+          selectedId = null;
+          return;
+        }
+
+        tbody.innerHTML = entries.map(entry => `
+          <tr data-email-pass-id="${escapeHtml(entry.id)}"
+            style="cursor:pointer;${String(entry.id) === String(selectedId) ? 'background:#dbeafe' : ''}">
+            <td style="padding:.6rem;border-bottom:1px solid #e5e7eb;overflow-wrap:anywhere">${escapeHtml(entry.email)}</td>
+            <td style="padding:.6rem;border-bottom:1px solid #e5e7eb">
+              <span class="email-pass-secret" data-visible="false">••••••••</span>
+              <button class="cal-btn" type="button" data-email-pass-action="toggle-password"
+                aria-label="Show password">Show</button>
+            </td>
+            <td style="padding:.6rem;border-bottom:1px solid #e5e7eb;overflow-wrap:anywhere">${escapeHtml(entry.comment)}</td>
+          </tr>`).join('');
+      }
+
+      function openModal(entry = null) {
+        editingId = entry ? entry.id : null;
+        title.textContent = entry ? 'Edit Email-Pass Entry' : 'Add Email-Pass Entry';
+        emailInput.value = entry?.email || '';
+        passwordInput.value = entry?.password || '';
+        passwordInput.type = 'password';
+        togglePasswordButton.textContent = '👁️';
+        togglePasswordButton.setAttribute('aria-label', 'Show password');
+        togglePasswordButton.setAttribute('title', 'Show password');
+        togglePasswordButton.setAttribute('aria-pressed', 'false');
+        commentInput.value = entry?.comment || '';
+        modal.classList.add('show');
+        emailInput.focus();
+      }
+
+      function closeModal() {
+        modal.classList.remove('show');
+        form.reset();
+        passwordInput.type = 'password';
+        togglePasswordButton.textContent = '👁️';
+        togglePasswordButton.setAttribute('aria-label', 'Show password');
+        togglePasswordButton.setAttribute('title', 'Show password');
+        togglePasswordButton.setAttribute('aria-pressed', 'false');
+        editingId = null;
+      }
+
+      function saveEntries(entries) {
+        window.CyberLifeData.emailPass = entries;
+        window.CyberLifeSystem.autoSave();
+        render();
+      }
+
+      menuButton.addEventListener('click', render);
+      tbody.addEventListener('click', event => {
+        const target = event.target;
+        if (!(target instanceof HTMLElement)) return;
+        const actionButton = target.closest('[data-email-pass-action="toggle-password"]');
+        const row = target.closest('tr[data-email-pass-id]');
+        if (!row) return;
+
+        if (actionButton) {
+          const entry = getEntries().find(item => String(item.id) === row.dataset.emailPassId);
+          const secret = row.querySelector('.email-pass-secret');
+          if (!entry || !secret) return;
+          const isVisible = secret.dataset.visible === 'true';
+          secret.textContent = isVisible ? '••••••••' : entry.password;
+          secret.dataset.visible = String(!isVisible);
+          actionButton.textContent = isVisible ? 'Show' : 'Hide';
+          actionButton.setAttribute('aria-label', isVisible ? 'Show password' : 'Hide password');
+          return;
+        }
+
+        selectedId = row.dataset.emailPassId;
+        render();
+      });
+
+      addButton.addEventListener('click', () => openModal());
+      togglePasswordButton.addEventListener('click', () => {
+        const showPassword = passwordInput.type === 'password';
+        passwordInput.type = showPassword ? 'text' : 'password';
+        togglePasswordButton.textContent = showPassword ? '🙈' : '👁️';
+        togglePasswordButton.setAttribute('aria-label', showPassword ? 'Hide password' : 'Show password');
+        togglePasswordButton.setAttribute('title', showPassword ? 'Hide password' : 'Show password');
+        togglePasswordButton.setAttribute('aria-pressed', String(showPassword));
+      });
+      editButton.addEventListener('click', () => {
+        const entry = getEntries().find(item => String(item.id) === String(selectedId));
+        if (!entry) {
+          alert('Select an entry to edit.');
+          return;
+        }
+        openModal(entry);
+      });
+      deleteButton.addEventListener('click', () => {
+        const entries = getEntries();
+        const entry = entries.find(item => String(item.id) === String(selectedId));
+        if (!entry) {
+          alert('Select an entry to delete.');
+          return;
+        }
+        if (!confirm(`Delete email entry "${entry.email}"?`)) return;
+        selectedId = null;
+        saveEntries(entries.filter(item => String(item.id) !== String(entry.id)));
+      });
+
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+        const entries = getEntries();
+        const existingIndex = entries.findIndex(item => String(item.id) === String(editingId));
+        const entry = {
+          id: editingId || `${Date.now()}-${Math.random().toString(36).slice(2)}`,
+          email: emailInput.value.trim(),
+          password: passwordInput.value,
+          comment: commentInput.value.trim()
+        };
+
+        if (existingIndex >= 0) {
+          entries[existingIndex] = entry;
+        } else {
+          entries.push(entry);
+        }
+        selectedId = entry.id;
+        saveEntries(entries);
+        closeModal();
+      });
+
+      closeButton.addEventListener('click', closeModal);
+      cancelButton.addEventListener('click', closeModal);
+      modal.addEventListener('click', event => {
+        if (event.target === modal) closeModal();
+      });
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && modal.classList.contains('show')) closeModal();
+      });
+
+      window.emailPassView = { render };
+      render();
+    })();
+
+    (function () {
       const btn = document.getElementById('about-copyright');
       const modal = document.getElementById('about-modal');
       const closeBtn = document.getElementById('about-close');
@@ -3223,20 +3377,17 @@
       const viewIntel = document.getElementById('view-intelligence');
       const menuAppLog = document.getElementById('menu-app-log');
       const viewAppLog = document.getElementById('view-app-log');
+      const menuEmailPass = document.getElementById('menu-email-pass');
+      const viewEmailPass = document.getElementById('view-email-pass');
       const menuCyberLifeReports = document.getElementById('menu-cyberlife-reports');
-      const menuCyberLifeReportsMobile = document.getElementById('menu-cyberlife-reports-mobile');
       const viewCyberLifeReports = document.getElementById('view-cyberlife-reports');
       const menuCrew = document.getElementById('menu-crew');
       const viewCrew = document.getElementById('view-crew');
       const viewWorkTime = document.getElementById('view-work-time');
       const menuPopulation = document.getElementById('menu-population');
-      const menuPopulationMobile = document.getElementById('menu-population-mobile');
       const menuCompany = document.getElementById('menu-company');
-      const menuCompanyMobile = document.getElementById('menu-company-mobile');
       const menuServers = document.getElementById('menu-servers');
-      const menuServersMobile = document.getElementById('menu-servers-mobile');
       const menuFraggile = document.getElementById('menu-fraggile');
-      const menuFraggileMobile = document.getElementById('menu-fraggile-mobile');
       const grid = document.getElementById('cal-grid');
       const title = document.getElementById('cal-title');
       const btnPrev = document.getElementById('cal-prev');
@@ -3260,6 +3411,7 @@
         viewAirosUpdate && (viewAirosUpdate.hidden = true);
         viewIntel && (viewIntel.hidden = true);
         viewAppLog && (viewAppLog.hidden = true);
+        viewEmailPass && (viewEmailPass.hidden = true);
         viewCyberLifeReports && (viewCyberLifeReports.hidden = true);
         viewCrew && (viewCrew.hidden = true);
         viewWorkTime && (viewWorkTime.hidden = true);
@@ -3295,6 +3447,7 @@
       function showAirosUpdate() { hideAll(); if (viewAirosUpdate) { viewAirosUpdate.hidden = false; if (window.airosUpdate) { window.airosUpdate.render(); } } saveCurrentView('airos-update'); }
       function showIntel() { hideAll(); if (viewIntel) { viewIntel.hidden = false; if (window.intelligenceCount) { window.intelligenceCount.render(); } } saveCurrentView('intelligence'); }
       function showAppLog() { hideAll(); if (viewAppLog) { viewAppLog.hidden = false; if (window.appLogView) { window.appLogView.render(); } } saveCurrentView('app-log'); }
+      function showEmailPass() { hideAll(); if (viewEmailPass) { viewEmailPass.hidden = false; window.emailPassView?.render(); } saveCurrentView('email-pass'); }
       function showCyberLifeReports() { hideAll(); if (viewCyberLifeReports) { viewCyberLifeReports.hidden = false; if (window.cyberLifeReports) { window.cyberLifeReports.render(); } } saveCurrentView('cyberlife-reports'); }
       function showCrew() { hideAll(); if (viewCrew) { viewCrew.hidden = false; if (window.CrewLogicRender) { window.CrewLogicRender(); } } saveCurrentView('crew'); }
       function showWorkTime() { hideAll(); if (viewWorkTime) { viewWorkTime.hidden = false; if (window.workTimeView) { window.workTimeView.render(); } } saveCurrentView('work-time'); }
@@ -3469,23 +3622,17 @@
       menuAirosUpdate?.addEventListener('click', showAirosUpdate);
       menuIntel?.addEventListener('click', showIntel);
       menuAppLog?.addEventListener('click', showAppLog);
+      menuEmailPass?.addEventListener('click', showEmailPass);
       menuCyberLifeReports?.addEventListener('click', showCyberLifeReports);
-      menuCyberLifeReportsMobile?.addEventListener('click', showCyberLifeReports);
       menuCrew?.addEventListener('click', showCrew);
       menuPopulation?.addEventListener('click', showPopulation);
-      menuPopulationMobile?.addEventListener('click', showPopulation);
       menuCompany?.addEventListener('click', showCompanyState);
-      menuCompanyMobile?.addEventListener('click', showCompanyState);
       menuServers?.addEventListener('click', showServersCenter);
-      menuServersMobile?.addEventListener('click', showServersCenter);
       menuFraggile?.addEventListener('click', showFraggileTransport);
-      menuFraggileMobile?.addEventListener('click', showFraggileTransport);
 
       // Work Time menu buttons
       const menuWorkTime = document.getElementById('menu-work-time');
-      const menuWorkTimeMobile = document.getElementById('menu-work-time-mobile');
       menuWorkTime?.addEventListener('click', showWorkTime);
-      menuWorkTimeMobile?.addEventListener('click', showWorkTime);
 
       // Restore the last viewed page on page load
       function restoreLastView() {
@@ -3501,6 +3648,7 @@
           case 'airos-update': showAirosUpdate(); break;
           case 'intelligence': showIntel(); break;
           case 'app-log': showAppLog(); break;
+          case 'email-pass': showEmailPass(); break;
           case 'cyberlife-reports': showCyberLifeReports(); break;
           case 'crew': showCrew(); break;
           case 'work-time': showWorkTime(); break;

@@ -942,6 +942,200 @@
     .auth-modal-actions.center {
       justify-content: center
     }
+
+    /* Mobile / small screens */
+    img,
+    video {
+      max-width: 100%;
+      height: auto
+    }
+
+    .modal {
+      max-height: 90vh;
+      overflow-y: auto
+    }
+
+    @media (max-width: 900px) {
+      .topbar {
+        position: relative;
+        z-index: 1000
+      }
+
+      /* Compact equal-width grid: all nav buttons (including those in the inner wrapper) become grid cells */
+      .nav {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: .35rem;
+        padding: .45rem .5rem
+      }
+
+      .nav>div {
+        display: contents !important
+      }
+
+      .nav .menu {
+        display: block
+      }
+
+      .nav .brand,
+      .nav .btn,
+      .nav .menu-btn,
+      #maintenance-btn {
+        width: 100%;
+        margin: 0 !important;
+        padding: .5rem .25rem !important;
+        font-size: .82rem;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis
+      }
+
+      .nav .brand {
+        background: #f9fafb;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: .5rem .25rem !important
+      }
+
+      .spacer {
+        display: none
+      }
+
+      /* Dropdowns span the full width under the nav instead of overflowing the screen */
+      .menu {
+        position: static
+      }
+
+      .menu-list {
+        left: .5rem;
+        right: .5rem;
+        min-width: 0;
+        max-height: 70vh;
+        overflow-y: auto;
+        z-index: 1000;
+        background: #fff !important;
+        opacity: 1;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .3)
+      }
+
+      .menu-list button {
+        padding: .65rem .7rem
+      }
+
+      .submenu-list {
+        position: static;
+        margin: .2rem 0 .2rem .8rem;
+        min-width: 0;
+        background: #fff;
+        box-shadow: none
+      }
+
+      .submenu-list button {
+        padding: .55rem .6rem
+      }
+    }
+
+    @media (max-width: 640px) {
+      .main {
+        padding: .5rem
+      }
+
+      .calendar {
+        border-radius: 12px
+      }
+
+      .cal-header {
+        flex-wrap: wrap;
+        padding: .6rem
+      }
+
+      .cal-title {
+        font-size: 1rem
+      }
+
+      .cal-btn {
+        padding: .4rem .55rem
+      }
+
+      .cal-weekdays div {
+        padding: .4rem .1rem;
+        font-size: .65rem;
+        text-align: center;
+        letter-spacing: 0
+      }
+
+      .cal-grid {
+        height: auto;
+        grid-auto-rows: minmax(64px, auto)
+      }
+
+      .cal-cell {
+        padding: .3rem .25rem
+      }
+
+      .cal-date {
+        font-size: .8rem
+      }
+
+      .cal-task {
+        font-size: .65rem;
+        max-width: 100%;
+        padding: .05rem .3rem
+      }
+
+      .cal-tasks {
+        width: 100%
+      }
+
+      .modal-backdrop {
+        padding: .5rem
+      }
+
+      .modal {
+        width: 100%;
+        max-height: 92vh;
+        padding: .8rem
+      }
+
+      .modal input,
+      .modal select,
+      .modal textarea,
+      .auth-modal-form input {
+        font-size: 16px
+      }
+
+      .tasks .row,
+      .tasks .actions {
+        flex-wrap: wrap
+      }
+
+      /* Override fixed-width inline grids so form rows stack */
+      [style*="grid-template-columns:180px 1fr"],
+      [style*="grid-template-columns:1fr 1fr;gap:1.5rem"],
+      [style*="grid-template-columns:1fr 1fr;gap:.6rem"] {
+        grid-template-columns: 1fr !important
+      }
+
+      [style*="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))"] {
+        grid-template-columns: 1fr !important
+      }
+
+      [style*="padding: 2rem"],
+      [style*="padding:2rem"] {
+        padding: 1rem !important
+      }
+
+      #view-home .cal-btn {
+        padding: .8rem 1.2rem !important;
+        font-size: 1rem !important
+      }
+
+      .auth-modal-card {
+        padding: 1.1rem
+      }
+    }
   </style>
 </head>
 
@@ -1087,6 +1281,17 @@
               <button class="cal-btn" id="back-to-menu">Back to Menu</button>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="calendar" aria-label="AI Suite 4 Announcement" style="margin-top:1.5rem">
+        <div class="cal-header">
+          <div class="cal-title" style="margin-right:0">          📢 Announcement</div>
+        </div>
+        <div style="padding: 2rem; text-align: center;">
+                    <h2>🛠️ Under development</h2>
+                    <p style="margin-top: 1rem; color: #6b7280;">We're working on the next generation of our platform.
+                      <strong>🚀 AI Suite 4</strong> is currently under development and will be available soon.</p>
         </div>
       </div>
     </section>

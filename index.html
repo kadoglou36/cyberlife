@@ -953,7 +953,7 @@
         <h2>🔒 CyberLife Access</h2>
         <p>Enter a GitHub Personal Access Token (repo scope) to unlock AI Suite 3. It is stored only in this
           browser and used solely to read/write <code>data-cyberlife.json</code> in
-          <code>kadoglou36/secure-databases</code>.</p>
+          <code>kadoglou36/DATABASE</code>.</p>
         <form id="cyberlife-auth-form" class="auth-modal-form">
           <label for="cyberlife-auth-token-input">Personal Access Token</label>
           <input type="password" id="cyberlife-auth-token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
@@ -1111,7 +1111,7 @@
               </div>
               <div style="display:flex;justify-content:space-between;padding:0.75rem;background:#f9fafb;border-radius:6px">
                 <span style="color:#6b7280">Database:</span>
-                <span style="font-weight:600;color:#374151">data-cyberlife.json (secure-databases)</span>
+                <span style="font-weight:600;color:#374151">data-cyberlife.json (DATABASE)</span>
               </div>
               <div style="display:flex;justify-content:space-between;padding:0.75rem;background:#f9fafb;border-radius:6px">
                 <span style="color:#6b7280">Storage Type:</span>
@@ -2920,11 +2920,11 @@
     })();
 
     // ============================================================================
-    // 🐙 GITHUB REST API SYNC - reads/writes data-cyberlife.json in kadoglou36/secure-databases
+    // 🐙 GITHUB REST API SYNC - reads/writes data-cyberlife.json in kadoglou36/DATABASE
     // ============================================================================
     (function () {
       const GITHUB_OWNER = 'kadoglou36';
-      const GITHUB_REPO = 'secure-databases';
+      const GITHUB_REPO = 'DATABASE';
       const GITHUB_FILE_PATH = 'data-cyberlife.json';
       const TOKEN_STORAGE_KEY = 'cyberlife_token';
 

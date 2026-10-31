@@ -2973,6 +2973,15 @@
         // 🌍 Population
         population: [],
 
+        // 🧠 Intelligence
+        intelligence: [],
+
+        // 📦 Fraggile Transport
+        fraggileTransport: [],
+
+        // 🖥️ Servers Center
+        serversCenter: {},
+
         // ⓘ Copyright & Metadata
         metadata: {
           version: '3.0',
@@ -3085,7 +3094,10 @@
             appLog: window.CyberLifeData.appLog,
             appLogEnabled: window.CyberLifeData.appLogEnabled,
             workCalendar: window.CyberLifeData.workCalendar,
-            population: window.CyberLifeData.population
+            population: window.CyberLifeData.population,
+            intelligence: window.CyberLifeData.intelligence,
+            fraggileTransport: window.CyberLifeData.fraggileTransport,
+            serversCenter: window.CyberLifeData.serversCenter
           };
         },
         set: function (value) {
@@ -3110,6 +3122,9 @@
             if (typeof value.appLogEnabled === 'boolean') window.CyberLifeData.appLogEnabled = value.appLogEnabled;
             if (value.workCalendar) window.CyberLifeData.workCalendar = value.workCalendar;
             if (Array.isArray(value.population)) window.CyberLifeData.population = value.population;
+            if (Array.isArray(value.intelligence)) window.CyberLifeData.intelligence = value.intelligence;
+            if (Array.isArray(value.fraggileTransport)) window.CyberLifeData.fraggileTransport = value.fraggileTransport;
+            if (value.serversCenter) window.CyberLifeData.serversCenter = value.serversCenter;
 
             // AUTO SAVE when data changes
             if (window.CyberLifeSystem) {

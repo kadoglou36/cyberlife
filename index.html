@@ -2970,6 +2970,9 @@
         // 🧠 Intelligence Count
         intelligenceByYear: {},
 
+        // 🌍 Population
+        population: [],
+
         // ⓘ Copyright & Metadata
         metadata: {
           version: '3.0',
@@ -3081,7 +3084,8 @@
             cyberLifeReports: window.CyberLifeData.cyberLifeReports,
             appLog: window.CyberLifeData.appLog,
             appLogEnabled: window.CyberLifeData.appLogEnabled,
-            workCalendar: window.CyberLifeData.workCalendar
+            workCalendar: window.CyberLifeData.workCalendar,
+            population: window.CyberLifeData.population
           };
         },
         set: function (value) {
@@ -3105,6 +3109,7 @@
             if (value.appLog) window.CyberLifeData.appLog = value.appLog;
             if (typeof value.appLogEnabled === 'boolean') window.CyberLifeData.appLogEnabled = value.appLogEnabled;
             if (value.workCalendar) window.CyberLifeData.workCalendar = value.workCalendar;
+            if (Array.isArray(value.population)) window.CyberLifeData.population = value.population;
 
             // AUTO SAVE when data changes
             if (window.CyberLifeSystem) {

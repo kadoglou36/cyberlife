@@ -1214,6 +1214,7 @@
           <button class="menu-btn" type="button">🔒 Privacy</button>
           <div class="menu-list">
             <button type="button" id="menu-work-time">⏰ Work Time</button>
+            <button type="button" id="menu-finances">💰 Finances</button>
             <button type="button" id="menu-email-pass">📧 Email-Pass</button>
             <button type="button" id="menu-cyberlife-reports">📄 CyberLife Reports</button>
             <button type="button" id="menu-app-log">📋 AI Suite 3 Log</button>
@@ -1934,24 +1935,22 @@
         justify-content: center;
         box-shadow: 0 12px 30px rgba(15,23,42,.08);
       }
-      .wt-pill span { color: #6b7280; font-size: 11px; text-transform: uppercase; margin-bottom: 2px; }
-      .wt-pill strong { font-size: 19px; color: #1f2937; }
-      .wt-efka-btn {
-        min-width: 130px;
-        height: 65px;
-        border: 1px solid #e5e7eb;
-        border-radius: 12px;
-        padding: 6px;
-        background: #ffffff;
+      .wt-money-pill { min-width: 154px; }
+      .wt-money-row { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+      .wt-money-toggle {
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 12px 30px rgba(15,23,42,.08);
+        padding: 2px;
+        border: 0;
+        background: transparent;
+        color: #4b5563;
         cursor: pointer;
-        transition: transform 0.1s ease;
       }
-      .wt-efka-btn:hover { transform: translateY(-2px); background: #f9fafb; }
-      .wt-efka-btn img { max-width: 100%; max-height: 100%; object-fit: contain; }
+      .wt-money-toggle svg { width: 18px; height: 18px; }
+      .wt-money-toggle:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; border-radius: 3px; }
+      .wt-pill span { color: #6b7280; font-size: 11px; text-transform: uppercase; margin-bottom: 2px; }
+      .wt-pill strong { font-size: 19px; color: #1f2937; }
       .wt-icon-btn {
         width: 65px;
         height: 65px;
@@ -2121,7 +2120,8 @@
       }
       @media (max-width: 760px) {
         .wt-top-actions { justify-content: space-between; }
-        .wt-pill, .wt-efka-btn { flex: 1; min-width: 110px; }
+        .wt-pill { flex: 1; min-width: 110px; }
+        .wt-money-pill { min-width: 154px; }
         .wt-calendar { display: block; padding: 10px; }
         .wt-day { margin-bottom: 8px; border: 1px solid #e5e7eb; border-radius: 8px; min-height: 80px; }
         .wt-weekday { display: none; }
@@ -2133,15 +2133,17 @@
       <header class="wt-topbar">
         <button id="wt-addBtn" class="wt-icon-btn wt-add-btn" type="button" aria-label="Προσθήκη">+</button>
         <div class="wt-top-actions">
-          <button id="wt-eEfkaBtn" class="wt-efka-btn" type="button">
-            <img src="https://services.e-efka.gov.gr/eEfkaExtAuth/resources/x0jkn/login/custom-theme/img/efka_logo.svg" alt="e-ΕΦΚΑ" />
-          </button>
-          <button id="wt-erganiBtn" class="wt-efka-btn" type="button">
-            <img src="https://myergani.gov.gr/(S(2vmxflickgppjw0xdntkwcrr))/Images/myErganiMd.png" alt="myErgani" />
-          </button>
-          <div class="wt-pill">
+          <div class="wt-pill wt-money-pill">
             <span>Περίοδος</span>
-            <strong id="wt-topMoney">0,00 €</strong>
+            <div class="wt-money-row">
+              <strong id="wt-topMoney">0,00 €</strong>
+              <button id="wt-moneyToggle" class="wt-money-toggle" type="button" aria-label="Απόκρυψη ποσού" aria-pressed="false" title="Απόκρυψη ποσού">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+            </div>
           </div>
           <div class="wt-pill">
             <span>Συνολικές Ώρες</span>
@@ -2206,8 +2208,8 @@
         </div>
         <div class="wt-modal-body">
           <div class="wt-settings-grid">
-            <label>Ωρομίσθιο (€) <input id="wt-defaultRate" type="number" step="0.01" min="0"></label>
-            <label>Έναρξη Περιόδου <input id="wt-periodStart" type="number" min="1" max="31"></label>
+            <label>Ωρομίσθιο (€) <input id="wt-defaultRate" type="number" step="0.01" min="0" required></label>
+            <label>Έναρξη Περιόδου <input id="wt-periodStart" type="number" min="1" max="31" required></label>
           </div>
           <button id="wt-saveSettings" class="primary" type="button">Αποθήκευση ρυθμίσεων</button>
         </div>
@@ -7083,7 +7085,8 @@
         entries: new Map(),
         settings: { defaultRate: 4, periodStartDay: 1 },
         viewDate: new Date(),
-        selectedDate: toDateKey(new Date())
+        selectedDate: toDateKey(new Date()),
+        moneyHidden: false
       };
 
       const el = {
@@ -7091,6 +7094,7 @@
         monthTitle:      document.getElementById('wt-monthTitle'),
         monthSummary:    document.getElementById('wt-monthSummary'),
         topMoney:        document.getElementById('wt-topMoney'),
+        moneyToggle:     document.getElementById('wt-moneyToggle'),
         topHours:        document.getElementById('wt-topHours'),
         prevMonth:       document.getElementById('wt-prevMonth'),
         nextMonth:       document.getElementById('wt-nextMonth'),
@@ -7237,9 +7241,12 @@
         const startKey=toDateKey(start), endKey=toDateKey(end);
         const pe = Array.from(state.entries.values()).filter(e=>e.date>=startKey&&e.date<=endKey);
         const th = pe.reduce((s,e)=>s+e.slots.reduce((a,sl)=>a+parseSlot(sl.text).hours,0),0);
-        const tm = pe.reduce((s,e)=>s+(e.slots.reduce((a,sl)=>a+parseSlot(sl.text).hours,0)*e.rate),0);
+        const tm = th * state.settings.defaultRate;
         el.topHours.textContent = th.toFixed(2);
-        el.topMoney.textContent = tm.toFixed(2)+' €';
+        el.topMoney.textContent = state.moneyHidden ? 'WIP' : tm.toFixed(2)+' €';
+        el.moneyToggle.setAttribute('aria-pressed', String(state.moneyHidden));
+        el.moneyToggle.setAttribute('aria-label', state.moneyHidden ? 'Εμφάνιση ποσού' : 'Απόκρυψη ποσού');
+        el.moneyToggle.title = state.moneyHidden ? 'Εμφάνιση ποσού' : 'Απόκρυψη ποσού';
       }
 
       function openWorkModal() {
@@ -7261,11 +7268,7 @@
       el.closeWorkModal.onclick      = ()=> el.workModal.classList.remove('open');
       el.closeSettingsModal.onclick  = ()=> el.settingsModal.classList.remove('open');
       el.addSlotBtn.onclick          = ()=> createSlotPicker();
-
-      const eEfkaBtn  = document.getElementById('wt-eEfkaBtn');
-      const erganiBtn = document.getElementById('wt-erganiBtn');
-      if (eEfkaBtn)  eEfkaBtn.onclick  = ()=> window.open('https://services.e-efka.gov.gr/','_blank');
-      if (erganiBtn) erganiBtn.onclick = ()=> window.open('https://myergani.gov.gr/','_blank');
+      el.moneyToggle.onclick         = ()=>{ state.moneyHidden = !state.moneyHidden; render(); };
 
       el.saveDayBtn.onclick = ()=>{
         const slots = slotsFromInputs();
@@ -7291,8 +7294,9 @@
         el.settingsModal.classList.add('open');
       };
       el.saveSettings.onclick = ()=>{
-        state.settings.defaultRate    = parseFloat(el.defaultRate.value)||4;
-        state.settings.periodStartDay = parseInt(el.periodStart.value)||1;
+        if (!el.defaultRate.reportValidity() || !el.periodStart.reportValidity()) return;
+        state.settings.defaultRate    = Number(el.defaultRate.value);
+        state.settings.periodStartDay = Number(el.periodStart.value);
         saveData();
         el.settingsModal.classList.remove('open');
         render();

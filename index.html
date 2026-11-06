@@ -3063,8 +3063,17 @@
         }, 1200);
       }
 
+      function flushAutoSave() {
+        if (saveTimer) {
+          clearTimeout(saveTimer);
+          saveTimer = null;
+        }
+        return window.saveAppData();
+      }
+
       window.CyberLifeSystem = {
-        autoSave: scheduleAutoSave
+        autoSave: scheduleAutoSave,
+        flushAutoSave
       };
 
       // Alias for compatibility
@@ -7293,11 +7302,17 @@
         el.periodStart.value = state.settings.periodStartDay;
         el.settingsModal.classList.add('open');
       };
-      el.saveSettings.onclick = ()=>{
+      el.saveSettings.onclick = async ()=>{
         if (!el.defaultRate.reportValidity() || !el.periodStart.reportValidity()) return;
         state.settings.defaultRate    = Number(el.defaultRate.value);
         state.settings.periodStartDay = Number(el.periodStart.value);
         saveData();
+        try {
+          await window.CyberLifeSystem.flushAutoSave();
+        } catch (error) {
+          console.error('Failed to save Work Time settings:', error);
+          return;
+        }
         el.settingsModal.classList.remove('open');
         render();
       };

@@ -342,6 +342,204 @@
       letter-spacing: .2px
     }
 
+    #view-home .home-content {
+      padding: 2rem 1.5rem;
+      text-align: center
+    }
+
+    #view-home .home-hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center
+    }
+
+    #view-home .home-intro h2 {
+      margin: 0;
+      font-size: 1.8rem
+    }
+
+    #view-home .home-intro {
+      max-width: none;
+      margin: 0;
+      text-align: center
+    }
+
+    #view-home .home-description {
+      max-width: none;
+      margin: .85rem 0 0;
+      color: var(--muted);
+      line-height: 1.65
+    }
+
+    .home-announcement {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      border: 1px solid #dbeafe;
+      border-radius: 12px;
+      background: #f8fafc;
+      text-align: left
+    }
+
+    #view-announcements .home-content {
+      padding: 2rem 1.5rem
+    }
+
+    .announcement-feature {
+      margin-bottom: 1.5rem
+    }
+
+    .announcement-feature .home-announcement {
+      max-width: none;
+      flex-direction: column;
+      text-align: center
+    }
+
+    .announcement-feature .home-announcement > div:last-child {
+      text-align: center
+    }
+
+    .home-announcement-icon {
+      display: grid;
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--primary-100);
+      font-size: 1.4rem
+    }
+
+    .home-announcement h3 {
+      margin: .2rem 0 0;
+      font-size: 1.15rem
+    }
+
+    .home-announcement p {
+      margin: .35rem 0 0;
+      color: var(--muted);
+      line-height: 1.5
+    }
+
+    #view-home .home-shortcut-groups {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-areas:
+        "main passengers"
+        "airos ."
+        "company privacy";
+      gap: 1.25rem;
+      max-width: 1100px;
+      margin: 2rem auto 0;
+      text-align: left
+    }
+
+    #view-home .home-shortcut-group[aria-labelledby="home-group-main"] {
+      grid-area: main
+    }
+
+    #view-home .home-shortcut-group[aria-labelledby="home-group-passengers"] {
+      grid-area: passengers
+    }
+
+    #view-home .home-shortcut-group[aria-labelledby="home-group-airos"] {
+      grid-area: airos
+    }
+
+    #view-home .home-shortcut-group[aria-labelledby="home-group-company"] {
+      grid-area: company
+    }
+
+    #view-home .home-shortcut-group[aria-labelledby="home-group-privacy"] {
+      grid-area: privacy
+    }
+
+    #view-home .home-shortcut-group h3 {
+      margin: 0 0 .85rem;
+      color: #374151;
+      font-size: .95rem;
+      text-align: center
+    }
+
+    #view-home .home-shortcut-group {
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .04)
+    }
+
+    #view-home .home-shortcut-grid {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 220px));
+      gap: .65rem
+    }
+
+    #view-home .home-shortcut {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      min-height: 58px;
+      width: 100%;
+      padding: .65rem .8rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fff;
+      color: var(--text);
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+      transition: border-color .15s ease, background .15s ease, box-shadow .15s ease
+    }
+
+    #view-home .home-shortcut:hover:not(:disabled) {
+      border-color: #bfdbfe;
+      background: #f8fafc;
+      box-shadow: 0 3px 10px rgba(37, 99, 235, .08)
+    }
+
+    #view-home .home-shortcut:focus-visible {
+      outline: 3px solid rgba(37, 99, 235, .35);
+      outline-offset: 2px
+    }
+
+    #view-home .home-shortcut-icon {
+      display: grid;
+      flex: 0 0 36px;
+      width: 36px;
+      height: 36px;
+      place-items: center;
+      border-radius: 9px;
+      background: #eff6ff;
+      font-size: 1.15rem
+    }
+
+    #view-home .home-shortcut-copy {
+      display: grid;
+      gap: .1rem;
+      font-weight: 600
+    }
+
+    #view-home .home-shortcut-note {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 400
+    }
+
+    #view-home .home-shortcut:disabled {
+      background: #f9fafb;
+      color: #6b7280;
+      cursor: not-allowed
+    }
+
+    #view-home .home-shortcut:disabled .home-shortcut-icon {
+      background: #f3f4f6
+    }
+
     .cal-btn {
       background: #ffffff;
       border: 1px solid var(--border);
@@ -1055,6 +1253,40 @@
         font-size: 1rem
       }
 
+      #view-home .home-content {
+        padding: 1.75rem 1rem
+      }
+
+      #view-announcements .home-content {
+        padding: 1.5rem 1rem
+      }
+
+      #view-home .home-intro h2 {
+        font-size: 1.5rem
+      }
+
+      .home-announcement {
+        align-items: flex-start;
+        gap: .75rem;
+        padding: 1rem
+      }
+
+      #view-home .home-shortcut-groups {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "main"
+          "passengers"
+          "airos"
+          "company"
+          "privacy";
+        gap: 1rem;
+        margin-top: 1.5rem
+      }
+
+      #view-home .home-shortcut-grid {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 220px))
+      }
+
       .cal-btn {
         padding: .4rem .55rem
       }
@@ -1173,54 +1405,9 @@
   <header class="topbar">
     <nav class="nav" aria-label="Main navigation">
       <button class="brand" id="brand-home" type="button">🏠 Main</button>
+      <button class="btn" type="button" id="menu-announcements">🚀 AI Suite 4 DEV</button>
 
       <div style="display:flex;gap:.5rem">
-        <button class="btn" type="button" id="menu-calendar">📅 Calendar</button>
-        <button class="btn" type="button" id="menu-crew">👥 Crew</button>
-        
-        <!-- Passengers dropdown -->
-        <div class="menu">
-          <button class="menu-btn" type="button">👤 Passengers</button>
-          <div class="menu-list">
-            <button type="button" id="menu-passengers">👥 All Passengers</button>
-            <button type="button" id="menu-passengers-void">🕳️ Passengers VOID</button>
-          </div>
-        </div>
-
-        <!-- AirOs15 dropdown -->
-        <div class="menu">
-          <button class="menu-btn" type="button">🚀 AirOs15</button>
-          <div class="menu-list">
-            <button type="button" id="menu-airos-status">📊 AirOs15 Status</button>
-            <button type="button" id="menu-airos-update">🔄 AirOs15 Update</button>
-          </div>
-        </div>
-
-        <!-- Company dropdown -->
-        <div class="menu">
-          <button class="menu-btn" type="button">🏢 Company</button>
-          <div class="menu-list">
-            <button type="button" id="menu-company">🏭 Company State</button>
-            <button type="button">🔓 State Access</button>
-            <button type="button" id="menu-servers">🗄️ Servers Center</button>
-            <button type="button" id="menu-fraggile">📦 Fraggile Transport</button>
-            <button type="button" id="menu-population">🌍 Population</button>
-            <button type="button" id="menu-intelligence-count">🧠 Intelligence Count</button>
-          </div>
-        </div>
-
-        <!-- Privacy dropdown -->
-        <div class="menu">
-          <button class="menu-btn" type="button">🔒 Privacy</button>
-          <div class="menu-list">
-            <button type="button" id="menu-work-time">⏰ Work Time</button>
-            <button type="button" id="menu-finances">💰 Finances</button>
-            <button type="button" id="menu-email-pass">📧 Email-Pass</button>
-            <button type="button" id="menu-cyberlife-reports">📄 CyberLife Reports</button>
-            <button type="button" id="menu-app-log">📋 AI Suite 3 Log</button>
-          </div>
-        </div>
-
         <button class="btn" type="button" id="about-copyright">ⓘ Copyright</button>
       </div>
 
@@ -1237,25 +1424,142 @@
   <main class="main">
     <!-- Home View (Default) -->
     <section id="view-home" class="view">
-      <div class="calendar" aria-label="CyberLife Home">
+      <div class="calendar" aria-label="CyberLife Homepage">
         <div class="cal-header">
           <div class="cal-title" style="margin-right:0">🚀 AI Suite 3 - Homepage</div>
         </div>
-        <div style="padding: 2rem; text-align: center;">
-          <h2>Welcome to 🚀 AI Suite 3</h2>
-          <p style="margin-top: 2rem; color: #6b7280;">Advanced AI management system for crew, passengers and
-            operations.</p>
+        <div class="home-content">
+          <div class="home-hero">
+            <div class="home-intro">
+              <h2>Welcome to 🚀 AI Suite 3</h2>
+              <p class="home-description">Your advanced hub for managing crew, passengers, and operations.</p>
+            </div>
+          </div>
+          <nav class="home-shortcut-groups" aria-label="Homepage shortcuts">
+            <section class="home-shortcut-group" aria-labelledby="home-group-main">
+              <h3 id="home-group-main">Main</h3>
+              <div class="home-shortcut-grid">
+                <button class="home-shortcut" type="button" id="menu-calendar">
+                  <span class="home-shortcut-icon" aria-hidden="true">📅</span>
+                  <span class="home-shortcut-copy">Calendar</span>
+                </button>
+                <button class="home-shortcut" type="button" id="menu-crew">
+                  <span class="home-shortcut-icon" aria-hidden="true">👥</span>
+                  <span class="home-shortcut-copy">Crew</span>
+                </button>
+              </div>
+            </section>
+            <section class="home-shortcut-group" aria-labelledby="home-group-passengers">
+              <h3 id="home-group-passengers">Passengers</h3>
+              <div class="home-shortcut-grid">
+                <button class="home-shortcut" type="button" id="menu-passengers">
+                  <span class="home-shortcut-icon" aria-hidden="true">👤</span>
+                  <span class="home-shortcut-copy">All Passengers</span>
+                </button>
+                <button class="home-shortcut" type="button" id="menu-passengers-void">
+                  <span class="home-shortcut-icon" aria-hidden="true">🕳️</span>
+                  <span class="home-shortcut-copy">Passengers VOID</span>
+                </button>
+              </div>
+            </section>
+            <section class="home-shortcut-group" aria-labelledby="home-group-airos">
+              <h3 id="home-group-airos">AirOs15</h3>
+              <div class="home-shortcut-grid">
+                <button class="home-shortcut" type="button" id="menu-airos-status">
+                  <span class="home-shortcut-icon" aria-hidden="true">📊</span>
+                  <span class="home-shortcut-copy">AirOs15 Status</span>
+                </button>
+                <button class="home-shortcut" type="button" id="menu-airos-update">
+                  <span class="home-shortcut-icon" aria-hidden="true">🔄</span>
+                  <span class="home-shortcut-copy">AirOs15 Update</span>
+                </button>
+              </div>
+            </section>
+            <section class="home-shortcut-group" aria-labelledby="home-group-company">
+              <h3 id="home-group-company">Company</h3>
+              <div class="home-shortcut-grid">
+                <button class="home-shortcut" type="button" id="menu-company">
+                  <span class="home-shortcut-icon" aria-hidden="true">🏭</span>
+                  <span class="home-shortcut-copy">Company State</span>
+                </button>
+                <button class="home-shortcut" type="button" disabled>
+                  <span class="home-shortcut-icon" aria-hidden="true">🔓</span>
+                  <span class="home-shortcut-copy">State Access<span class="home-shortcut-note">Coming soon</span></span>
+                </button>
+                <button class="home-shortcut" type="button" id="menu-servers">
+                  <span class="home-shortcut-icon" aria-hidden="true">🗄️</span>
+                  <span class="home-shortcut-copy">Servers Center</span>
+                </button>
+                <button class="home-shortcut" type="button" id="menu-fraggile">
+                  <span class="home-shortcut-icon" aria-hidden="true">📦</span>
+                  <span class="home-shortcut-copy">Fragile Transport</span>
+                </button>
+                <button class="home-shortcut" type="button" id="menu-population">
+                  <span class="home-shortcut-icon" aria-hidden="true">🌍</span>
+                  <span class="home-shortcut-copy">Population</span>
+                </button>
+                <button class="home-shortcut" type="button" id="menu-intelligence-count">
+                  <span class="home-shortcut-icon" aria-hidden="true">🧠</span>
+                  <span class="home-shortcut-copy">Intelligence Count</span>
+                </button>
+              </div>
+            </section>
+            <section class="home-shortcut-group" aria-labelledby="home-group-privacy">
+              <h3 id="home-group-privacy">Privacy</h3>
+              <div class="home-shortcut-grid">
+                <button class="home-shortcut" type="button" id="menu-work-time">
+                  <span class="home-shortcut-icon" aria-hidden="true">⏰</span>
+                  <span class="home-shortcut-copy">Work Time</span>
+                </button>
+                <button class="home-shortcut" type="button" disabled>
+                  <span class="home-shortcut-icon" aria-hidden="true">💰</span>
+                  <span class="home-shortcut-copy">Finances<span class="home-shortcut-note">Coming soon</span></span>
+                </button>
+                <button class="home-shortcut" type="button" id="menu-email-pass">
+                  <span class="home-shortcut-icon" aria-hidden="true">📧</span>
+                  <span class="home-shortcut-copy">Email-Pass</span>
+                </button>
+                <button class="home-shortcut" type="button" id="menu-cyberlife-reports">
+                  <span class="home-shortcut-icon" aria-hidden="true">📄</span>
+                  <span class="home-shortcut-copy">CyberLife Reports</span>
+                </button>
+                <button class="home-shortcut" type="button" id="menu-app-log">
+                  <span class="home-shortcut-icon" aria-hidden="true">📋</span>
+                  <span class="home-shortcut-copy">AI Suite 3 Log</span>
+                </button>
+              </div>
+            </section>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- Announcements View -->
+    <section id="view-announcements" class="view" hidden>
+      <div class="announcement-feature" aria-label="AI Suite 4 DEV">
+        <div class="home-announcement" role="note" aria-label="AI Suite 4 update">
+          <div>
+            <h3>🛠️ 🚀 AI Suite 4</h3>
+            <p>We're building the next generation of our platform. Stay tuned — it will be available soon.</p>
+          </div>
         </div>
       </div>
 
-      <div class="calendar" aria-label="AI Suite 4 Announcement" style="margin-top:1.5rem">
+      <div class="calendar" aria-label="In development announcements">
         <div class="cal-header">
-          <div class="cal-title" style="margin-right:0">          📢 Announcement</div>
+          <div class="cal-title" style="margin-right:0">🛠️ In development</div>
         </div>
-        <div style="padding: 2rem; text-align: center;">
-                    <h2>🛠️ Under development</h2>
-                    <p style="margin-top: 1rem; color: #6b7280;">We're working on the next generation of our platform.
-                      <strong>🚀 AI Suite 4</strong> is currently under development and will be available soon.</p>
+        <div class="home-content" style="text-align:center;color:var(--muted)">
+          No other announcements in development yet.
+        </div>
+      </div>
+
+      <div class="calendar" aria-label="Completed announcements" style="margin-top:1.5rem">
+        <div class="cal-header">
+          <div class="cal-title" style="margin-right:0">✅ Complete</div>
+        </div>
+        <div class="home-content" style="text-align:center;color:var(--muted)">
+          No completed announcements yet.
         </div>
       </div>
     </section>
@@ -3583,6 +3887,8 @@
     (function () {
       const brandHome = document.getElementById('brand-home');
       const viewHome = document.getElementById('view-home');
+      const menuAnnouncements = document.getElementById('menu-announcements');
+      const viewAnnouncements = document.getElementById('view-announcements');
       const menuCalendar = document.getElementById('menu-calendar');
       const menuPassengers = document.getElementById('menu-passengers');
       const menuPassengersVoid = document.getElementById('menu-passengers-void');
@@ -3624,6 +3930,7 @@
 
         // Hide all views
         viewHome && (viewHome.hidden = true);
+        viewAnnouncements && (viewAnnouncements.hidden = true);
         viewCalendar.hidden = true;
         viewPassengers.hidden = true;
         viewPassengersVoid && (viewPassengersVoid.hidden = true);
@@ -3660,9 +3967,16 @@
         }
         saveCurrentView('home');
       }
+      function showAnnouncements() {
+        hideAll();
+        if (viewAnnouncements) {
+          viewAnnouncements.hidden = false;
+        }
+        saveCurrentView('announcements');
+      }
       function showCalendar() { hideAll(); viewCalendar.hidden = false; render(); saveCurrentView('calendar'); }
       function showPassengers() { hideAll(); viewPassengers.hidden = false; if (window.passengers) { window.passengers.render(); window.passengers.hideForm(); } saveCurrentView('passengers'); }
-      function showPassengersVoid() { hideAll(); if (viewPassengersVoid) { viewPassengersVoid.hidden = false; if (window.passengersVoid) { window.passengersVoid.render(); window.passengersVoid.hideForm(); } } saveCurrentView('passengers-void'); }
+      function showPassengersVoid() { hideAll(); if (viewPassengersVoid) { viewPassengersVoid.hidden = false; if (window.passengersVoid) { window.passengersVoid.render(); window.passengersVoid.closeModal(); } } saveCurrentView('passengers-void'); }
       function showAiros() { hideAll(); if (viewAiros) { viewAiros.hidden = false; if (window.airos) { window.airos.render(); } } saveCurrentView('airos'); }
       function showAirosUpdate() { hideAll(); if (viewAirosUpdate) { viewAirosUpdate.hidden = false; if (window.airosUpdate) { window.airosUpdate.render(); } } saveCurrentView('airos-update'); }
       function showIntel() { hideAll(); if (viewIntel) { viewIntel.hidden = false; if (window.intelligenceCount) { window.intelligenceCount.render(); } } saveCurrentView('intelligence'); }
@@ -3835,6 +4149,7 @@
         if (e.key === 'Home' && e.ctrlKey) { btnToday?.click(); e.preventDefault(); }
       });
       brandHome?.addEventListener('click', showHome);
+      menuAnnouncements?.addEventListener('click', showAnnouncements);
       menuCalendar.addEventListener('click', showCalendar);
       menuPassengers?.addEventListener('click', showPassengers);
       menuPassengersVoid?.addEventListener('click', showPassengersVoid);
@@ -3861,6 +4176,7 @@
 
         switch (savedView) {
           case 'home': showHome(); break;
+          case 'announcements': showAnnouncements(); break;
           case 'calendar': showCalendar(); break;
           case 'passengers': showPassengers(); break;
           case 'passengers-void': showPassengersVoid(); break;

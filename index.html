@@ -1226,6 +1226,8 @@
 
       <span class="spacer"></span>
       <button class="btn" type="button" id="btn-report" style="margin-left:0.5rem">📄 Report</button>
+      <button class="btn" type="button" id="cyberlife-status-indicator"
+        aria-live="polite" style="margin-left:0.5rem;cursor:default">Status 🔴</button>
       <button id="maintenance-btn"
         style="background:#ef4444;border:1px solid #dc2626;border-radius:8px;padding:.45rem .8rem;cursor:pointer;color:#fff;font-weight:700;margin-left:0.5rem;">🔧 Maintenance</button>
     </nav>
@@ -1243,45 +1245,6 @@
           <h2>Welcome to 🚀 AI Suite 3</h2>
           <p style="margin-top: 2rem; color: #6b7280;">Advanced AI management system for crew, passengers and
             operations.</p>
-          <button class="cal-btn cal-btn--blue" id="btn-connect-cyberlife" style="margin-top:2rem;padding:1rem 2rem;font-size:1.1rem;font-weight:600">
-            Connect CyberLife
-          </button>
-        </div>
-
-        <!-- CyberLife Connect Interface -->
-        <div id="cyberlife-connect-container" style="display:none;padding:2rem;max-width:800px;margin:0 auto">
-          <!-- Connection Phase -->
-          <div id="connection-phase" style="display:none">
-            <div style="background:#0a0a0a;color:#00ff00;padding:1.5rem;border-radius:8px;font-family:monospace;font-size:0.95rem;min-height:200px;box-shadow:0 4px 6px rgba(0,0,0,0.1)">
-              <div id="connection-output"></div>
-            </div>
-          </div>
-          
-          <!-- Main Menu Phase -->
-          <div id="menu-phase" style="display:none">
-            <div style="text-align:center;margin-bottom:1.5rem;padding:1rem;background:#f0f9ff;border:2px solid #3b82f6;border-radius:8px">
-              <h4 style="margin:0;color:#1e40af">==========================================</h4>
-              <h4 style="margin:0.5rem 0;color:#1e40af">AI HOMESTEAD COMPANY</h4>
-              <h4 style="margin:0;color:#1e40af">==========================================</h4>
-            </div>
-            <div style="display:grid;gap:0.8rem">
-              <button class="cal-btn" id="menu-connect-ai" style="text-align:left;padding:1rem;font-size:1rem">1. Connect AI</button>
-              <button class="cal-btn cal-btn--red" id="menu-emergency" style="text-align:left;padding:1rem;font-size:1rem">2. EMERGENCY Disable AirOS15 Services</button>
-              <button class="cal-btn" id="menu-disable" style="text-align:left;padding:1rem;font-size:1rem">3. Disable AirOS15 Service</button>
-              <button class="cal-btn cal-btn--green" id="menu-enable" style="text-align:left;padding:1rem;font-size:1rem">4. Enable AirOS15 Service</button>
-              <button class="cal-btn cal-btn--blue" id="menu-update" style="text-align:left;padding:1rem;font-size:1rem">5. Update</button>
-            </div>
-          </div>
-
-          <!-- Operation Phase -->
-          <div id="operation-phase" style="display:none">
-            <div style="background:#0a0a0a;color:#00ff00;padding:1.5rem;border-radius:8px;font-family:monospace;font-size:0.95rem;min-height:200px;box-shadow:0 4px 6px rgba(0,0,0,0.1)">
-              <div id="operation-output"></div>
-            </div>
-            <div style="margin-top:1rem;text-align:center">
-              <button class="cal-btn" id="back-to-menu">Back to Menu</button>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -1323,21 +1286,14 @@
                 <span style="color:#6b7280">Storage Type:</span>
                 <span style="font-weight:600;color:#374151">GitHub REST API</span>
               </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:0.75rem;background:#f9fafb;border-radius:6px">
+                <label for="maintenance-status" style="color:#6b7280">CyberLife Status:</label>
+                <select id="maintenance-status" style="padding:.45rem .65rem;border:1px solid #d1d5db;border-radius:6px;background:#fff;color:#111827">
+                  <option value="offline">🔴 Offline</option>
+                  <option value="online">🟢 Online</option>
+                </select>
+              </div>
             </div>
-          </div>
-
-          <!-- Future Features Placeholder -->
-          <div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.1)">
-            <h3 style="color:#374151;margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem">
-              🚀 Coming Soon
-            </h3>
-            <ul style="color:#6b7280;line-height:1.8;padding-left:1.5rem">
-              <li>Performance Monitoring</li>
-              <li>Data Backup Scheduler</li>
-              <li>System Health Checks</li>
-              <li>Error Log Viewer</li>
-              <li>Cache Management</li>
-            </ul>
           </div>
 
         </div>
@@ -2954,6 +2910,7 @@
         // 🚀 AirOs15
         airosStatus: {},
         airosUpdates: [],
+        serviceStatus: 'offline',
 
         // 🏢 Company
         company: [],
@@ -3099,6 +3056,7 @@
             report: window.CyberLifeData.report,
             airosStatus: window.CyberLifeData.airosStatus,
             airosUpdates: window.CyberLifeData.airosUpdates,
+            serviceStatus: window.CyberLifeData.serviceStatus,
             airosUpdatesByTab: window.CyberLifeData.airosUpdatesByTab,
             intelligenceByYear: window.CyberLifeData.intelligenceByYear,
             cyberLifeReports: window.CyberLifeData.cyberLifeReports,
@@ -3126,6 +3084,9 @@
             if (typeof value.report === 'string') window.CyberLifeData.report = value.report;
             if (value.airosStatus) window.CyberLifeData.airosStatus = value.airosStatus;
             if (value.airosUpdates) window.CyberLifeData.airosUpdates = value.airosUpdates;
+            if (value.serviceStatus === 'online' || value.serviceStatus === 'offline') {
+              window.CyberLifeData.serviceStatus = value.serviceStatus;
+            }
             if (value.airosUpdatesByTab) window.CyberLifeData.airosUpdatesByTab = value.airosUpdatesByTab;
             if (value.intelligenceByYear) window.CyberLifeData.intelligenceByYear = value.intelligenceByYear;
             if (value.cyberLifeReports) window.CyberLifeData.cyberLifeReports = value.cyberLifeReports;
@@ -3153,6 +3114,29 @@
           }
         }
       };
+    })();
+
+    (function () {
+      const indicator = document.getElementById('cyberlife-status-indicator');
+      const selector = document.getElementById('maintenance-status');
+      if (!indicator || !selector) return;
+
+      function renderStatus() {
+        const isOnline = window.CyberLifeData.serviceStatus === 'online';
+        const status = isOnline ? 'online' : 'offline';
+        indicator.textContent = isOnline ? 'Status 🟢' : 'Status 🔴';
+        selector.value = status;
+      }
+
+      selector.addEventListener('change', function () {
+        if (selector.value !== 'online' && selector.value !== 'offline') return;
+        window.CyberLifeData.serviceStatus = selector.value;
+        renderStatus();
+        window.cyberLifeAutoSave?.scheduleAutoSave();
+      });
+
+      window.renderCyberLifeStatus = renderStatus;
+      renderStatus();
     })();
 
     // ============================================================================
@@ -3355,6 +3339,7 @@
         if (connectBtn) { connectBtn.disabled = true; connectBtn.textContent = 'Connecting…'; }
         try {
           await loadAppData();
+          window.renderCyberLifeStatus?.();
           unlockApp();
           window.restoreLastView?.();
           window.passengersVoid?.render?.();
@@ -3395,6 +3380,7 @@
         }
         try {
           await loadAppData();
+          window.renderCyberLifeStatus?.();
           unlockApp();
           window.restoreLastView?.();
           window.passengersVoid?.render?.();
@@ -7330,199 +7316,6 @@
       render();
     })();
 
-    // CyberLife Connect Logic
-    (function() {
-      const btnConnect = document.getElementById('btn-connect-cyberlife');
-      const container = document.getElementById('cyberlife-connect-container');
-      const connectionPhase = document.getElementById('connection-phase');
-      const menuPhase = document.getElementById('menu-phase');
-      const operationPhase = document.getElementById('operation-phase');
-      const connectionOutput = document.getElementById('connection-output');
-      const operationOutput = document.getElementById('operation-output');
-      
-      if (!btnConnect || !container) return;
-
-      function showContainer() {
-        container.style.display = 'block';
-        btnConnect.style.display = 'none';
-        showConnectionPhase();
-      }
-
-      function hideContainer() {
-        container.style.display = 'none';
-        btnConnect.style.display = 'inline-block';
-        resetPhases();
-      }
-
-      function resetPhases() {
-        connectionPhase.style.display = 'none';
-        menuPhase.style.display = 'none';
-        operationPhase.style.display = 'none';
-        connectionOutput.innerHTML = '';
-        operationOutput.innerHTML = '';
-      }
-
-      function typeMessage(element, message, delay = 50) {
-        return new Promise(resolve => {
-          const line = document.createElement('div');
-          line.style.marginBottom = '0.5rem';
-          element.appendChild(line);
-          
-          let i = 0;
-          const interval = setInterval(() => {
-            if (i < message.length) {
-              line.textContent += message[i];
-              i++;
-            } else {
-              clearInterval(interval);
-              resolve();
-            }
-          }, delay);
-        });
-      }
-
-      async function showConnectionPhase() {
-        connectionPhase.style.display = 'block';
-        menuPhase.style.display = 'none';
-        operationPhase.style.display = 'none';
-        connectionOutput.innerHTML = '';
-
-        await typeMessage(connectionOutput, 'Connect to Bridge...');
-        await new Promise(r => setTimeout(r, 1000));
-        
-        await typeMessage(connectionOutput, 'Connect to Southbridge...');
-        await new Promise(r => setTimeout(r, 1000));
-        
-        await typeMessage(connectionOutput, 'Connect to Northbridge...');
-        await new Promise(r => setTimeout(r, 1000));
-        
-        await typeMessage(connectionOutput, 'Connect to Servers...');
-        await new Promise(r => setTimeout(r, 1000));
-        
-        await typeMessage(connectionOutput, 'Connection Stabilized...');
-        await new Promise(r => setTimeout(r, 800));
-        
-        await typeMessage(connectionOutput, 'Finalizing Check...');
-        await new Promise(r => setTimeout(r, 1000));
-
-        showMenu();
-      }
-
-      function showMenu() {
-        connectionPhase.style.display = 'none';
-        menuPhase.style.display = 'block';
-        operationPhase.style.display = 'none';
-      }
-
-      async function runOperation(messages) {
-        menuPhase.style.display = 'none';
-        operationPhase.style.display = 'block';
-        operationOutput.innerHTML = '';
-
-        for (const msg of messages) {
-          await typeMessage(operationOutput, msg);
-          await new Promise(r => setTimeout(r, 500));
-        }
-      }
-
-      // Menu buttons
-      document.getElementById('menu-connect-ai')?.addEventListener('click', async () => {
-        await runOperation([
-          'Connect to Bridge...',
-          'Connect to Southbridge...',
-          'Connect to Northbridge...',
-          'Connect to Servers...',
-          'Connection Stabilized...',
-          'Finalizing Check...',
-          'Operation Completed!'
-        ]);
-      });
-
-      document.getElementById('menu-emergency')?.addEventListener('click', async () => {
-        await runOperation([
-          'SHUT DOWN AirOS15...',
-          'EMERGENCY SHUTDOWN COMPLETE!'
-        ]);
-      });
-
-      document.getElementById('menu-disable')?.addEventListener('click', async () => {
-        await runOperation([
-          'SHUT DOWN AirOS...',
-          'SHUT DOWN Scanner...',
-          'SHUT DOWN Community...',
-          'SHUT DOWN Diagnostic...',
-          'SHUT DOWN Control Check...',
-          'SHUT DOWN Control Sleep...',
-          'SHUT DOWN Driving Control...',
-          'SHUT DOWN Power Control...',
-          'SHUT DOWN CT Scan...',
-          'SHUT DOWN Central Scan...',
-          'SHUT DOWN Processing...',
-          'SHUT DOWN Optical Graphics...',
-          'SHUT DOWN Technical...',
-          'SHUT DOWN Support...',
-          'SHUT DOWN Copilot+Recall...',
-          'SHUT DOWN Snap X Elite Assist...',
-          'SHUT DOWN Sudo...',
-          'All Services Disabled!'
-        ]);
-      });
-
-      document.getElementById('menu-enable')?.addEventListener('click', async () => {
-        await runOperation([
-          'POWER UP AirOS...',
-          'POWER UP Scanner...',
-          'POWER UP Community...',
-          'POWER UP Diagnostic...',
-          'POWER UP Control Check...',
-          'POWER UP Control Sleep...',
-          'POWER UP Driving Control...',
-          'POWER UP Power Control...',
-          'POWER UP CT Scan...',
-          'POWER UP Central Scan...',
-          'POWER UP Processing...',
-          'POWER UP Optical Graphics...',
-          'POWER UP Technical...',
-          'POWER UP Support...',
-          'POWER UP Copilot+Recall...',
-          'POWER UP Snap X Elite Assist...',
-          'POWER UP Sudo...',
-          'All Services Enabled!'
-        ]);
-      });
-
-      document.getElementById('menu-update')?.addEventListener('click', async () => {
-        operationOutput.innerHTML = '';
-        menuPhase.style.display = 'none';
-        operationPhase.style.display = 'block';
-
-        await typeMessage(operationOutput, 'Check file system...');
-        await new Promise(r => setTimeout(r, 800));
-        
-        await typeMessage(operationOutput, 'Upload to server...');
-        await new Promise(r => setTimeout(r, 800));
-        
-        await typeMessage(operationOutput, 'Verify version...');
-        await new Promise(r => setTimeout(r, 800));
-
-        // Flashing progress
-        for (let i = 0; i <= 100; i += 10) {
-          const line = document.createElement('div');
-          line.textContent = `Flashing ${i}%...`;
-          line.style.marginBottom = '0.3rem';
-          operationOutput.appendChild(line);
-          await new Promise(r => setTimeout(r, 200));
-        }
-        
-        await typeMessage(operationOutput, 'Flashing Completed!');
-      });
-
-      document.getElementById('back-to-menu')?.addEventListener('click', () => {
-        showMenu();
-      });
-
-      btnConnect?.addEventListener('click', showContainer);
-    })();
   </script>
 
   <script>

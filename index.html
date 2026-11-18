@@ -3119,57 +3119,37 @@
 
     (function () {
       const handlers = new Map();
-      const redirectKey = 'cyberlife-route';
-      const isHosted = location.protocol === 'http:' || location.protocol === 'https:';
-      const basePath = isHosted && location.pathname.startsWith('/cyberlife/')
-        ? '/cyberlife/'
-        : '/';
       let isApplying = false;
 
-      function routeFromPath(pathname) {
-        const relativePath = pathname.startsWith(basePath)
-          ? pathname.slice(basePath.length)
-          : pathname.replace(/^\/+/, '');
-        return decodeURIComponent(relativePath.replace(/^\/+|\/+$/g, '')) || 'main';
-      }
-
-      function redirectedRoute() {
-        const value = sessionStorage.getItem(redirectKey);
-        if (value) {
-          sessionStorage.removeItem(redirectKey);
-          return routeFromPath(value);
-        }
-        return null;
+      function routeFromHash() {
+        return decodeURIComponent(location.hash.replace(/^#\/?/, '').replace(/^\/+|\/+$/g, '')) || 'main';
       }
 
       function write(route, replace = false) {
-        if (!isHosted || isApplying) return;
-        const url = `${basePath}${encodeURIComponent(route)}`;
-        if (location.pathname === url) return;
-        history[replace ? 'replaceState' : 'pushState']({ route }, '', url);
+        if (isApplying) return;
+        const hash = `#/${encodeURIComponent(route)}`;
+        if (location.hash === hash) return;
+        if (replace) {
+          history.replaceState({ route }, '', hash);
+        } else {
+          location.hash = hash;
+        }
       }
 
       function apply() {
-        let route;
-        let foundRoute = false;
+        const route = routeFromHash();
         isApplying = true;
         try {
-          route = redirectedRoute() || routeFromPath(location.pathname);
           const handler = handlers.get(route);
           if (handler) {
             handler();
-            foundRoute = true;
           } else {
             handlers.get('main')?.();
           }
         } finally {
           isApplying = false;
         }
-        write(foundRoute ? route : 'main', true);
-      }
-
-      if (isHosted && location.pathname === basePath && !sessionStorage.getItem(redirectKey)) {
-        write('main', true);
+        write(handlers.has(route) ? route : 'main', true);
       }
 
       window.CyberLifeRouter = {
@@ -3179,7 +3159,7 @@
         },
         write
       };
-      window.addEventListener('popstate', apply);
+      window.addEventListener('hashchange', apply);
     })();
 
     // Application initialization
@@ -3379,7 +3359,7 @@
           window.saveAppData?.().catch(err => {
             if (window.DEBUG_MODE) console.error('❌ GitHub save error:', err);
           });
-        }, 1200);
+        }, 250);
       }
 
       function flushAutoSave() {
@@ -3392,6 +3372,7 @@
 
       window.CyberLifeSystem = {
         autoSave: scheduleAutoSave,
+        save: scheduleAutoSave,
         flushAutoSave
       };
 
@@ -3406,30 +3387,7 @@
       // Create compatibility layer
       Object.defineProperty(window, 'appData', {
         get: function () {
-          return {
-            // Map new structure to old names
-            calendar: window.CyberLifeData.calendar,
-            passengers: window.CyberLifeData.passengers,
-            passengersVoid: window.CyberLifeData.passengersVoid,
-            emailPass: window.CyberLifeData.emailPass,
-            crewCyber: window.CyberLifeData.crewCyber,
-            crewHome: window.CyberLifeData.crewHome,
-            company: window.CyberLifeData.company,
-            report: window.CyberLifeData.report,
-            airosStatus: window.CyberLifeData.airosStatus,
-            airosUpdates: window.CyberLifeData.airosUpdates,
-            serviceStatus: window.CyberLifeData.serviceStatus,
-            airosUpdatesByTab: window.CyberLifeData.airosUpdatesByTab,
-            intelligenceByYear: window.CyberLifeData.intelligenceByYear,
-            cyberLifeReports: window.CyberLifeData.cyberLifeReports,
-            appLog: window.CyberLifeData.appLog,
-            appLogEnabled: window.CyberLifeData.appLogEnabled,
-            workCalendar: window.CyberLifeData.workCalendar,
-            population: window.CyberLifeData.population,
-            intelligence: window.CyberLifeData.intelligence,
-            fraggileTransport: window.CyberLifeData.fraggileTransport,
-            serversCenter: window.CyberLifeData.serversCenter
-          };
+          return window.CyberLifeData;
         },
         set: function (value) {
           // When old code sets appData, update new structure
@@ -5093,7 +5051,7 @@
       // Modal functions
       function openModal() { 
         modal?.classList.add('show'); 
-        setTimeout(() => inputName?.focus(), 100);
+        setTimeout(() => (currentTab === 'cyber' ? cyName : hoName)?.focus(), 100);
       }
       function closeModal() { modal?.classList.remove('show'); clearForm(); }
 

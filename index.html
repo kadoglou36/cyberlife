@@ -3117,6 +3117,71 @@
     // Debug mode disabled
     window.DEBUG_MODE = false;
 
+    (function () {
+      const handlers = new Map();
+      const redirectKey = 'cyberlife-route';
+      const isHosted = location.protocol === 'http:' || location.protocol === 'https:';
+      const basePath = isHosted && location.pathname.startsWith('/cyberlife/')
+        ? '/cyberlife/'
+        : '/';
+      let isApplying = false;
+
+      function routeFromPath(pathname) {
+        const relativePath = pathname.startsWith(basePath)
+          ? pathname.slice(basePath.length)
+          : pathname.replace(/^\/+/, '');
+        return decodeURIComponent(relativePath.replace(/^\/+|\/+$/g, '')) || 'main';
+      }
+
+      function redirectedRoute() {
+        const value = sessionStorage.getItem(redirectKey);
+        if (value) {
+          sessionStorage.removeItem(redirectKey);
+          return routeFromPath(value);
+        }
+        return null;
+      }
+
+      function write(route, replace = false) {
+        if (!isHosted || isApplying) return;
+        const url = `${basePath}${encodeURIComponent(route)}`;
+        if (location.pathname === url) return;
+        history[replace ? 'replaceState' : 'pushState']({ route }, '', url);
+      }
+
+      function apply() {
+        let route;
+        let foundRoute = false;
+        isApplying = true;
+        try {
+          route = redirectedRoute() || routeFromPath(location.pathname);
+          const handler = handlers.get(route);
+          if (handler) {
+            handler();
+            foundRoute = true;
+          } else {
+            handlers.get('main')?.();
+          }
+        } finally {
+          isApplying = false;
+        }
+        write(foundRoute ? route : 'main', true);
+      }
+
+      if (isHosted && location.pathname === basePath && !sessionStorage.getItem(redirectKey)) {
+        write('main', true);
+      }
+
+      window.CyberLifeRouter = {
+        apply,
+        register(route, handler) {
+          handlers.set(route, handler);
+        },
+        write
+      };
+      window.addEventListener('popstate', apply);
+    })();
+
     // Application initialization
 
     // Menu click behavior (instead of hover)
@@ -3126,20 +3191,13 @@
         // Hide all views consistently using .hidden property
         document.querySelectorAll('section.view').forEach(v => v.hidden = true);
         document.getElementById('view-home').hidden = false;
-        // Save the view state
-        if (!window.CyberLifeData) window.CyberLifeData = {};
-        window.CyberLifeData.currentView = 'home';
-        window.cyberLifeAutoSave?.scheduleAutoSave();
       });
       // Maintenance button - show Maintenance view
       document.getElementById('maintenance-btn').addEventListener('click', function () {
         // Hide all views consistently using .hidden property
         document.querySelectorAll('section.view').forEach(v => v.hidden = true);
         document.getElementById('view-maintenance').hidden = false;
-        // Save the view state
-        if (!window.CyberLifeData) window.CyberLifeData = {};
-        window.CyberLifeData.currentView = 'maintenance';
-        window.cyberLifeAutoSave?.scheduleAutoSave();
+        window.CyberLifeRouter?.write('maintenance');
       });
 
 
@@ -3402,10 +3460,6 @@
             if (Array.isArray(value.fraggileTransport)) window.CyberLifeData.fraggileTransport = value.fraggileTransport;
             if (value.serversCenter) window.CyberLifeData.serversCenter = value.serversCenter;
 
-            // AUTO SAVE when data changes
-            if (window.CyberLifeSystem) {
-              window.CyberLifeSystem.autoSave();
-            }
           }
         }
       });
@@ -3645,7 +3699,7 @@
           await loadAppData();
           window.renderCyberLifeStatus?.();
           unlockApp();
-          window.restoreLastView?.();
+          window.CyberLifeRouter?.apply();
           window.passengersVoid?.render?.();
         } catch (err) {
           console.error('CyberLife GitHub sync error:', err);
@@ -3686,7 +3740,7 @@
           await loadAppData();
           window.renderCyberLifeStatus?.();
           unlockApp();
-          window.restoreLastView?.();
+          window.CyberLifeRouter?.apply();
           window.passengersVoid?.render?.();
         } catch (err) {
           console.error('CyberLife GitHub sync error:', err);
@@ -3955,40 +4009,35 @@
         const viewFraggile = document.getElementById('view-fraggile-transport');
         viewFraggile && (viewFraggile.hidden = true);
       }
-      function saveCurrentView(viewName) {
-        if (!window.CyberLifeData) window.CyberLifeData = {};
-        window.CyberLifeData.currentView = viewName;
-        window.cyberLifeAutoSave?.scheduleAutoSave();
-      }
       function showHome() {
         hideAll();
         if (viewHome) {
           viewHome.hidden = false;
         }
-        saveCurrentView('home');
+        window.CyberLifeRouter.write('main');
       }
       function showAnnouncements() {
         hideAll();
         if (viewAnnouncements) {
           viewAnnouncements.hidden = false;
         }
-        saveCurrentView('announcements');
+        window.CyberLifeRouter.write('announcements');
       }
-      function showCalendar() { hideAll(); viewCalendar.hidden = false; render(); saveCurrentView('calendar'); }
-      function showPassengers() { hideAll(); viewPassengers.hidden = false; if (window.passengers) { window.passengers.render(); window.passengers.hideForm(); } saveCurrentView('passengers'); }
-      function showPassengersVoid() { hideAll(); if (viewPassengersVoid) { viewPassengersVoid.hidden = false; if (window.passengersVoid) { window.passengersVoid.render(); window.passengersVoid.closeModal(); } } saveCurrentView('passengers-void'); }
-      function showAiros() { hideAll(); if (viewAiros) { viewAiros.hidden = false; if (window.airos) { window.airos.render(); } } saveCurrentView('airos'); }
-      function showAirosUpdate() { hideAll(); if (viewAirosUpdate) { viewAirosUpdate.hidden = false; if (window.airosUpdate) { window.airosUpdate.render(); } } saveCurrentView('airos-update'); }
-      function showIntel() { hideAll(); if (viewIntel) { viewIntel.hidden = false; if (window.intelligenceCount) { window.intelligenceCount.render(); } } saveCurrentView('intelligence'); }
-      function showAppLog() { hideAll(); if (viewAppLog) { viewAppLog.hidden = false; if (window.appLogView) { window.appLogView.render(); } } saveCurrentView('app-log'); }
-      function showEmailPass() { hideAll(); if (viewEmailPass) { viewEmailPass.hidden = false; window.emailPassView?.render(); } saveCurrentView('email-pass'); }
-      function showCyberLifeReports() { hideAll(); if (viewCyberLifeReports) { viewCyberLifeReports.hidden = false; if (window.cyberLifeReports) { window.cyberLifeReports.render(); } } saveCurrentView('cyberlife-reports'); }
-      function showCrew() { hideAll(); if (viewCrew) { viewCrew.hidden = false; if (window.CrewLogicRender) { window.CrewLogicRender(); } } saveCurrentView('crew'); }
-      function showWorkTime() { hideAll(); if (viewWorkTime) { viewWorkTime.hidden = false; if (window.workTimeView) { window.workTimeView.render(); } } saveCurrentView('work-time'); }
-      function showPopulation() { hideAll(); const viewPopulation = document.getElementById('view-population'); if (viewPopulation) { viewPopulation.hidden = false; if (window.population) { window.population.render(); } } saveCurrentView('population'); }
-      function showCompanyState() { hideAll(); const viewCompanyState = document.getElementById('view-company-state'); if (viewCompanyState) { viewCompanyState.hidden = false; } saveCurrentView('company'); }
-      function showServersCenter() { hideAll(); const viewServersCenter = document.getElementById('view-servers-center'); if (viewServersCenter) { viewServersCenter.hidden = false; if (window.serversCenter) { window.serversCenter.render(); } } saveCurrentView('servers-center'); }
-      function showFraggileTransport() { hideAll(); const viewFraggile = document.getElementById('view-fraggile-transport'); if (viewFraggile) { viewFraggile.hidden = false; if (window.fraggileTransport) { window.fraggileTransport.render(); } } saveCurrentView('fraggile-transport'); }
+      function showCalendar() { hideAll(); viewCalendar.hidden = false; render(); window.CyberLifeRouter.write('calendar'); }
+      function showPassengers() { hideAll(); viewPassengers.hidden = false; if (window.passengers) { window.passengers.render(); window.passengers.hideForm(); } window.CyberLifeRouter.write('passengers'); }
+      function showPassengersVoid() { hideAll(); if (viewPassengersVoid) { viewPassengersVoid.hidden = false; if (window.passengersVoid) { window.passengersVoid.render(); window.passengersVoid.closeModal(); } } window.CyberLifeRouter.write('passengers-void'); }
+      function showAiros() { hideAll(); if (viewAiros) { viewAiros.hidden = false; if (window.airos) { window.airos.render(); } } window.CyberLifeRouter.write('airos-status'); }
+      function showAirosUpdate() { hideAll(); if (viewAirosUpdate) { viewAirosUpdate.hidden = false; if (window.airosUpdate) { window.airosUpdate.render(); } } window.CyberLifeRouter.write('airos-update'); }
+      function showIntel() { hideAll(); if (viewIntel) { viewIntel.hidden = false; if (window.intelligenceCount) { window.intelligenceCount.render(); } } window.CyberLifeRouter.write('intelligence-count'); }
+      function showAppLog() { hideAll(); if (viewAppLog) { viewAppLog.hidden = false; if (window.appLogView) { window.appLogView.render(); } } window.CyberLifeRouter.write('app-log'); }
+      function showEmailPass() { hideAll(); if (viewEmailPass) { viewEmailPass.hidden = false; window.emailPassView?.render(); } window.CyberLifeRouter.write('email-pass'); }
+      function showCyberLifeReports() { hideAll(); if (viewCyberLifeReports) { viewCyberLifeReports.hidden = false; if (window.cyberLifeReports) { window.cyberLifeReports.render(); } } window.CyberLifeRouter.write('cyberlife-reports'); }
+      function showCrew() { hideAll(); if (viewCrew) { viewCrew.hidden = false; if (window.CrewLogicRender) { window.CrewLogicRender(); } } window.CyberLifeRouter.write('crew'); }
+      function showWorkTime() { hideAll(); if (viewWorkTime) { viewWorkTime.hidden = false; if (window.workTimeView) { window.workTimeView.render(); } } window.CyberLifeRouter.write('work-time'); }
+      function showPopulation() { hideAll(); const viewPopulation = document.getElementById('view-population'); if (viewPopulation) { viewPopulation.hidden = false; if (window.population) { window.population.render(); } } window.CyberLifeRouter.write('population'); }
+      function showCompanyState() { hideAll(); const viewCompanyState = document.getElementById('view-company-state'); if (viewCompanyState) { viewCompanyState.hidden = false; } window.CyberLifeRouter.write('company-state'); }
+      function showServersCenter() { hideAll(); const viewServersCenter = document.getElementById('view-servers-center'); if (viewServersCenter) { viewServersCenter.hidden = false; if (window.serversCenter) { window.serversCenter.render(); } } window.CyberLifeRouter.write('servers-center'); }
+      function showFraggileTransport() { hideAll(); const viewFraggile = document.getElementById('view-fraggile-transport'); if (viewFraggile) { viewFraggile.hidden = false; if (window.fraggileTransport) { window.fraggileTransport.render(); } } window.CyberLifeRouter.write('fragile-transport'); }
 
       // State
       let current = new Date(); // current shown month
@@ -4169,44 +4218,27 @@
       const menuWorkTime = document.getElementById('menu-work-time');
       menuWorkTime?.addEventListener('click', showWorkTime);
 
-      // Restore the last viewed page on page load
-      function restoreLastView() {
-        const savedView = window.CyberLifeData?.currentView;
-        if (!savedView) return; // No saved view, stay on default
-
-        switch (savedView) {
-          case 'home': showHome(); break;
-          case 'announcements': showAnnouncements(); break;
-          case 'calendar': showCalendar(); break;
-          case 'passengers': showPassengers(); break;
-          case 'passengers-void': showPassengersVoid(); break;
-          case 'airos': showAiros(); break;
-          case 'airos-update': showAirosUpdate(); break;
-          case 'intelligence': showIntel(); break;
-          case 'app-log': showAppLog(); break;
-          case 'email-pass': showEmailPass(); break;
-          case 'cyberlife-reports': showCyberLifeReports(); break;
-          case 'crew': showCrew(); break;
-          case 'work-time': showWorkTime(); break;
-          case 'population': showPopulation(); break;
-          case 'company': showCompanyState(); break;
-          case 'servers-center': 
-            showServersCenter(); 
-            break;
-          case 'fraggile-transport': showFraggileTransport(); break;
-          case 'maintenance':
-            document.querySelectorAll('section.view').forEach(v => v.hidden = true);
-            document.getElementById('view-maintenance').hidden = false;
-            break;
-          case 'report':
-            document.querySelectorAll('.view').forEach(v => v.hidden = true);
-            document.getElementById('view-report').hidden = false;
-            document.getElementById('report-textarea').value = window.CyberLifeData?.report || '';
-            break;
-        }
-      }
-      window.restoreLastView = restoreLastView;
-
+      window.CyberLifeRouter.register('main', showHome);
+      window.CyberLifeRouter.register('announcements', showAnnouncements);
+      window.CyberLifeRouter.register('calendar', showCalendar);
+      window.CyberLifeRouter.register('passengers', showPassengers);
+      window.CyberLifeRouter.register('passengers-void', showPassengersVoid);
+      window.CyberLifeRouter.register('airos-status', showAiros);
+      window.CyberLifeRouter.register('airos-update', showAirosUpdate);
+      window.CyberLifeRouter.register('intelligence-count', showIntel);
+      window.CyberLifeRouter.register('app-log', showAppLog);
+      window.CyberLifeRouter.register('email-pass', showEmailPass);
+      window.CyberLifeRouter.register('cyberlife-reports', showCyberLifeReports);
+      window.CyberLifeRouter.register('crew', showCrew);
+      window.CyberLifeRouter.register('work-time', showWorkTime);
+      window.CyberLifeRouter.register('population', showPopulation);
+      window.CyberLifeRouter.register('company-state', showCompanyState);
+      window.CyberLifeRouter.register('servers-center', showServersCenter);
+      window.CyberLifeRouter.register('fragile-transport', showFraggileTransport);
+      window.CyberLifeRouter.register('maintenance', () => {
+        hideAll();
+        document.getElementById('view-maintenance').hidden = false;
+      });
 
       // Scroll over the calendar (main area) to change months (debounced for performance)
       const calendarEl = document.querySelector('#view-calendar .calendar');
@@ -6757,17 +6789,27 @@
 
       function loadData() {
         if (!window.CyberLifeData) window.CyberLifeData = {};
-        if (!window.CyberLifeData.serversCenter) {
-          // Initialize with default data
-          window.CyberLifeData.serversCenter = {};
-          states.forEach(state => {
-            window.CyberLifeData.serversCenter[state] = {};
-            servers.forEach(server => {
-              window.CyberLifeData.serversCenter[state][server] = 'NORMAL';
-            });
+        const savedData = window.CyberLifeData.serversCenter;
+        const normalizedData = savedData && typeof savedData === 'object' && !Array.isArray(savedData)
+          ? savedData
+          : {};
+
+        states.forEach(state => {
+          const savedState = normalizedData[state];
+          const normalizedState = savedState && typeof savedState === 'object' && !Array.isArray(savedState)
+            ? savedState
+            : {};
+          normalizedData[state] = normalizedState;
+
+          servers.forEach(server => {
+            if (!statusOptions.includes(normalizedState[server])) {
+              normalizedState[server] = 'NORMAL';
+            }
           });
-        }
-        return window.CyberLifeData.serversCenter;
+        });
+
+        window.CyberLifeData.serversCenter = normalizedData;
+        return normalizedData;
       }
 
       function saveData(data) {
@@ -6796,7 +6838,7 @@
             td.dataset.state = state;
             td.dataset.server = server;
 
-            const status = data[state][server] || 'NORMAL';
+            const status = data[state][server];
             td.textContent = status;
             td.style.background = statusColors[status];
             td.style.color = '#fff';
@@ -6898,7 +6940,7 @@
         const changes = [];
 
         selectedCells.forEach(cell => {
-          const oldStatus = data[cell.state][cell.server];
+          const oldStatus = data[cell.state]?.[cell.server];
           data[cell.state][cell.server] = newStatus;
           changes.push(`${cell.state}-${cell.server}: ${oldStatus}→${newStatus}`);
         });
@@ -7297,10 +7339,7 @@
         document.querySelectorAll('.menu').forEach(m => m.classList.remove('active'));
         document.querySelectorAll('.submenu').forEach(s => s.classList.remove('active'));
         viewReport.hidden = false;
-        // Save the view state
-        if (!window.CyberLifeData) window.CyberLifeData = {};
-        window.CyberLifeData.currentView = 'report';
-        window.cyberLifeAutoSave?.scheduleAutoSave();
+        window.CyberLifeRouter.write('report');
       }
 
       function saveReport() {
@@ -7313,6 +7352,7 @@
 
       btnReport?.addEventListener('click', showReport);
       reportSaveBtn?.addEventListener('click', saveReport);
+      window.CyberLifeRouter.register('report', showReport);
     })();
   </script>
 

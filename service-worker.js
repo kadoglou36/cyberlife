@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cyberlife-v2';
+const CACHE_NAME = 'cyberlife-v3';
 const APP_SHELL = [
   './',
   './index.html',
@@ -43,6 +43,22 @@ self.addEventListener('fetch', event => {
           return response;
         })
         .catch(() => caches.match('./index.html'))
+    );
+    return;
+  }
+
+  if (url.pathname.endsWith('/manifest.webmanifest') ||
+      /\/(?:favicon\.ico|icon-32\.png|icon-192\.png|icon-512\.png)$/.test(url.pathname)) {
+    event.respondWith(
+      fetch(request, { cache: 'no-store' })
+        .then(response => {
+          if (response.ok) {
+            const copy = response.clone();
+            caches.open(CACHE_NAME).then(cache => cache.put(request, copy));
+          }
+          return response;
+        })
+        .catch(() => caches.match(request))
     );
     return;
   }

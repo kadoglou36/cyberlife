@@ -5,8 +5,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="CyberLife AI Suite 3 - Advanced AI management system for crew, passengers and operations" />
+  <meta name="theme-color" content="#2563eb" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="CyberLife" />
   <title>AI Suite 3 Homestead</title>
-  <link rel="icon" type="image/x-icon" href="../Images/AI Homestead Company.ico">
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
   <script src="../config.js"></script>
   <style>
     :root {
@@ -1157,6 +1164,10 @@
       white-space: nowrap
     }
 
+    #install-app-btn[hidden] {
+      display: none !important
+    }
+
     #view-maintenance .maintenance-panel {
       display: flex;
       flex-direction: column;
@@ -1594,6 +1605,8 @@
       <button class="btn" type="button" id="btn-report" style="margin-left:0.5rem">📄 Report</button>
       <button class="btn" type="button" id="cyberlife-status-indicator"
         aria-live="polite" style="margin-left:0.5rem;cursor:default">Status 🔴</button>
+      <button class="btn" type="button" id="install-app-btn" hidden
+        style="margin-left:0.5rem;background:#2563eb;border-color:#2563eb;color:#fff;font-weight:700">⬇️ Install App</button>
       <button id="maintenance-btn"
         style="background:#ef4444;border:1px solid #dc2626;border-radius:8px;padding:.45rem .8rem;cursor:pointer;color:#fff;font-weight:700;margin-left:0.5rem;">🔧 Maintenance</button>
     </nav>
@@ -3335,6 +3348,43 @@
   <script>
     // Debug mode disabled
     window.DEBUG_MODE = false;
+
+    (function () {
+      const installButton = document.getElementById('install-app-btn');
+      let deferredPrompt = null;
+
+      window.addEventListener('beforeinstallprompt', event => {
+        event.preventDefault();
+        deferredPrompt = event;
+        if (installButton) installButton.hidden = false;
+      });
+
+      installButton?.addEventListener('click', async () => {
+        if (!deferredPrompt) return;
+        installButton.disabled = true;
+        try {
+          await deferredPrompt.prompt();
+          await deferredPrompt.userChoice;
+        } finally {
+          deferredPrompt = null;
+          installButton.hidden = true;
+          installButton.disabled = false;
+        }
+      });
+
+      window.addEventListener('appinstalled', () => {
+        deferredPrompt = null;
+        if (installButton) installButton.hidden = true;
+      });
+
+      if ('serviceWorker' in navigator && window.isSecureContext) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./service-worker.js').catch(error => {
+            console.error('Service worker registration failed:', error);
+          });
+        });
+      }
+    })();
 
     (function () {
       const handlers = new Map();

@@ -310,7 +310,7 @@
 
     /* Main/content */
     .main {
-      padding: 1rem
+      padding: 1rem 1rem 4.5rem
     }
 
     .view[hidden] {
@@ -1070,6 +1070,135 @@
       display: block !important
     }
 
+    .system-status-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: .75rem 1rem;
+      border-bottom: 1px solid #f59e0b;
+      background: #fffbeb;
+      color: #92400e
+    }
+
+    .system-status-banner.is-error {
+      border-bottom-color: #dc2626;
+      background: #fef2f2;
+      color: #991b1b
+    }
+
+    .system-status-banner[hidden] {
+      display: none !important
+    }
+
+    .system-status-copy {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      min-width: 0
+    }
+
+    .system-status-copy p {
+      margin: .15rem 0 0
+    }
+
+    .system-status-icon {
+      flex: 0 0 auto;
+      font-size: 1.35rem
+    }
+
+    #view-maintenance .maintenance-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      align-items: stretch;
+      width: min(1240px, calc(100% - 2rem));
+      height: 560px;
+      margin: 0 auto;
+      padding: 1.25rem 0
+    }
+
+    .app-footer {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: .35rem 1rem;
+      min-height: 44px;
+      padding: .75rem 1rem;
+      border-top: 1px solid #e5e7eb;
+      background: #fff;
+      color: #6b7280;
+      font-size: .82rem;
+      text-align: center
+    }
+
+    .app-footer strong {
+      color: #374151;
+      font-weight: 600
+    }
+
+    .app-footer .footer-divider {
+      color: #d1d5db
+    }
+
+    .app-footer-owner {
+      margin-left: auto;
+      white-space: nowrap
+    }
+
+    .app-footer-copyright {
+      margin-left: 1rem;
+      white-space: nowrap
+    }
+
+    #view-maintenance .maintenance-panel {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      min-height: 0;
+      height: 100%;
+      overflow: hidden
+    }
+
+    #maintenance-commit-list {
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+      padding-right: .25rem
+    }
+
+    @media (max-width: 900px) {
+      #view-maintenance .maintenance-grid {
+        grid-template-columns: 1fr;
+        width: min(760px, calc(100% - 1.5rem));
+        height: auto;
+        padding: 1rem 0
+      }
+
+      #view-maintenance .maintenance-panel {
+        height: auto
+      }
+
+      #maintenance-commit-list {
+        overflow-y: visible;
+        padding-right: 0
+      }
+    }
+
+    @media (max-width: 640px) {
+      .system-status-banner {
+        align-items: flex-start;
+        flex-direction: column
+      }
+
+    }
+
     /* Full-screen dark auth gate - always on top while the app is locked */
     #auth-modal {
       position: fixed;
@@ -1237,7 +1366,12 @@
 
     @media (max-width: 640px) {
       .main {
-        padding: .5rem
+        padding: .5rem .5rem 5.5rem
+      }
+
+      .app-footer {
+        gap: .25rem .65rem;
+        padding: .55rem .75rem
       }
 
       .calendar {
@@ -1407,10 +1541,6 @@
       <button class="brand" id="brand-home" type="button">🏠 Main</button>
       <button class="btn" type="button" id="menu-announcements">🚀 AI Suite 4 DEV</button>
 
-      <div style="display:flex;gap:.5rem">
-        <button class="btn" type="button" id="about-copyright">ⓘ Copyright</button>
-      </div>
-
       <span class="spacer"></span>
       <button class="btn" type="button" id="btn-report" style="margin-left:0.5rem">📄 Report</button>
       <button class="btn" type="button" id="cyberlife-status-indicator"
@@ -1420,6 +1550,16 @@
     </nav>
   </header>
 
+  <div id="system-status-banner" class="system-status-banner" role="status" aria-live="assertive" hidden>
+    <div class="system-status-copy">
+      <span id="system-status-icon" class="system-status-icon" aria-hidden="true">🛠️</span>
+      <div>
+        <strong id="system-status-title">System update in progress</strong>
+        <p id="system-status-message">Please wait while CyberLife is being updated.</p>
+      </div>
+    </div>
+    <button type="button" class="btn" id="system-status-retry">Retry</button>
+  </div>
 
   <main class="main">
     <!-- Home View (Default) -->
@@ -1519,6 +1659,10 @@
                   <span class="home-shortcut-icon" aria-hidden="true">📧</span>
                   <span class="home-shortcut-copy">Email-Pass</span>
                 </button>
+                <button class="home-shortcut" type="button" disabled>
+                  <span class="home-shortcut-icon" aria-hidden="true">🎯</span>
+                  <span class="home-shortcut-copy">Typology<span class="home-shortcut-note">Coming soon</span></span>
+                </button>
                 <button class="home-shortcut" type="button" id="menu-cyberlife-reports">
                   <span class="home-shortcut-icon" aria-hidden="true">📄</span>
                   <span class="home-shortcut-copy">CyberLife Reports</span>
@@ -1570,33 +1714,68 @@
         <div class="cal-header">
           <div class="cal-title" style="color:#ef4444">🔧 Maintenance</div>
         </div>
-        <div style="padding:2rem;max-width:900px;margin:0 auto">
+        <div class="maintenance-grid">
           
           <!-- System Information -->
-          <div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.1)">
-            <h3 style="color:#374151;margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem">
+          <div class="maintenance-panel"
+            style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1.1rem">
+            <h3 style="color:#374151;margin:0 0 .85rem;display:flex;align-items:center;gap:.4rem;font-size:1rem">
               ℹ️ System Information
             </h3>
-            <div style="display:grid;gap:0.75rem">
-              <div style="display:flex;justify-content:space-between;padding:0.75rem;background:#f9fafb;border-radius:6px">
+            <div style="display:grid;gap:.5rem">
+              <div style="display:flex;justify-content:space-between;gap:1rem;padding:.65rem .7rem;background:#f9fafb;border-radius:6px;font-size:.9rem">
                 <span style="color:#6b7280">Application Version:</span>
-                <span style="font-weight:600;color:#374151">V 3.50</span>
+                <span id="maintenance-application-version" style="font-weight:600;color:#374151">—</span>
               </div>
-              <div style="display:flex;justify-content:space-between;padding:0.75rem;background:#f9fafb;border-radius:6px">
+              <div style="display:flex;justify-content:space-between;gap:1rem;padding:.65rem .7rem;background:#f9fafb;border-radius:6px;font-size:.9rem">
                 <span style="color:#6b7280">Database:</span>
                 <span style="font-weight:600;color:#374151">data-cyberlife.json (DATABASE)</span>
               </div>
-              <div style="display:flex;justify-content:space-between;padding:0.75rem;background:#f9fafb;border-radius:6px">
+              <div style="display:flex;justify-content:space-between;gap:1rem;padding:.65rem .7rem;background:#f9fafb;border-radius:6px;font-size:.9rem">
                 <span style="color:#6b7280">Storage Type:</span>
                 <span style="font-weight:600;color:#374151">GitHub REST API</span>
               </div>
-              <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:0.75rem;background:#f9fafb;border-radius:6px">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.65rem .7rem;background:#f9fafb;border-radius:6px;font-size:.9rem">
                 <label for="maintenance-status" style="color:#6b7280">CyberLife Status:</label>
                 <select id="maintenance-status" style="padding:.45rem .65rem;border:1px solid #d1d5db;border-radius:6px;background:#fff;color:#111827">
-                  <option value="offline">🔴 Offline</option>
                   <option value="online">🟢 Online</option>
+                  <option value="maintenance">🟠 Maintenance / Update</option>
+                  <option value="error">🔴 Data unavailable</option>
                 </select>
               </div>
+              <div style="display:grid;gap:.35rem;padding:.65rem .7rem;background:#f9fafb;border-radius:6px;font-size:.9rem">
+                <label for="maintenance-message" style="color:#6b7280">Public status message:</label>
+                <textarea id="maintenance-message" rows="4" maxlength="300"
+                  placeholder="Example: We are updating the database. Please try again in a few minutes."
+                  style="width:100%;resize:vertical;border:1px solid #d1d5db;border-radius:6px;padding:.6rem;background:#fff;color:#111827"></textarea>
+                <small style="color:#9ca3af">Shown to every connected browser.</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Automatic GitHub Update Log -->
+          <div class="maintenance-panel"
+            style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1.1rem">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:.75rem;margin-bottom:.85rem;flex-wrap:wrap">
+              <div>
+                <h3 style="color:#374151;margin:0;display:flex;align-items:center;gap:.4rem;font-size:1rem">🔄 Update Log</h3>
+                <small id="maintenance-commit-status" style="color:#9ca3af">Loaded automatically from GitHub commits.</small>
+              </div>
+              <div style="display:flex;align-items:center;gap:.5rem">
+                <label for="maintenance-commit-limit" style="color:#6b7280;font-size:.85rem">Show</label>
+                <select id="maintenance-commit-limit"
+                  style="border:1px solid #d1d5db;border-radius:6px;padding:.45rem;background:#fff;color:#111827">
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="50">50</option>
+                  <option value="all">All</option>
+                </select>
+                <button type="button" class="cal-btn" id="maintenance-commit-refresh">↻ Refresh</button>
+              </div>
+            </div>
+            <div id="maintenance-commit-list" aria-live="polite" style="display:grid;gap:.45rem">
+              <p style="margin:0;padding:1rem;text-align:center;color:#6b7280;background:#f9fafb;border-radius:8px">Loading commits…</p>
             </div>
           </div>
 
@@ -3027,22 +3206,6 @@
     </div>
   </div>
 
-  <!-- Minimal modal -->
-  <div class="modal-backdrop" id="about-modal">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="about-title">
-      <header>
-        <h3 id="about-title">About</h3>
-        <button class="close" type="button" aria-label="Close" id="about-close">✕</button>
-      </header>
-      <div class="content">
-        AI Suite 3 - Version V 3.50
-        Team: AI Homestead Company
-        First Officer: Vangelis Kadoglou ID: 152400
-        2001-2026 CyberLife. All rights reserved.
-      </div>
-    </div>
-  </div>
-
   <!-- Day tasks modal -->
   <div class="modal-backdrop" id="day-modal">
     <div class="modal modal-day" role="dialog" aria-modal="true" aria-labelledby="day-title">
@@ -3111,6 +3274,13 @@
       </div>
     </div>
   </div>
+  <footer class="app-footer" id="app-footer">
+    <strong>AI Suite 3 · Version <span id="about-application-version">—</span></strong>
+    <span class="footer-divider" aria-hidden="true">•</span>
+    <span>AI Homestead Company</span>
+    <span class="app-footer-owner">Vangelis Kadoglou · ID 152400</span>
+    <span class="app-footer-copyright">2001-2026 CyberLife. All rights reserved.</span>
+  </footer>
   </div><!-- /#app-container -->
 
   <script>
@@ -3140,6 +3310,7 @@
         if (!window.CyberLifeData) window.CyberLifeData = {};
         window.CyberLifeData.currentView = 'maintenance';
         window.cyberLifeAutoSave?.scheduleAutoSave();
+        void window.loadMaintenanceCommitLog?.();
       });
 
 
@@ -3215,6 +3386,7 @@
         airosStatus: {},
         airosUpdates: [],
         serviceStatus: 'offline',
+        serviceMessage: '',
 
         // 🏢 Company
         company: [],
@@ -3334,6 +3506,7 @@
 
       window.CyberLifeSystem = {
         autoSave: scheduleAutoSave,
+        save: scheduleAutoSave,
         flushAutoSave
       };
 
@@ -3360,7 +3533,9 @@
             report: window.CyberLifeData.report,
             airosStatus: window.CyberLifeData.airosStatus,
             airosUpdates: window.CyberLifeData.airosUpdates,
+            currentView: window.CyberLifeData.currentView,
             serviceStatus: window.CyberLifeData.serviceStatus,
+            serviceMessage: window.CyberLifeData.serviceMessage,
             airosUpdatesByTab: window.CyberLifeData.airosUpdatesByTab,
             intelligenceByYear: window.CyberLifeData.intelligenceByYear,
             cyberLifeReports: window.CyberLifeData.cyberLifeReports,
@@ -3388,9 +3563,11 @@
             if (typeof value.report === 'string') window.CyberLifeData.report = value.report;
             if (value.airosStatus) window.CyberLifeData.airosStatus = value.airosStatus;
             if (value.airosUpdates) window.CyberLifeData.airosUpdates = value.airosUpdates;
-            if (value.serviceStatus === 'online' || value.serviceStatus === 'offline') {
-              window.CyberLifeData.serviceStatus = value.serviceStatus;
+            if (typeof value.currentView === 'string') window.CyberLifeData.currentView = value.currentView;
+            if (['online', 'maintenance', 'error', 'offline'].includes(value.serviceStatus)) {
+              window.CyberLifeData.serviceStatus = value.serviceStatus === 'offline' ? 'error' : value.serviceStatus;
             }
+            if (typeof value.serviceMessage === 'string') window.CyberLifeData.serviceMessage = value.serviceMessage;
             if (value.airosUpdatesByTab) window.CyberLifeData.airosUpdatesByTab = value.airosUpdatesByTab;
             if (value.intelligenceByYear) window.CyberLifeData.intelligenceByYear = value.intelligenceByYear;
             if (value.cyberLifeReports) window.CyberLifeData.cyberLifeReports = value.cyberLifeReports;
@@ -3402,10 +3579,6 @@
             if (Array.isArray(value.fraggileTransport)) window.CyberLifeData.fraggileTransport = value.fraggileTransport;
             if (value.serversCenter) window.CyberLifeData.serversCenter = value.serversCenter;
 
-            // AUTO SAVE when data changes
-            if (window.CyberLifeSystem) {
-              window.CyberLifeSystem.autoSave();
-            }
           }
         }
       });
@@ -3423,25 +3596,122 @@
     (function () {
       const indicator = document.getElementById('cyberlife-status-indicator');
       const selector = document.getElementById('maintenance-status');
+      const messageInput = document.getElementById('maintenance-message');
+      const banner = document.getElementById('system-status-banner');
+      const bannerIcon = document.getElementById('system-status-icon');
+      const bannerTitle = document.getElementById('system-status-title');
+      const bannerMessage = document.getElementById('system-status-message');
+      const retryButton = document.getElementById('system-status-retry');
       if (!indicator || !selector) return;
 
+      let runtimeError = '';
+
+      function currentStatus() {
+        const status = window.CyberLifeData.serviceStatus;
+        if (status === 'maintenance' || status === 'error') return status;
+        return 'online';
+      }
+
       function renderStatus() {
-        const isOnline = window.CyberLifeData.serviceStatus === 'online';
-        const status = isOnline ? 'online' : 'offline';
-        indicator.textContent = isOnline ? 'Status 🟢' : 'Status 🔴';
+        const status = currentStatus();
+        const isError = status === 'error' || !!runtimeError;
+        indicator.textContent = status === 'online' && !runtimeError
+          ? 'Status 🟢'
+          : isError ? 'Status 🔴' : 'Status 🟠';
         selector.value = status;
+        if (messageInput && document.activeElement !== messageInput) {
+          messageInput.value = window.CyberLifeData.serviceMessage || '';
+        }
+
+        if (!banner || !bannerTitle || !bannerMessage || !bannerIcon) return;
+        const shouldShow = status !== 'online' || !!runtimeError;
+        banner.hidden = !shouldShow;
+        banner.classList.toggle('is-error', isError);
+        if (!shouldShow) return;
+
+        if (runtimeError) {
+          bannerIcon.textContent = '⚠️';
+          bannerTitle.textContent = 'Data could not be loaded';
+          bannerMessage.textContent = runtimeError;
+        } else if (status === 'maintenance') {
+          bannerIcon.textContent = '🛠️';
+          bannerTitle.textContent = 'System update in progress';
+          bannerMessage.textContent = window.CyberLifeData.serviceMessage?.trim()
+            || 'We are updating CyberLife. Please try again in a few minutes.';
+        } else {
+          bannerIcon.textContent = '🔴';
+          bannerTitle.textContent = 'Data temporarily unavailable';
+          bannerMessage.textContent = window.CyberLifeData.serviceMessage?.trim()
+            || 'Some data is temporarily unavailable. Please try again shortly.';
+        }
+        if (retryButton) retryButton.hidden = !isError;
       }
 
       selector.addEventListener('change', function () {
-        if (selector.value !== 'online' && selector.value !== 'offline') return;
+        if (!['online', 'maintenance', 'error'].includes(selector.value)) return;
         window.CyberLifeData.serviceStatus = selector.value;
+        runtimeError = '';
         renderStatus();
         window.cyberLifeAutoSave?.scheduleAutoSave();
       });
 
+      messageInput?.addEventListener('change', function () {
+        window.CyberLifeData.serviceMessage = messageInput.value.trim();
+        renderStatus();
+        window.cyberLifeAutoSave?.scheduleAutoSave();
+      });
+
+      retryButton?.addEventListener('click', function () {
+        retryButton.disabled = true;
+        retryButton.textContent = 'Retrying…';
+        window.checkAuth?.().finally(() => {
+          retryButton.disabled = false;
+          retryButton.textContent = 'Retry';
+        });
+      });
+
       window.renderCyberLifeStatus = renderStatus;
+      window.showCyberLifeDataError = function (message) {
+        runtimeError = String(message || 'Please check your connection and try again.');
+        renderStatus();
+      };
+      window.clearCyberLifeDataError = function () {
+        runtimeError = '';
+        renderStatus();
+      };
       renderStatus();
     })();
+
+    window.renderMaintenanceApplicationVersion = function () {
+      const element = document.getElementById('maintenance-application-version');
+      const aboutElement = document.getElementById('about-application-version');
+
+      const byTab = window.CyberLifeData?.airosUpdatesByTab;
+      const stableUpdates = Array.isArray(byTab?.stable) ? byTab.stable : null;
+      const legacyUpdates = Array.isArray(window.CyberLifeData?.airosUpdates)
+        ? window.CyberLifeData.airosUpdates
+        : [];
+      const updates = stableUpdates || legacyUpdates;
+      const latest = updates.length
+        ? updates[updates.length - 1]
+        : null;
+      const version = latest?.versionStatus?.trim() || '—';
+
+      if (element) {
+        element.textContent = version;
+        element.title = latest?.versionStatus
+          ? `Latest AirOs15 Update: ${latest.versionStatus}`
+          : 'No AirOs15 Update version available';
+      }
+      if (aboutElement) {
+        aboutElement.textContent = version;
+        aboutElement.title = latest?.versionStatus
+          ? `Latest AirOs15 Update: ${latest.versionStatus}`
+          : 'No AirOs15 Update version available';
+      }
+    };
+
+    window.renderMaintenanceApplicationVersion();
 
     // ============================================================================
     // 🐙 GITHUB REST API SYNC - reads/writes data-cyberlife.json in kadoglou36/DATABASE
@@ -3450,6 +3720,7 @@
       const GITHUB_OWNER = 'kadoglou36';
       const GITHUB_REPO = 'DATABASE';
       const GITHUB_FILE_PATH = 'data-cyberlife.json';
+      const APP_REPOSITORY = 'cyberlife';
       const TOKEN_STORAGE_KEY = 'cyberlife_token';
 
       // sha of the last-loaded database file, required by GitHub to update it
@@ -3469,6 +3740,125 @@
 
       function getStoredToken() {
         return localStorage.getItem(TOKEN_STORAGE_KEY);
+      }
+
+      function formatCommitDate(value) {
+        const date = new Date(value);
+        if (Number.isNaN(date.getTime())) return 'Unknown time';
+        return date.toLocaleString('el-GR', {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit'
+        });
+      }
+
+      let maintenanceCommits = [];
+
+      function renderMaintenanceCommitLog() {
+        const list = document.getElementById('maintenance-commit-list');
+        const status = document.getElementById('maintenance-commit-status');
+        const limitSelector = document.getElementById('maintenance-commit-limit');
+        if (!list || !status || !limitSelector) return;
+
+        const limit = limitSelector.value === 'all'
+          ? maintenanceCommits.length
+          : Number.parseInt(limitSelector.value, 10);
+        const visibleCommits = maintenanceCommits.slice(0, limit);
+
+        if (!visibleCommits.length) {
+          list.innerHTML = '<p style="margin:0;padding:1rem;text-align:center;color:#6b7280;background:#f9fafb;border-radius:8px">No commits found.</p>';
+          return;
+        }
+
+        list.innerHTML = visibleCommits.map(commit => {
+          const fullMessage = String(commit.commit?.message || 'No commit message');
+          const firstLine = fullMessage.split('\n')[0];
+          const details = fullMessage.split('\n').slice(1).join('\n').trim();
+          const author = commit.commit?.author?.name || commit.author?.login || 'Unknown author';
+          const when = commit.commit?.author?.date || commit.commit?.committer?.date || '';
+          const sha = String(commit.sha || '');
+          const url = commit.html_url
+            || `https://github.com/${GITHUB_OWNER}/${APP_REPOSITORY}/commit/${sha}`;
+          return `
+            <article style="border-bottom:1px solid #e5e7eb;padding:.7rem .15rem;background:#fff">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap">
+                <div style="min-width:0;flex:1">
+                  <div style="display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin-bottom:.3rem">
+                    <strong style="color:#374151;overflow-wrap:anywhere">${escapeHtml(firstLine)}</strong>
+                    <code style="color:#6b7280;background:#f3f4f6;border-radius:4px;padding:.12rem .4rem;font-size:.75rem">${escapeHtml(sha.slice(0, 7))}</code>
+                  </div>
+                  ${details ? `<p style="margin:.25rem 0 .45rem;color:#6b7280;white-space:pre-wrap;overflow-wrap:anywhere">${escapeHtml(details)}</p>` : ''}
+                  <div style="display:flex;gap:.45rem;align-items:center;flex-wrap:wrap;color:#6b7280;font-size:.82rem">
+                    <span>👤 ${escapeHtml(author)}</span>
+                    <span>•</span>
+                    <time datetime="${escapeHtml(when)}">${escapeHtml(formatCommitDate(when))}</time>
+                  </div>
+                </div>
+                <a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer"
+                  style="color:#2563eb;text-decoration:none;flex:0 0 auto;font-size:.85rem;white-space:nowrap">View ↗</a>
+              </div>
+            </article>
+          `;
+        }).join('');
+        const total = maintenanceCommits.length;
+        const shown = visibleCommits.length;
+        const countText = limitSelector.value === 'all' || shown === total
+          ? `Showing all ${total}`
+          : `Showing ${shown} of ${total}`;
+        status.textContent = `${countText} commits • Synced ${formatCommitDate(new Date().toISOString())}`;
+        status.style.color = '#6b7280';
+      }
+
+      async function loadMaintenanceCommitLog() {
+        const list = document.getElementById('maintenance-commit-list');
+        const status = document.getElementById('maintenance-commit-status');
+        const refreshButton = document.getElementById('maintenance-commit-refresh');
+        if (!list || !status) return;
+
+        if (refreshButton) {
+          refreshButton.disabled = true;
+          refreshButton.textContent = '↻ Loading…';
+        }
+        status.textContent = 'Loading commits from GitHub…';
+
+        try {
+          const headers = {
+            'Accept': 'application/vnd.github+json'
+          };
+          const token = getStoredToken();
+          if (token) headers.Authorization = `token ${token}`;
+
+          maintenanceCommits = [];
+          let page = 1;
+          while (true) {
+            const response = await fetch(
+              `https://api.github.com/repos/${GITHUB_OWNER}/${APP_REPOSITORY}/commits?per_page=100&page=${page}&t=${Date.now()}`,
+              { cache: 'no-store', headers }
+            );
+            if (!response.ok) {
+              throw new Error(`GitHub returned ${response.status} ${response.statusText}`);
+            }
+
+            const pageCommits = await response.json();
+            if (!Array.isArray(pageCommits)) throw new Error('GitHub returned an invalid commit list.');
+            maintenanceCommits.push(...pageCommits);
+            if (pageCommits.length < 100) break;
+            page += 1;
+          }
+          renderMaintenanceCommitLog();
+        } catch (error) {
+          console.error('Failed to load CyberLife commit history:', error);
+          status.textContent = 'Unable to load the commit history.';
+          status.style.color = '#b91c1c';
+          list.innerHTML = `<p style="margin:0;padding:1rem;text-align:center;color:#b91c1c;background:#fef2f2;border:1px solid #fecaca;border-radius:8px">${escapeHtml(error.message || 'Unable to load commits from GitHub.')}</p>`;
+        } finally {
+          if (refreshButton) {
+            refreshButton.disabled = false;
+            refreshButton.textContent = '↻ Refresh';
+          }
+        }
       }
       function setStoredToken(token) {
         localStorage.setItem(TOKEN_STORAGE_KEY, token);
@@ -3643,13 +4033,21 @@
         if (connectBtn) { connectBtn.disabled = true; connectBtn.textContent = 'Connecting…'; }
         try {
           await loadAppData();
+          window.clearCyberLifeDataError?.();
           window.renderCyberLifeStatus?.();
+          window.renderMaintenanceApplicationVersion?.();
+          void loadMaintenanceCommitLog();
           unlockApp();
           window.restoreLastView?.();
           window.passengersVoid?.render?.();
         } catch (err) {
           console.error('CyberLife GitHub sync error:', err);
-          showAuthForm(err.message || 'Failed to connect. Please check your token and try again.');
+          const isTokenError = /invalid github token|no github token/i.test(err.message || '');
+          const message = err.message || 'Failed to connect. Please check your token and try again.';
+          if (!isTokenError) window.showCyberLifeDataError?.(message);
+          showAuthForm(isTokenError
+            ? message
+            : `CyberLife data could not be loaded. ${message} Please retry without changing your data.`);
         } finally {
           if (connectBtn) { connectBtn.disabled = false; connectBtn.textContent = 'Submit'; }
         }
@@ -3684,19 +4082,38 @@
         }
         try {
           await loadAppData();
+          window.clearCyberLifeDataError?.();
           window.renderCyberLifeStatus?.();
+          window.renderMaintenanceApplicationVersion?.();
+          void loadMaintenanceCommitLog();
           unlockApp();
           window.restoreLastView?.();
           window.passengersVoid?.render?.();
         } catch (err) {
           console.error('CyberLife GitHub sync error:', err);
-          showAuthForm(err.message);
+          const isTokenError = /invalid github token|no github token/i.test(err.message || '');
+          if (!isTokenError) {
+            window.showCyberLifeDataError?.(err.message || 'Please check your connection and retry.');
+          }
+          showAuthForm(isTokenError
+            ? err.message
+            : `CyberLife data could not be loaded. ${err.message || 'Please check your connection.'} Please retry without changing your data.`);
         }
       }
 
       window.loadAppData = loadAppData;
       window.saveAppData = saveAppData;
       window.checkAuth = checkAuth;
+      window.loadMaintenanceCommitLog = loadMaintenanceCommitLog;
+
+      document.getElementById('maintenance-commit-refresh')?.addEventListener('click', loadMaintenanceCommitLog);
+      document.getElementById('maintenance-commit-limit')?.addEventListener('change', renderMaintenanceCommitLog);
+      setInterval(() => {
+        const maintenanceView = document.getElementById('view-maintenance');
+        if (maintenanceView && !maintenanceView.hidden && document.visibilityState === 'visible') {
+          void loadMaintenanceCommitLog();
+        }
+      }, 60000);
 
       document.addEventListener('DOMContentLoaded', checkAuth);
     })();
@@ -3869,18 +4286,6 @@
 
       window.emailPassView = { render };
       render();
-    })();
-
-    (function () {
-      const btn = document.getElementById('about-copyright');
-      const modal = document.getElementById('about-modal');
-      const closeBtn = document.getElementById('about-close');
-      if (!btn || !modal || !closeBtn) return;
-      const open = () => modal.classList.add('show');
-      const close = () => modal.classList.remove('show');
-      btn.addEventListener('click', open);
-      closeBtn.addEventListener('click', close);
-      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
     })();
 
     // Calendar logic
@@ -4172,7 +4577,10 @@
       // Restore the last viewed page on page load
       function restoreLastView() {
         const savedView = window.CyberLifeData?.currentView;
-        if (!savedView) return; // No saved view, stay on default
+        if (!savedView) {
+          showHome();
+          return;
+        }
 
         switch (savedView) {
           case 'home': showHome(); break;
@@ -5735,6 +6143,7 @@
             tr.tabIndex = 0;
             tbody.appendChild(tr);
           });
+          window.renderMaintenanceApplicationVersion?.();
         }
 
         function selectRow(id, rowEl) {
@@ -6757,16 +7166,21 @@
 
       function loadData() {
         if (!window.CyberLifeData) window.CyberLifeData = {};
-        if (!window.CyberLifeData.serversCenter) {
-          // Initialize with default data
+        if (!window.CyberLifeData.serversCenter ||
+            typeof window.CyberLifeData.serversCenter !== 'object') {
           window.CyberLifeData.serversCenter = {};
-          states.forEach(state => {
-            window.CyberLifeData.serversCenter[state] = {};
-            servers.forEach(server => {
-              window.CyberLifeData.serversCenter[state][server] = 'NORMAL';
-            });
-          });
         }
+        states.forEach(state => {
+          if (!window.CyberLifeData.serversCenter[state] ||
+              typeof window.CyberLifeData.serversCenter[state] !== 'object') {
+            window.CyberLifeData.serversCenter[state] = {};
+          }
+          servers.forEach(server => {
+            if (!window.CyberLifeData.serversCenter[state][server]) {
+              window.CyberLifeData.serversCenter[state][server] = 'NORMAL';
+            }
+          });
+        });
         return window.CyberLifeData.serversCenter;
       }
 

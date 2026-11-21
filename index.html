@@ -3287,6 +3287,51 @@
     // Debug mode disabled
     window.DEBUG_MODE = false;
 
+    (function () {
+      const handlers = new Map();
+      let isApplying = false;
+
+      function routeFromHash() {
+        return decodeURIComponent(location.hash.replace(/^#\/?/, '').replace(/^\/+|\/+$/g, '')) || 'main';
+      }
+
+      function write(route, replace = false) {
+        if (isApplying) return;
+        const hash = `#/${encodeURIComponent(route)}`;
+        if (location.hash === hash) return;
+        if (replace) {
+          history.replaceState({ route }, '', hash);
+        } else {
+          location.hash = hash;
+        }
+      }
+
+      function apply() {
+        const route = routeFromHash();
+        isApplying = true;
+        try {
+          const handler = handlers.get(route);
+          if (handler) {
+            handler();
+          } else {
+            handlers.get('main')?.();
+          }
+        } finally {
+          isApplying = false;
+        }
+        write(handlers.has(route) ? route : 'main', true);
+      }
+
+      window.CyberLifeRouter = {
+        apply,
+        register(route, handler) {
+          handlers.set(route, handler);
+        },
+        write
+      };
+      window.addEventListener('hashchange', apply);
+    })();
+
     // Application initialization
 
     // Menu click behavior (instead of hover)
@@ -3296,21 +3341,17 @@
         // Hide all views consistently using .hidden property
         document.querySelectorAll('section.view').forEach(v => v.hidden = true);
         document.getElementById('view-home').hidden = false;
-        // Save the view state
-        if (!window.CyberLifeData) window.CyberLifeData = {};
-        window.CyberLifeData.currentView = 'home';
-        window.cyberLifeAutoSave?.scheduleAutoSave();
       });
       // Maintenance button - show Maintenance view
       document.getElementById('maintenance-btn').addEventListener('click', function () {
         // Hide all views consistently using .hidden property
         document.querySelectorAll('section.view').forEach(v => v.hidden = true);
         document.getElementById('view-maintenance').hidden = false;
-        // Save the view state
         if (!window.CyberLifeData) window.CyberLifeData = {};
         window.CyberLifeData.currentView = 'maintenance';
         window.cyberLifeAutoSave?.scheduleAutoSave();
         void window.loadMaintenanceCommitLog?.();
+        window.CyberLifeRouter?.write('maintenance');
       });
 
 
@@ -3493,7 +3534,7 @@
           window.saveAppData?.().catch(err => {
             if (window.DEBUG_MODE) console.error('❌ GitHub save error:', err);
           });
-        }, 1200);
+        }, 250);
       }
 
       function flushAutoSave() {
@@ -3521,32 +3562,7 @@
       // Create compatibility layer
       Object.defineProperty(window, 'appData', {
         get: function () {
-          return {
-            // Map new structure to old names
-            calendar: window.CyberLifeData.calendar,
-            passengers: window.CyberLifeData.passengers,
-            passengersVoid: window.CyberLifeData.passengersVoid,
-            emailPass: window.CyberLifeData.emailPass,
-            crewCyber: window.CyberLifeData.crewCyber,
-            crewHome: window.CyberLifeData.crewHome,
-            company: window.CyberLifeData.company,
-            report: window.CyberLifeData.report,
-            airosStatus: window.CyberLifeData.airosStatus,
-            airosUpdates: window.CyberLifeData.airosUpdates,
-            currentView: window.CyberLifeData.currentView,
-            serviceStatus: window.CyberLifeData.serviceStatus,
-            serviceMessage: window.CyberLifeData.serviceMessage,
-            airosUpdatesByTab: window.CyberLifeData.airosUpdatesByTab,
-            intelligenceByYear: window.CyberLifeData.intelligenceByYear,
-            cyberLifeReports: window.CyberLifeData.cyberLifeReports,
-            appLog: window.CyberLifeData.appLog,
-            appLogEnabled: window.CyberLifeData.appLogEnabled,
-            workCalendar: window.CyberLifeData.workCalendar,
-            population: window.CyberLifeData.population,
-            intelligence: window.CyberLifeData.intelligence,
-            fraggileTransport: window.CyberLifeData.fraggileTransport,
-            serversCenter: window.CyberLifeData.serversCenter
-          };
+          return window.CyberLifeData;
         },
         set: function (value) {
           // When old code sets appData, update new structure
@@ -4038,7 +4054,7 @@
           window.renderMaintenanceApplicationVersion?.();
           void loadMaintenanceCommitLog();
           unlockApp();
-          window.restoreLastView?.();
+          window.CyberLifeRouter?.apply();
           window.passengersVoid?.render?.();
         } catch (err) {
           console.error('CyberLife GitHub sync error:', err);
@@ -4087,7 +4103,7 @@
           window.renderMaintenanceApplicationVersion?.();
           void loadMaintenanceCommitLog();
           unlockApp();
-          window.restoreLastView?.();
+          window.CyberLifeRouter?.apply();
           window.passengersVoid?.render?.();
         } catch (err) {
           console.error('CyberLife GitHub sync error:', err);
@@ -4360,40 +4376,35 @@
         const viewFraggile = document.getElementById('view-fraggile-transport');
         viewFraggile && (viewFraggile.hidden = true);
       }
-      function saveCurrentView(viewName) {
-        if (!window.CyberLifeData) window.CyberLifeData = {};
-        window.CyberLifeData.currentView = viewName;
-        window.cyberLifeAutoSave?.scheduleAutoSave();
-      }
       function showHome() {
         hideAll();
         if (viewHome) {
           viewHome.hidden = false;
         }
-        saveCurrentView('home');
+        window.CyberLifeRouter.write('main');
       }
       function showAnnouncements() {
         hideAll();
         if (viewAnnouncements) {
           viewAnnouncements.hidden = false;
         }
-        saveCurrentView('announcements');
+        window.CyberLifeRouter.write('announcements');
       }
-      function showCalendar() { hideAll(); viewCalendar.hidden = false; render(); saveCurrentView('calendar'); }
-      function showPassengers() { hideAll(); viewPassengers.hidden = false; if (window.passengers) { window.passengers.render(); window.passengers.hideForm(); } saveCurrentView('passengers'); }
-      function showPassengersVoid() { hideAll(); if (viewPassengersVoid) { viewPassengersVoid.hidden = false; if (window.passengersVoid) { window.passengersVoid.render(); window.passengersVoid.closeModal(); } } saveCurrentView('passengers-void'); }
-      function showAiros() { hideAll(); if (viewAiros) { viewAiros.hidden = false; if (window.airos) { window.airos.render(); } } saveCurrentView('airos'); }
-      function showAirosUpdate() { hideAll(); if (viewAirosUpdate) { viewAirosUpdate.hidden = false; if (window.airosUpdate) { window.airosUpdate.render(); } } saveCurrentView('airos-update'); }
-      function showIntel() { hideAll(); if (viewIntel) { viewIntel.hidden = false; if (window.intelligenceCount) { window.intelligenceCount.render(); } } saveCurrentView('intelligence'); }
-      function showAppLog() { hideAll(); if (viewAppLog) { viewAppLog.hidden = false; if (window.appLogView) { window.appLogView.render(); } } saveCurrentView('app-log'); }
-      function showEmailPass() { hideAll(); if (viewEmailPass) { viewEmailPass.hidden = false; window.emailPassView?.render(); } saveCurrentView('email-pass'); }
-      function showCyberLifeReports() { hideAll(); if (viewCyberLifeReports) { viewCyberLifeReports.hidden = false; if (window.cyberLifeReports) { window.cyberLifeReports.render(); } } saveCurrentView('cyberlife-reports'); }
-      function showCrew() { hideAll(); if (viewCrew) { viewCrew.hidden = false; if (window.CrewLogicRender) { window.CrewLogicRender(); } } saveCurrentView('crew'); }
-      function showWorkTime() { hideAll(); if (viewWorkTime) { viewWorkTime.hidden = false; if (window.workTimeView) { window.workTimeView.render(); } } saveCurrentView('work-time'); }
-      function showPopulation() { hideAll(); const viewPopulation = document.getElementById('view-population'); if (viewPopulation) { viewPopulation.hidden = false; if (window.population) { window.population.render(); } } saveCurrentView('population'); }
-      function showCompanyState() { hideAll(); const viewCompanyState = document.getElementById('view-company-state'); if (viewCompanyState) { viewCompanyState.hidden = false; } saveCurrentView('company'); }
-      function showServersCenter() { hideAll(); const viewServersCenter = document.getElementById('view-servers-center'); if (viewServersCenter) { viewServersCenter.hidden = false; if (window.serversCenter) { window.serversCenter.render(); } } saveCurrentView('servers-center'); }
-      function showFraggileTransport() { hideAll(); const viewFraggile = document.getElementById('view-fraggile-transport'); if (viewFraggile) { viewFraggile.hidden = false; if (window.fraggileTransport) { window.fraggileTransport.render(); } } saveCurrentView('fraggile-transport'); }
+      function showCalendar() { hideAll(); viewCalendar.hidden = false; render(); window.CyberLifeRouter.write('calendar'); }
+      function showPassengers() { hideAll(); viewPassengers.hidden = false; if (window.passengers) { window.passengers.render(); window.passengers.hideForm(); } window.CyberLifeRouter.write('passengers'); }
+      function showPassengersVoid() { hideAll(); if (viewPassengersVoid) { viewPassengersVoid.hidden = false; if (window.passengersVoid) { window.passengersVoid.render(); window.passengersVoid.closeModal(); } } window.CyberLifeRouter.write('passengers-void'); }
+      function showAiros() { hideAll(); if (viewAiros) { viewAiros.hidden = false; if (window.airos) { window.airos.render(); } } window.CyberLifeRouter.write('airos-status'); }
+      function showAirosUpdate() { hideAll(); if (viewAirosUpdate) { viewAirosUpdate.hidden = false; if (window.airosUpdate) { window.airosUpdate.render(); } } window.CyberLifeRouter.write('airos-update'); }
+      function showIntel() { hideAll(); if (viewIntel) { viewIntel.hidden = false; if (window.intelligenceCount) { window.intelligenceCount.render(); } } window.CyberLifeRouter.write('intelligence-count'); }
+      function showAppLog() { hideAll(); if (viewAppLog) { viewAppLog.hidden = false; if (window.appLogView) { window.appLogView.render(); } } window.CyberLifeRouter.write('app-log'); }
+      function showEmailPass() { hideAll(); if (viewEmailPass) { viewEmailPass.hidden = false; window.emailPassView?.render(); } window.CyberLifeRouter.write('email-pass'); }
+      function showCyberLifeReports() { hideAll(); if (viewCyberLifeReports) { viewCyberLifeReports.hidden = false; if (window.cyberLifeReports) { window.cyberLifeReports.render(); } } window.CyberLifeRouter.write('cyberlife-reports'); }
+      function showCrew() { hideAll(); if (viewCrew) { viewCrew.hidden = false; if (window.CrewLogicRender) { window.CrewLogicRender(); } } window.CyberLifeRouter.write('crew'); }
+      function showWorkTime() { hideAll(); if (viewWorkTime) { viewWorkTime.hidden = false; if (window.workTimeView) { window.workTimeView.render(); } } window.CyberLifeRouter.write('work-time'); }
+      function showPopulation() { hideAll(); const viewPopulation = document.getElementById('view-population'); if (viewPopulation) { viewPopulation.hidden = false; if (window.population) { window.population.render(); } } window.CyberLifeRouter.write('population'); }
+      function showCompanyState() { hideAll(); const viewCompanyState = document.getElementById('view-company-state'); if (viewCompanyState) { viewCompanyState.hidden = false; } window.CyberLifeRouter.write('company-state'); }
+      function showServersCenter() { hideAll(); const viewServersCenter = document.getElementById('view-servers-center'); if (viewServersCenter) { viewServersCenter.hidden = false; if (window.serversCenter) { window.serversCenter.render(); } } window.CyberLifeRouter.write('servers-center'); }
+      function showFraggileTransport() { hideAll(); const viewFraggile = document.getElementById('view-fraggile-transport'); if (viewFraggile) { viewFraggile.hidden = false; if (window.fraggileTransport) { window.fraggileTransport.render(); } } window.CyberLifeRouter.write('fragile-transport'); }
 
       // State
       let current = new Date(); // current shown month
@@ -4574,47 +4585,28 @@
       const menuWorkTime = document.getElementById('menu-work-time');
       menuWorkTime?.addEventListener('click', showWorkTime);
 
-      // Restore the last viewed page on page load
-      function restoreLastView() {
-        const savedView = window.CyberLifeData?.currentView;
-        if (!savedView) {
-          showHome();
-          return;
-        }
-
-        switch (savedView) {
-          case 'home': showHome(); break;
-          case 'announcements': showAnnouncements(); break;
-          case 'calendar': showCalendar(); break;
-          case 'passengers': showPassengers(); break;
-          case 'passengers-void': showPassengersVoid(); break;
-          case 'airos': showAiros(); break;
-          case 'airos-update': showAirosUpdate(); break;
-          case 'intelligence': showIntel(); break;
-          case 'app-log': showAppLog(); break;
-          case 'email-pass': showEmailPass(); break;
-          case 'cyberlife-reports': showCyberLifeReports(); break;
-          case 'crew': showCrew(); break;
-          case 'work-time': showWorkTime(); break;
-          case 'population': showPopulation(); break;
-          case 'company': showCompanyState(); break;
-          case 'servers-center': 
-            showServersCenter(); 
-            break;
-          case 'fraggile-transport': showFraggileTransport(); break;
-          case 'maintenance':
-            document.querySelectorAll('section.view').forEach(v => v.hidden = true);
-            document.getElementById('view-maintenance').hidden = false;
-            break;
-          case 'report':
-            document.querySelectorAll('.view').forEach(v => v.hidden = true);
-            document.getElementById('view-report').hidden = false;
-            document.getElementById('report-textarea').value = window.CyberLifeData?.report || '';
-            break;
-        }
-      }
-      window.restoreLastView = restoreLastView;
-
+      window.CyberLifeRouter.register('main', showHome);
+      window.CyberLifeRouter.register('announcements', showAnnouncements);
+      window.CyberLifeRouter.register('calendar', showCalendar);
+      window.CyberLifeRouter.register('passengers', showPassengers);
+      window.CyberLifeRouter.register('passengers-void', showPassengersVoid);
+      window.CyberLifeRouter.register('airos-status', showAiros);
+      window.CyberLifeRouter.register('airos-update', showAirosUpdate);
+      window.CyberLifeRouter.register('intelligence-count', showIntel);
+      window.CyberLifeRouter.register('app-log', showAppLog);
+      window.CyberLifeRouter.register('email-pass', showEmailPass);
+      window.CyberLifeRouter.register('cyberlife-reports', showCyberLifeReports);
+      window.CyberLifeRouter.register('crew', showCrew);
+      window.CyberLifeRouter.register('work-time', showWorkTime);
+      window.CyberLifeRouter.register('population', showPopulation);
+      window.CyberLifeRouter.register('company-state', showCompanyState);
+      window.CyberLifeRouter.register('servers-center', showServersCenter);
+      window.CyberLifeRouter.register('fragile-transport', showFraggileTransport);
+      window.CyberLifeRouter.register('maintenance', () => {
+        hideAll();
+        document.getElementById('view-maintenance').hidden = false;
+        void window.loadMaintenanceCommitLog?.();
+      });
 
       // Scroll over the calendar (main area) to change months (debounced for performance)
       const calendarEl = document.querySelector('#view-calendar .calendar');
@@ -5469,7 +5461,7 @@
       // Modal functions
       function openModal() { 
         modal?.classList.add('show'); 
-        setTimeout(() => inputName?.focus(), 100);
+        setTimeout(() => (currentTab === 'cyber' ? cyName : hoName)?.focus(), 100);
       }
       function closeModal() { modal?.classList.remove('show'); clearForm(); }
 
@@ -7166,22 +7158,27 @@
 
       function loadData() {
         if (!window.CyberLifeData) window.CyberLifeData = {};
-        if (!window.CyberLifeData.serversCenter ||
-            typeof window.CyberLifeData.serversCenter !== 'object') {
-          window.CyberLifeData.serversCenter = {};
-        }
+        const savedData = window.CyberLifeData.serversCenter;
+        const normalizedData = savedData && typeof savedData === 'object' && !Array.isArray(savedData)
+          ? savedData
+          : {};
+
         states.forEach(state => {
-          if (!window.CyberLifeData.serversCenter[state] ||
-              typeof window.CyberLifeData.serversCenter[state] !== 'object') {
-            window.CyberLifeData.serversCenter[state] = {};
-          }
+          const savedState = normalizedData[state];
+          const normalizedState = savedState && typeof savedState === 'object' && !Array.isArray(savedState)
+            ? savedState
+            : {};
+          normalizedData[state] = normalizedState;
+
           servers.forEach(server => {
-            if (!window.CyberLifeData.serversCenter[state][server]) {
-              window.CyberLifeData.serversCenter[state][server] = 'NORMAL';
+            if (!statusOptions.includes(normalizedState[server])) {
+              normalizedState[server] = 'NORMAL';
             }
           });
         });
-        return window.CyberLifeData.serversCenter;
+
+        window.CyberLifeData.serversCenter = normalizedData;
+        return normalizedData;
       }
 
       function saveData(data) {
@@ -7210,7 +7207,7 @@
             td.dataset.state = state;
             td.dataset.server = server;
 
-            const status = data[state][server] || 'NORMAL';
+            const status = data[state][server];
             td.textContent = status;
             td.style.background = statusColors[status];
             td.style.color = '#fff';
@@ -7312,7 +7309,7 @@
         const changes = [];
 
         selectedCells.forEach(cell => {
-          const oldStatus = data[cell.state][cell.server];
+          const oldStatus = data[cell.state]?.[cell.server];
           data[cell.state][cell.server] = newStatus;
           changes.push(`${cell.state}-${cell.server}: ${oldStatus}→${newStatus}`);
         });
@@ -7711,10 +7708,7 @@
         document.querySelectorAll('.menu').forEach(m => m.classList.remove('active'));
         document.querySelectorAll('.submenu').forEach(s => s.classList.remove('active'));
         viewReport.hidden = false;
-        // Save the view state
-        if (!window.CyberLifeData) window.CyberLifeData = {};
-        window.CyberLifeData.currentView = 'report';
-        window.cyberLifeAutoSave?.scheduleAutoSave();
+        window.CyberLifeRouter.write('report');
       }
 
       function saveReport() {
@@ -7727,6 +7721,7 @@
 
       btnReport?.addEventListener('click', showReport);
       reportSaveBtn?.addEventListener('click', saveReport);
+      window.CyberLifeRouter.register('report', showReport);
     })();
   </script>
 

@@ -1366,16 +1366,22 @@
 
     @media (max-width: 640px) {
       .main {
-        padding: .5rem .5rem 5.5rem
+        padding: .35rem .35rem 4.5rem
       }
 
       .app-footer {
-        gap: .25rem .65rem;
-        padding: .55rem .75rem
+        gap: .15rem .45rem;
+        min-height: 36px;
+        padding: .4rem .55rem;
+        font-size: .68rem
+      }
+
+      .app-footer-owner {
+        display: none
       }
 
       .calendar {
-        border-radius: 12px
+        border-radius: 10px
       }
 
       .cal-header {
@@ -1384,11 +1390,11 @@
       }
 
       .cal-title {
-        font-size: 1rem
+        font-size: .95rem
       }
 
       #view-home .home-content {
-        padding: 1.75rem 1rem
+        padding: 1.1rem .7rem
       }
 
       #view-announcements .home-content {
@@ -1396,7 +1402,13 @@
       }
 
       #view-home .home-intro h2 {
-        font-size: 1.5rem
+        margin-top: 0;
+        font-size: 1.25rem
+      }
+
+      #view-home .home-description {
+        margin-bottom: 0;
+        font-size: .88rem
       }
 
       .home-announcement {
@@ -1413,16 +1425,53 @@
           "airos"
           "company"
           "privacy";
-        gap: 1rem;
-        margin-top: 1.5rem
+        gap: .65rem;
+        margin-top: 1rem
+      }
+
+      #view-home .home-shortcut-group {
+        padding: .7rem;
+        border-radius: 10px
+      }
+
+      #view-home .home-shortcut-group h3 {
+        margin-bottom: .5rem;
+        font-size: .88rem
       }
 
       #view-home .home-shortcut-grid {
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 220px))
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: .45rem
+      }
+
+      #view-home .home-shortcut {
+        min-height: 48px;
+        gap: .45rem;
+        padding: .45rem .5rem;
+        border-radius: 8px;
+        font-size: .78rem
+      }
+
+      #view-home .home-shortcut-icon {
+        flex-basis: 30px;
+        width: 30px;
+        height: 30px;
+        border-radius: 7px;
+        font-size: .95rem
+      }
+
+      #view-home .home-shortcut-copy {
+        font-weight: 600;
+        line-height: 1.15
+      }
+
+      #view-home .home-shortcut-note {
+        font-size: .62rem
       }
 
       .cal-btn {
-        padding: .4rem .55rem
+        padding: .35rem .45rem;
+        font-size: .78rem
       }
 
       .cal-weekdays div {

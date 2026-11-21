@@ -1,10 +1,10 @@
 {
-  "id": "./",
+  "id": "/cyberlife/",
   "name": "CyberLife AI Suite 3",
   "short_name": "CyberLife",
   "description": "CyberLife AI Suite 3 operations and management application.",
-  "start_url": "./index.html",
-  "scope": "./",
+  "start_url": "/cyberlife/",
+  "scope": "/cyberlife/",
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
   "orientation": "any",

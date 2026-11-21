@@ -1,11 +1,10 @@
-const CACHE_NAME = 'cyberlife-v1';
+const CACHE_NAME = 'cyberlife-v2';
 const APP_SHELL = [
   './',
   './index.html',
   './manifest.webmanifest',
   './favicon.ico',
   './icon-32.png',
-  './icon.svg',
   './icon-192.png',
   './icon-512.png'
 ];

@@ -16,7 +16,6 @@
   <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
   <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png" />
   <link rel="apple-touch-icon" href="icon-192.png" />
-  <script src="../config.js"></script>
   <style>
     :root {
       --bg: #f3f4f6;
@@ -1166,8 +1165,46 @@
       white-space: nowrap
     }
 
-    #install-app-btn[hidden] {
-      display: none !important
+    #install-app-btn {
+      display: none
+    }
+
+    #install-app-btn.pwa-visible {
+      display: block
+    }
+
+    .pwa-install-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 100000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      background: rgba(15, 23, 42, .62)
+    }
+
+    .pwa-install-modal.show {
+      display: flex
+    }
+
+    .pwa-install-card {
+      max-width: 420px;
+      width: 100%;
+      padding: 1.25rem;
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .3)
+    }
+
+    .pwa-install-card h3 {
+      margin: 0 0 .6rem
+    }
+
+    .pwa-install-card ol {
+      margin: .5rem 0 1rem;
+      padding-left: 1.25rem;
+      line-height: 1.55
     }
 
     #view-maintenance .maintenance-panel {
@@ -1607,7 +1644,7 @@
       <button class="btn" type="button" id="btn-report" style="margin-left:0.5rem">📄 Report</button>
       <button class="btn" type="button" id="cyberlife-status-indicator"
         aria-live="polite" style="margin-left:0.5rem;cursor:default">Status 🔴</button>
-      <button class="btn" type="button" id="install-app-btn" hidden
+      <button class="btn" type="button" id="install-app-btn"
         style="margin-left:0.5rem;background:#2563eb;border-color:#2563eb;color:#fff;font-weight:700">⬇️ Install App</button>
       <button id="maintenance-btn"
         style="background:#ef4444;border:1px solid #dc2626;border-radius:8px;padding:.45rem .8rem;cursor:pointer;color:#fff;font-weight:700;margin-left:0.5rem;">🔧 Maintenance</button>
@@ -3345,6 +3382,18 @@
     <span class="app-footer-owner">Vangelis Kadoglou · ID 152400</span>
     <span class="app-footer-copyright">2001-2026 CyberLife. All rights reserved.</span>
   </footer>
+  <div class="pwa-install-modal" id="pwa-install-modal">
+    <div class="pwa-install-card" role="dialog" aria-modal="true" aria-labelledby="pwa-install-title">
+      <h3 id="pwa-install-title">Install CyberLife</h3>
+      <p id="pwa-install-message">Open the browser menu and choose the install option.</p>
+      <ol>
+        <li>Open the page from <strong>https://kadoglou36.github.io/cyberlife/</strong></li>
+        <li>Open Brave/Chrome menu <strong>⋮</strong></li>
+        <li>Choose <strong>Install app</strong> or <strong>Add to Home screen</strong></li>
+      </ol>
+      <button type="button" class="cal-btn cal-btn--blue" id="pwa-install-close">OK</button>
+    </div>
+  </div>
   </div><!-- /#app-container -->
 
   <script>
@@ -3353,30 +3402,44 @@
 
     (function () {
       const installButton = document.getElementById('install-app-btn');
+      const installModal = document.getElementById('pwa-install-modal');
+      const installClose = document.getElementById('pwa-install-close');
       let deferredPrompt = null;
+
+      if (window.isSecureContext && ['https:', 'http:'].includes(location.protocol)) {
+        installButton?.classList.add('pwa-visible');
+      }
 
       window.addEventListener('beforeinstallprompt', event => {
         event.preventDefault();
         deferredPrompt = event;
-        if (installButton) installButton.hidden = false;
+        installButton?.classList.add('pwa-visible');
       });
 
       installButton?.addEventListener('click', async () => {
-        if (!deferredPrompt) return;
+        if (!deferredPrompt) {
+          installModal?.classList.add('show');
+          return;
+        }
         installButton.disabled = true;
         try {
           await deferredPrompt.prompt();
           await deferredPrompt.userChoice;
         } finally {
           deferredPrompt = null;
-          installButton.hidden = true;
+          installButton.classList.remove('pwa-visible');
           installButton.disabled = false;
         }
       });
 
+      installClose?.addEventListener('click', () => installModal?.classList.remove('show'));
+      installModal?.addEventListener('click', event => {
+        if (event.target === installModal) installModal.classList.remove('show');
+      });
+
       window.addEventListener('appinstalled', () => {
         deferredPrompt = null;
-        if (installButton) installButton.hidden = true;
+        installButton?.classList.remove('pwa-visible');
       });
 
       if ('serviceWorker' in navigator && window.isSecureContext) {

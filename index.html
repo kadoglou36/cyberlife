@@ -3512,7 +3512,7 @@
       };
       const refresh = async () => {
         clearTimeout(timer);
-        let pending = true;
+        let deploying = true;
         try {
           const commit = await getJson(API + 'main');
           if (!commit || !commit.sha) throw new Error('no commit');
@@ -3522,13 +3522,18 @@
           const runs = (await getJson(API + commit.sha + '/check-runs')).check_runs || [];
           const failed = runs.some(r => r.status === 'completed' && !['success', 'neutral', 'skipped'].includes(r.conclusion));
           const done = runs.length > 0 && runs.every(r => r.status === 'completed');
-          if (failed) { setState('failure', 'Deployment failed'); pending = false; }
-          else if (done) { setState('success', 'Deployed'); pending = false; }
+          if (failed) {
+            setState('failure', 'Deployment failed');
+            deploying = false;
+          } else if (done) {
+            setState('success', 'Deployed');
+            deploying = false;
+          }
           else setState('pending', 'Deploying…');
         } catch (e) {
           setState('unknown', 'Deployment status unavailable');
         }
-        timer = setTimeout(refresh, pending ? 20 * 1000 : 2 * 60 * 1000);
+        timer = setTimeout(refresh, deploying ? 2 * 1000 : 10 * 1000);
       };
       refresh();
       document.addEventListener('visibilitychange', () => { if (!document.hidden) refresh(); });

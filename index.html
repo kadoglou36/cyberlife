@@ -1444,14 +1444,28 @@
       }
 
       .app-footer {
-        gap: .15rem .45rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: .2rem .6rem;
         min-height: 36px;
-        padding: .4rem .55rem;
-        font-size: .68rem
+        padding: .45rem .55rem;
+        font-size: .68rem;
+        text-align: center
       }
 
+      .app-footer .footer-divider,
       .app-footer-owner {
         display: none
+      }
+
+      .app-footer-build {
+        margin-left: 0
+      }
+
+      .app-footer>span:nth-of-type(2),
+      .app-footer-copyright {
+        margin-left: 0
       }
 
       .calendar {
@@ -3413,8 +3427,7 @@
     <strong>AI Suite 3 · Version <span id="about-application-version">—</span></strong>
     <span class="footer-divider" aria-hidden="true">•</span>
     <span>AI Homestead Company</span>
-    <a class="app-footer-build" id="app-footer-build" href="https://github.com/kadoglou36/cyberlife/commits/main"
-      target="_blank" rel="noopener" hidden>Build <span id="app-footer-build-id">—</span></a>
+    <span class="app-footer-build" id="app-footer-build" hidden>Build <span id="app-footer-build-id">—</span></span>
     <span class="app-footer-owner">Vangelis Kadoglou · ID 152400</span>
     <span class="app-footer-copyright">2001-2026 CyberLife. All rights reserved.</span>
   </footer>
@@ -3428,8 +3441,6 @@
         if (!sha) return;
         const short = sha.slice(0, 7);
         idEl.textContent = short;
-        link.href = 'https://github.com/kadoglou36/cyberlife/commit/' + sha;
-        link.title = 'Latest GitHub build ' + short;
         link.hidden = false;
       };
       let cached = null;

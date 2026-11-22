@@ -1169,6 +1169,32 @@
       color: #374151
     }
 
+    .app-footer-build-check {
+      display: inline-block;
+      width: .55rem;
+      height: .55rem;
+      margin-left: .4rem;
+      border-radius: 50%;
+      vertical-align: middle;
+      background: #eab308
+    }
+
+    .app-footer-build-check[data-state="success"] {
+      background: #16a34a
+    }
+
+    .app-footer-build-check[data-state="failure"] {
+      background: #dc2626
+    }
+
+    .app-footer-build-check[data-state="unknown"] {
+      background: #9ca3af
+    }
+
+    .app-footer-build-check:not([data-state]) {
+      display: none
+    }
+
     .app-footer-owner {
       white-space: nowrap
     }
@@ -3427,7 +3453,8 @@
     <strong>AI Suite 3 · Version <span id="about-application-version">—</span></strong>
     <span class="footer-divider" aria-hidden="true">•</span>
     <span>AI Homestead Company</span>
-    <span class="app-footer-build" id="app-footer-build" hidden>Build <span id="app-footer-build-id">—</span></span>
+    <span class="app-footer-build" id="app-footer-build" hidden>Build <span id="app-footer-build-id">—</span><span
+        id="app-footer-build-check" class="app-footer-build-check" aria-hidden="true"></span></span>
     <span class="app-footer-owner">Vangelis Kadoglou · ID 152400</span>
     <span class="app-footer-copyright">2001-2026 CyberLife. All rights reserved.</span>
   </footer>
@@ -3435,7 +3462,9 @@
     (function () {
       const link = document.getElementById('app-footer-build');
       const idEl = document.getElementById('app-footer-build-id');
-      if (!link || !idEl) return;
+      const checkEl = document.getElementById('app-footer-build-check');
+      if (!link || !idEl || !checkEl) return;
+      const API = 'https://api.github.com/repos/kadoglou36/cyberlife/commits/';
       const CACHE_KEY = 'cyberlife-latest-build';
       const show = sha => {
         if (!sha) return;
@@ -3443,25 +3472,45 @@
         idEl.textContent = short;
         link.hidden = false;
       };
+      const setState = (state, label) => {
+        checkEl.dataset.state = state;
+        link.title = label;
+      };
       let cached = null;
       try { cached = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null'); } catch (e) { }
       if (cached && cached.sha) show(cached.sha);
-      // no-cache revalidates via ETag, so each check returns the newest commit and 304s don't count against the API rate limit
-      const refresh = () => {
-        fetch('https://api.github.com/repos/kadoglou36/cyberlife/commits/main', {
-          cache: 'no-cache',
-          headers: { Accept: 'application/vnd.github+json' }
-        })
-          .then(r => r.ok ? r.json() : Promise.reject(new Error(r.status)))
-          .then(data => {
-            if (!data || !data.sha) return;
-            show(data.sha);
-            try { localStorage.setItem(CACHE_KEY, JSON.stringify({ sha: data.sha })); } catch (e) { }
-          })
-          .catch(() => { });
+      let timer = null;
+      // no-cache revalidates via ETag, so each check returns fresh data and 304s don't count against the API rate limit
+      // the unlock token raises the API limit from 60 to 5000 requests/hour
+      const getJson = url => {
+        const headers = { Accept: 'application/vnd.github+json' };
+        let token = null;
+        try { token = localStorage.getItem('cyberlife_token'); } catch (e) { }
+        if (token) headers.Authorization = 'token ' + token;
+        return fetch(url, { cache: 'no-cache', headers })
+          .then(r => r.ok ? r.json() : Promise.reject(new Error(r.status)));
+      };
+      const refresh = async () => {
+        clearTimeout(timer);
+        let pending = true;
+        try {
+          const commit = await getJson(API + 'main');
+          if (!commit || !commit.sha) throw new Error('no commit');
+          show(commit.sha);
+          try { localStorage.setItem(CACHE_KEY, JSON.stringify({ sha: commit.sha })); } catch (e) { }
+          // GitHub Pages deployments report as check runs on the commit
+          const runs = (await getJson(API + commit.sha + '/check-runs')).check_runs || [];
+          const failed = runs.some(r => r.status === 'completed' && !['success', 'neutral', 'skipped'].includes(r.conclusion));
+          const done = runs.length > 0 && runs.every(r => r.status === 'completed');
+          if (failed) { setState('failure', 'Deployment failed'); pending = false; }
+          else if (done) { setState('success', 'Deployed'); pending = false; }
+          else setState('pending', 'Deploying…');
+        } catch (e) {
+          setState('unknown', 'Deployment status unavailable');
+        }
+        timer = setTimeout(refresh, pending ? 20 * 1000 : 2 * 60 * 1000);
       };
       refresh();
-      setInterval(refresh, 2 * 60 * 1000);
       document.addEventListener('visibilitychange', () => { if (!document.hidden) refresh(); });
     })();
   </script>

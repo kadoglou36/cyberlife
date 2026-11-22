@@ -3424,7 +3424,6 @@
       const idEl = document.getElementById('app-footer-build-id');
       if (!link || !idEl) return;
       const CACHE_KEY = 'cyberlife-latest-build';
-      const CACHE_MS = 5 * 60 * 1000;
       const show = sha => {
         if (!sha) return;
         const short = sha.slice(0, 7);
@@ -3436,17 +3435,23 @@
       let cached = null;
       try { cached = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null'); } catch (e) { }
       if (cached && cached.sha) show(cached.sha);
-      if (cached && Date.now() - cached.time < CACHE_MS) return;
-      fetch('https://api.github.com/repos/kadoglou36/cyberlife/commits/main', {
-        headers: { Accept: 'application/vnd.github+json' }
-      })
-        .then(r => r.ok ? r.json() : Promise.reject(new Error(r.status)))
-        .then(data => {
-          if (!data || !data.sha) return;
-          show(data.sha);
-          try { localStorage.setItem(CACHE_KEY, JSON.stringify({ sha: data.sha, time: Date.now() })); } catch (e) { }
+      // no-cache revalidates via ETag, so each check returns the newest commit and 304s don't count against the API rate limit
+      const refresh = () => {
+        fetch('https://api.github.com/repos/kadoglou36/cyberlife/commits/main', {
+          cache: 'no-cache',
+          headers: { Accept: 'application/vnd.github+json' }
         })
-        .catch(() => { });
+          .then(r => r.ok ? r.json() : Promise.reject(new Error(r.status)))
+          .then(data => {
+            if (!data || !data.sha) return;
+            show(data.sha);
+            try { localStorage.setItem(CACHE_KEY, JSON.stringify({ sha: data.sha })); } catch (e) { }
+          })
+          .catch(() => { });
+      };
+      refresh();
+      setInterval(refresh, 2 * 60 * 1000);
+      document.addEventListener('visibilitychange', () => { if (!document.hidden) refresh(); });
     })();
   </script>
   <div class="pwa-install-modal" id="pwa-install-modal">

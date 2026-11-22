@@ -1,14 +1,14 @@
-const CACHE_NAME = 'cyberlife-v4';
+const CACHE_NAME = 'cyberlife-v5';
 const APP_SHELL = [
   './',
   './index.html',
   './manifest.webmanifest',
   './favicon.ico',
-  './icon-32.png',
-  './icon-192.png',
-  './icon-512.png',
-  './icon-maskable-512.png',
-  './apple-touch-icon.png'
+  './Images/icon-32.png',
+  './Images/icon-192.png',
+  './Images/icon-512.png',
+  './Images/icon-maskable-512.png',
+  './Images/apple-touch-icon.png'
 ];
 
 self.addEventListener('install', event => {
@@ -50,7 +50,7 @@ self.addEventListener('fetch', event => {
   }
 
   if (url.pathname.endsWith('/manifest.webmanifest') ||
-      /\/(?:favicon\.ico|icon-32\.png|icon-192\.png|icon-512\.png|icon-maskable-512\.png|apple-touch-icon\.png)$/.test(url.pathname)) {
+      /\/(?:favicon\.ico|Images\/(?:icon-32|icon-192|icon-512|icon-maskable-512|apple-touch-icon)\.png)$/.test(url.pathname)) {
     event.respondWith(
       fetch(request, { cache: 'no-store' })
         .then(response => {

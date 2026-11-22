@@ -1153,8 +1153,23 @@
       color: #d1d5db
     }
 
-    .app-footer-owner {
+    .app-footer-build {
       margin-left: auto;
+      color: inherit;
+      text-decoration: none;
+      white-space: nowrap
+    }
+
+    .app-footer-build[hidden] {
+      display: none
+    }
+
+    .app-footer-build span {
+      font-family: Consolas, "Courier New", monospace;
+      color: #374151
+    }
+
+    .app-footer-owner {
       white-space: nowrap
     }
 
@@ -3398,9 +3413,42 @@
     <strong>AI Suite 3 · Version <span id="about-application-version">—</span></strong>
     <span class="footer-divider" aria-hidden="true">•</span>
     <span>AI Homestead Company</span>
+    <a class="app-footer-build" id="app-footer-build" href="https://github.com/kadoglou36/cyberlife/commits/main"
+      target="_blank" rel="noopener" hidden>Build <span id="app-footer-build-id">—</span></a>
     <span class="app-footer-owner">Vangelis Kadoglou · ID 152400</span>
     <span class="app-footer-copyright">2001-2026 CyberLife. All rights reserved.</span>
   </footer>
+  <script>
+    (function () {
+      const link = document.getElementById('app-footer-build');
+      const idEl = document.getElementById('app-footer-build-id');
+      if (!link || !idEl) return;
+      const CACHE_KEY = 'cyberlife-latest-build';
+      const CACHE_MS = 5 * 60 * 1000;
+      const show = sha => {
+        if (!sha) return;
+        const short = sha.slice(0, 7);
+        idEl.textContent = short;
+        link.href = 'https://github.com/kadoglou36/cyberlife/commit/' + sha;
+        link.title = 'Latest GitHub build ' + short;
+        link.hidden = false;
+      };
+      let cached = null;
+      try { cached = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null'); } catch (e) { }
+      if (cached && cached.sha) show(cached.sha);
+      if (cached && Date.now() - cached.time < CACHE_MS) return;
+      fetch('https://api.github.com/repos/kadoglou36/cyberlife/commits/main', {
+        headers: { Accept: 'application/vnd.github+json' }
+      })
+        .then(r => r.ok ? r.json() : Promise.reject(new Error(r.status)))
+        .then(data => {
+          if (!data || !data.sha) return;
+          show(data.sha);
+          try { localStorage.setItem(CACHE_KEY, JSON.stringify({ sha: data.sha, time: Date.now() })); } catch (e) { }
+        })
+        .catch(() => { });
+    })();
+  </script>
   <div class="pwa-install-modal" id="pwa-install-modal">
     <div class="pwa-install-card" role="dialog" aria-modal="true" aria-labelledby="pwa-install-title">
       <h3 id="pwa-install-title">Install CyberLife</h3>

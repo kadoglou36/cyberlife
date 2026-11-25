@@ -353,6 +353,570 @@
       letter-spacing: .2px
     }
 
+    #view-main {
+      min-height: calc(100vh - 210px);
+      padding: 2rem 1rem 5rem;
+      text-align: left
+    }
+
+    .main-page-intro {
+      margin: 0 0 1.5rem;
+      text-align: center
+    }
+
+    .main-page-intro h2 {
+      margin: 0;
+      color: #0f172a;
+      font-size: 1.8rem
+    }
+
+    .main-page-intro p {
+      margin: .85rem 0 0;
+      color: var(--muted);
+      line-height: 1.65
+    }
+
+    .main-landing-card {
+      position: relative;
+      display: grid;
+      width: 100%;
+      min-height: 260px;
+      place-items: center;
+      overflow: hidden;
+      border: 1px solid #dbeafe;
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(96, 165, 250, .2), transparent 32%),
+        radial-gradient(circle at 85% 75%, rgba(37, 99, 235, .16), transparent 30%),
+        linear-gradient(145deg, #ffffff 0%, #eff6ff 58%, #dbeafe 100%);
+      box-shadow: 0 24px 60px rgba(37, 99, 235, .12)
+    }
+
+    .main-landing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem
+    }
+
+    .main-landing-card::before,
+    .main-landing-card::after {
+      position: absolute;
+      content: "";
+      border: 1px solid rgba(37, 99, 235, .13);
+      border-radius: 50%
+    }
+
+    .main-landing-card::before {
+      top: -170px;
+      right: -110px;
+      width: 420px;
+      height: 420px
+    }
+
+    .main-landing-card::after {
+      bottom: -140px;
+      left: -90px;
+      width: 320px;
+      height: 320px
+    }
+
+    .main-landing-content {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      padding: 1.5rem;
+      text-align: center
+    }
+
+    .main-landing-mark {
+      display: grid;
+      width: 82px;
+      height: 82px;
+      margin: 0 auto 1rem;
+      place-items: center;
+      border: 1px solid rgba(37, 99, 235, .2);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, .82);
+      box-shadow: 0 16px 35px rgba(37, 99, 235, .16);
+      font-size: 2.6rem
+    }
+
+    .main-landing-kicker {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .4rem;
+      margin: 0 0 .75rem;
+      color: #2563eb;
+      font-size: .82rem;
+      font-weight: 800;
+      text-transform: none
+    }
+
+    .main-landing-kicker span {
+      padding: .28rem .55rem;
+      border: 1px solid #bfdbfe;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .72)
+    }
+
+    .main-landing-copy {
+      max-width: 580px;
+      margin: .75rem auto 1rem;
+      color: #475569;
+      font-size: 1.08rem;
+      line-height: 1.7
+    }
+
+    .main-landing-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .75rem;
+      min-width: 190px;
+      padding: .9rem 1.35rem;
+      border: 1px solid #1d4ed8;
+      border-radius: 14px;
+      background: #2563eb;
+      box-shadow: 0 14px 28px rgba(37, 99, 235, .24);
+      color: #fff;
+      font: inherit;
+      font-size: 1.05rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background .15s ease, box-shadow .15s ease, transform .15s ease
+    }
+
+    .main-landing-action:hover {
+      background: #1d4ed8;
+      box-shadow: 0 18px 34px rgba(37, 99, 235, .3);
+      transform: translateY(-2px)
+    }
+
+    .main-landing-action:focus-visible {
+      outline: 4px solid rgba(37, 99, 235, .28);
+      outline-offset: 4px
+    }
+
+    #view-starship {
+      min-height: calc(100vh - 160px);
+      padding: 2rem 1rem 5rem
+    }
+
+    .starship-home {
+      overflow: hidden;
+      min-height: 420px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: var(--shadow);
+      color: var(--text)
+    }
+
+    .starship-home-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: .7rem .9rem;
+      border-bottom: 1px solid #d1d5db;
+      background: linear-gradient(180deg, #f8fafc, #eef2ff);
+      text-align: center
+    }
+
+    .starship-home-header h2 {
+      margin: 0;
+      font-size: 1.15rem
+    }
+
+    #view-starship .home-shortcut-groups {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      max-width: 540px;
+      margin: 1.5rem 0 0;
+      padding: 0 1.5rem 1.5rem
+    }
+
+    #view-starship .home-shortcut-group {
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .04);
+      color: var(--text);
+      text-align: left
+    }
+
+    #view-starship .home-shortcut-group h3 {
+      margin: 0 0 .85rem;
+      color: #374151;
+      font-size: .95rem;
+      text-align: center
+    }
+
+    #view-starship .home-shortcut-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .65rem
+    }
+
+    #view-starship .home-shortcut {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      min-height: 58px;
+      width: 100%;
+      padding: .65rem .8rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fff;
+      color: var(--text);
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+      transition: border-color .15s ease, background .15s ease, box-shadow .15s ease
+    }
+
+    #view-starship .home-shortcut:hover:not(:disabled) {
+      border-color: #bfdbfe;
+      background: #f8fafc;
+      box-shadow: 0 3px 10px rgba(37, 99, 235, .08)
+    }
+
+    #view-starship .home-shortcut:focus-visible {
+      outline: 3px solid rgba(37, 99, 235, .35);
+      outline-offset: 2px
+    }
+
+    #view-starship .home-shortcut-icon {
+      display: grid;
+      flex: 0 0 36px;
+      width: 36px;
+      height: 36px;
+      place-items: center;
+      border-radius: 9px;
+      background: #eff6ff;
+      font-size: 1.15rem
+    }
+
+    #view-starship .home-shortcut-copy {
+      display: grid;
+      gap: .1rem;
+      font-weight: 600
+    }
+
+    #view-starship .home-shortcut-note {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 400
+    }
+
+    #view-starship .home-shortcut:disabled {
+      background: #f9fafb;
+      color: #6b7280;
+      cursor: not-allowed
+    }
+
+    #view-starship .home-shortcut:disabled .home-shortcut-icon {
+      background: #f3f4f6
+    }
+
+    .flight-plans-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .flight-plans-toolbar h2 {
+      margin: 0;
+      font-size: 1.1rem
+    }
+
+    .flight-plans-content {
+      display: grid;
+      gap: 1rem;
+      padding: 1rem
+    }
+
+    .flight-active-card {
+      padding: 1.15rem;
+      border: 1px solid #bfdbfe;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #eff6ff, #fff);
+      box-shadow: 0 5px 18px rgba(37, 99, 235, .08)
+    }
+
+    .flight-panel-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem
+    }
+
+    .flight-panel {
+      min-width: 0;
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fff
+    }
+
+    .flight-panel h3,
+    .flight-active-card h3 {
+      margin: 0 0 .8rem;
+      color: #374151;
+      font-size: 1rem
+    }
+
+    .flight-list {
+      display: grid;
+      gap: .7rem
+    }
+
+    .flight-item {
+      padding: .85rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      background: #f9fafb
+    }
+
+    .flight-item-header {
+      display: flex;
+      justify-content: space-between;
+      gap: .75rem;
+      margin-bottom: .55rem
+    }
+
+    .flight-item-route {
+      font-weight: 700
+    }
+
+    .flight-item-meta {
+      display: grid;
+      gap: .25rem;
+      color: #6b7280;
+      font-size: .9rem
+    }
+
+    .flight-empty {
+      margin: 0;
+      padding: 1rem;
+      border: 1px dashed #d1d5db;
+      border-radius: 10px;
+      color: #6b7280;
+      text-align: center
+    }
+
+    .flight-form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .8rem
+    }
+
+    .flight-form-grid label {
+      display: grid;
+      gap: .3rem;
+      color: #374151;
+      font-size: .9rem;
+      font-weight: 600
+    }
+
+    .flight-form-grid input,
+    .flight-form-grid textarea {
+      width: 100%;
+      padding: .5rem .6rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font: inherit
+    }
+
+    .flight-form-grid .flight-field-wide {
+      grid-column: 1 / -1
+    }
+
+    .flight-modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: .5rem;
+      margin-top: 1rem
+    }
+
+    .flight-path-content {
+      padding: 1.5rem
+    }
+
+    .flight-path-card {
+      padding: 1.4rem;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fff
+    }
+
+    .flight-path-card + .flight-path-card {
+      margin-top: 1rem
+    }
+
+    .flight-path-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.8rem
+    }
+
+    .flight-path-heading h3 {
+      margin: 0
+    }
+
+    .flight-path-line {
+      position: relative;
+      height: 86px;
+      margin: 1.2rem 2.1rem .5rem
+    }
+
+    .flight-path-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible
+    }
+
+    .flight-path-track {
+      fill: none;
+      stroke: #94a3b8;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-dasharray: 1 3;
+      animation: flight-path-forward 4s linear infinite
+    }
+
+    .flight-path-completed {
+      fill: none;
+      stroke: #2563eb;
+      stroke-width: 4;
+      stroke-linecap: round
+    }
+
+    .flight-path-marker {
+      position: absolute;
+      top: 57px;
+      left: var(--flight-progress, 0%);
+      display: grid;
+      width: 28px;
+      height: 28px;
+      place-items: center;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      background: #2563eb;
+      box-shadow: 0 0 0 2px #2563eb, 0 5px 12px rgba(37, 99, 235, .25);
+      color: #fff;
+      transform: translateX(-50%)
+    }
+
+    @keyframes flight-path-forward {
+      to {
+        stroke-dashoffset: -4
+      }
+    }
+
+    .flight-path-start,
+    .flight-path-end {
+      position: absolute;
+      top: 57px;
+      display: grid;
+      width: 22px;
+      height: 22px;
+      place-items: center;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      background: #64748b;
+      box-shadow: 0 0 0 2px #94a3b8;
+      color: #fff;
+      font-size: .65rem
+    }
+
+    .flight-path-start {
+      left: 0;
+      transform: translateX(-50%)
+    }
+
+    .flight-path-end {
+      top: 57px;
+      right: 0;
+      transform: translateX(50%)
+    }
+
+    .flight-path-endpoints {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem
+    }
+
+    .flight-path-endpoint:last-child {
+      text-align: right
+    }
+
+    .flight-path-endpoint strong {
+      display: block;
+      color: #1e293b;
+      font-size: 1.05rem
+    }
+
+    .flight-path-endpoint span {
+      color: #64748b;
+      font-size: .88rem
+    }
+
+    .flight-path-status {
+      margin-top: 1.2rem;
+      color: #475569;
+      text-align: center
+    }
+
+    .starship-home-content {
+      display: grid;
+      min-height: 350px;
+      place-items: center;
+      padding: 2rem 1.25rem;
+      text-align: center
+    }
+
+    .starship-home-mark {
+      font-size: 4rem
+    }
+
+    .starship-home-content h1 {
+      margin: .5rem 0 .75rem;
+      font-size: clamp(2.2rem, 6vw, 4.5rem)
+    }
+
+    .starship-home-content p {
+      max-width: 620px;
+      margin: 0 auto 1.5rem;
+      color: #dbeafe;
+      font-size: 1.05rem;
+      line-height: 1.7
+    }
+
+    .starship-home-action {
+      border: 1px solid rgba(255, 255, 255, .28);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, .12);
+      color: #fff;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 700;
+      padding: .65rem 1rem
+    }
+
+    .starship-home-action:hover {
+      background: rgba(255, 255, 255, .2)
+    }
+
     #view-home .home-content {
       padding: 2rem 1.5rem;
       text-align: center
@@ -440,7 +1004,7 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
       grid-template-areas:
         "main passengers"
-        "airos tracking"
+        "airos development"
         "company privacy";
       gap: 1.25rem;
       max-width: 1100px;
@@ -460,8 +1024,8 @@
       grid-area: airos
     }
 
-    #view-home .home-shortcut-group[aria-labelledby="home-group-tracking"] {
-      grid-area: tracking
+    #view-home .home-shortcut-group[aria-labelledby="home-group-development"] {
+      grid-area: development
     }
 
     #view-home .home-shortcut-group[aria-labelledby="home-group-company"] {
@@ -1523,6 +2087,60 @@
         padding: 1.1rem .7rem
       }
 
+      #view-main {
+        min-height: calc(100vh - 160px);
+        padding: 1rem .6rem 5rem
+      }
+
+      .main-landing-card {
+        width: 100%;
+        min-height: 480px;
+        border-radius: 18px
+      }
+
+      .main-landing-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem
+      }
+
+      .main-landing-content {
+        padding: 3rem 1rem
+      }
+
+      .main-landing-mark {
+        width: 70px;
+        height: 70px;
+        border-radius: 18px;
+        font-size: 2.2rem
+      }
+
+      .main-landing-copy {
+        font-size: .95rem
+      }
+
+      .flight-panel-grid,
+      .flight-form-grid {
+        grid-template-columns: 1fr
+      }
+
+      .flight-path-content {
+        padding: .75rem
+      }
+
+      .flight-path-card {
+        padding: 1rem
+      }
+
+      .flight-path-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 1.25rem
+      }
+
+      .flight-item-header {
+        flex-direction: column
+      }
+
       #view-announcements .home-content {
         padding: 1.5rem 1rem
       }
@@ -1549,7 +2167,7 @@
           "main"
           "passengers"
           "airos"
-          "tracking"
+          "development"
           "company"
           "privacy";
         gap: .65rem;
@@ -1738,19 +2356,109 @@
   </div>
 
   <main class="main">
-    <!-- Home View (Default) -->
-    <section id="view-home" class="view">
+    <!-- Main landing page -->
+    <section id="view-main" class="view">
+      <div class="main-page-intro">
+        <h2>Welcome to 🚀 AI Suite 3</h2>
+      </div>
+      <div class="main-landing-grid">
+        <div class="main-landing-card">
+          <div class="main-landing-content">
+            <div class="main-landing-mark" aria-hidden="true">💼</div>
+            <p class="main-landing-kicker" aria-label="Homestead categories">
+              <span>Main</span>
+              <span>Passengers</span>
+              <span>AirOs15</span>
+              <span>Development</span>
+              <span>Company</span>
+              <span>Privacy</span>
+            </p>
+            <p class="main-landing-copy">Your central gateway to business, passenger, and operations management.</p>
+            <button class="main-landing-action" type="button" id="menu-homestead">
+              <span>Homestead</span>
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+        <div class="main-landing-card">
+          <div class="main-landing-content">
+            <div class="main-landing-mark" aria-hidden="true">🚀</div>
+            <p class="main-landing-copy">A new destination for future AI Suite operations.</p>
+            <button class="main-landing-action" type="button" id="menu-starship">
+              <span>Starship</span>
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Starship Homepage -->
+    <section id="view-starship" class="view" hidden>
+      <div class="starship-home">
+        <div class="starship-home-header">
+          <h2>🚀 Starship Management</h2>
+        </div>
+        <nav class="home-shortcut-groups" aria-label="Starship shortcuts">
+          <section class="home-shortcut-group" aria-labelledby="home-group-tracking-starship">
+            <h3 id="home-group-tracking-starship">Tracking</h3>
+            <div class="home-shortcut-grid">
+              <button class="home-shortcut" type="button" id="menu-flight-path">
+                <span class="home-shortcut-icon" aria-hidden="true">➤</span>
+                <span class="home-shortcut-copy">Flight Path</span>
+              </button>
+              <button class="home-shortcut" type="button" id="menu-flight-plans">
+                <span class="home-shortcut-icon" aria-hidden="true">📋</span>
+                <span class="home-shortcut-copy">Flight Plans</span>
+              </button>
+            </div>
+          </section>
+        </nav>
+      </div>
+    </section>
+
+    <section id="view-flight-plans" class="view" hidden>
+      <div class="calendar">
+        <div class="flight-plans-toolbar">
+          <h2>📋 Flight Plans</h2>
+          <button class="cal-btn cal-btn--blue" type="button" id="flight-add">+ Add Flight</button>
+        </div>
+        <div class="flight-plans-content">
+          <section class="flight-active-card" aria-labelledby="flight-active-title">
+            <h3 id="flight-active-title">Active Flight</h3>
+            <div id="flight-active"></div>
+          </section>
+          <div class="flight-panel-grid">
+            <section class="flight-panel" aria-labelledby="flight-upcoming-title">
+              <h3 id="flight-upcoming-title">Upcoming Flights</h3>
+              <div class="flight-list" id="flight-upcoming"></div>
+            </section>
+            <section class="flight-panel" aria-labelledby="flight-previous-title">
+              <h3 id="flight-previous-title">Previous Flights</h3>
+              <div class="flight-list" id="flight-previous"></div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-flight-path" class="view" hidden>
+      <div class="calendar">
+        <div class="flight-plans-toolbar">
+          <h2>➤ Flight Path</h2>
+          <button class="cal-btn" type="button" id="flight-path-plans">View Flight Plans</button>
+        </div>
+        <div class="flight-path-content" id="flight-path-content"></div>
+      </div>
+    </section>
+
+    <!-- Homestead View -->
+    <section id="view-home" class="view" hidden>
       <div class="calendar" aria-label="CyberLife Homepage">
         <div class="cal-header">
-          <div class="cal-title" style="margin-right:0">🚀 AI Suite 3 - Homepage</div>
+          <div class="cal-title" style="width:100%;margin-right:0;text-align:center">💼 Homestead Management</div>
         </div>
         <div class="home-content">
-          <div class="home-hero">
-            <div class="home-intro">
-              <h2>Welcome to 🚀 AI Suite 3</h2>
-              <p class="home-description">Your advanced hub for managing crew, passengers, and operations.</p>
-            </div>
-          </div>
           <nav class="home-shortcut-groups" aria-label="Homepage shortcuts">
             <section class="home-shortcut-group" aria-labelledby="home-group-main">
               <h3 id="home-group-main">Main</h3>
@@ -1791,16 +2499,12 @@
                 </button>
               </div>
             </section>
-            <section class="home-shortcut-group" aria-labelledby="home-group-tracking">
-              <h3 id="home-group-tracking">Tracking</h3>
+            <section class="home-shortcut-group" aria-labelledby="home-group-development">
+              <h3 id="home-group-development">Development</h3>
               <div class="home-shortcut-grid">
                 <button class="home-shortcut" type="button" disabled>
-                  <span class="home-shortcut-icon" aria-hidden="true">➤</span>
-                  <span class="home-shortcut-copy">Flight Path<span class="home-shortcut-note">Coming soon</span></span>
-                </button>
-                <button class="home-shortcut" type="button" disabled>
-                  <span class="home-shortcut-icon" aria-hidden="true">📋</span>
-                  <span class="home-shortcut-copy">Flight Plans<span class="home-shortcut-note">Coming soon</span></span>
+                  <span class="home-shortcut-icon" aria-hidden="true">🛠️</span>
+                  <span class="home-shortcut-copy">Development<span class="home-shortcut-note">Coming soon</span></span>
                 </button>
               </div>
             </section>
@@ -3040,6 +3744,46 @@
   </div>
 
   <!-- Crew modal -->
+  <div class="modal-backdrop" id="flight-modal">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="flight-modal-title">
+      <header>
+        <h3 id="flight-modal-title">Add Flight</h3>
+        <button class="close" type="button" aria-label="Close" id="flight-close">✕</button>
+      </header>
+      <form id="flight-form">
+        <div class="flight-form-grid">
+          <label>Departure
+            <input id="flight-departure" type="text" required maxlength="100" autocomplete="off" />
+          </label>
+          <label>Destination
+            <input id="flight-destination" type="text" required maxlength="100" autocomplete="off" />
+          </label>
+          <label>Start date
+            <input id="flight-start-date" type="date" required />
+          </label>
+          <label>End date
+            <input id="flight-end-date" type="date" required />
+          </label>
+          <label>Flight ID
+            <input id="flight-reference" type="text" required maxlength="7" pattern="AEE[0-9]{4}"
+              placeholder="AEE0000" title="Use AEE followed by exactly 4 digits" autocomplete="off"
+              style="text-transform:uppercase" />
+          </label>
+          <label>Reference (optional)
+            <input id="flight-note-reference" type="text" maxlength="80" autocomplete="off" />
+          </label>
+          <label class="flight-field-wide">Information (optional)
+            <textarea id="flight-information" rows="3" maxlength="1000"></textarea>
+          </label>
+        </div>
+        <div class="flight-modal-actions">
+          <button class="cal-btn" type="button" id="flight-cancel">Cancel</button>
+          <button class="cal-btn cal-btn--green" type="submit">Save Flight</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <div class="modal-backdrop" id="crew-modal">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="crew-title">
       <header>
@@ -3614,16 +4358,37 @@
       const handlers = new Map();
       let isApplying = false;
 
+      function canonicalRoute(route) {
+        const normalized = String(route || '')
+          .replace(/^#\/?/, '')
+          .replace(/^\/+|\/+$/g, '');
+
+        if (!normalized || normalized === 'main') return 'main';
+        if (normalized === 'homestead') return 'main/homestead';
+        if (normalized === 'main/homestead') return normalized;
+        if (normalized.startsWith('main/homestead/')) return normalized;
+        if (normalized === 'main/starship' || normalized.startsWith('main/starship/')) return normalized;
+        if (normalized.startsWith('main/')) return `main/homestead/${normalized.slice(5)}`;
+        return `main/homestead/${normalized}`;
+      }
+
       function routeFromHash() {
-        return decodeURIComponent(location.hash.replace(/^#\/?/, '').replace(/^\/+|\/+$/g, '')) || 'main';
+        let route = location.hash.replace(/^#\/?/, '').replace(/^\/+|\/+$/g, '');
+        try {
+          route = decodeURIComponent(route);
+        } catch (error) {
+          console.warn('Invalid route encoding; falling back to Main.', error);
+        }
+        return canonicalRoute(route);
       }
 
       function write(route, replace = false) {
         if (isApplying) return;
-        const hash = `#/${encodeURIComponent(route)}`;
+        const canonical = canonicalRoute(route);
+        const hash = `#/${canonical.split('/').map(encodeURIComponent).join('/')}`;
         if (location.hash === hash) return;
         if (replace) {
-          history.replaceState({ route }, '', hash);
+          history.replaceState({ route: canonical }, '', hash);
         } else {
           location.hash = hash;
         }
@@ -3648,7 +4413,7 @@
       window.CyberLifeRouter = {
         apply,
         register(route, handler) {
-          handlers.set(route, handler);
+          handlers.set(canonicalRoute(route), handler);
         },
         write
       };
@@ -3659,12 +4424,6 @@
 
     // Menu click behavior (instead of hover)
     document.addEventListener('DOMContentLoaded', function () {
-      // Main button - show homepage only
-      document.getElementById('brand-home').addEventListener('click', function () {
-        // Hide all views consistently using .hidden property
-        document.querySelectorAll('section.view').forEach(v => v.hidden = true);
-        document.getElementById('view-home').hidden = false;
-      });
       // Maintenance button - show Maintenance view
       document.getElementById('maintenance-btn').addEventListener('click', function () {
         // Hide all views consistently using .hidden property
@@ -3771,6 +4530,9 @@
 
         // 🌍 Population
         population: [],
+
+        // ✈️ Flight Plans
+        flightPlans: [],
 
         // 🧠 Intelligence
         intelligence: [],
@@ -3914,6 +4676,7 @@
             if (typeof value.appLogEnabled === 'boolean') window.CyberLifeData.appLogEnabled = value.appLogEnabled;
             if (value.workCalendar) window.CyberLifeData.workCalendar = value.workCalendar;
             if (Array.isArray(value.population)) window.CyberLifeData.population = value.population;
+            if (Array.isArray(value.flightPlans)) window.CyberLifeData.flightPlans = value.flightPlans;
             if (Array.isArray(value.intelligence)) window.CyberLifeData.intelligence = value.intelligence;
             if (Array.isArray(value.fraggileTransport)) window.CyberLifeData.fraggileTransport = value.fraggileTransport;
             if (value.serversCenter) window.CyberLifeData.serversCenter = value.serversCenter;
@@ -4627,10 +5390,284 @@
       render();
     })();
 
+    // Flight Plans
+    (function () {
+      const modal = document.getElementById('flight-modal');
+      const form = document.getElementById('flight-form');
+      const addButton = document.getElementById('flight-add');
+      const closeButton = document.getElementById('flight-close');
+      const cancelButton = document.getElementById('flight-cancel');
+      const startDateInput = document.getElementById('flight-start-date');
+      const endDateInput = document.getElementById('flight-end-date');
+      const activeContainer = document.getElementById('flight-active');
+      const upcomingContainer = document.getElementById('flight-upcoming');
+      const previousContainer = document.getElementById('flight-previous');
+      let editingId = null;
+
+      function getFlights() {
+        const flights = window.CyberLifeData?.flightPlans;
+        return Array.isArray(flights) ? flights : [];
+      }
+
+      function dateValue(value) {
+        const parts = String(value || '').split('-').map(Number);
+        if (parts.length !== 3 || parts.some(Number.isNaN)) return null;
+        return Date.UTC(parts[0], parts[1] - 1, parts[2]);
+      }
+
+      function formatDate(value) {
+        const timestamp = dateValue(value);
+        return timestamp === null
+          ? 'Unknown date'
+          : new Date(timestamp).toLocaleDateString('en-GB');
+      }
+
+      function flightMarkup(flight, includeActions = true) {
+        const reference = flight.reference
+          ? `<span>Flight ID: ${escapeHtml(flight.reference)}</span>`
+          : '';
+        const noteReference = flight.noteReference
+          ? `<span>Reference: ${escapeHtml(flight.noteReference)}</span>`
+          : '';
+        const information = flight.information
+          ? `<span>${escapeHtml(flight.information)}</span>`
+          : '';
+        return `
+          <article class="flight-item">
+            <div class="flight-item-header">
+              <span class="flight-item-route">${escapeHtml(flight.departure)} → ${escapeHtml(flight.destination)}</span>
+              <span>${formatDate(flight.startDate)} – ${formatDate(flight.endDate)}</span>
+            </div>
+            <div class="flight-item-meta">
+              ${reference}
+              ${noteReference}
+              ${information}
+            </div>
+            ${includeActions ? `
+              <div style="display:flex;gap:.5rem;justify-content:flex-end;margin-top:.7rem">
+                <button class="cal-btn flight-edit" type="button" data-flight-id="${escapeHtml(flight.id)}">Edit</button>
+                <button class="cal-btn cal-btn--red flight-delete" type="button" data-flight-id="${escapeHtml(flight.id)}">Delete</button>
+              </div>
+            ` : ''}
+          </article>
+        `;
+      }
+
+      function bindCardActions(container) {
+        container.querySelectorAll('.flight-edit').forEach(button => {
+          button.addEventListener('click', () => {
+            const flight = getFlights().find(item => String(item.id) === button.dataset.flightId);
+            if (flight) openModal(flight);
+          });
+        });
+        container.querySelectorAll('.flight-delete').forEach(button => {
+          button.addEventListener('click', () => deleteFlight(button.dataset.flightId));
+        });
+      }
+
+      function render() {
+        const today = new Date();
+        const todayValue = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
+        const flights = getFlights()
+          .filter(flight => dateValue(flight.startDate) !== null && dateValue(flight.endDate) !== null)
+          .sort((a, b) => dateValue(a.startDate) - dateValue(b.startDate));
+        const available = flights.filter(flight => dateValue(flight.endDate) >= todayValue);
+        const active = available[0] || null;
+        const upcoming = available.filter(flight => flight !== active);
+        const previous = flights
+          .filter(flight => dateValue(flight.endDate) < todayValue)
+          .sort((a, b) => dateValue(b.endDate) - dateValue(a.endDate));
+
+        activeContainer.innerHTML = active
+          ? flightMarkup(active)
+          : '<p class="flight-empty">No active flight.</p>';
+        upcomingContainer.innerHTML = upcoming.length
+          ? upcoming.map(flight => flightMarkup(flight)).join('')
+          : '<p class="flight-empty">No upcoming flights.</p>';
+        previousContainer.innerHTML = previous.length
+          ? previous.map(flight => flightMarkup(flight)).join('')
+          : '<p class="flight-empty">No previous flights.</p>';
+
+        [activeContainer, upcomingContainer, previousContainer].forEach(bindCardActions);
+      }
+
+      function openModal(flight = null) {
+        editingId = flight?.id || null;
+        form.reset();
+        document.getElementById('flight-modal-title').textContent = flight ? 'Edit Flight' : 'Add Flight';
+        if (flight) {
+          document.getElementById('flight-departure').value = flight.departure || '';
+          document.getElementById('flight-destination').value = flight.destination || '';
+          startDateInput.value = flight.startDate || '';
+          endDateInput.value = flight.endDate || '';
+          document.getElementById('flight-reference').value = flight.reference || '';
+          document.getElementById('flight-note-reference').value = flight.noteReference || '';
+          document.getElementById('flight-information').value = flight.information || '';
+        }
+        modal.classList.add('show');
+      }
+
+      function closeModal() {
+        modal.classList.remove('show');
+        editingId = null;
+        form.reset();
+      }
+
+      function saveFlights(flights) {
+        window.CyberLifeData.flightPlans = flights;
+        window.cyberLifeAutoSave?.scheduleAutoSave();
+        render();
+        window.flightPathView?.render();
+      }
+
+      function deleteFlight(id) {
+        const flight = getFlights().find(item => String(item.id) === String(id));
+        if (!flight || !confirm(`Delete flight ${flight.departure} → ${flight.destination}?`)) return;
+        saveFlights(getFlights().filter(item => String(item.id) !== String(id)));
+      }
+
+      addButton?.addEventListener('click', () => openModal());
+      document.getElementById('flight-reference')?.addEventListener('input', event => {
+        event.target.value = event.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 7);
+      });
+      closeButton?.addEventListener('click', closeModal);
+      cancelButton?.addEventListener('click', closeModal);
+      modal?.addEventListener('click', event => {
+        if (event.target === modal) closeModal();
+      });
+      startDateInput?.addEventListener('change', () => {
+        endDateInput.min = startDateInput.value;
+        if (endDateInput.value && endDateInput.value < startDateInput.value) {
+          endDateInput.value = startDateInput.value;
+        }
+      });
+      form?.addEventListener('submit', event => {
+        event.preventDefault();
+        const startDate = startDateInput.value;
+        const endDate = endDateInput.value;
+        const referenceInput = document.getElementById('flight-reference');
+        referenceInput.value = referenceInput.value.toUpperCase().trim();
+        if (!/^AEE\d{4}$/.test(referenceInput.value)) {
+          alert('Flight ID must use AEE followed by exactly 4 digits, for example AEE1234.');
+          referenceInput.focus();
+          return;
+        }
+        if (endDate < startDate) {
+          alert('End date cannot be before the start date.');
+          endDateInput.focus();
+          return;
+        }
+        const flight = {
+          id: editingId || `${Date.now()}-${Math.random().toString(36).slice(2)}`,
+          departure: document.getElementById('flight-departure').value.trim(),
+          destination: document.getElementById('flight-destination').value.trim(),
+          startDate,
+          endDate,
+          reference: referenceInput.value,
+          noteReference: document.getElementById('flight-note-reference').value.trim(),
+          information: document.getElementById('flight-information').value.trim()
+        };
+        const flights = [...getFlights()];
+        const existingIndex = flights.findIndex(item => String(item.id) === String(editingId));
+        if (existingIndex >= 0) flights[existingIndex] = flight;
+        else flights.push(flight);
+        saveFlights(flights);
+        closeModal();
+      });
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && modal?.classList.contains('show')) closeModal();
+      });
+
+      window.flightPlansView = { render };
+      render();
+    })();
+
+    // Flight Path
+    (function () {
+      const container = document.getElementById('flight-path-content');
+
+      function dateValue(value) {
+        const parts = String(value || '').split('-').map(Number);
+        if (parts.length !== 3 || parts.some(Number.isNaN)) return null;
+        return Date.UTC(parts[0], parts[1] - 1, parts[2]);
+      }
+
+      function formatDate(value) {
+        const timestamp = dateValue(value);
+        return timestamp === null ? 'Unknown' : new Date(timestamp).toLocaleDateString('en-GB');
+      }
+
+      function render() {
+        const now = new Date();
+        const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+        const flights = Array.isArray(window.CyberLifeData?.flightPlans)
+          ? window.CyberLifeData.flightPlans
+          : [];
+        const activeFlights = flights
+          .filter(flight => dateValue(flight.startDate) !== null && dateValue(flight.endDate) !== null)
+          .filter(flight => dateValue(flight.endDate) >= today)
+          .sort((a, b) => dateValue(a.startDate) - dateValue(b.startDate));
+
+        if (!activeFlights.length) {
+          container.innerHTML = '<p class="flight-empty">No active or upcoming flight. Add one from Flight Plans.</p>';
+          return;
+        }
+
+        container.innerHTML = activeFlights.map(flight => {
+          const start = dateValue(flight.startDate);
+          const end = dateValue(flight.endDate);
+          const duration = Math.max(end - start, 24 * 60 * 60 * 1000);
+          const elapsed = Math.min(Math.max(today - start, 0), duration);
+          const progress = Math.round((elapsed / duration) * 100);
+          const state = start > today ? 'Scheduled' : end === today ? 'Arriving today' : 'In progress';
+          return `
+            <article class="flight-path-card">
+              <div class="flight-path-heading">
+                <h3>${escapeHtml(flight.reference)}${flight.noteReference ? ` · ${escapeHtml(flight.noteReference)}` : ''}</h3>
+                <span class="status-pill blue">${state}</span>
+              </div>
+              <div class="flight-path-endpoints">
+                <div class="flight-path-endpoint">
+                  <strong>${escapeHtml(flight.departure)}</strong>
+                  <span>${formatDate(flight.startDate)}</span>
+                </div>
+                <div class="flight-path-endpoint">
+                  <strong>${escapeHtml(flight.destination)}</strong>
+                  <span>${formatDate(flight.endDate)}</span>
+                </div>
+              </div>
+              <div class="flight-path-line" style="--flight-progress:${progress}%">
+                <svg class="flight-path-svg" viewBox="0 0 1000 86" preserveAspectRatio="none" aria-hidden="true">
+                  <path class="flight-path-track" pathLength="100" d="M 0 71 H 1000"></path>
+                  <path class="flight-path-completed" pathLength="100" stroke-dasharray="${progress} ${100 - progress}" d="M 0 71 H 1000"></path>
+                </svg>
+                <span class="flight-path-start" aria-hidden="true"></span>
+                <span class="flight-path-marker" aria-label="${progress}% completed">✈</span>
+                <span class="flight-path-end" aria-hidden="true"></span>
+              </div>
+              <div class="flight-path-status">${progress}% of the route completed · ${formatDate(new Date(today).toISOString().slice(0, 10))}</div>
+            </article>
+          `;
+        }).join('');
+      }
+
+      window.flightPathView = { render };
+      render();
+    })();
+
     // Calendar logic
     (function () {
       const brandHome = document.getElementById('brand-home');
+      const viewMain = document.getElementById('view-main');
       const viewHome = document.getElementById('view-home');
+      const menuHomestead = document.getElementById('menu-homestead');
+      const menuStarship = document.getElementById('menu-starship');
+      const viewStarship = document.getElementById('view-starship');
+      const menuFlightPlans = document.getElementById('menu-flight-plans');
+      const viewFlightPlans = document.getElementById('view-flight-plans');
+      const menuFlightPath = document.getElementById('menu-flight-path');
+      const viewFlightPath = document.getElementById('view-flight-path');
+      const flightPathPlans = document.getElementById('flight-path-plans');
       const menuAnnouncements = document.getElementById('menu-announcements');
       const viewAnnouncements = document.getElementById('view-announcements');
       const menuCalendar = document.getElementById('menu-calendar');
@@ -4673,7 +5710,11 @@
         document.querySelectorAll('.submenu').forEach(s => s.classList.remove('active'));
 
         // Hide all views
+        viewMain && (viewMain.hidden = true);
         viewHome && (viewHome.hidden = true);
+        viewStarship && (viewStarship.hidden = true);
+        viewFlightPlans && (viewFlightPlans.hidden = true);
+        viewFlightPath && (viewFlightPath.hidden = true);
         viewAnnouncements && (viewAnnouncements.hidden = true);
         viewCalendar.hidden = true;
         viewPassengers.hidden = true;
@@ -4699,12 +5740,42 @@
         const viewFraggile = document.getElementById('view-fraggile-transport');
         viewFraggile && (viewFraggile.hidden = true);
       }
-      function showHome() {
+      function showMain() {
+        hideAll();
+        if (viewMain) {
+          viewMain.hidden = false;
+        }
+        window.CyberLifeRouter.write('main');
+      }
+      function showHomestead() {
         hideAll();
         if (viewHome) {
           viewHome.hidden = false;
         }
-        window.CyberLifeRouter.write('main');
+        window.CyberLifeRouter.write('main/homestead');
+      }
+      function showStarship() {
+        hideAll();
+        if (viewStarship) {
+          viewStarship.hidden = false;
+        }
+        window.CyberLifeRouter.write('main/starship');
+      }
+      function showFlightPlans() {
+        hideAll();
+        if (viewFlightPlans) {
+          viewFlightPlans.hidden = false;
+          window.flightPlansView?.render();
+        }
+        window.CyberLifeRouter.write('main/starship/flight-plans');
+      }
+      function showFlightPath() {
+        hideAll();
+        if (viewFlightPath) {
+          viewFlightPath.hidden = false;
+          window.flightPathView?.render();
+        }
+        window.CyberLifeRouter.write('main/starship/flight-path');
       }
       function showAnnouncements() {
         hideAll();
@@ -4888,7 +5959,12 @@
         if (e.key === 'ArrowRight' && e.ctrlKey) { btnNext?.click(); e.preventDefault(); }
         if (e.key === 'Home' && e.ctrlKey) { btnToday?.click(); e.preventDefault(); }
       });
-      brandHome?.addEventListener('click', showHome);
+      brandHome?.addEventListener('click', showMain);
+      menuHomestead?.addEventListener('click', showHomestead);
+      menuStarship?.addEventListener('click', showStarship);
+      menuFlightPlans?.addEventListener('click', showFlightPlans);
+      menuFlightPath?.addEventListener('click', showFlightPath);
+      flightPathPlans?.addEventListener('click', showFlightPlans);
       menuAnnouncements?.addEventListener('click', showAnnouncements);
       menuCalendar.addEventListener('click', showCalendar);
       menuPassengers?.addEventListener('click', showPassengers);
@@ -4909,7 +5985,11 @@
       const menuWorkTime = document.getElementById('menu-work-time');
       menuWorkTime?.addEventListener('click', showWorkTime);
 
-      window.CyberLifeRouter.register('main', showHome);
+      window.CyberLifeRouter.register('main', showMain);
+      window.CyberLifeRouter.register('main/homestead', showHomestead);
+      window.CyberLifeRouter.register('main/starship', showStarship);
+      window.CyberLifeRouter.register('main/starship/flight-plans', showFlightPlans);
+      window.CyberLifeRouter.register('main/starship/flight-path', showFlightPath);
       window.CyberLifeRouter.register('announcements', showAnnouncements);
       window.CyberLifeRouter.register('calendar', showCalendar);
       window.CyberLifeRouter.register('passengers', showPassengers);

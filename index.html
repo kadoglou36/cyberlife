@@ -1995,6 +1995,10 @@
         text-overflow: ellipsis
       }
 
+      #maintenance-btn {
+        grid-column: 3
+      }
+
       .nav .brand {
         background: #f9fafb;
         border: 1px solid #e5e7eb;
@@ -2089,33 +2093,74 @@
 
       #view-main {
         min-height: calc(100vh - 160px);
-        padding: 1rem .6rem 5rem
+        padding: .65rem .6rem 5rem
+      }
+
+      .main-page-intro {
+        margin-bottom: .75rem
+      }
+
+      .main-page-intro h2 {
+        font-size: 1.35rem
       }
 
       .main-landing-card {
         width: 100%;
-        min-height: 480px;
+        min-height: 144px;
         border-radius: 18px
       }
 
       .main-landing-grid {
         grid-template-columns: 1fr;
-        gap: 1rem
+        gap: .65rem
       }
 
       .main-landing-content {
-        padding: 3rem 1rem
+        display: grid;
+        grid-template-columns: 54px minmax(0, 1fr);
+        align-items: center;
+        gap: .3rem .75rem;
+        width: 100%;
+        padding: .85rem
       }
 
       .main-landing-mark {
-        width: 70px;
-        height: 70px;
-        border-radius: 18px;
-        font-size: 2.2rem
+        grid-row: 1 / 5;
+        width: 54px;
+        height: 54px;
+        margin: 0;
+        border-radius: 14px;
+        box-shadow: 0 10px 22px rgba(37, 99, 235, .14);
+        font-size: 1.7rem
+      }
+
+      .main-landing-kicker {
+        justify-content: flex-start;
+        gap: .2rem;
+        margin: 0 0 .15rem;
+        font-size: .64rem
+      }
+
+      .main-landing-kicker span {
+        padding: .12rem .35rem
       }
 
       .main-landing-copy {
-        font-size: .95rem
+        max-width: none;
+        margin: 0 0 .2rem;
+        font-size: .82rem;
+        line-height: 1.35;
+        text-align: left
+      }
+
+      .main-landing-action {
+        justify-self: start;
+        min-width: 0;
+        gap: .45rem;
+        padding: .5rem .8rem;
+        border-radius: 10px;
+        box-shadow: 0 8px 18px rgba(37, 99, 235, .2);
+        font-size: .85rem
       }
 
       .flight-panel-grid,
